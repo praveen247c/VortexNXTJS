@@ -23,10 +23,11 @@ import { JSDOM } from "jsdom";
 // common defaults. Adjust if the dry-run log shows your fields are named
 // differently.
 // ---------------------------------------------------------------------------
-const BODY_FIELDS = ["post-body", "body", "content", "rich-text", "article-body"];
-const EXCERPT_FIELDS = ["post-summary", "summary", "excerpt", "subtitle", "intro"];
-const COVER_FIELDS = ["main-image", "thumbnail-image", "cover-image", "thumbnail", "image", "featured-image"];
-const DATE_FIELDS = ["published-on", "published-date", "date", "publish-date"];
+const BODY_FIELDS = ["main-article", "post-body", "body", "content", "rich-text", "article-body"];
+const EXCERPT_FIELDS = ["introduction-paragraph", "post-summary", "summary", "excerpt", "subtitle", "intro"];
+const SEO_DESC_FIELDS = ["meta-description", "seo-description", "meta-desc"];
+const COVER_FIELDS = ["main-photo", "main-image", "thumbnail-image", "cover-image", "thumbnail", "image", "featured-image"];
+const DATE_FIELDS = ["published-date", "published-on", "date", "publish-date"];
 const CATEGORY_FIELDS = ["category", "categories", "blog-category", "tag"];
 const AUTHOR_FIELDS = ["author", "writer", "post-author"];
 
@@ -49,6 +50,11 @@ function loadEnv() {
 loadEnv();
 
 const COMMIT = process.argv.includes("--commit");
+// Optional `--limit N` to process only the first N posts (test batches).
+const limitArg = process.argv.find((a) => a.startsWith("--limit"));
+const LIMIT = limitArg
+  ? Number(limitArg.split("=")[1] ?? process.argv[process.argv.indexOf(limitArg) + 1])
+  : Infinity;
 
 const {
   NEXT_PUBLIC_SANITY_PROJECT_ID: projectId,
@@ -71,7 +77,7 @@ function requireEnv(name: string, value: string | undefined) {
 requireEnv("NEXT_PUBLIC_SANITY_PROJECT_ID", projectId);
 requireEnv("NEXT_PUBLIC_SANITY_DATASET", dataset);
 requireEnv("WEBFLOW_API_TOKEN", wfToken);
-requireEnv("WEBFLOW_SITE_ID", wfSiteId);
+// WEBFLOW_SITE_ID is optional — auto-discovered from the token if omitted.
 if (COMMIT) requireEnv("SANITY_API_WRITE_TOKEN", token);
 
 const sanity = createClient({
@@ -238,6 +244,18 @@ function slugify(s: string) {
     .slice(0, 96);
 }
 
+// Excerpt/SEO fields are plain strings — strip any HTML the rich field carries.
+function toPlainText(v: unknown): string | undefined {
+  const s = asString(v);
+  if (!s) return undefined;
+  const text = s
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  return text || undefined;
+}
+
 // Resolve Webflow reference ids -> human names across all collections.
 const idToName = new Map<string, string>();
 
@@ -269,8 +287,24 @@ async function main() {
     `\n${COMMIT ? "⚙️  COMMIT mode — writing to Sanity" : "🔍 DRY RUN — no writes (pass --commit to apply)"}\n`
   );
 
+  // Resolve the site id (auto-discover from the token if not provided).
+  let siteId = wfSiteId;
+  if (!siteId) {
+    const { sites } = await wf<{ sites: { id: string; displayName: string }[] }>(
+      "/sites"
+    );
+    if (sites.length === 1) {
+      siteId = sites[0].id;
+      console.log(`Auto-detected site: ${sites[0].displayName} (${siteId})\n`);
+    } else {
+      console.error("Multiple Webflow sites found — set WEBFLOW_SITE_ID to one of:");
+      sites.forEach((s) => console.error(`  ${s.displayName}: ${s.id}`));
+      process.exit(1);
+    }
+  }
+
   const { collections } = await wf<{ collections: WfCollection[] }>(
-    `/sites/${wfSiteId}/collections`
+    `/sites/${siteId}/collections`
   );
   console.log("Webflow collections:");
   collections.forEach((c) => console.log(`  - ${c.displayName} (slug: ${c.slug}, id: ${c.id})`));
@@ -286,8 +320,13 @@ async function main() {
 
   await buildIdNameMap(collections);
 
-  const items = await getAllItems(blog.id);
-  console.log(`→ Found ${items.length} items\n`);
+  const allItems = await getAllItems(blog.id);
+  const items = Number.isFinite(LIMIT) ? allItems.slice(0, LIMIT) : allItems;
+  console.log(
+    `→ Found ${allItems.length} items${
+      Number.isFinite(LIMIT) ? ` (processing first ${items.length})` : ""
+    }\n`
+  );
 
   if (items[0]) {
     console.log("Sample field keys:", Object.keys(items[0].fieldData).join(", "), "\n");
@@ -306,7 +345,8 @@ async function main() {
     const html = asString(pick(fd, BODY_FIELDS)) || "";
     const body = html ? await htmlToPortableText(html) : [];
 
-    const excerpt = asString(pick(fd, EXCERPT_FIELDS));
+    const excerpt = toPlainText(pick(fd, EXCERPT_FIELDS));
+    const seoDescription = toPlainText(pick(fd, SEO_DESC_FIELDS));
     const cover = imageUrl(pick(fd, COVER_FIELDS));
     const publishedAt =
       asString(pick(fd, DATE_FIELDS)) || item.lastPublished || item.createdOn;
@@ -320,6 +360,7 @@ async function main() {
       title,
       slug: { _type: "slug", current: slug },
       ...(excerpt ? { excerpt } : {}),
+      ...(seoDescription ? { seoDescription } : {}),
       ...(publishedAt ? { publishedAt: new Date(publishedAt).toISOString() } : {}),
       body,
     };
@@ -372,7 +413,7 @@ async function main() {
       console.log(`  ✓ ${title}`);
     } else {
       console.log(
-        `  · ${title}  [slug: ${slug}, blocks: ${body.length}, category: ${categoryName ?? "—"}]`
+        `  · ${title}  [blocks: ${body.length}, cover: ${cover ? "yes" : "no"}, excerpt: ${excerpt ? "yes" : "no"}, category: ${categoryName ?? "—"}, author: ${authorName ?? "—"}]`
       );
     }
     created++;

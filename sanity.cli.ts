@@ -1,9 +1,11 @@
 import { defineCliConfig } from "sanity/cli";
 
-import { dataset, projectId } from "./sanity/env";
-
+// Read directly from env (no throwing) so `sanity` CLI commands like
+// `init` / `login` work before the project id has been set.
 export default defineCliConfig({
-  api: { projectId, dataset },
-  // Enables the App Router auto-detect for `sanity` CLI commands.
+  api: {
+    projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  },
   autoUpdates: true,
 });
