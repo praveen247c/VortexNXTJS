@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vortex IQ — Board Meeting · 29 May 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand-purple:#5529d6;--brand-purple-mid:#392bd5;--brand-purple-light:#a58af3;--brand-purple-deep:#0c061f;
+  --brand-gradient:linear-gradient(135deg,#5529d6,#0c061f 50%,#5529d6 75%);
+  --brand-gradient-soft:linear-gradient(135deg,#a58af3,#5529d6);
+  --white:#ffffff;--surface-soft:#f6f5f3;--surface-tint:#f3f0fc;
+  --primary:#222325;--text-body:rgba(0,0,0,.62);--text-faded:rgba(0,0,0,.42);
+  --border-dark:rgba(0,0,0,.10);--border-strong:rgba(0,0,0,.16);--border-brand:rgba(85,41,214,.30);
+  --success:#1f9e54;--success-soft:rgba(31,158,84,.10);
+  --font-heading:'Geist',Arial,sans-serif;--font-body:'Geist',Arial,sans-serif;--font-mono:'Geist Mono',ui-monospace,monospace;
+  --font-features:"ss01" 1,"ss03" 1,"ss04" 1;
+  --shadow-sm:0 1px 2px rgba(20,12,40,.06),0 1px 3px rgba(20,12,40,.05);
+  --shadow-lg:0 20px 50px rgba(20,12,40,.10),0 6px 16px rgba(20,12,40,.06);
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--surface-soft);color:var(--primary);font-family:var(--font-body);
+  font-feature-settings:var(--font-features);line-height:1.5;-webkit-font-smoothing:antialiased}
+
+/* progress */
+.prog-track{position:fixed;top:0;left:0;right:0;height:3px;background:rgba(0,0,0,.06);z-index:60}
+.prog{height:100%;width:0;background:var(--brand-gradient-soft);transition:width .35s var(--ease)}
+
+/* deck nav */
+.deck-nav{position:fixed;bottom:1.4rem;left:50%;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:.5rem;
+  background:rgba(255,255,255,.85);backdrop-filter:blur(14px);border:1px solid var(--border-dark);border-radius:999px;padding:.4rem .5rem;box-shadow:var(--shadow-lg)}
+.nav-btn{width:36px;height:36px;border-radius:50%;border:none;background:var(--surface-soft);color:var(--primary);cursor:pointer;
+  font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:all .18s}
+.nav-btn:hover{background:var(--brand-purple);color:#fff}
+.counter{font-family:var(--font-mono);font-size:.78rem;color:var(--text-body);padding:0 .6rem;min-width:64px;text-align:center}
+
+/* slide */
+.slide{position:fixed;inset:0;display:none;flex-direction:column;overflow:auto;background:var(--white);padding:3.2rem 4vw}
+.slide.is-active{display:flex}
+.s-wrap{width:100%;max-width:1080px;margin:auto;display:flex;flex-direction:column;min-height:100%}
+.s-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:1.6rem;border-bottom:1px solid var(--border-dark)}
+.s-head img{height:26px;width:auto;display:block}
+.s-kicker{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-purple)}
+.s-main{flex:1;padding:2.2rem 0}
+.s-foot{display:flex;align-items:center;justify-content:space-between;padding-top:1.2rem;border-top:1px solid var(--border-dark);
+  font-family:var(--font-mono);font-size:.68rem;color:var(--text-faded)}
+
+/* headings */
+.eyebrow{font-family:var(--font-mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--brand-purple);font-weight:500;display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1rem}
+.eyebrow::before{content:"";width:1.4rem;height:1px;background:var(--brand-purple);opacity:.5}
+.s-title{font-family:var(--font-heading);font-weight:500;font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.08;letter-spacing:-.02em;margin-bottom:.4rem}
+.s-intro{font-size:1.05rem;color:var(--text-body);max-width:74ch;line-height:1.55;margin-bottom:1.8rem}
+.grad{background:var(--brand-gradient-soft);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* cover */
+.cover .s-main{display:flex;flex-direction:column;justify-content:center;text-align:left}
+.cover h1{font-family:var(--font-heading);font-weight:500;font-size:clamp(2.6rem,6vw,4.4rem);line-height:1.02;letter-spacing:-.03em;max-width:18ch}
+.cover .sub{font-size:1.3rem;color:var(--text-body);max-width:60ch;margin-top:1.4rem;line-height:1.45}
+.cover .meta{margin-top:2.6rem;display:flex;flex-direction:column;gap:.4rem;font-family:var(--font-mono);font-size:.82rem;color:var(--text-faded)}
+.cover .meta b{color:var(--brand-purple);font-weight:500}
+.tagpill{display:inline-flex;align-items:center;gap:.5rem;align-self:flex-start;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.04em;
+  background:var(--surface-tint);border:1px solid var(--border-brand);color:var(--brand-purple);padding:.4rem .8rem;border-radius:999px;margin-bottom:2rem}
+
+/* layout helpers */
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem 2.4rem}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.cols4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+
+/* group block */
+.group{}
+.glabel{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-purple);
+  display:inline-block;background:var(--surface-tint);border:1px solid var(--border-brand);padding:.2rem .55rem;border-radius:999px;margin-bottom:.9rem}
+.items{list-style:none;display:grid;gap:.5rem}
+.items li{font-size:.92rem;color:var(--text-body);padding-left:1.1rem;position:relative;line-height:1.45}
+.items li::before{content:"";position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--brand-purple)}
+.items li b{color:var(--primary);font-weight:600}
+
+/* point cards (2x2) */
+.points{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem}
+.point{background:var(--white);border:1px solid var(--border-dark);border-radius:12px;padding:1.5rem 1.6rem}
+.point h3{font-family:var(--font-heading);font-weight:600;font-size:1.12rem;letter-spacing:-.01em;margin-bottom:.5rem}
+.point p{font-size:.92rem;color:var(--text-body);line-height:1.5}
+.point .n{font-family:var(--font-mono);font-size:.66rem;color:var(--brand-purple);letter-spacing:.1em}
+
+/* workstream rows */
+.ws{display:grid;grid-template-columns:1fr 1fr;gap:.9rem 2rem}
+.ws .row{padding:.85rem 0;border-top:1px solid var(--border-dark)}
+.ws .row b{font-family:var(--font-heading);font-weight:600;font-size:.98rem;display:block;margin-bottom:.2rem}
+.ws .row span{font-size:.86rem;color:var(--text-body);line-height:1.45}
+
+/* take callout */
+.take{margin-top:1.8rem;background:var(--surface-tint);border:1px solid var(--border-brand);border-radius:12px;padding:1.1rem 1.4rem;
+  font-family:var(--font-heading);font-weight:500;font-size:1.05rem;color:var(--primary);letter-spacing:-.01em}
+.take::before{content:"→ ";color:var(--brand-purple)}
+
+/* stats */
+.stat-card{background:var(--white);border:1px solid var(--border-dark);border-radius:12px;padding:1.5rem}
+.stat-card .v{font-family:var(--font-heading);font-weight:700;font-size:clamp(1.8rem,3vw,2.4rem);letter-spacing:-.03em;line-height:1;color:var(--brand-purple)}
+.stat-card .k{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faded);margin-bottom:.6rem}
+.stat-card .s{font-size:.82rem;color:var(--text-body);margin-top:.5rem}
+
+/* tables */
+.dt-wrap{border:1px solid var(--border-dark);border-radius:12px;overflow:hidden;margin-top:1.2rem}
+.dt{width:100%;border-collapse:collapse;font-size:.88rem}
+.dt th,.dt td{padding:.7rem 1rem;text-align:left;border-bottom:1px solid var(--border-dark)}
+.dt thead th{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-faded);background:var(--surface-soft);font-weight:500}
+.dt td{color:var(--text-body)}
+.dt td.b,.dt th.b{font-family:var(--font-heading);font-weight:600;color:var(--primary)}
+.dt td.num{font-family:var(--font-mono)}
+.dt tbody tr:last-child td{border-bottom:none}
+.dt tr.total td{background:var(--surface-tint);font-weight:600;color:var(--primary)}
+.tbl-label{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-purple);margin-bottom:.2rem;display:block}
+
+/* agenda */
+.agenda{display:grid;gap:.4rem;margin-top:.5rem}
+.arow{display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:1.2rem;padding:.95rem 1.2rem;
+  background:var(--white);border:1px solid var(--border-dark);border-radius:10px;transition:border-color .2s}
+.arow:hover{border-color:var(--brand-purple)}
+.arow .anum{font-family:var(--font-heading);font-weight:700;font-size:1.05rem;color:var(--brand-purple);width:1.5rem}
+.arow .atitle{font-family:var(--font-heading);font-weight:500;font-size:1.05rem}
+.arow .awho{font-family:var(--font-mono);font-size:.72rem;color:var(--text-faded);text-transform:uppercase;letter-spacing:.06em}
+.arow .atime{font-family:var(--font-mono);font-size:.78rem;color:var(--brand-purple);background:var(--surface-tint);border:1px solid var(--border-brand);padding:.2rem .55rem;border-radius:999px;white-space:nowrap}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem 2.4rem}
+.tperson{font-size:.9rem;color:var(--text-body);padding:.3rem 0}
+.tperson b{color:var(--primary);font-weight:600}
+
+/* badges */
+.badge{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--font-mono);font-size:.66rem;padding:.18rem .5rem;border-radius:999px;border:1px solid var(--border-dark)}
+.badge.ok{background:var(--success-soft);color:var(--success);border-color:rgba(31,158,84,.3)}
+.badge.open{background:var(--surface-tint);color:var(--brand-purple);border-color:var(--border-brand)}
+
+/* print */
+@media print{
+  body{background:#fff}
+  .deck-nav,.prog-track{display:none!important}
+  .slide{position:relative!important;display:flex!important;page-break-after:always;min-height:100vh;inset:auto}
+}
+@media(max-width:760px){
+  .cols2,.cols3,.cols4,.points,.ws,.team{grid-template-columns:1fr}
+  .arow{grid-template-columns:auto 1fr;gap:.5rem 1rem}
+  .arow .awho,.arow .atime{grid-column:2}
+  .slide{padding:2.4rem 6vw}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="prog-track"><div class="prog" id="prog"></div></div>
+
+<!-- 1 · COVER -->
+<section class="slide cover is-active">
+  <div class="s-wrap">
+    <div class="s-head">
+      <img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c29054c6d22238eac9bb4c_vlogo.svg" alt="Vortex IQ">
+      <span class="s-kicker">Board Meeting</span>
+    </div>
+    <div class="s-main">
+      <span class="tagpill">Confidential · Board &amp; Investors Only</span>
+      <h1>The AI <span class="grad">Operating System</span> for e-commerce.</h1>
+      <p class="sub">Detect what's wrong, understand why, and fix it safely, across every platform you run.</p>
+      <div class="meta">
+        <span><b>Board Meeting</b> · Friday 29 May 2026 · 2&ndash;3 pm</span>
+        <span>Prepared for the Board of Vortex IQ Ltd. · www.vortexiq.ai</span>
+      </div>
+    </div>
+    <div class="s-foot"><span>Confidential — Board &amp; Investors Only</span><span>01 / 13</span></div>
+  </div>
+</section>
+
+<!-- 2 · AGENDA -->
+<section class="slide">
+  <div class="s-wrap">
+    <div class="s-head"><img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c29054c6d22238eac9bb4c_vlogo.svg" alt="Vortex IQ"><span class="s-kicker">Agenda</span></div>
+    <div class="s-main">
+      <div class="eyebrow">One hour</div>
+      <h2 class="s-title">Agenda</h2>
+      <div class="agenda">
+        <div class="arow"><span class="anum">1</span><span class="atitle">Executive Summary</span><span class="awho">CEO</span><span class="atime">5 min</span></div>
+        <div class="arow"><span class="anum">2</span><span class="atitle">Product, AI &amp; Engineering Update</span><span class="awho">CEO</span><span class="atime">15 min</span></div>
+        <div class="arow"><span class="anum">3</span><span class="atitle">Sales &amp; GTM Update</span><span class="awho">CEO</span><span class="atime">15 min</span></div>
+        <div class="arow"><span class="anum">4</span><span class="atitle">Pipeline</span><span class="awho">CEO</span><span class="atime">5 min</span></div>
+        <div class="arow"><span class="anum">5</span><span class="atitle">Financial Overview</span><span class="awho">COO</span><span class="atime">5 min</span></div>
+        <div class="arow"><span class="anum">6</span><span class="atitle">Fundraising Update</span><span class="awho">CEO</span><span class="atime">5 min</span></div>
+        <div class="arow"><span class="anum">7</span><span class="atitle">Strategic Decisions Required</span><span class="awho">Board</span><span class="atime">5 min</span></div>
+        <div class="arow"><span class="anum">8</span><span class="atitle">AOB</span><span class="awho">Board</span><span class="atime">5 min</span></div>
+      </div>
+    </div>
+    <div class="s-foot"><span>Confidential — Board &amp; Investors Only</span><span>02 / 13</span></div>
+  </div>
+</section>
+
+<!-- 3 · EXECUTIVE SUMMARY -->
+<section class="slide">
+  <div class="s-wrap">
+    <div class="s-head"><img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c29054c6d22238eac9bb4c_vlogo.svg" alt="Vortex IQ"><span class="s-kicker">Executive Summary</span></div>
+    <div class="s-main">
+      <div class="eyebrow">May 2026</div>
+      <h2 class="s-title">Executive Summary</h2>
+      <p class="s-intro">Vortex IQ is now a working AI Operating System for e-commerce: agents that detect, diagnose and safely fix store issues across 200+ connectors, validated by a BigCommerce AI-Pilots partnership and a reference roster of real merchants.</p>
+      <div class="cols3">
+        <div class="group">
+          <span class="glabel">Product · shipped &amp; live</span>
+          <ul class="items">
+            <li>Closed-loop AI OS: detect, diagnose, act, safe-deploy, learn (6 modules)</li>
+            <li>Long-running autonomous agents + Instant Store Audit</li>
+            <li>Automated issue resolution with rollback / staging guardrails</li>
+            <li>AI SEO &amp; GEO (AI-search readiness)</li>
+            <li>Cross-channel analytics + automated AI reporting</li>
+            <li>Kanban workflow + Vortex Memory (compounding data layer)</li>
+          </ul>
+        </div>
+        <div class="group">
+          <span class="glabel">Traction signals</span>
+          <ul class="items">
+            <li><b>1,400% organic growth</b> on GA after SEO/GEO rollout</li>
+            <li>BigCommerce AI-Pilots Partner (Elite); Shopify agencies; Meet Magento</li>
+            <li>Reference customer: Soak &amp; Sleep</li>
+            <li>Roster: Linguaphone, ShipBob, Viva Payments, DotDigital, Mailchimp, Barclays, BigCommerce</li>
+            <li>Live use cases: Direct English, UK Vapes, DHS Equipment, Richer Sounds</li>
+            <li>Pricing live: $499 / $1,499 / $3,999 per month</li>
+          </ul>
+        </div>
+        <div class="group">
+          <span class="glabel">Team &amp; governance</span>
+          <ul class="items">
+            <li>Headcount <b>13</b></li>
+            <li>ISO 27001 certified; SOC 2 in progress</li>
+            <li>Anthropic Claude Partner application in progress</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="s-foot"><span>Confidential — Board &amp; Investors Only</span><span>03 / 13</span></div>
+  </div>
+</section>
+
+<!-- 4 · THE AI OS -->
+<section class="slide">
+  <div class="s-wrap">
+    <div class="s-head"><img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c29054c6d22238eac9bb4c_vlogo.svg" alt="Vortex IQ"><span class="s-kicker">Product</span></div>
+    <div class="s-main">
+      <div class="eyebrow">The platform</div>
+      <h2 class="s-title">The AI Operating System</h2>
+      <p class="s-intro">Vortex IQ detects what's wrong, explains why, and fixes it safely, across every platform a merchant runs.</p>
+      <div class="points">
+        <div class="point"><span class="n">01</span><h3>One closed loop, not another dashboard</h3><p>A continuous detect, diagnose, act, safe-deploy, learn loop. Six modules (Nerve Centre, Vortex Mind, Ask Viq, Actions, Vortex Apps, Vortex Memory) turn raw store signals into resolved work, not more charts.</p></div>
+        <div class="point"><span class="n">02</span><h3>Long-running agents that resolve, not just alert</h3><p>Agents watch revenue, conversion, inventory, SEO, payments and ops 24/7, surface each issue with its revenue impact, and execute the fix via connected APIs, with one-click rollback and staging guardrails (RollbackPro, StagingPro).</p></div>
+        <div class="point"><span class="n">03</span><h3>The moat: a unified commerce graph + Vortex Memory</h3><p>Every connector, fix, deploy and decision is written into one live graph across 200+ integrations and 6,000+ KPIs. It compounds with every store, report and question, the part a dashboard-plus-AI competitor can't copy.</p></div>
+        <div class="point"><span class="n">04</span><h3>First-mover on AI-search (GEO)</h3><p>Beyond classic SEO, Vortex IQ makes catalogues discoverable in AI and conversational search, ahead of the market shift in how buyers find products.</p></div>
+      </div>
+    </div>
+    <div class="s-foot"><span>Confidential — Board &amp; Investors Only</span><span>04 / 13</span></div>
+  </div>
+</section>
+
+<!-- 5 · INSIGHT TO ACTION -->
+<section class="slide">
+  <div class="s-wrap">
+    <div class="s-head"><img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c29054c6d22238eac9bb4c_vlogo.svg" alt="Vortex IQ"><span class="s-kicker">Product</span></div>
+    <div class="s-main">
+      <div class="eyebrow">How it works</div>
+      <h2 class="s-title">From insight to action</h2>
+      <div class="points">
+        <div class="point"><span class="n">01</span><h3>One command centre across every channel</h3><p>Commerce platforms, analytics, ad channels and ops unify into a single intelligence layer: revenue, spend and risk in real time, not twelve tabs.</p></div>
+        <div class="point"><span class="n">02</span><h3>Findings become done work</h3><p>AI-generated, AI-ranked findings flow onto a Kanban board with assignees, due dates and automation rules, syncing bidirectionally to Jira, Asana and Linear. The platform defines the work and tracks it to done.</p></div>
+        <div class="point"><span class="n">03</span><h3>One ecosystem, every major platform</h3><p>BigCommerce, Shopify, Adobe Commerce (Magento) and WooCommerce, managed from one place by merchants and agencies.</p></div>
+        <div class="point"><span class="n">04</span><h3>Agents that act inside the store</h3><p>Demonstrated agents help create products, landing pages, issue discount codes, run workflows and execute operational actions through platform APIs, every change gated by approval and rollback.</p></div>
+      </div>
+    </div>
+    <div class="s-foot"><span>Confidential — Board &amp; Investors Only</span><span>05 / 13</span></div>
+  </div>
+</section>
+
+<!-- 6 · PRODUCT & TECH WORKSTREAM -->
+<section class="slide">
+  <div class="s-wrap">
+    <div class="s-head"><img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c29054c6d22238eac9bb4c_vlogo.svg" alt="Vortex IQ"><span class="s-kicker">Product &amp; Engineering</span></div>
+    <div class="s-main">
+      <div class="eyebrow">Workstream update</div>
+      <h2 class="s-title">Product &amp; Technology</h2>
+      <div class="ws">
+        <div class="row"><b>Agent platform</b><span>7 specialist agents shipped: Merchandising, SEO &amp; GEO, UX Optimisation, Paid Media, Inventory, Customer Retention, AI Store Maintenance.</span></div>
+        <div class="row"><b>Agent quality &amp; evals</b><span>Prompt-evaluation framework, regression testing, API-execution validation, response-consistency monitoring.</span></div>
+        <div class="row"><b>MCP &amp; connectors</b><span>200+ connector framework: BigCommerce, Shopify, Adobe Commerce, GA, ShipBob, Viva Payments + operational APIs.</span></div>
+        <div class="row"><b>Onboarding &amp; activation</b><span>Faster onboarding, simplified connector setup, self-serve activation, reduced time-to-value.</span></div>
+        <div class="row"><b>Explainability &amp; trust</b><span>Ask Viq action visibility, AI-reasoning transparency, rollback visibility, merchant approval controls.</span></div>
+        <div class="row"><b>Safety &amp; reliability</b><span>Expanded StagingPro, safe-deploy workflows, rollback automation, AI-assisted change validation.</span></div>
+        <div class="row"><b>Testing &amp; quality</b><span>E2E + agent-regression suite, AI-regression detection, API reliability coverage.</span></div>
+      </div>
+      <div class="take">The agent layer is real, evaluated and governed, built so autonomy is safe to run on live revenue.</div>
+    </div>
+    <div class="s-foot"><span>Confidential — Board &amp; Investors Only</span><span>06 / 13</span></div>
+  </div>
+</section>
+
+<!-- 7 · PLATFORM & INFRA -->
+<section class="slide">
+  <div class="s-wrap">
+    <div class="s-head"><img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c29054c6d22238eac9bb4c_vlogo.svg" alt="Vortex IQ"><span class="s-kicker">Platform &amp; Infrastructure</span></div>
+    <div class="s-main">
+      <div class="eyebrow">Workstream update</div>
+      <h2 class="s-title">Platform, Infrastructure &amp; Monitoring</h2>
+      <div class="ws">
+        <div class="row"><b>Multi-tenant architecture</b><span>Isolated merchant environments, scalable onboarding pipelines, enterprise-grade data boundaries for safe agent execution.</span></div>
+        <div class="row"><b>Staging / sandbox</b><span>Production-parity staging for safe agent testing, rollback validation, controlled deployment.</span></div>
+        <div class="row"><b>Data &amp; event pipeline</b><span>Unified real-time pipeline ingesting commerce, analytics, ads and ops signals to power autonomous action.</span></div>
+        <div class="row"><b>Deploys &amp; release</b><span>Automated releases with rollback protection, staged promotion, secrets management.</span></div>
+        <div class="row"><b>Security &amp; compliance</b><span>ISO 27001 certified; SOC 2 in progress. Role-based access, audit trails, data isolation.</span></div>
+        <div class="row"><b>Monitoring &amp; observability</b><span>Real-time telemetry, anomaly detection, SLA/SLO monitoring, automated failure recovery.</span></div>
+      </div>
+      <div class="take">Enterprise-ready foundations, security, isolation and reliability, in place ahead of scale.</div>
+    </div>
+    <div class="s-foot"><span>Confidential — Board &amp; Investors Only</span><span>07 / 13</span></div>
+  </div>
+</section>
+
+<!-- 8 · GO TO MARKET -->
+<section class="slide">
+  <div class="s-wrap">
+    <div class="s-head"><img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c29054c6d22238eac9bb4c_vlogo.svg" alt="Vortex IQ"><span class="s-kicker">Sales &amp; GTM</span></div>
+    <div class="s-main">
+      <div class="eyebrow">Go-to-market</div>
+      <h2 class="s-title">Three motions, prioritised</h2>
+      <p class="s-intro"><b>ICP:</b> mid-market e-commerce brands and the agencies that run them, on BigCommerce, Shopify, Adobe Commerce and WooCommerce.</p>
+      <div class="cols3">
+        <div class="point"><span class="n">Motion 1 · lead</span><h3>Platform-partner-led</h3><p>BigCommerce AI-Pilots / Elite co-sell into their merchant base; Shopify agencies; Meet Magento for Adobe Commerce. Lowest CAC, highest trust.</p></div>
+        <div class="point"><span class="n">Motion 2</span><h3>Agency &amp; white-label</h3><p>Agencies run the AI OS across client books: one playbook, many stores. Enablement + reseller programme.</p></div>
+        <div class="point"><span class="n">Motion 3</span><h3>Direct + product-led</h3><p>Self-serve at $499 / $1,499 / $3,999, expanding from a single audit into long-running agents.</p></div>
+      </div>
+      <div class="take">Land with the Instant Store Audit + SEO/GEO win (proof: 1,400% organic). Expand into long-running agents, cross-channel reporting, revenue recovery and retention. Viva Payments, ShipBob, DotDigital and Mailchimp add distribution and connector depth.</div>
+    </div>
+    <div class="s-foot"><span>Confidential — Board &amp; Investors Only</span><span>08 / 13</span></div>
+  </div>
+</section>
+
+<!-- 9 · PIPELINE -->
+<section class="slide">
+  <div class="s-wrap">
+    <div class="s-head"><img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c29054c6d22238eac9bb4c_vlogo.svg" alt="Vortex IQ"><span class="s-kicker">Pipeline</span></div>
+    <div class="s-main">
+      <div class="eyebrow">As at 27 / 05 / 2026</div>
+      <h2 class="s-title">Pipeline</h2>
+      <div class="cols4" style="margin-bottom:1.6rem">
+        <div class="stat-card"><div class="k">Open deals</div><div class="v">24</div><div class="s">across direct + agency</div></div>
+        <div class="stat-card"><div class="k">Pipeline value</div><div class="v">$362,874</div><div class="s">total weighted</div></div>
+        <div class="stat-card"><div class="k">Agency channel</div><div class="v">1</div><div class="s">agency partner</div></div>
+        <div class="stat-card"><div class="k">Avg. ACV</div><div class="v">$11,706</div><div class="s">blended SMB + Enterprise</div></div>
+      </div>
+      <div class="cols2">
+        <div>
+          <span class="tbl-label">Pipeline by stage</span>
+          <div class="dt-wrap"><table class="dt">
+            <thead><tr><th>Stage</th><th>Deals</th><th>Value</th><th>Weight</th></tr></thead>
+            <tbody>
+              <tr><td class="b">Prospect</td><td class="num">2</td><td class="num">$6,408</td><td class="num">10%</td></tr>
+              <tr><td class="b">Discovery / Demo</td><td class="num">5</td><td class="num">$21,274</td><td class="num">25%</td></tr>
+              <tr><td class="b">Trial</td><td class="num">6</td><td class="num">$21,312</td><td class="num">50%</td></tr>
+              <tr><td class="b">Proposal</td><td class="num">11</td><td class="num">$278,808</td><td class="num">75%</td></tr>
+              <tr><td class="b">Closed Won (period)</td><td class="num">7</td><td class="num">$35,072</td><td class="num">100%</td></tr>
+              <tr class="total"><td>Total</td><td class="num">31</td><td class="num">$362,874</td><td>—</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div>
+          <span class="tbl-label">Pipeline by channel</span>
+          <div class="dt-wrap"><table class="dt">
+            <thead><tr><th>Channel</th><th>Deals</th><th>Value</th><th>Top account</th></tr></thead>
+            <tbody>
+              <tr><td class="b">Direct, SMB / Plus</td><td class="num">8</td><td class="num">$28,906</td><td>Glasdon</td></tr>
+              <tr><td class="b">Direct, Enterprise</td><td class="num">5</td><td class="num">$315,236</td><td>ZAGG, Linguaphone, Soak &amp; Sleep</td></tr>
+              <tr><td class="b">BigCommerce co-sell</td><td class="num">3</td><td class="num">$12,324</td><td>Pkaufmann</td></tr>
+              <tr><td class="b">Inbound / PLG</td><td class="num">2</td><td class="num">$6,408</td><td>Global</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+    </div>
+    <div class="s-foot"><span>Confidential — Board &amp; Investors Only</span><span>09 / 13</span></div>
+  </div>
+</section>
+
+<!-- 10 · FINANCIALS -->
+<section class="slide">
+  <div class="s-wrap">
+    <div class="s-head"><img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c29054c6d22238eac9bb4c_vlogo.svg" alt="Vortex IQ"><span class="s-kicker">Finance</span></div>
+    <div class="s-main">
+      <div class="eyebrow">Cash, burn, runway</div>
+      <h2 class="s-title">Financial Dashboard</h2>
+      <div class="cols3" style="margin-top:1.4rem">
+        <div class="stat-card"><div class="k">Cash in bank</div><div class="v">£202,194</div><div class="s">as at 29 May 2026</div></div>
+        <div class="stat-card"><div class="k">Monthly net burn</div><div class="v">~£13,804</div><div class="s">current period</div></div>
+        <div class="stat-card"><div class="k">Runway</div><div class="v">6 months</div><div class="s">at current burn</div></div>
+      </div>
+      <div class="take">Capital-efficient burn relative to a full AI OS shipped by a 13-person team. Runway extension is the core driver behind the fundraising timeline.</div>
+    </div>
+    <div class="s-foot"><span>Confidential — Board &amp; Investors Only</span><span>10 / 13</span></div>
+  </div>
+</section>
+
+<!-- 11 · HR / ORG -->
+<section class="slide">
+  <div class="s-wrap">
+    <div class="s-head"><img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c29054c6d22238eac9bb4c_vlogo.svg" alt="Vortex IQ"><span class="s-kicker">People</span></div>
+    <div class="s-main">
+      <div class="eyebrow">Headcount 13 · as at 29 May 2026</div>
+      <h2 class="s-title">HR &amp; Org</h2>
+      <div class="cols2">
+        <div class="group">
+          <span class="glabel">Leadership</span>
+          <div class="tperson"><b>Susant Patro</b>, CEO</div>
+          <div class="tperson"><b>Jaiganesh V</b>, CTO</div>
+          <div class="tperson"><b>Sambit Patra</b>, COO</div>
+          <span class="glabel" style="margin-top:1.2rem">AI / Research</span>
+          <div class="tperson"><b>Chandan Viswass</b>, AI Lead</div>
+          <div class="tperson"><b>Vidula A E</b>, AI Engineer</div>
+          <span class="glabel" style="margin-top:1.2rem">GTM / Customer</span>
+          <div class="tperson"><b>Austin-Buah Ashle</b>, Sales Manager</div>
+          <div class="tperson"><b>Alexander Vijay</b>, Technical Support</div>
+        </div>
+        <div class="group">
+          <span class="glabel">Product / Engineering</span>
+          <div class="tperson"><b>Kenson Lee</b>, Sr Software Engineer</div>
+          <div class="tperson"><b>K Vilas Kumar</b>, Sr Software Engineer</div>
+          <div class="tperson"><b>Magesh R</b>, Sr Software Engineer</div>
+          <div class="tperson"><b>Karan Kandoriya</b>, Sr Software Engineer</div>
+          <div class="tperson"><b>Prabhu Deivam</b>, Web Designer</div>
+          <div class="tperson"><b>Praveen Divakaran</b>, UX Engineer</div>
+          <span class="glabel" style="margin-top:1.2rem">Hiring &amp; advisory</span>
+          <div class="tperson">Hiring: Marketing Intern, AI Research Interns</div>
+          <div class="tperson">Advisor (in progress): <b>Shanon Low</b>, ex-Google Director</div>
+        </div>
+      </div>
+      <div class="take">A 13-person team, AI-research-heavy, shipping a full AI OS, capital-efficient relative to output.</div>
+    </div>
+    <div class="s-foot"><span>Confidential — Board &amp; Investors Only</span><span>11 / 13</span></div>
+  </div>
+</section>
+
+<!-- 12 · AOB -->
+<section class="slide">
+  <div class="s-wrap">
+    <div class="s-head"><img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c29054c6d22238eac9bb4c_vlogo.svg" alt="Vortex IQ"><span class="s-kicker">AOB</span></div>
+    <div class="s-main">
+      <div class="eyebrow">Fundraising, operations &amp; travel</div>
+      <h2 class="s-title">Any Other Business</h2>
+      <div class="cols2">
+        <div class="group">
+          <span class="glabel">Fundraising</span>
+          <ul class="items">
+            <li><b>Round:</b> Seed extension / Series A</li>
+            <li><b>Valuation:</b> set ~2 months after mature onboarding of BigCommerce, ShipBob &amp; Viva merchants, de-risk first, price on traction</li>
+            <li><b>Status:</b> no VCs pursued yet, board input on EIS funds</li>
+            <li><b>Target close:</b> November / December 2026</li>
+          </ul>
+        </div>
+        <div class="group">
+          <span class="glabel">Operations, events &amp; travel</span>
+          <ul class="items">
+            <li>In progress: e-commerce division of New Horizons (international)</li>
+            <li>Participated in BigCommerce Annual Event, London</li>
+            <li>PR: 15+ blogs published; demo videos planned (YouTube &amp; LinkedIn)</li>
+            <li>Partnerships: BigCommerce Elite, Shopify, Adobe, DotDigital, Viva, ShipBob</li>
+            <li>Governance: planned share issue to Shanon Low (Advisor, ex-Google Director)</li>
+            <li>Anthropic Claude Partner Program application in progress</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="s-foot"><span>Confidential — Board &amp; Investors Only</span><span>12 / 13</span></div>
+  </div>
+</section>
+
+<!-- 13 · DECISIONS -->
+<section class="slide">
+  <div class="s-wrap">
+    <div class="s-head"><img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c29054c6d22238eac9bb4c_vlogo.svg" alt="Vortex IQ"><span class="s-kicker">Decisions</span></div>
+    <div class="s-main">
+      <div class="eyebrow">Board sign-off</div>
+      <h2 class="s-title">Decisions &amp; Action Items</h2>
+      <span class="tbl-label">Board decisions</span>
+      <div class="dt-wrap"><table class="dt">
+        <thead><tr><th style="width:3rem">#</th><th>Decision required</th><th style="width:9rem">Outcome</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td class="b">Identify EIS funds to apply</td><td><span class="badge ok">Approved</span></td></tr>
+          <tr><td class="num">2</td><td class="b">Get SOC 2 certified</td><td><span class="badge ok">Approved</span></td></tr>
+          <tr><td class="num">3</td><td class="b">Pursue Anthropic Claude partnership</td><td><span class="badge ok">Approved</span></td></tr>
+        </tbody>
+      </table></div>
+      <span class="tbl-label" style="margin-top:1.6rem;display:block">Action items</span>
+      <div class="dt-wrap"><table class="dt">
+        <thead><tr><th style="width:3rem">#</th><th>Action</th><th style="width:11rem">Owner</th><th style="width:9rem">Due</th><th style="width:6rem">Status</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td class="b">Prepare the data room</td><td>Sambit Patra</td><td class="num">8 Jun 2026</td><td><span class="badge open">Open</span></td></tr>
+          <tr><td class="num">2</td><td class="b">AI product demo (long-running tasks, Kanban, audit &amp; fix)</td><td>Sambit Patra</td><td class="num">10 Jun 2026</td><td><span class="badge open">Open</span></td></tr>
+          <tr><td class="num">3</td><td class="b">Build EIS funds tracker</td><td>Sambit Patra</td><td class="num">10 Jun 2026</td><td><span class="badge open">Open</span></td></tr>
+          <tr><td class="num">4</td><td class="b">Pursue BC / ShipBob / Viva merchant onboarding</td><td>Susant Patro</td><td class="num">Ongoing</td><td><span class="badge open">Open</span></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="s-foot"><span>Confidential — Board &amp; Investors Only</span><span>13 / 13</span></div>
+  </div>
+</section>
+
+<!-- nav -->
+<div class="deck-nav">
+  <button class="nav-btn" id="prev" aria-label="Previous slide">&larr;</button>
+  <span class="counter" id="counter">1 / 13</span>
+  <button class="nav-btn" id="next" aria-label="Next slide">&rarr;</button>
+</div>
+
+<script>
+  const slides=[...document.querySelectorAll('.slide')];
+  let i=0;
+  function show(n){
+    i=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach((s,k)=>s.classList.toggle('is-active',k===i));
+    document.getElementById('counter').textContent=(i+1)+' / '+slides.length;
+    document.getElementById('prog').style.width=((i+1)/slides.length*100)+'%';
+    window.scrollTo(0,0);
+  }
+  document.getElementById('prev').onclick=()=>show(i-1);
+  document.getElementById('next').onclick=()=>show(i+1);
+  document.addEventListener('keydown',e=>{
+    if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(i+1);}
+    else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(i-1);}
+    else if(e.key==='Home'){show(0);}
+    else if(e.key==='End'){show(slides.length-1);}
+  });
+  show(0);
+</script>
+</body>
+</html>
