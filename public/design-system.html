@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vortex IQ — Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+/* ============================================================
+   VORTEX IQ — DESIGN SYSTEM v2  (LIGHT)
+   Tokens taken verbatim from the live stylesheet:
+   cdn.prod.website-files.com/.../vortexiq.webflow.shared.min.css
+   ============================================================
+
+   AESTHETIC: Light, airy, premium. White canvas, near-black text,
+   deep-purple brand. Pill buttons. Rounded bento cards on generous
+   white space. Geist typeface with stylistic sets ss01/ss03/ss04.
+   ============================================================ */
+
+:root {
+
+  /* --- BRAND (verbatim) --- */
+  --brand-purple:       #5529d6;  /* primary brand / buttons */
+  --brand-purple-mid:   #392bd5;  /* hover / secondary */
+  --brand-purple-light: #a58af3;  /* gradient-1 / soft accent */
+  --brand-purple-deep:  #0c061f;  /* gradient depth stop */
+  --brand-blue:         #004794;  /* --darkblue */
+  --brand-gradient:     linear-gradient(135deg,#5529d6,#0c061f 50%,#5529d6 75%);
+  --brand-gradient-soft:linear-gradient(135deg,#a58af3,#5529d6);
+
+  /* --- SURFACES (light) --- */
+  --white:        #ffffff;
+  --neutral-1:    #ffffff;
+  --neutral-2:    #e8e6e3;   /* warm light gray panel */
+  --surface-soft: #f6f5f3;   /* faint off-white section */
+  --surface-tint: #f3f0fc;   /* faint purple wash */
+
+  /* --- TEXT (verbatim) --- */
+  --primary:        #222325;            /* near-black headings/text */
+  --text-body:      rgba(0,0,0,0.60);   /* --body-text  #0009 */
+  --text-faded:     rgba(0,0,0,0.40);   /* --faded-headings #0006 */
+  --text-on-dark:   #ffffff;
+  --text-on-dark-2: rgba(255,255,255,0.60); /* #fff9 */
+
+  /* --- BORDERS (verbatim) --- */
+  --border-dark:   rgba(0,0,0,0.10);    /* #0000001a */
+  --border-strong: rgba(0,0,0,0.16);
+  --border-white:  rgba(255,255,255,0.20); /* #fff3 */
+  --border-brand:  rgba(85,41,214,0.30);
+
+  /* --- STATUS --- */
+  --success:      #1f9e54;
+  --success-soft: rgba(31,158,84,0.10);
+  --danger:       #d23f31;
+  --danger-soft:  rgba(210,63,49,0.09);
+  --warning:      #c47d12;
+  --warning-soft: rgba(196,125,18,0.10);
+
+  /* --- TYPOGRAPHY (verbatim: Geist everywhere) --- */
+  --font-heading: 'Geist', Arial, sans-serif;
+  --font-body:    'Geist', Arial, sans-serif;
+  --font-mono:    'Geist Mono', ui-monospace, monospace;
+  --font-features: "ss01" 1, "ss03" 1, "ss04" 1;
+
+  /* --- TYPE SCALE (from live: 79/56/38/32/24, body 17) --- */
+  --text-display: clamp(3rem, 6vw, 4.95rem);   /* 79px hero */
+  --text-h-xl:    clamp(2.4rem, 4.4vw, 3.5rem);/* 56px section */
+  --text-h1:      2.375rem;  /* 38px */
+  --text-h2:      2rem;      /* 32px */
+  --text-h3:      1.5rem;    /* 24px */
+  --text-h4:      1.25rem;   /* 20px */
+  --text-lead:    1.25rem;   /* 20px lede */
+  --text-body-sz: 1.0625rem; /* 17px body */
+  --text-sm:      0.9375rem; /* 15px */
+  --text-xs:      0.8125rem; /* 13px */
+  --text-2xs:     0.72rem;   /* labels */
+
+  /* --- RADIUS (verbatim) --- */
+  --radius-default: 10px;   /* cards */
+  --radius-lg:      16px;
+  --radius-xl:      24px;
+  --radius-pill:    200px;  /* buttons */
+
+  /* --- SPACING / GAPS (verbatim bento gap 30px) --- */
+  --bento-gap: 30px;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* --- SHADOWS (soft, light-theme) --- */
+  --shadow-sm: 0 1px 2px rgba(20,12,40,0.06), 0 1px 3px rgba(20,12,40,0.05);
+  --shadow-md: 0 6px 20px rgba(20,12,40,0.07), 0 2px 6px rgba(20,12,40,0.05);
+  --shadow-lg: 0 20px 50px rgba(20,12,40,0.10), 0 6px 16px rgba(20,12,40,0.06);
+  --shadow-brand: 0 14px 40px rgba(85,41,214,0.22);
+
+  /* --- TRANSITIONS --- */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --max-width: 1180px;
+  --nav-height: 4.5rem;
+}
+
+/* ---- RESET ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--white);
+  color: var(--primary);
+  font-family: var(--font-body);
+  font-size: var(--text-body-sz);
+  font-feature-settings: var(--font-features);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ---- LAYOUT ---- */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; }
+
+.ds-section { padding: var(--space-20) 0; border-bottom: 1px solid var(--border-dark); }
+.ds-title {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faded);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-dark);
+}
+.ds-row { display: flex; gap: var(--space-4); flex-wrap: wrap; align-items: flex-start; margin-bottom: var(--space-6); }
+.ds-label { font-family: var(--font-mono); font-size: var(--text-2xs); color: var(--text-faded); margin-top: var(--space-2); }
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+.display    { font-family: var(--font-heading); font-size: var(--text-display); font-weight: 700; line-height: 1.02; letter-spacing: -0.025em; }
+.h-xl       { font-family: var(--font-heading); font-size: var(--text-h-xl);  font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; }
+.h1         { font-family: var(--font-heading); font-size: var(--text-h1); font-weight: 700; line-height: 1.16; letter-spacing: -0.02em; }
+.h2         { font-family: var(--font-heading); font-size: var(--text-h2); font-weight: 700; line-height: 1.12; letter-spacing: -0.02em; }
+.h3         { font-family: var(--font-heading); font-size: var(--text-h3); font-weight: 600; line-height: 1.25; letter-spacing: -0.015em; }
+.h4         { font-family: var(--font-heading); font-size: var(--text-h4); font-weight: 600; line-height: 1.3; letter-spacing: -0.01em; }
+.lede       { font-size: var(--text-lead); font-weight: 400; line-height: 1.5; color: var(--text-body); }
+.body       { font-size: var(--text-body-sz); font-weight: 400; line-height: 1.55; color: var(--text-body); }
+.body-sm    { font-size: var(--text-sm); font-weight: 400; line-height: 1.5; color: var(--text-body); }
+.mono       { font-family: var(--font-mono); font-size: var(--text-xs); }
+.label      { font-family: var(--font-mono); font-size: var(--text-2xs); font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+
+.text-primary { color: var(--primary); }
+.text-body    { color: var(--text-body); }
+.text-faded   { color: var(--text-faded); }
+.text-brand   { color: var(--brand-purple); }
+
+/* Gradient text — signature */
+.text-gradient {
+  background: var(--brand-gradient-soft);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Eyebrow */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: var(--space-3);
+  font-family: var(--font-mono); font-size: var(--text-2xs); font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand-purple);
+}
+.eyebrow::before { content: ""; width: 1.4rem; height: 1px; background: var(--brand-purple); opacity: 0.5; }
+
+/* ============================================================
+   BUTTONS  (pill, 200px radius — verbatim)
+   ============================================================ */
+.btn {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  height: 50px; padding: 0 24px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body); font-weight: 500; font-size: var(--text-body-sz);
+  text-decoration: none; cursor: pointer; border: none;
+  transition: all 0.22s var(--ease); white-space: nowrap;
+}
+.btn-primary { background: var(--brand-purple); color: #fff; }
+.btn-primary:hover { background: var(--brand-purple-mid); box-shadow: var(--shadow-brand); transform: translateY(-1px); }
+
+.btn-ghost { background: transparent; color: var(--primary); border: 1px solid var(--border-strong); }
+.btn-ghost:hover { background: rgba(0,0,0,0.03); border-color: var(--primary); transform: translateY(-1px); }
+
+.btn-soft { background: var(--surface-tint); color: var(--brand-purple); }
+.btn-soft:hover { background: #e9e2fb; transform: translateY(-1px); }
+
+.btn-sm { height: 40px; padding: 0 18px; font-size: var(--text-sm); }
+.btn-lg { height: 56px; padding: 0 30px; font-size: var(--text-lead); }
+
+.textlink {
+  font-family: var(--font-mono); font-size: var(--text-sm); color: var(--brand-purple);
+  text-decoration: none; border-bottom: 1px solid var(--border-brand); padding-bottom: 2px;
+  transition: border-color 0.18s;
+}
+.textlink:hover { border-color: var(--brand-purple); }
+
+/* ============================================================
+   BADGES / CHIPS
+   ============================================================ */
+.badge {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-family: var(--font-mono); font-size: var(--text-2xs); font-weight: 500; letter-spacing: 0.03em;
+  padding: 0.32rem 0.7rem; border-radius: var(--radius-pill);
+  border: 1px solid var(--border-dark); background: var(--white); color: var(--text-body);
+}
+.badge-brand   { background: var(--surface-tint); border-color: var(--border-brand); color: var(--brand-purple); }
+.badge-success { background: var(--success-soft); border-color: rgba(31,158,84,0.3); color: var(--success); }
+.badge-danger  { background: var(--danger-soft); border-color: rgba(210,63,49,0.3); color: var(--danger); }
+.badge-warning { background: var(--warning-soft); border-color: rgba(196,125,18,0.3); color: var(--warning); }
+
+.dot-live { width: 7px; height: 7px; border-radius: 50%; background: var(--success);
+  box-shadow: 0 0 0 0 rgba(31,158,84,0.45); animation: pulse-dot 2.4s infinite; flex-shrink: 0; }
+@keyframes pulse-dot { 0%{box-shadow:0 0 0 0 rgba(31,158,84,0.45)} 70%{box-shadow:0 0 0 7px rgba(31,158,84,0)} 100%{box-shadow:0 0 0 0 rgba(31,158,84,0)} }
+
+.statusbar {
+  display: inline-flex; align-items: center; gap: var(--space-3);
+  font-family: var(--font-mono); font-size: var(--text-2xs); letter-spacing: 0.04em;
+  color: var(--text-body); border: 1px solid var(--border-dark); background: var(--white);
+  border-radius: var(--radius-pill); padding: 0.45rem 1rem; box-shadow: var(--shadow-sm);
+}
+
+/* ============================================================
+   CARDS / BENTO
+   ============================================================ */
+.card {
+  background: var(--white); border: 1px solid var(--border-dark);
+  border-radius: var(--radius-default); padding: var(--space-8);
+  transition: border-color 0.2s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.card:hover { border-color: var(--border-strong); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+
+.card-soft { background: var(--surface-soft); border-color: transparent; }
+.card-soft:hover { background: var(--white); border-color: var(--border-dark); }
+
+.card-brand {
+  background: var(--brand-gradient); color: #fff; border-color: transparent;
+}
+.card-brand:hover { box-shadow: var(--shadow-brand); }
+.card-brand .body, .card-brand .stat-label { color: rgba(255,255,255,0.7); }
+
+.card-tint { background: var(--surface-tint); border-color: var(--border-brand); }
+
+.stat-value { font-family: var(--font-heading); font-size: var(--text-h-xl); font-weight: 700; letter-spacing: -0.03em; line-height: 1; color: var(--primary); }
+.stat-value.on-brand { color: #fff; }
+.stat-value.accent { color: var(--brand-purple); }
+.stat-label { font-family: var(--font-mono); font-size: var(--text-2xs); color: var(--text-faded); line-height: 1.5; margin-top: var(--space-3); }
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: var(--nav-height);
+  background: rgba(255,255,255,0.8); backdrop-filter: blur(18px) saturate(1.4);
+  border-bottom: 1px solid var(--border-dark);
+}
+.nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; height: 100%; display: flex; align-items: center; gap: var(--space-8); }
+.logo { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; letter-spacing: -0.02em; display: flex; align-items: center; gap: var(--space-2); }
+.logo b { color: var(--brand-purple); }
+.logo-mark { width: 28px; height: 28px; background: var(--brand-gradient); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 800; color: #fff; }
+.logo img { height: 30px; width: auto; display: block; }
+.nav-links { display: flex; gap: var(--space-6); margin-left: auto; }
+.nav-link { font-size: var(--text-sm); font-weight: 500; color: var(--text-body); text-decoration: none; transition: color 0.15s; }
+.nav-link:hover { color: var(--primary); }
+
+/* ============================================================
+   LOOP DIAGRAM
+   ============================================================ */
+.loop-grid { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid var(--border-dark); border-radius: var(--radius-default); overflow: hidden; background: var(--white); }
+.loop-node { padding: 1.8rem 1.2rem; text-align: center; border-right: 1px solid var(--border-dark); position: relative; transition: background 0.2s; }
+.loop-node:last-child { border-right: none; }
+.loop-node:hover { background: var(--surface-tint); }
+.loop-step { font-family: var(--font-mono); font-size: var(--text-2xs); letter-spacing: 0.16em; color: var(--brand-purple); text-transform: uppercase; display: block; margin-bottom: var(--space-3); }
+.loop-title { font-family: var(--font-heading); font-weight: 600; font-size: var(--text-body-sz); color: var(--primary); display: block; }
+.loop-desc { font-family: var(--font-mono); font-size: var(--text-2xs); color: var(--text-faded); display: block; margin-top: var(--space-2); }
+.loop-node::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--brand-gradient-soft); transform: scaleX(0); transform-origin: left; animation: sweep-loop 8s infinite; }
+.loop-node:nth-child(1)::after { animation-delay: 0s; }
+.loop-node:nth-child(2)::after { animation-delay: 1.4s; }
+.loop-node:nth-child(3)::after { animation-delay: 2.8s; }
+.loop-node:nth-child(4)::after { animation-delay: 4.2s; }
+.loop-node:nth-child(5)::after { animation-delay: 5.6s; }
+@keyframes sweep-loop { 0%{transform:scaleX(0);transform-origin:left} 8%{transform:scaleX(1);transform-origin:left} 20%{transform:scaleX(1)} 28%{transform:scaleX(0);transform-origin:right} 100%{transform:scaleX(0);transform-origin:right} }
+
+/* ============================================================
+   MINICARD / CHAT / FAQ
+   ============================================================ */
+.minicard { background: var(--white); border: 1px solid var(--border-dark); border-radius: var(--radius-default); padding: 0.9rem 1.1rem; display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); transition: border-color 0.2s; }
+.minicard:hover { border-color: var(--border-strong); }
+.minicard-name { font-family: var(--font-mono); font-size: var(--text-sm); color: var(--text-body); }
+
+.chat-box { background: var(--surface-soft); border: 1px solid var(--border-dark); border-radius: var(--radius-default); padding: 1.4rem; font-size: var(--text-sm); }
+.chat-line { margin-bottom: var(--space-4); }
+.chat-who { font-family: var(--font-mono); font-size: var(--text-2xs); letter-spacing: 0.06em; text-transform: uppercase; }
+.chat-who.you { color: var(--brand-purple); }
+.chat-who.viq { color: var(--success); }
+.chat-source { font-family: var(--font-mono); font-size: var(--text-2xs); color: var(--text-faded); border-top: 1px dashed var(--border-strong); padding-top: var(--space-3); margin-top: var(--space-2); }
+
+.faq-item { border-bottom: 1px solid var(--border-dark); }
+.faq-item summary { font-weight: 600; font-size: var(--text-body-sz); padding: 1.4rem 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); color: var(--primary); }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; font-family: var(--font-mono); font-size: 1.2rem; color: var(--brand-purple); font-weight: 400; flex-shrink: 0; }
+.faq-item[open] summary::after { content: "−"; }
+.faq-item[open] summary { color: var(--brand-purple); }
+.faq-item p { color: var(--text-body); font-size: var(--text-sm); padding-bottom: 1.4rem; line-height: 1.7; }
+
+/* ============================================================
+   GRIDS / REVEAL
+   ============================================================ */
+.grid { display: grid; gap: var(--bento-gap); }
+.g-2 { grid-template-columns: repeat(2, 1fr); }
+.g-3 { grid-template-columns: repeat(3, 1fr); }
+.g-4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1024px) { .g-4 { grid-template-columns: repeat(2,1fr); } .g-3 { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 640px) { .g-4,.g-3,.g-2 { grid-template-columns: 1fr; } }
+
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
+.reveal.in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } .reveal { opacity: 1; transform: none; } }
+
+/* ============================================================
+   BUILDING BLOCKS  (added v2.1 — from solution & content pages)
+   ============================================================ */
+/* gradient module icon tile */
+.mod-icon { width: 54px; height: 54px; border-radius: 13px; background: var(--brand-gradient); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); }
+.mod-icon svg { width: 28px; height: 28px; display: block; }
+.mod-icon.sm { width: 44px; height: 44px; border-radius: 11px; }
+.mod-icon.sm svg { width: 22px; height: 22px; }
+
+/* category tag (small mono pill) */
+.det-cat { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand-purple); background: var(--surface-tint); border: 1px solid var(--border-brand); padding: 0.2rem 0.5rem; border-radius: 999px; display: inline-block; }
+
+/* checklist (brand check + danger cross variant) */
+.checks { display: grid; gap: 0.8rem; }
+.ck { display: flex; align-items: flex-start; gap: 0.7rem; font-size: 1rem; color: var(--primary); }
+.ck i { width: 22px; height: 22px; flex: none; border-radius: 6px; background: var(--surface-tint); border: 1px solid var(--border-brand); display: inline-flex; align-items: center; justify-content: center; margin-top: 1px; }
+.ck i svg { width: 13px; height: 13px; }
+.ck.x i { background: var(--danger-soft); border-color: rgba(210,63,49,0.3); }
+
+/* feature bullet list (mono) */
+.flist { list-style: none; display: grid; gap: 0.55rem; }
+.flist li { font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-body); padding-left: 1.1rem; position: relative; line-height: 1.5; }
+.flist li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 5px; height: 5px; border-radius: 50%; background: var(--brand-purple); }
+
+/* numbered step badge */
+.step-num { width: 40px; height: 40px; border-radius: 11px; background: var(--brand-gradient); color: #fff; font-family: var(--font-heading); font-weight: 700; font-size: 1.05rem; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); }
+.step-mech { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-purple); display: block; }
+
+/* hero stat callout */
+.hero-stat { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.3rem; background: var(--surface-tint); border: 1px solid var(--border-brand); border-radius: var(--radius-default); max-width: 430px; }
+.hero-stat .n { font-family: var(--font-heading); font-weight: 700; font-size: 2rem; letter-spacing: -0.03em; color: var(--brand-purple); line-height: 1; }
+.hero-stat .t { font-size: 0.92rem; color: var(--text-body); line-height: 1.4; }
+
+/* code chip (version pill) */
+.codechip { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-body); background: var(--surface-soft); border: 1px solid var(--border-dark); padding: 0.4rem 0.8rem; border-radius: var(--radius-pill); }
+.codechip b { color: var(--brand-purple); font-weight: 600; }
+
+/* tag row (wrap of chips) */
+.tag-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+/* split layout */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
+@media (max-width: 1024px) { .split { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+/* ============================================================
+   CONTENT CARDS  (added v2.1)
+   ============================================================ */
+/* story / case-study card (logo cover + metric) */
+.scard { background: var(--white); border: 1px solid var(--border-dark); border-radius: var(--radius-default); overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: transform 0.25s var(--ease), border-color 0.25s, box-shadow 0.3s; }
+.scard:hover { transform: translateY(-4px); border-color: var(--border-strong); box-shadow: var(--shadow-lg); }
+.scard .cover { position: relative; width: 100%; aspect-ratio: 16/10; overflow: hidden; background: var(--white); border-bottom: 1px solid var(--border-dark); }
+.scard .cover img { width: 100%; height: 100%; object-fit: contain; padding: 2rem; display: block; transition: transform 0.4s var(--ease); }
+.scard:hover .cover img { transform: scale(1.03); }
+.scard .company { position: absolute; top: 0.9rem; left: 0.9rem; font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: rgba(12,6,31,0.62); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.18); padding: 0.28rem 0.6rem; border-radius: 999px; }
+.scard .sbody { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+.scard .metric { font-family: var(--font-heading); font-weight: 600; font-size: 1.15rem; line-height: 1.25; letter-spacing: -0.01em; color: var(--brand-purple); margin-bottom: 0.7rem; }
+.scard .desc { color: var(--text-body); font-size: 0.95rem; line-height: 1.5; }
+.scard .read { margin-top: 1.2rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--brand-purple); }
+
+/* team member card */
+.team-photo { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: var(--radius-default); border: 1px solid var(--border-dark); display: block; margin-bottom: 1.3rem; background: var(--surface-soft); }
+.team-name { font-family: var(--font-heading); font-weight: 600; font-size: 1.2rem; letter-spacing: -0.01em; }
+.team-role { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brand-purple); margin-top: 0.35rem; }
+
+/* partner logo strip (dark, for white logos) */
+.logo-strip { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; background: var(--brand-purple-deep); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-default); padding: 1.3rem 1.5rem; }
+.logo-strip img { height: 26px; width: auto; display: block; opacity: 0.95; }
+
+/* ============================================================
+   HERO VISUALS — animated (added v2.1)
+   ============================================================ */
+/* shared centring wrap + glow */
+.viz-wrap { position: relative; min-height: 460px; display: flex; align-items: center; justify-content: center; }
+.viz-glow { position: absolute; width: 380px; height: 380px; border-radius: 50%; background: radial-gradient(circle, rgba(85,41,214,0.18), transparent 62%); animation: vizPulse 6s ease-in-out infinite; }
+@keyframes vizPulse { 0%,100%{transform:scale(0.92);opacity:0.6} 50%{transform:scale(1.05);opacity:1} }
+@keyframes vizFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-9px)} }
+
+/* --- A. product screenshot browser frame --- */
+.shot { position: relative; z-index: 2; border: 1px solid var(--border-dark); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-lg); background: #fff; width: 100%; max-width: 440px; animation: vizFloat 7s ease-in-out infinite; }
+.shot-bar { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 0.85rem; border-bottom: 1px solid var(--border-dark); background: var(--surface-soft); }
+.shot-bar i { width: 9px; height: 9px; border-radius: 50%; display: block; }
+.shot-url { margin-left: 0.6rem; font-family: var(--font-mono); font-size: 0.64rem; color: var(--text-faded); background: var(--white); border: 1px solid var(--border-dark); border-radius: 999px; padding: 0.2rem 0.7rem; }
+.shot img { display: block; width: 100%; height: auto; }
+
+/* --- B. Ask Viq diagnosis console --- */
+.cv-card { position: relative; z-index: 2; width: 384px; max-width: 100%; background: #fff; border: 1px solid var(--border-dark); border-radius: 18px; box-shadow: var(--shadow-lg); overflow: hidden; animation: vizFloat 7s ease-in-out infinite; }
+.cv-head { display: flex; align-items: center; gap: 0.6rem; padding: 0.95rem 1.1rem; border-bottom: 1px solid var(--border-dark); }
+.cv-ava { width: 32px; height: 32px; border-radius: 9px; background: var(--brand-gradient); display: flex; align-items: center; justify-content: center; flex: none; box-shadow: var(--shadow-sm); }
+.cv-ava svg { width: 18px; height: 18px; display: block; }
+.cv-id { display: flex; flex-direction: column; line-height: 1.25; }
+.cv-name { font-family: var(--font-heading); font-weight: 600; font-size: 0.95rem; }
+.cv-sub { font-family: var(--font-mono); font-size: 0.6rem; color: var(--text-faded); display: flex; align-items: center; gap: 0.35rem; }
+.cv-tag { margin-left: auto; font-family: var(--font-mono); font-size: 0.6rem; color: var(--brand-purple); background: var(--surface-tint); border: 1px solid var(--border-brand); padding: 0.24rem 0.55rem; border-radius: 999px; }
+.cv-body { padding: 1.05rem 1.1rem; display: flex; flex-direction: column; gap: 0.65rem; }
+.cv-q { align-self: flex-end; max-width: 84%; background: var(--brand-purple); color: #fff; font-size: 0.82rem; line-height: 1.4; padding: 0.55rem 0.8rem; border-radius: 14px 14px 4px 14px; opacity: 0; transform: translateY(10px); animation: cvIn 0.55s var(--ease) 0.3s forwards; }
+.cv-aslot { position: relative; align-self: flex-start; max-width: 92%; }
+.cv-typing { position: absolute; top: 0; left: 0; display: flex; gap: 5px; padding: 0.7rem 0.85rem; background: var(--surface-soft); border: 1px solid var(--border-dark); border-radius: 14px 14px 14px 4px; opacity: 0; animation: cvType 1.2s ease 0.85s forwards; }
+@keyframes cvType { 0%{opacity:0} 14%{opacity:1} 82%{opacity:1} 100%{opacity:0} }
+.cv-typing span { width: 6px; height: 6px; border-radius: 50%; background: var(--brand-purple-light); animation: cvBlink 1s infinite; }
+.cv-typing span:nth-child(2){animation-delay:0.16s} .cv-typing span:nth-child(3){animation-delay:0.32s}
+@keyframes cvBlink { 0%,100%{opacity:0.3;transform:translateY(0)} 50%{opacity:1;transform:translateY(-3px)} }
+.cv-a { position: relative; background: var(--surface-soft); border: 1px solid var(--border-dark); color: var(--primary); font-size: 0.82rem; line-height: 1.45; padding: 0.6rem 0.8rem; border-radius: 14px 14px 14px 4px; opacity: 0; transform: translateY(10px); animation: cvIn 0.55s var(--ease) 2.1s forwards; }
+.cv-a b { color: var(--brand-purple); font-weight: 600; }
+@keyframes cvIn { to { opacity: 1; transform: none; } }
+.cv-steps { display: grid; gap: 0.5rem; margin-top: 0.25rem; }
+.cv-step { display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-body); opacity: 0; transform: translateY(8px); animation: cvIn 0.5s var(--ease) forwards; }
+.cv-step:nth-child(1){animation-delay:2.7s} .cv-step:nth-child(2){animation-delay:3.3s} .cv-step:nth-child(3){animation-delay:3.9s}
+.cv-step i { width: 20px; height: 20px; flex: none; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; background: var(--success-soft); border: 1px solid rgba(31,158,84,0.3); }
+.cv-step i svg { width: 11px; height: 11px; }
+.cv-step .k { color: var(--primary); font-weight: 500; }
+.cv-foot { display: flex; align-items: center; gap: 0.7rem; padding: 0.85rem 1.1rem; border-top: 1px solid var(--border-dark); opacity: 0; transform: translateY(8px); animation: cvIn 0.5s var(--ease) 4.4s forwards; }
+.cv-impact { font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-faded); line-height: 1.3; }
+.cv-impact b { display: block; font-family: var(--font-heading); font-size: 1.05rem; color: var(--success); letter-spacing: -0.01em; }
+.cv-apply { margin-left: auto; font-size: 0.78rem; font-weight: 500; color: #fff; background: var(--brand-purple); border-radius: 999px; padding: 0.5rem 0.95rem; display: inline-flex; align-items: center; gap: 0.4rem; box-shadow: 0 0 0 0 rgba(85,41,214,0.4); animation: cvApply 2.4s 4.8s infinite; }
+@keyframes cvApply { 0%{box-shadow:0 0 0 0 rgba(85,41,214,0.4)} 70%{box-shadow:0 0 0 10px rgba(85,41,214,0)} 100%{box-shadow:0 0 0 0 rgba(85,41,214,0)} }
+.cv-apply svg { width: 13px; height: 13px; }
+
+/* --- C. developer console (dark) --- */
+.dc-card { position: relative; z-index: 2; width: 426px; max-width: 100%; background: #0d0a1a; border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; box-shadow: 0 30px 70px rgba(12,6,31,0.45); overflow: hidden; animation: vizFloat 7s ease-in-out infinite; }
+.dc-bar { display: flex; align-items: center; gap: 0.7rem; padding: 0.7rem 0.95rem; border-bottom: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); }
+.dc-dots { display: flex; gap: 0.4rem; }
+.dc-dots i { width: 10px; height: 10px; border-radius: 50%; display: block; }
+.dc-dots i:nth-child(1){background:#ff5f57} .dc-dots i:nth-child(2){background:#febc2e} .dc-dots i:nth-child(3){background:#28c840}
+.dc-file { font-family: var(--font-mono); font-size: 0.68rem; color: rgba(255,255,255,0.55); }
+.dc-lang { margin-left: auto; font-family: var(--font-mono); font-size: 0.58rem; color: var(--brand-purple-light); background: rgba(165,138,243,0.12); border: 1px solid rgba(165,138,243,0.3); padding: 0.18rem 0.5rem; border-radius: 999px; }
+.dc-code { padding: 1.05rem 1.1rem; font-family: var(--font-mono); font-size: 0.72rem; line-height: 1.95; color: rgba(255,255,255,0.85); }
+.dc-line { display: block; white-space: pre-wrap; opacity: 0; transform: translateX(-6px); animation: dcIn 0.4s var(--ease) forwards; }
+.dc-line:nth-child(1){animation-delay:0.3s} .dc-line:nth-child(2){animation-delay:0.6s} .dc-line:nth-child(3){animation-delay:0.9s} .dc-line:nth-child(4){animation-delay:1.2s} .dc-line:nth-child(5){animation-delay:1.5s} .dc-line:nth-child(6){animation-delay:1.8s} .dc-line:nth-child(7){animation-delay:2.1s}
+@keyframes dcIn { to { opacity: 1; transform: none; } }
+.tk-k{color:#a58af3} .tk-s{color:#7ee0a6} .tk-f{color:#c9b8ff} .tk-c{color:rgba(255,255,255,0.38)} .tk-p{color:rgba(255,255,255,0.55)}
+.dc-run { display: flex; align-items: center; gap: 0.6rem; padding: 0.8rem 1.1rem; border-top: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); font-family: var(--font-mono); font-size: 0.66rem; }
+.dc-method { color: #7ee0a6; font-weight: 600; }
+.dc-path { color: rgba(255,255,255,0.55); }
+.dc-status { position: relative; margin-left: auto; width: 90px; height: 20px; }
+.dc-status .s { position: absolute; right: 0; top: 0; padding: 0.18rem 0.5rem; border-radius: 999px; white-space: nowrap; font-size: 0.58rem; }
+.dc-status .build { color: #febc2e; background: rgba(254,188,46,0.12); border: 1px solid rgba(254,188,46,0.3); animation: dcBuild 6s 2.2s infinite; }
+.dc-status .live { color: #28c840; background: rgba(40,200,64,0.12); border: 1px solid rgba(40,200,64,0.3); opacity: 0; animation: dcLive 6s 2.2s infinite; }
+@keyframes dcBuild { 0%,38%{opacity:1} 52%,100%{opacity:0} }
+@keyframes dcLive { 0%,42%{opacity:0} 56%,100%{opacity:1} }
+
+/* --- D. portfolio command centre --- */
+.pf-card { position: relative; z-index: 2; width: 394px; max-width: 100%; background: #fff; border: 1px solid var(--border-dark); border-radius: 18px; box-shadow: var(--shadow-lg); overflow: hidden; animation: vizFloat 7s ease-in-out infinite; }
+.pf-head { display: flex; align-items: center; gap: 0.6rem; padding: 0.95rem 1.1rem; border-bottom: 1px solid var(--border-dark); }
+.pf-ava { width: 32px; height: 32px; border-radius: 9px; background: var(--brand-gradient); display: flex; align-items: center; justify-content: center; flex: none; box-shadow: var(--shadow-sm); }
+.pf-ava svg { width: 18px; height: 18px; display: block; }
+.pf-id { display: flex; flex-direction: column; line-height: 1.25; }
+.pf-name { font-family: var(--font-heading); font-weight: 600; font-size: 0.95rem; }
+.pf-sub { font-family: var(--font-mono); font-size: 0.6rem; color: var(--text-faded); display: flex; align-items: center; gap: 0.35rem; }
+.pf-tag { margin-left: auto; font-family: var(--font-mono); font-size: 0.6rem; color: var(--brand-purple); background: var(--surface-tint); border: 1px solid var(--border-brand); padding: 0.24rem 0.55rem; border-radius: 999px; }
+.pf-stats { display: grid; grid-template-columns: repeat(3,1fr); border-bottom: 1px solid var(--border-dark); }
+.pf-stat { padding: 0.8rem 1.1rem; border-right: 1px solid var(--border-dark); }
+.pf-stat:last-child { border-right: none; }
+.pf-stat b { display: block; font-family: var(--font-heading); font-weight: 700; font-size: 1.35rem; letter-spacing: -0.02em; color: var(--brand-purple); }
+.pf-stat span { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faded); }
+.pf-list { padding: 0.35rem 0; }
+.pf-row { display: flex; align-items: center; gap: 0.7rem; padding: 0.6rem 1.1rem; opacity: 0; transform: translateY(8px); animation: cvIn 0.5s var(--ease) forwards; }
+.pf-row:nth-child(1){animation-delay:0.4s} .pf-row:nth-child(2){animation-delay:0.9s} .pf-row:nth-child(3){animation-delay:1.4s} .pf-row:nth-child(4){animation-delay:1.9s}
+.pf-logo { width: 28px; height: 28px; flex: none; border-radius: 8px; background: var(--surface-tint); border: 1px solid var(--border-brand); display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 600; font-size: 0.78rem; color: var(--brand-purple); }
+.pf-cli { display: flex; flex-direction: column; line-height: 1.25; min-width: 0; }
+.pf-cn { font-size: 0.82rem; font-weight: 500; color: var(--primary); }
+.pf-cp { font-family: var(--font-mono); font-size: 0.56rem; color: var(--text-faded); }
+.pf-st { margin-left: auto; font-family: var(--font-mono); font-size: 0.56rem; padding: 0.2rem 0.5rem; border-radius: 999px; white-space: nowrap; }
+.pf-st.ok { background: var(--success-soft); color: var(--success); border: 1px solid rgba(31,158,84,0.3); }
+.pf-st.warn { background: var(--warning-soft); color: var(--warning); border: 1px solid rgba(196,125,18,0.3); }
+.pf-flip { position: relative; margin-left: auto; width: 84px; height: 20px; }
+.pf-flip .pf-st { position: absolute; right: 0; top: 0; margin: 0; }
+.pf-flip .bad { background: var(--danger-soft); color: var(--danger); border: 1px solid rgba(210,63,49,0.3); animation: pfBad 6s 2.4s infinite; }
+.pf-flip .good { background: var(--success-soft); color: var(--success); border: 1px solid rgba(31,158,84,0.3); opacity: 0; animation: pfGood 6s 2.4s infinite; }
+@keyframes pfBad { 0%,40%{opacity:1} 55%,100%{opacity:0} }
+@keyframes pfGood { 0%,45%{opacity:0} 60%,100%{opacity:1} }
+.pf-report { display: flex; align-items: center; gap: 0.55rem; padding: 0.85rem 1.1rem; border-top: 1px solid var(--border-dark); background: linear-gradient(180deg,#faf8ff,#fff); opacity: 0; transform: translateY(8px); animation: cvIn 0.5s var(--ease) 2.3s forwards; }
+.pf-report svg { width: 16px; height: 16px; flex: none; }
+.pf-report .rt { font-family: var(--font-mono); font-size: 0.66rem; color: var(--primary); }
+.pf-report .rb { font-family: var(--font-mono); font-size: 0.56rem; color: var(--text-faded); }
+.pf-report .wl { margin-left: auto; font-family: var(--font-mono); font-size: 0.55rem; color: var(--brand-purple); background: var(--surface-tint); border: 1px solid var(--border-brand); padding: 0.2rem 0.5rem; border-radius: 999px; }
+
+/* --- E. detect / explain / fix loop card --- */
+.lp-card { position: relative; z-index: 2; width: 360px; max-width: 100%; background: #fff; border: 1px solid var(--border-dark); border-radius: 18px; box-shadow: var(--shadow-lg); padding: 1.2rem; animation: vizFloat 7s ease-in-out infinite; }
+.lp-head { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
+.lp-name { font-family: var(--font-heading); font-weight: 600; font-size: 0.95rem; }
+.lp-sub { font-family: var(--font-mono); font-size: 0.6rem; color: var(--text-faded); display: flex; align-items: center; gap: 0.35rem; }
+.lp-tag { margin-left: auto; font-family: var(--font-mono); font-size: 0.6rem; color: var(--brand-purple); background: var(--surface-tint); border: 1px solid var(--border-brand); padding: 0.24rem 0.55rem; border-radius: 999px; }
+.lp-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.8rem 0.85rem; border: 1px solid var(--border-dark); border-radius: 11px; background: #fff; margin-bottom: 0.7rem; opacity: 0.5; animation: lpStep 6s infinite; }
+.lp-row:last-child { margin-bottom: 0; }
+.lp-row:nth-child(1){animation-delay:0s} .lp-row:nth-child(2){animation-delay:2s} .lp-row:nth-child(3){animation-delay:4s}
+@keyframes lpStep { 0%{opacity:0.5;border-color:var(--border-dark);transform:none} 6%{opacity:1;border-color:var(--border-brand);box-shadow:var(--shadow-md);transform:translateY(-2px)} 28%{opacity:1;border-color:var(--border-brand)} 34%,100%{opacity:0.5;border-color:var(--border-dark);box-shadow:none;transform:none} }
+.lp-ic { width: 34px; height: 34px; flex: none; border-radius: 9px; background: var(--brand-gradient); display: flex; align-items: center; justify-content: center; }
+.lp-ic svg { width: 18px; height: 18px; display: block; }
+.lp-tx { display: flex; flex-direction: column; line-height: 1.3; }
+.lp-tx b { font-size: 0.9rem; font-weight: 600; }
+.lp-tx span { font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-faded); }
+.lp-state { margin-left: auto; font-family: var(--font-mono); font-size: 0.6rem; color: var(--brand-purple); }
+
+/* ============================================================
+   SHOWCASE PAGE CHROME
+   ============================================================ */
+.ds-hero { background: var(--brand-gradient); padding: 5rem 0 4rem; border-bottom: 1px solid var(--border-dark); position: relative; overflow: hidden; }
+.ds-hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 80% -10%, rgba(165,138,243,0.45) 0%, transparent 60%); pointer-events: none; }
+.ds-hero-content { position: relative; z-index: 1; }
+.swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 0.75rem; }
+.swatch-color { height: 56px; border-radius: 8px; border: 1px solid var(--border-dark); }
+.swatch-info { padding: 0.5rem 0; }
+.swatch-name { font-family: var(--font-mono); font-size: 0.68rem; color: var(--primary); display: block; }
+.swatch-value { font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-faded); display: block; }
+
+</style>
+</head>
+<body>
+
+<div class="ds-hero">
+  <div class="container ds-hero-content">
+    <span class="label" style="color:var(--brand-purple-light)">Design System · Light</span>
+    <h1 style="font-family:var(--font-heading);font-size:3rem;font-weight:700;letter-spacing:-0.025em;margin:1rem 0 0.5rem;color:#fff">Vortex <span style="color:var(--brand-purple-light)">IQ</span> · v2</h1>
+    <p style="font-family:var(--font-mono);font-size:0.82rem;color:rgba(255,255,255,0.7)">Geist typeface · Deep-purple brand · Pill buttons</p>
+  </div>
+</div>
+
+<div style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-dark);padding:0.75rem 0;">
+  <div class="container" style="display:flex;gap:2rem;font-family:var(--font-mono);font-size:0.72rem;overflow-x:auto;">
+    <a href="#colors" style="color:var(--text-faded);text-decoration:none;white-space:nowrap">Colors</a>
+    <a href="#typography" style="color:var(--text-faded);text-decoration:none;white-space:nowrap">Typography</a>
+    <a href="#buttons" style="color:var(--text-faded);text-decoration:none;white-space:nowrap">Buttons</a>
+    <a href="#badges" style="color:var(--text-faded);text-decoration:none;white-space:nowrap">Badges</a>
+    <a href="#cards" style="color:var(--text-faded);text-decoration:none;white-space:nowrap">Cards</a>
+    <a href="#nav" style="color:var(--text-faded);text-decoration:none;white-space:nowrap">Navigation</a>
+    <a href="#components" style="color:var(--text-faded);text-decoration:none;white-space:nowrap">Components</a>
+    <a href="#blocks" style="color:var(--text-faded);text-decoration:none;white-space:nowrap">Building Blocks</a>
+    <a href="#content" style="color:var(--text-faded);text-decoration:none;white-space:nowrap">Content Cards</a>
+    <a href="#visuals" style="color:var(--text-faded);text-decoration:none;white-space:nowrap">Hero Visuals</a>
+  </div>
+</div>
+
+<!-- COLORS -->
+<section class="ds-section" id="colors">
+  <div class="container">
+    <div class="ds-title">01 — Color Tokens (verbatim from live CSS)</div>
+
+    <p class="ds-label" style="margin-bottom:1.2rem;font-size:0.78rem">Brand — Purple</p>
+    <div class="swatch-grid" style="margin-bottom:2.5rem">
+      <div><div class="swatch-color" style="background:#5529d6"></div><div class="swatch-info"><span class="swatch-name">brand-purple ★</span><span class="swatch-value">#5529d6 · PRIMARY</span></div></div>
+      <div><div class="swatch-color" style="background:#392bd5"></div><div class="swatch-info"><span class="swatch-name">purple-mid</span><span class="swatch-value">#392bd5</span></div></div>
+      <div><div class="swatch-color" style="background:#a58af3"></div><div class="swatch-info"><span class="swatch-name">purple-light</span><span class="swatch-value">#a58af3</span></div></div>
+      <div><div class="swatch-color" style="background:#0c061f"></div><div class="swatch-info"><span class="swatch-name">purple-deep</span><span class="swatch-value">#0c061f</span></div></div>
+      <div><div class="swatch-color" style="background:linear-gradient(135deg,#5529d6,#0c061f 50%,#5529d6 75%)"></div><div class="swatch-info"><span class="swatch-name">brand-gradient</span><span class="swatch-value">135deg</span></div></div>
+      <div><div class="swatch-color" style="background:#004794"></div><div class="swatch-info"><span class="swatch-name">brand-blue</span><span class="swatch-value">#004794</span></div></div>
+    </div>
+
+    <p class="ds-label" style="margin-bottom:1.2rem;font-size:0.78rem">Surfaces (light)</p>
+    <div class="swatch-grid" style="margin-bottom:2.5rem">
+      <div><div class="swatch-color" style="background:#ffffff"></div><div class="swatch-info"><span class="swatch-name">white</span><span class="swatch-value">#ffffff</span></div></div>
+      <div><div class="swatch-color" style="background:#f6f5f3"></div><div class="swatch-info"><span class="swatch-name">surface-soft</span><span class="swatch-value">#f6f5f3</span></div></div>
+      <div><div class="swatch-color" style="background:#f3f0fc"></div><div class="swatch-info"><span class="swatch-name">surface-tint</span><span class="swatch-value">#f3f0fc</span></div></div>
+      <div><div class="swatch-color" style="background:#e8e6e3"></div><div class="swatch-info"><span class="swatch-name">neutral-2</span><span class="swatch-value">#e8e6e3</span></div></div>
+    </div>
+
+    <p class="ds-label" style="margin-bottom:1.2rem;font-size:0.78rem">Text &amp; Status</p>
+    <div class="swatch-grid">
+      <div><div class="swatch-color" style="background:#222325"></div><div class="swatch-info"><span class="swatch-name">primary text</span><span class="swatch-value">#222325</span></div></div>
+      <div><div class="swatch-color" style="background:rgba(0,0,0,0.6)"></div><div class="swatch-info"><span class="swatch-name">body-text</span><span class="swatch-value">#0009 · 60%</span></div></div>
+      <div><div class="swatch-color" style="background:rgba(0,0,0,0.4)"></div><div class="swatch-info"><span class="swatch-name">faded</span><span class="swatch-value">#0006 · 40%</span></div></div>
+      <div><div class="swatch-color" style="background:#1f9e54"></div><div class="swatch-info"><span class="swatch-name">success</span><span class="swatch-value">#1f9e54</span></div></div>
+      <div><div class="swatch-color" style="background:#d23f31"></div><div class="swatch-info"><span class="swatch-name">danger</span><span class="swatch-value">#d23f31</span></div></div>
+      <div><div class="swatch-color" style="background:#c47d12"></div><div class="swatch-info"><span class="swatch-name">warning</span><span class="swatch-value">#c47d12</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPOGRAPHY -->
+<section class="ds-section" id="typography">
+  <div class="container">
+    <div class="ds-title">02 — Typography · Geist (ss01/ss03/ss04)</div>
+    <div class="grid g-3" style="margin-bottom:3rem">
+      <div class="card">
+        <p class="label" style="color:var(--text-faded);margin-bottom:0.75rem">Heading / Body / Badge</p>
+        <p style="font-family:var(--font-heading);font-size:1.6rem;font-weight:700">Geist</p>
+        <p style="font-family:var(--font-heading);font-size:0.95rem;color:var(--text-body);margin-top:0.25rem">AaBbCcDd 0123456789</p>
+        <p class="ds-label" style="margin-top:0.5rem">All UI text uses Geist</p>
+      </div>
+      <div class="card">
+        <p class="label" style="color:var(--text-faded);margin-bottom:0.75rem">Mono accents</p>
+        <p style="font-family:var(--font-mono);font-size:1.6rem;font-weight:500">Geist Mono</p>
+        <p style="font-family:var(--font-mono);font-size:0.9rem;color:var(--text-body);margin-top:0.25rem">01 / DETECT · LIVE</p>
+        <p class="ds-label" style="margin-top:0.5rem">Eyebrows, labels, step numbers</p>
+      </div>
+      <div class="card card-tint">
+        <p class="label" style="color:var(--brand-purple);margin-bottom:0.75rem">Feature settings</p>
+        <p style="font-family:var(--font-mono);font-size:1.1rem;color:var(--primary)">"ss01" "ss03" "ss04"</p>
+        <p class="ds-label" style="margin-top:0.5rem">Stylistic sets enabled site-wide</p>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:1.4rem;max-width:840px">
+      <div style="display:flex;align-items:baseline;gap:2rem"><span class="ds-label" style="min-width:120px">display · 79px</span><span class="display">Vortex IQ</span></div>
+      <div style="display:flex;align-items:baseline;gap:2rem"><span class="ds-label" style="min-width:120px">h-xl · 56px</span><span class="h-xl">One loop. Five steps.</span></div>
+      <div style="display:flex;align-items:baseline;gap:2rem"><span class="ds-label" style="min-width:120px">h1 · 38px</span><span class="h1">The AI OS for commerce</span></div>
+      <div style="display:flex;align-items:baseline;gap:2rem"><span class="ds-label" style="min-width:120px">h2 · 32px</span><span class="h2">Catch what's breaking</span></div>
+      <div style="display:flex;align-items:baseline;gap:2rem"><span class="ds-label" style="min-width:120px">h3 · 24px</span><span class="h3">Platform overview</span></div>
+      <div style="display:flex;align-items:baseline;gap:2rem"><span class="ds-label" style="min-width:120px">lede · 20px</span><span class="lede">Modern commerce leaks revenue in the gaps.</span></div>
+      <div style="display:flex;align-items:baseline;gap:2rem"><span class="ds-label" style="min-width:120px">body · 17px</span><span class="body">Detect, diagnose, act, deploy safely, learn.</span></div>
+      <div style="display:flex;align-items:baseline;gap:2rem"><span class="ds-label" style="min-width:120px">gradient</span><span class="display text-gradient" style="font-size:2.4rem">Purple gradient</span></div>
+      <div style="display:flex;align-items:center;gap:2rem"><span class="ds-label" style="min-width:120px">eyebrow</span><span class="eyebrow">How it works</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BUTTONS -->
+<section class="ds-section" id="buttons">
+  <div class="container">
+    <div class="ds-title">03 — Buttons (pill · 200px radius)</div>
+    <div class="ds-row">
+      <div><a class="btn btn-primary btn-lg">Book a Demo</a><p class="ds-label">primary · lg</p></div>
+      <div><a class="btn btn-primary">Run a free audit</a><p class="ds-label">primary</p></div>
+      <div><a class="btn btn-primary btn-sm">Get started</a><p class="ds-label">primary · sm</p></div>
+    </div>
+    <div class="ds-row">
+      <div><a class="btn btn-ghost">See how it works →</a><p class="ds-label">ghost</p></div>
+      <div><a class="btn btn-soft">Learn more</a><p class="ds-label">soft</p></div>
+      <div><a class="textlink">Read the customer stories →</a><p class="ds-label">textlink</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BADGES -->
+<section class="ds-section" id="badges">
+  <div class="container">
+    <div class="ds-title">04 — Badges &amp; Chips</div>
+    <div class="ds-row">
+      <div><span class="badge">Default</span><p class="ds-label">badge</p></div>
+      <div><span class="badge badge-brand">AI OS</span><p class="ds-label">brand</p></div>
+      <div><span class="badge badge-success"><span class="dot-live"></span>Live · 200+ connectors</span><p class="ds-label">success + dot</p></div>
+      <div><span class="badge badge-danger">Revenue at risk</span><p class="ds-label">danger</p></div>
+      <div><span class="badge badge-warning">Anomaly</span><p class="ds-label">warning</p></div>
+    </div>
+    <div class="ds-row" style="margin-top:1rem">
+      <div><span class="statusbar"><span class="dot-live"></span>Nerve Centre · live across 200+ connectors</span><p class="ds-label">statusbar</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CARDS -->
+<section class="ds-section" id="cards">
+  <div class="container">
+    <div class="ds-title">05 — Cards &amp; Bento</div>
+    <div class="grid g-3" style="margin-bottom:2rem">
+      <div class="card"><p class="label" style="color:var(--brand-purple);margin-bottom:0.7rem">Feature</p><p class="h4" style="margin-bottom:0.4rem">Nerve Centre</p><p class="body">Watches every KPI live across 200+ connectors.</p></div>
+      <div class="card card-tint"><p class="label" style="color:var(--brand-purple);margin-bottom:0.7rem">Tint</p><p class="h4" style="margin-bottom:0.4rem">Vortex Memory</p><p class="body">The graph that compounds per store.</p></div>
+      <div class="card card-brand"><p class="label" style="color:rgba(255,255,255,0.75);margin-bottom:0.7rem">Brand gradient</p><p class="h4" style="margin-bottom:0.4rem;color:#fff">Ask Viq</p><p class="body">Conversational agent, cited to the graph.</p></div>
+    </div>
+    <div class="grid g-4">
+      <div class="card"><div class="stat-value accent">1,400%</div><div class="stat-label">organic growth · Soak &amp; Sleep, GA</div></div>
+      <div class="card"><div class="stat-value">+35%</div><div class="stat-label">revenue recovered · cross-channel fixes</div></div>
+      <div class="card card-brand"><div class="stat-value on-brand">200+</div><div class="stat-label">connectors mapped onto one graph</div></div>
+      <div class="card"><div class="stat-value">50%</div><div class="stat-label">faster problem resolution</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NAV -->
+<section class="ds-section" id="nav">
+  <div class="container">
+    <div class="ds-title">06 — Navigation</div>
+    <div style="border:1px solid var(--border-dark);border-radius:var(--radius-default);overflow:hidden">
+      <nav style="background:rgba(255,255,255,0.85);backdrop-filter:blur(18px);border-bottom:1px solid var(--border-dark);height:4.5rem;display:flex;align-items:center;padding:0 2rem;gap:2rem">
+        <a class="logo" href="#"><img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c29054c6d22238eac9bb4c_vlogo.svg" alt="Vortex IQ"></a>
+        <div style="display:flex;gap:1.5rem;margin-left:auto">
+          <a class="nav-link">The AI OS</a><a class="nav-link">Solutions</a><a class="nav-link">Pricing</a><a class="nav-link">Resources</a>
+        </div>
+        <div style="display:flex;gap:0.75rem;margin-left:1rem">
+          <a class="btn btn-ghost btn-sm">Login</a><a class="btn btn-primary btn-sm">Book a Demo</a>
+        </div>
+      </nav>
+      <div style="height:80px;background:var(--surface-tint)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPONENTS -->
+<section class="ds-section" id="components">
+  <div class="container">
+    <div class="ds-title">07 — Composite Components</div>
+
+    <p class="ds-label" style="margin-bottom:1rem">5-Step Loop Diagram</p>
+    <div class="loop-grid" style="margin-bottom:2.5rem">
+      <div class="loop-node"><span class="loop-step">01</span><b class="loop-title">Detect</b><span class="loop-desc">watch every KPI live</span></div>
+      <div class="loop-node"><span class="loop-step">02</span><b class="loop-title">Diagnose</b><span class="loop-desc">find the root cause</span></div>
+      <div class="loop-node"><span class="loop-step">03</span><b class="loop-title">Act</b><span class="loop-desc">turn findings into work</span></div>
+      <div class="loop-node"><span class="loop-step">04</span><b class="loop-title">Deploy</b><span class="loop-desc">approval-gated · reversible</span></div>
+      <div class="loop-node"><span class="loop-step">05</span><b class="loop-title">Learn</b><span class="loop-desc">remember &amp; compound</span></div>
+    </div>
+
+    <div class="grid g-2">
+      <div>
+        <p class="ds-label" style="margin-bottom:1rem">KPI Minicards</p>
+        <div style="display:flex;flex-direction:column;gap:0.6rem">
+          <div class="minicard"><span class="minicard-name">Add-to-cart rate</span><span class="badge badge-danger">Down 8%</span></div>
+          <div class="minicard"><span class="minicard-name">Payment decline rate</span><span class="badge badge-danger">Rising · anomaly</span></div>
+          <div class="minicard"><span class="minicard-name">Checkout completion</span><span class="badge badge-success">Stable</span></div>
+        </div>
+      </div>
+      <div>
+        <p class="ds-label" style="margin-bottom:1rem">Ask Viq Chat</p>
+        <div class="chat-box">
+          <div class="chat-line"><span class="chat-who you">You</span> &nbsp;Which products are losing money on ads this week?</div>
+          <div class="chat-line"><span class="chat-who viq">Viq</span> &nbsp;Here are the SKUs spending above target with no return.</div>
+          <div class="chat-source">Sourced from: Google Ads · Inventory · Orders</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="ds-label" style="margin:2rem 0 1rem">FAQ Accordion</p>
+    <div style="max-width:680px">
+      <details class="faq-item" open><summary>How fast is the first audit?</summary><p>1 to 3 days. Connect your stack and the Instant Store Audit runs, then the Nerve Centre keeps watching live.</p></details>
+      <details class="faq-item"><summary>Which platforms do you support?</summary><p>BigCommerce, Shopify, Adobe Commerce and WooCommerce, plus 200+ connectors.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- BUILDING BLOCKS -->
+<section class="ds-section" id="blocks">
+  <div class="container">
+    <div class="ds-title">08 — Building Blocks</div>
+
+    <div class="grid g-4" style="margin-bottom:2.5rem">
+      <div>
+        <div class="mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3l2-7 4 14 2-7h4"/></svg></div>
+        <p class="ds-label" style="margin-top:0.7rem">mod-icon · gradient tile</p>
+      </div>
+      <div>
+        <div class="mod-icon sm"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <p class="ds-label" style="margin-top:0.7rem">mod-icon.sm</p>
+      </div>
+      <div>
+        <div class="step-num">3</div>
+        <p class="ds-label" style="margin-top:0.7rem">step-num · numbered</p>
+      </div>
+      <div>
+        <span class="det-cat">For Merchants</span>
+        <p class="ds-label" style="margin-top:0.7rem">det-cat · category tag</p>
+      </div>
+    </div>
+
+    <div class="grid g-2" style="margin-bottom:2.5rem">
+      <div class="card">
+        <p class="ds-label" style="margin-bottom:1rem">Checklist · brand + danger</p>
+        <div class="checks">
+          <div class="ck"><i><svg viewBox="0 0 14 14" fill="none" stroke="#5529d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.3 5.7 10 11 3.8"/></svg></i>Fix safely with staging, backup, and rollback</div>
+          <div class="ck"><i><svg viewBox="0 0 14 14" fill="none" stroke="#5529d6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.3 5.7 10 11 3.8"/></svg></i>Automate SEO, merchandising, and ops with agents</div>
+          <div class="ck x"><i><svg viewBox="0 0 14 14" fill="none" stroke="#d23f31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l6 6M10 4l-6 6"/></svg></i>Reactive reporting arrives after the damage is done</div>
+        </div>
+      </div>
+      <div class="card">
+        <p class="ds-label" style="margin-bottom:1rem">Feature list · flist</p>
+        <ul class="flist">
+          <li>Stateful orchestration</li>
+          <li>Managed context windows</li>
+          <li>No LLM ops to run</li>
+        </ul>
+        <p class="ds-label" style="margin:1.4rem 0 0.6rem">Tag row · tag-row</p>
+        <div class="tag-row">
+          <span class="badge">Ecommerce</span><span class="badge">Marketing</span><span class="badge">Ops</span><span class="badge">Dev/IT</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid g-2">
+      <div>
+        <p class="ds-label" style="margin-bottom:1rem">Hero stat callout · hero-stat</p>
+        <div class="hero-stat">
+          <span class="n">65%</span>
+          <span class="t">increase in operational efficiency, reported by merchants on the platform for 12 months or more.</span>
+        </div>
+      </div>
+      <div>
+        <p class="ds-label" style="margin-bottom:1rem">Code chip · codechip</p>
+        <span class="codechip"><span class="dot-live"></span> Current version <b>v2.4.0</b> (Stable) · Python &amp; Node.js SDKs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT CARDS -->
+<section class="ds-section" id="content">
+  <div class="container">
+    <div class="ds-title">09 — Content Cards</div>
+
+    <p class="ds-label" style="margin-bottom:1rem">Story / case-study card · scard</p>
+    <div class="grid g-3" style="margin-bottom:2.5rem">
+      <a class="scard" href="#">
+        <div class="cover">
+          <span class="company">The Revere Group · Glerup</span>
+          <img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da28056b56c687e9008e87_image%2036.avif" alt="Glerup case study" loading="lazy">
+        </div>
+        <div class="sbody">
+          <div class="metric">65% reduction in development cycle time</div>
+          <p class="desc">Eliminated their biggest development bottleneck and enabled safe collaboration with their agency.</p>
+          <span class="read">Read the full story &rarr;</span>
+        </div>
+      </a>
+      <a class="scard" href="#">
+        <div class="cover">
+          <span class="company">Menkind</span>
+          <img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da280551fda1d89b0b73a1_image%2037.avif" alt="Menkind case study" loading="lazy">
+        </div>
+        <div class="sbody">
+          <div class="metric">Zero-risk rollout of a new search platform</div>
+          <p class="desc">Tested and deployed a complex search and merchandising platform with no risk to live operations.</p>
+          <span class="read">Read the full story &rarr;</span>
+        </div>
+      </a>
+      <a class="scard" href="#">
+        <div class="cover">
+          <span class="company">The Tire Man</span>
+          <img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da2805a5e493b26156ecc7_image%2039.avif" alt="The Tire Man case study" loading="lazy">
+        </div>
+        <div class="sbody">
+          <div class="metric">Accelerated mobile optimization cycles by 30%</div>
+          <p class="desc">A reliable way to test responsive designs across devices before deploying to the live store.</p>
+          <span class="read">Read the full story &rarr;</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="grid g-2">
+      <div>
+        <p class="ds-label" style="margin-bottom:1rem">Team member card · team-photo</p>
+        <div class="grid g-3">
+          <div class="card"><img class="team-photo" src="https://cdn.prod.website-files.com/68bff4a0a25caa581ab052ee/68d6d8ef82d9738396afe730_susant.jpg" alt="Susant Patro"><div class="team-name">Susant Patro</div><div class="team-role">Co-Founder</div></div>
+          <div class="card"><img class="team-photo" src="https://cdn.prod.website-files.com/68bff4a0a25caa581ab052ee/68d6d93ed17c3a3180ab9706_sambi.jpg" alt="Sambit Patro"><div class="team-name">Sambit Patro</div><div class="team-role">Co-Founder</div></div>
+          <div class="card"><img class="team-photo" src="https://cdn.prod.website-files.com/68bff4a0a25caa581ab052ee/68d6d964f392c627ee4e5c64_jaiganesh.jpg" alt="Jaiganesh V"><div class="team-name">Jaiganesh V</div><div class="team-role">Co-Founder</div></div>
+        </div>
+      </div>
+      <div>
+        <p class="ds-label" style="margin-bottom:1rem">Partner logo strip · logo-strip (dark, for white logos)</p>
+        <div class="logo-strip">
+          <img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/69b7da27334983a40fecbeea_e3e51451c918c4f802d3b734717db84d_SVV%2Bwhite.webp" alt="Sure Valley Ventures">
+          <img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/6953b913c52134a51a525a2d_techstars-logo.svg" alt="Techstars">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HERO VISUALS -->
+<section class="ds-section" id="visuals">
+  <div class="container">
+    <div class="ds-title">10 — Hero Visuals (animated)</div>
+
+    <div class="grid g-2" style="margin-bottom:2.5rem">
+      <div>
+        <p class="ds-label" style="margin-bottom:1rem">A · Detect / Explain / Fix loop card</p>
+        <div class="viz-wrap" style="min-height:380px">
+          <div class="viz-glow"></div>
+          <div class="lp-card">
+            <div class="lp-head"><span class="lp-name">Vortex IQ</span><span class="lp-sub"><span class="dot-live"></span> Detect. Explain. Fix.</span><span class="lp-tag">AI OS</span></div>
+            <div class="lp-row"><span class="lp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3l2-7 4 14 2-7h4"/></svg></span><span class="lp-tx"><b>Detect</b><span>Nerve Centre</span></span><span class="lp-state">Checkout errors rising</span></div>
+            <div class="lp-row"><span class="lp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span><span class="lp-tx"><b>Explain</b><span>Vortex Mind</span></span><span class="lp-state">3P script blocks render</span></div>
+            <div class="lp-row"><span class="lp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6.5v5c0 4.5 3.4 7.7 8 9 4.6-1.3 8-4.5 8-9v-5z"/><path d="m9 12 2 2 4-4.5"/></svg></span><span class="lp-tx"><b>Fix</b><span>Vortex Apps</span></span><span class="lp-state">Rollback staged</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="ds-label" style="margin-bottom:1rem">B · Ask Viq diagnosis console</p>
+        <div class="viz-wrap" style="min-height:380px">
+          <div class="viz-glow"></div>
+          <div class="cv-card">
+            <div class="cv-head">
+              <span class="cv-ava"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2.5l1.7 4.9a4 4 0 0 0 2.4 2.4l4.9 1.7-4.9 1.7a4 4 0 0 0-2.4 2.4L12 20.5l-1.7-4.9a4 4 0 0 0-2.4-2.4L3 11.5l4.9-1.7a4 4 0 0 0 2.4-2.4L12 2.5z"/></svg></span>
+              <span class="cv-id"><span class="cv-name">Ask Viq&trade;</span><span class="cv-sub"><span class="dot-live"></span> Live · diagnosing</span></span>
+              <span class="cv-tag">Vortex Mind</span>
+            </div>
+            <div class="cv-body">
+              <div class="cv-q">Why did conversion drop 12% on mobile today?</div>
+              <div class="cv-aslot">
+                <div class="cv-typing"><span></span><span></span><span></span></div>
+                <div class="cv-a">A third-party reviews script is <b>blocking checkout render</b> on mobile, adding 1.8s to LCP. I've staged a fix.</div>
+              </div>
+              <div class="cv-steps">
+                <div class="cv-step"><i><svg viewBox="0 0 14 14" fill="none" stroke="#1f9e54" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.3 5.7 10 11 3.8"/></svg></i><span><span class="k">Detected</span> · checkout LCP +1.8s</span></div>
+                <div class="cv-step"><i><svg viewBox="0 0 14 14" fill="none" stroke="#1f9e54" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.3 5.7 10 11 3.8"/></svg></i><span><span class="k">Diagnosed</span> · reviews script blocking render</span></div>
+                <div class="cv-step"><i><svg viewBox="0 0 14 14" fill="none" stroke="#1f9e54" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.3 5.7 10 11 3.8"/></svg></i><span><span class="k">Fix ready</span> · defer script + rollback staged</span></div>
+              </div>
+            </div>
+            <div class="cv-foot">
+              <div class="cv-impact">Recovered today<b>£42,800</b></div>
+              <span class="cv-apply"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Apply fix</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid g-2" style="margin-bottom:2.5rem">
+      <div>
+        <p class="ds-label" style="margin-bottom:1rem">C · Developer console (dark)</p>
+        <div class="viz-wrap" style="min-height:380px">
+          <div class="viz-glow"></div>
+          <div class="dc-card">
+            <div class="dc-bar"><span class="dc-dots"><i></i><i></i><i></i></span><span class="dc-file">deploy-agent.ts</span><span class="dc-lang">Agent Dev Kit</span></div>
+            <code class="dc-code">
+<span class="dc-line"><span class="tk-k">import</span> <span class="tk-p">{</span> VortexAgent <span class="tk-p">}</span> <span class="tk-k">from</span> <span class="tk-s">"@vortexiq/sdk"</span></span>
+<span class="dc-line"> </span>
+<span class="dc-line"><span class="tk-k">const</span> agent <span class="tk-p">=</span> <span class="tk-k">new</span> <span class="tk-f">VortexAgent</span><span class="tk-p">({</span></span>
+<span class="dc-line">  name<span class="tk-p">:</span> <span class="tk-s">"support-copilot"</span><span class="tk-p">,</span></span>
+<span class="dc-line">  brand<span class="tk-p">:</span> <span class="tk-s">"grey-label"</span><span class="tk-p">,</span>   <span class="tk-c">// your UI, our brains</span></span>
+<span class="dc-line">  tools<span class="tk-p">:</span> <span class="tk-p">[</span><span class="tk-s">"catalog"</span><span class="tk-p">,</span> <span class="tk-s">"orders"</span><span class="tk-p">]</span><span class="tk-p">,</span></span>
+<span class="dc-line"><span class="tk-p">})</span>.<span class="tk-f">deploy</span><span class="tk-p">({</span> region<span class="tk-p">:</span> <span class="tk-s">"multi"</span> <span class="tk-p">})</span></span>
+            </code>
+            <div class="dc-run"><span class="dc-method">POST</span><span class="dc-path">/v2/agents/deploy</span><span class="dc-status"><span class="s build">Building…</span><span class="s live">● Live 1.2s</span></span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="ds-label" style="margin-bottom:1rem">D · Portfolio command centre</p>
+        <div class="viz-wrap" style="min-height:380px">
+          <div class="viz-glow"></div>
+          <div class="pf-card">
+            <div class="pf-head">
+              <span class="pf-ava"><svg viewBox="0 0 24 24" fill="#fff"><rect x="3" y="3" width="7.5" height="7.5" rx="1.6"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.6"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.6"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.6"/></svg></span>
+              <span class="pf-id"><span class="pf-name">Client Portfolio</span><span class="pf-sub"><span class="dot-live"></span> Live · 24 stores monitored</span></span>
+              <span class="pf-tag">Multi-tenant</span>
+            </div>
+            <div class="pf-stats">
+              <div class="pf-stat"><b>24</b><span>Stores</span></div>
+              <div class="pf-stat"><b>22</b><span>Healthy</span></div>
+              <div class="pf-stat"><b>2</b><span>Incidents</span></div>
+            </div>
+            <div class="pf-list">
+              <div class="pf-row"><span class="pf-logo">N</span><span class="pf-cli"><span class="pf-cn">Northwind Apparel</span><span class="pf-cp">Shopify Plus</span></span><span class="pf-st ok">Healthy</span></div>
+              <div class="pf-row"><span class="pf-logo">A</span><span class="pf-cli"><span class="pf-cn">Atlas Outdoors</span><span class="pf-cp">BigCommerce</span></span><span class="pf-flip"><span class="pf-st bad">Incident</span><span class="pf-st good">Recovered</span></span></div>
+              <div class="pf-row"><span class="pf-logo">L</span><span class="pf-cli"><span class="pf-cn">Lumen Beauty</span><span class="pf-cp">Adobe Commerce</span></span><span class="pf-st warn">Watching</span></div>
+              <div class="pf-row"><span class="pf-logo">F</span><span class="pf-cli"><span class="pf-cn">Forge &amp; Co</span><span class="pf-cp">Shopify Plus</span></span><span class="pf-st ok">Healthy</span></div>
+            </div>
+            <div class="pf-report">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#5529d6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+              <span><span class="rt">Monday health check</span><br><span class="rb">Generated &amp; sent · 24 clients</span></span>
+              <span class="wl">Your branding</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p class="ds-label" style="margin-bottom:1rem">E · Product screenshot browser frame · shot</p>
+      <div class="viz-wrap" style="min-height:360px">
+        <div class="viz-glow"></div>
+        <div class="shot">
+          <div class="shot-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="shot-url">app.yourbrand.ai</span></div>
+          <img src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68dd081255f9b7c6ec49eb02_full-app.avif" alt="Vortex IQ AI OS dashboard" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="background:var(--surface-soft);border-top:1px solid var(--border-dark);padding:2rem 0;text-align:center">
+  <p style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-faded)">Vortex IQ Design System v2.1 · Light · Geist · vortexiq.ai</p>
+</div>
+
+</body>
+</html>
