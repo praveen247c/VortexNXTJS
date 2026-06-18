@@ -85,16 +85,17 @@ export default async function BlogPostPage({
             &larr; Back to blog
           </Link>
 
-          <div
-            className="eyebrow reveal in"
-            style={{ marginTop: "1.6rem" }}
-          >
-            {post.category?.title || "Article"}
-          </div>
-          <h1 className="reveal in" style={{ marginTop: "1rem" }}>
+          <h1 className="reveal in" style={{ marginTop: "1.6rem" }}>
             {post.title}
           </h1>
           <div className="post-meta reveal in">
+            {post.category?.title ? (
+              <span className="post-meta-cat">
+                <Link href={`/resources/blog/category/${post.category.slug}`}>
+                  {post.category.title}
+                </Link>
+              </span>
+            ) : null}
             {post.author?.name ? <span>{post.author.name}</span> : null}
             {post.publishedAt ? (
               <span>{formatDate(post.publishedAt)}</span>

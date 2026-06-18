@@ -475,25 +475,65 @@ main .section--hero{padding-top:10rem}
    BLOG (Sanity) — index cards + article prose
    ============================================================ */
 
-/* index cards (mirrors the customer-stories .scard look) */
-.bcard{background:var(--white);border:1px solid var(--border-dark);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .25s var(--ease),border-color .25s,box-shadow .3s}
-.bcard:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:var(--shadow-lg)}
-.bcard .cover{position:relative;width:100%;aspect-ratio:16/10;overflow:hidden;background:var(--surface-tint);border-bottom:1px solid var(--border-dark)}
-.bcard .cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s var(--ease)}
-.bcard:hover .cover img{transform:scale(1.03)}
-.bcard-noimg{width:100%;height:100%;background:var(--brand-gradient-soft);opacity:.5}
-.bcard-cat{position:absolute;top:.9rem;left:.9rem;z-index:1;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(12,6,31,.62);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);padding:.28rem .6rem;border-radius:999px}
-.bcard .bbody{padding:1.7rem;display:flex;flex-direction:column;flex:1}
-.bcard-title{font-family:var(--font-heading);font-weight:600;font-size:1.18rem;line-height:1.25;letter-spacing:-.01em;color:var(--primary);margin-bottom:.6rem}
-.bcard .desc{color:var(--text-body);font-size:.96rem;line-height:1.5}
-.bcard-meta{margin-top:auto;padding-top:1.4rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;font-family:var(--font-mono);font-size:.76rem;color:var(--text-faded)}
-.bcard-meta .read{color:var(--brand-purple);display:inline-flex;align-items:center;gap:.4rem;transition:gap .2s}
-.bcard:hover .bcard-meta .read{gap:.7rem}
+/* structural layout — minimal styling (supahub-style sections) */
+.blog-sec-title{font-family:var(--font-heading);font-weight:600;font-size:1.4rem;letter-spacing:-.01em;margin-bottom:1.4rem}
+
+/* read by category */
+.cat-row{display:flex;flex-wrap:wrap;gap:1rem}
+.cat-card{display:flex;flex-direction:column;gap:.2rem;padding:1rem 1.2rem;border:1px solid var(--border-dark);border-radius:var(--radius);text-decoration:none;color:inherit;transition:filter .2s var(--ease)}
+.cat-card:hover{filter:brightness(.97)}
+.cat-name{font-weight:600}
+.cat-count{font-family:var(--font-mono);font-size:.76rem;color:var(--text-faded)}
+/* light category tints (cycled) */
+.cat-tint-0{background:#f3f0fc;border-color:#e3dbf7}
+.cat-tint-1{background:#eaf3ff;border-color:#d4e6fb}
+.cat-tint-2{background:#eafaf1;border-color:#cdeedd}
+.cat-tint-3{background:#fff5e9;border-color:#f5e3c8}
+.cat-tint-4{background:#fdeef4;border-color:#f6d8e6}
+
+/* featured (meta + title only) */
+.feat-list{list-style:none;display:flex;flex-direction:column;border-top:1px solid var(--border-dark)}
+.feat-item{padding:1.1rem 0;border-bottom:1px solid var(--border-dark)}
+.feat-meta{display:flex;gap:1rem;font-family:var(--font-mono);font-size:.76rem;color:var(--text-faded);margin-bottom:.4rem}
+.feat-cat{color:var(--brand-purple)}
+.feat-title{font-family:var(--font-heading);font-weight:600;font-size:1.18rem;letter-spacing:-.01em;color:var(--primary);text-decoration:none}
+.feat-title:hover{text-decoration:underline}
+
+/* recent posts — 3-column card grid */
+.post-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6rem var(--bento-gap)}
+.pcard{display:flex;flex-direction:column}
+.pcard-cover{display:block;width:100%;aspect-ratio:16/10;overflow:hidden;border-radius:12px;background:var(--surface-tint)}
+.pcard-cover img{width:100%;height:100%;object-fit:cover;display:block}
+.pcard-noimg{width:100%;height:100%;background:var(--surface-tint)}
+.pcard-meta{display:flex;align-items:center;gap:.9rem;margin:1.1rem 0 .8rem}
+.pcard-cat{flex:none;font-size:.82rem;color:var(--text-body);background:var(--surface-soft);border:1px solid var(--border-dark);padding:.3rem .8rem;border-radius:999px;text-decoration:none}
+.pcard-cat:hover{color:var(--primary)}
+.pcard-rule{flex:1;height:1px;background:var(--border-dark)}
+.pcard-date{flex:none;font-size:.86rem;color:var(--text-faded)}
+.pcard-title{font-family:var(--font-heading);font-weight:600;font-size:1.32rem;line-height:1.22;letter-spacing:-.015em;margin-bottom:.7rem}
+.pcard-title a{color:var(--primary);text-decoration:none}
+.pcard-title a:hover{text-decoration:underline}
+.pcard-excerpt{color:var(--text-body);font-size:1rem;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:1024px){.post-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.post-grid{grid-template-columns:1fr}}
+
+/* full-width feature post (spans the grid row: image left, text right) */
+.pcard-wide{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:2.6rem;align-items:center}
+.pcard-wide-cover{display:block;width:100%;aspect-ratio:16/10;overflow:hidden;border-radius:12px;background:var(--surface-tint)}
+.pcard-wide-cover img{width:100%;height:100%;object-fit:cover;display:block}
+.pcard-wide-body{display:flex;flex-direction:column}
+.pcard-wide-title{font-family:var(--font-heading);font-weight:600;font-size:2rem;line-height:1.15;letter-spacing:-.02em;margin-bottom:.9rem}
+.pcard-wide-title a{color:var(--primary);text-decoration:none}
+.pcard-wide-title a:hover{text-decoration:underline}
+.pcard-wide-excerpt{color:var(--text-body);font-size:1.1rem;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:768px){.pcard-wide{grid-template-columns:1fr;gap:1.2rem}}
 
 /* article header */
 .post-meta{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-top:1.4rem;font-family:var(--font-mono);font-size:.82rem;color:var(--text-faded)}
 .post-meta span{position:relative}
 .post-meta span+span::before{content:"·";position:absolute;left:-.75rem;color:var(--text-faded)}
+.post-meta-cat a{color:var(--brand-purple);text-transform:uppercase;letter-spacing:.06em;text-decoration:none}
+.post-meta-cat a:hover{text-decoration:underline}
 .post-cover{margin-top:2.4rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-dark)}
 .post-cover img{width:100%;height:auto;display:block}
 
