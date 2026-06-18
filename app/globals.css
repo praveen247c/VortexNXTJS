@@ -470,3 +470,45 @@ em.hl{font-style:normal;color:var(--brand-purple);font-weight:500}
    stop cramping the eyebrow against the nav on small screens. */
 main .section--hero{padding-top:10rem}
 @media(max-width:640px){main .section--hero{padding-top:8rem}}
+
+/* ============================================================
+   BLOG (Sanity) — index cards + article prose
+   ============================================================ */
+
+/* index cards (mirrors the customer-stories .scard look) */
+.bcard{background:var(--white);border:1px solid var(--border-dark);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .25s var(--ease),border-color .25s,box-shadow .3s}
+.bcard:hover{transform:translateY(-4px);border-color:var(--border-strong);box-shadow:var(--shadow-lg)}
+.bcard .cover{position:relative;width:100%;aspect-ratio:16/10;overflow:hidden;background:var(--surface-tint);border-bottom:1px solid var(--border-dark)}
+.bcard .cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s var(--ease)}
+.bcard:hover .cover img{transform:scale(1.03)}
+.bcard-noimg{width:100%;height:100%;background:var(--brand-gradient-soft);opacity:.5}
+.bcard-cat{position:absolute;top:.9rem;left:.9rem;z-index:1;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(12,6,31,.62);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);padding:.28rem .6rem;border-radius:999px}
+.bcard .bbody{padding:1.7rem;display:flex;flex-direction:column;flex:1}
+.bcard-title{font-family:var(--font-heading);font-weight:600;font-size:1.18rem;line-height:1.25;letter-spacing:-.01em;color:var(--primary);margin-bottom:.6rem}
+.bcard .desc{color:var(--text-body);font-size:.96rem;line-height:1.5}
+.bcard-meta{margin-top:auto;padding-top:1.4rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;font-family:var(--font-mono);font-size:.76rem;color:var(--text-faded)}
+.bcard-meta .read{color:var(--brand-purple);display:inline-flex;align-items:center;gap:.4rem;transition:gap .2s}
+.bcard:hover .bcard-meta .read{gap:.7rem}
+
+/* article header */
+.post-meta{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-top:1.4rem;font-family:var(--font-mono);font-size:.82rem;color:var(--text-faded)}
+.post-meta span{position:relative}
+.post-meta span+span::before{content:"·";position:absolute;left:-.75rem;color:var(--text-faded)}
+.post-cover{margin-top:2.4rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-dark)}
+.post-cover img{width:100%;height:auto;display:block}
+
+/* portable-text prose */
+.prose{margin-top:2.8rem;font-size:1.0625rem;line-height:1.7;color:var(--primary)}
+.prose .prose-p{margin:0 0 1.3rem;color:var(--text-body)}
+.prose .prose-h2{font-family:var(--font-heading);font-weight:600;font-size:1.7rem;letter-spacing:-.02em;line-height:1.2;margin:2.6rem 0 1rem;color:var(--primary)}
+.prose .prose-h3{font-family:var(--font-heading);font-weight:600;font-size:1.32rem;letter-spacing:-.01em;margin:2rem 0 .8rem;color:var(--primary)}
+.prose .prose-h4{font-family:var(--font-heading);font-weight:600;font-size:1.1rem;margin:1.6rem 0 .6rem;color:var(--primary)}
+.prose .prose-ul,.prose .prose-ol{margin:0 0 1.3rem 1.3rem;color:var(--text-body)}
+.prose .prose-ul li,.prose .prose-ol li{margin:.4rem 0;padding-left:.3rem}
+.prose .prose-quote{margin:1.8rem 0;padding:.4rem 0 .4rem 1.4rem;border-left:3px solid var(--brand-purple);color:var(--primary);font-size:1.18rem;line-height:1.5;font-style:italic}
+.prose .prose-link{color:var(--brand-purple);text-decoration:underline;text-underline-offset:2px}
+.prose .prose-link:hover{color:var(--brand-purple-mid)}
+.prose .prose-code{font-family:var(--font-mono);font-size:.88em;background:var(--surface-tint);border:1px solid var(--border-brand);border-radius:5px;padding:.1rem .35rem}
+.prose .prose-figure{margin:2rem 0}
+.prose .prose-img{width:100%;height:auto;display:block;border-radius:var(--radius);border:1px solid var(--border-dark)}
+.prose .prose-caption{margin-top:.6rem;font-family:var(--font-mono);font-size:.76rem;color:var(--text-faded);text-align:center}

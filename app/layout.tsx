@@ -1,8 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import RevealInit from "@/components/RevealInit";
 
 export const metadata: Metadata = {
   title: "Vortex IQ · The AI Operating System for E-Commerce",
@@ -22,12 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body suppressHydrationWarning>
-        <Header />
-        {children}
-        <Footer />
-        <RevealInit />
-      </body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
