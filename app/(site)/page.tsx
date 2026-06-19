@@ -221,7 +221,7 @@ export default function Home() {
                 <img src="/assets/logos/clients/coldwater-creek.svg" alt="Coldwater Creek" />
                 <img src="/assets/logos/clients/richer-sounds.svg" alt="Richer Sounds" />
                 <img className="dhs" src="/assets/logos/clients/dhs-equipment.svg" alt="DHS Equipment" />
-                <img src="/assets/logos/clients/krispy-kreme.svg" alt="Krispy Kreme" />
+                <img className="krispy" src="/assets/logos/clients/krispy-kreme.png" alt="Krispy Kreme" />
               </div>
             </div>
             <div className="card">

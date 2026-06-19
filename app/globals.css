@@ -291,6 +291,7 @@ em.hl{font-style:normal;color:var(--brand-purple);font-weight:500}
 .plogos img:hover{transform:translateY(-2px)}
 .plogos--clients img{height:18px}
 .plogos--clients img.dhs{height:14px}
+.plogos--clients img.krispy{height:38px}
 
 /* ---- faq ---- */
 .faq{max-width:860px}
@@ -378,6 +379,8 @@ em.hl{font-style:normal;color:var(--brand-purple);font-weight:500}
 .mega-ic img{width:30px;height:30px;display:block}
 .mega-tx b{display:block;color:#fff;font-family:var(--font-heading);font-size:1rem;font-weight:600;letter-spacing:-.01em}
 .mega-tx span{display:block;color:rgba(255,255,255,.5);font-size:.84rem;margin-top:.12rem}
+.mega-divider{height:1px;background:rgba(255,255,255,.12);margin:.6rem .8rem}
+.m-divider{height:1px;background:rgba(255,255,255,.1);margin:.5rem 0}
 
 /* mobile menu */
 .mobile-menu{display:none}
