@@ -20,6 +20,7 @@ const ICON_SRC: Record<string, string> = {
   enablement: "/assets/icons/enablement.svg",
   integrations: "/assets/icons/integrations.svg",
   blog: "/assets/icons/blog.svg",
+  docs: "/assets/icons/docs.svg",
   stories: "/assets/icons/stories.svg",
   about: "/assets/icons/about.svg",
   careers: "/assets/icons/careers.svg",
@@ -144,7 +145,10 @@ export default function Header() {
               ) : null}
               <div className="mega-list">
                 {entry.panel.items.map((it) => (
-                  <MegaRow key={it.label} item={it} />
+                  <div key={it.label} style={{ display: "contents" }}>
+                    {it.divider ? <div className="mega-divider" /> : null}
+                    <MegaRow item={it} />
+                  </div>
                 ))}
               </div>
             </div>
@@ -180,14 +184,19 @@ export default function Header() {
                             </span>
                           </>
                         );
-                        return it.external ? (
-                          <a key={it.label} className="m-row" href={it.href} target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}>
-                            {row}
-                          </a>
-                        ) : (
-                          <Link key={it.label} className="m-row" href={it.href} onClick={() => setMobileOpen(false)}>
-                            {row}
-                          </Link>
+                        return (
+                          <div key={it.label} style={{ display: "contents" }}>
+                            {it.divider ? <div className="m-divider" /> : null}
+                            {it.external ? (
+                              <a className="m-row" href={it.href} target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}>
+                                {row}
+                              </a>
+                            ) : (
+                              <Link className="m-row" href={it.href} onClick={() => setMobileOpen(false)}>
+                                {row}
+                              </Link>
+                            )}
+                          </div>
                         );
                       })}
                     </div>

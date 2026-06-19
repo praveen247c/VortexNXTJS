@@ -7,6 +7,7 @@ export type MegaItem = {
   desc?: string;
   icon?: string; // key into the icon map in MegaMenu
   external?: boolean;
+  divider?: boolean; // render a separator line before this row
 };
 
 export type NavEntry = {
@@ -86,8 +87,10 @@ export const NAV: NavEntry[] = [
         moreHref: "/resources/blog",
       },
       items: [
+        { label: "Docs", href: "https://docs.vortexiq.ai/", desc: "Technical documentation & reference guides", icon: "docs", external: true },
+        { label: "Academy", href: "https://www.vortexiq.ai/academy/", desc: "Guides, playbooks, and workflows", icon: "academy", external: true },
         { label: "Blog", href: "/resources/blog", desc: "Product updates & insights", icon: "blog" },
-        { label: "Customer Stories", href: "/customer-stories", desc: "Real results, line by line", icon: "stories" },
+        { label: "Customer Stories", href: "/customer-stories", desc: "Real results, line by line", icon: "stories", divider: true },
         { label: "About Us", href: "/about-us", desc: "Who we are and what we build", icon: "about" },
         { label: "Careers", href: "/careers", desc: "Join the Vortex IQ team", icon: "careers" },
         { label: "Security & Trust", href: "/trust/trust-center", desc: "ISO 27001, approvals, rollback", icon: "trust" },
