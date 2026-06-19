@@ -47,9 +47,18 @@ export async function generateMetadata({
   const { slug } = await params;
   const category = await getCategory(slug);
   if (!category) return { title: "Blog · Vortex IQ" };
+  const description = category.description || `Articles in ${category.title}.`;
+  const path = `/resources/blog/category/${slug}`;
   return {
     title: `${category.title} · Vortex IQ Blog`,
-    description: category.description || `Articles in ${category.title}.`,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      type: "website",
+      title: `${category.title} · Vortex IQ Blog`,
+      description,
+      url: path,
+    },
   };
 }
 

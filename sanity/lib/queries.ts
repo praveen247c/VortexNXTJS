@@ -45,6 +45,19 @@ export const categorySlugsQuery = groq`
   *[_type == "category" && defined(slug.current)].slug.current
 `;
 
+// Sitemap: published (non-draft) posts and categories with last-modified dates.
+export const sitemapPostsQuery = groq`
+  *[_type == "post" && defined(slug.current) && !(_id in path("drafts.**"))]{
+    "slug": slug.current, _updatedAt
+  }
+`;
+
+export const sitemapCategoriesQuery = groq`
+  *[_type == "category" && defined(slug.current)]{
+    "slug": slug.current, _updatedAt
+  }
+`;
+
 export const postsByCategoryQuery = groq`
   *[_type == "post" && defined(slug.current) && category->slug.current == $slug]
     | order(publishedAt desc){
@@ -59,10 +72,14 @@ export const postBySlugQuery = groq`
     "slug": slug.current,
     excerpt,
     publishedAt,
+    _updatedAt,
     coverImage,
     body,
     seoTitle,
     seoDescription,
+    seoOgImage,
+    seoCanonicalUrl,
+    seoNoIndex,
     "category": category->{title, "slug": slug.current},
     "author": author->{name, bio, avatar}
   }

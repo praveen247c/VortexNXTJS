@@ -1,6 +1,30 @@
 import HeroRotator from "@/components/home/HeroRotator";
 import ConnectorChips from "@/components/home/ConnectorChips";
 import PlatformTabs from "@/components/home/PlatformTabs";
+import JsonLd from "@/components/JsonLd";
+import {
+  organizationLd,
+  websiteLd,
+  softwareApplicationLd,
+  faqPageLd,
+  type Faq,
+} from "@/lib/structured-data";
+
+// Single source of truth: the visible FAQ below AND the FAQPage JSON-LD are both
+// rendered from this array, so the schema always matches on-page content (Google
+// policy requires it). Edit copy here; both stay in sync.
+const homeFaq: Faq[] = [
+  { question: "What is Vortex IQ?", answer: "Vortex IQ is the AI Operating System for e-commerce. It connects your store and the tools around it, watches everything in real time, tells you what is wrong and why, and helps you fix it safely. One system, across 200+ connectors." },
+  { question: "How is it different from analytics or a dashboard?", answer: "Analytics tells you what happened. Vortex IQ tells you what is wrong, why it happened, and helps you fix it. It is the difference between a report you read and a system that acts, with your approval." },
+  { question: "Which platforms and tools does it work with?", answer: "BigCommerce, Shopify, Adobe Commerce, and WooCommerce, plus 200+ connectors across advertising, analytics, email, payments, shipping, and more. Connect the tools you already use in minutes." },
+  { question: "Do I need a developer to set it up?", answer: "No. Connect your stack from the dashboard and the platform does the rest. Your first findings appear within the hour, ranked by the revenue at stake." },
+  { question: "Will the AI make changes to my live store?", answer: "Vortex IQ does the watching. Your team makes the calls. Every change runs through staging first, is approval-gated, and can be rolled back in one click, with a full audit trail. Nothing touches live revenue untested unless you choose to automate it." },
+  { question: "What is Viq?", answer: "Viq is the AI agent you talk to inside Vortex IQ. Ask it plain questions like “Where am I losing revenue?” or “Summarise last week’s sales” and get an answer in seconds. Just ask Viq." },
+  { question: "How does it keep my store safe?", answer: "Test every change on StagingPro before it goes live, and keep a full backup with one-click rollback through RollbackPro. You always have a recent restore point, and we never lose anything you delete." },
+  { question: "What does it cost?", answer: "Start with a 14-day free trial, then $499 a month. Higher plans add SEO and GEO, more connectors, deeper retention, and dedicated support. See full pricing for details." },
+  { question: "How is my data used and is it secure?", answer: "Your data powers your own insights and recommendations. It is not used to train shared AI models. We are ISO 27001 certified with SOC 2 in progress, and your data is processed in the United Kingdom under our Privacy Policy." },
+  { question: "What results can I expect?", answer: "Across 60+ store audits we surfaced 749 issues and resolve 55% of them automatically, approval-gated and reversible. When the SEO and GEO engine runs, growth compounds; one recent deployment saw organic search rise 1,750% in 28 days." },
+];
 
 const Check = () => (
   <i>
@@ -13,6 +37,10 @@ const Check = () => (
 export default function Home() {
   return (
     <main id="top">
+      <JsonLd data={organizationLd} />
+      <JsonLd data={websiteLd} />
+      <JsonLd data={softwareApplicationLd} />
+      <JsonLd data={faqPageLd(homeFaq)} />
       {/* ============ HERO ============ */}
       <section className="section section--hero hero-wrap">
         <div className="container hero">
@@ -290,16 +318,12 @@ export default function Home() {
           <div className="eyebrow reveal">FAQ</div>
           <h2 className="reveal">Questions, answered.</h2>
           <div className="faq reveal" style={{ marginTop: "2.5rem" }}>
-            <details className="faq-item" open><summary>What is Vortex IQ?</summary><p>Vortex IQ is the AI Operating System for e-commerce. It connects your store and the tools around it, watches everything in real time, tells you what is wrong and why, and helps you fix it safely. One system, across 200+ connectors.</p></details>
-            <details className="faq-item"><summary>How is it different from analytics or a dashboard?</summary><p>Analytics tells you what happened. Vortex IQ tells you what is wrong, why it happened, and helps you fix it. It is the difference between a report you read and a system that acts, with your approval.</p></details>
-            <details className="faq-item"><summary>Which platforms and tools does it work with?</summary><p>BigCommerce, Shopify, Adobe Commerce, and WooCommerce, plus 200+ connectors across advertising, analytics, email, payments, shipping, and more. Connect the tools you already use in minutes.</p></details>
-            <details className="faq-item"><summary>Do I need a developer to set it up?</summary><p>No. Connect your stack from the dashboard and the platform does the rest. Your first findings appear within the hour, ranked by the revenue at stake.</p></details>
-            <details className="faq-item"><summary>Will the AI make changes to my live store?</summary><p>Vortex IQ does the watching. Your team makes the calls. Every change runs through staging first, is approval-gated, and can be rolled back in one click, with a full audit trail. Nothing touches live revenue untested unless you choose to automate it.</p></details>
-            <details className="faq-item"><summary>What is Viq?</summary><p>Viq is the AI agent you talk to inside Vortex IQ. Ask it plain questions like &quot;Where am I losing revenue?&quot; or &quot;Summarise last week&apos;s sales&quot; and get an answer in seconds. Just ask Viq.</p></details>
-            <details className="faq-item"><summary>How does it keep my store safe?</summary><p>Test every change on StagingPro before it goes live, and keep a full backup with one-click rollback through RollbackPro. You always have a recent restore point, and we never lose anything you delete.</p></details>
-            <details className="faq-item"><summary>What does it cost?</summary><p>Start with a 14-day free trial, then $499 a month. Higher plans add SEO and GEO, more connectors, deeper retention, and dedicated support. See full pricing for details.</p></details>
-            <details className="faq-item"><summary>How is my data used and is it secure?</summary><p>Your data powers your own insights and recommendations. It is not used to train shared AI models. We are ISO 27001 certified with SOC 2 in progress, and your data is processed in the United Kingdom under our Privacy Policy.</p></details>
-            <details className="faq-item"><summary>What results can I expect?</summary><p>Across 60+ store audits we surfaced 749 issues and resolve 55% of them automatically, approval-gated and reversible. When the SEO and GEO engine runs, growth compounds; one recent deployment saw organic search rise 1,750% in 28 days.</p></details>
+            {homeFaq.map((item, i) => (
+              <details className="faq-item" key={item.question} open={i === 0}>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>

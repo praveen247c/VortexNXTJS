@@ -8,6 +8,13 @@ import { categoriesQuery, postsQuery } from "@/sanity/lib/queries";
 export const metadata: Metadata = {
   title: "Blog & News · Vortex IQ",
   description: "Product updates, insights and news from Vortex IQ.",
+  alternates: { canonical: "/resources/blog" },
+  openGraph: {
+    type: "website",
+    title: "Blog & News · Vortex IQ",
+    description: "Product updates, insights and news from Vortex IQ.",
+    url: "/resources/blog",
+  },
 };
 
 export const revalidate = 60;
