@@ -5,11 +5,16 @@ import { notFound } from "next/navigation";
 import type { PortableTextBlock } from "sanity";
 
 import PortableText from "@/components/PortableText";
+import JsonLd from "@/components/JsonLd";
 import { client } from "@/sanity/lib/client";
 import { urlForImage } from "@/sanity/lib/image";
 import { postBySlugQuery, postSlugsQuery } from "@/sanity/lib/queries";
+import { blogPostingLd, breadcrumbLd } from "@/lib/structured-data";
+import { absoluteUrl } from "@/lib/site";
 
 export const revalidate = 60;
+
+type SanityImage = { asset?: { _ref: string }; alt?: string };
 
 type Post = {
   _id: string;
@@ -17,10 +22,14 @@ type Post = {
   slug: string;
   excerpt?: string;
   publishedAt?: string;
-  coverImage?: { asset?: { _ref: string }; alt?: string };
+  _updatedAt?: string;
+  coverImage?: SanityImage;
   body?: PortableTextBlock[];
   seoTitle?: string;
   seoDescription?: string;
+  seoOgImage?: SanityImage;
+  seoCanonicalUrl?: string;
+  seoNoIndex?: boolean;
   category?: { title?: string; slug?: string } | null;
   author?: { name?: string; bio?: string } | null;
 };
@@ -59,12 +68,23 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = await getPost(slug);
   if (!post) return { title: "Blog · Vortex IQ" };
+
+  const title = `${post.seoTitle || post.title} · Vortex IQ`;
+  const description = post.seoDescription || post.excerpt;
+  const path = `/resources/blog/${slug}`;
+  const ogImage = post.seoOgImage?.asset
+    ? urlForImage(post.seoOgImage).width(1200).height(630).fit("crop").url()
+    : post.coverImage?.asset
+      ? urlForImage(post.coverImage).width(1200).height(630).fit("crop").url()
+      : "/og/default.png";
+
   return {
-    title: `${post.seoTitle || post.title} · Vortex IQ`,
-    description: post.seoDescription || post.excerpt,
-    openGraph: post.coverImage?.asset
-      ? { images: [urlForImage(post.coverImage).width(1200).height(630).url()] }
-      : undefined,
+    title,
+    description,
+    alternates: { canonical: post.seoCanonicalUrl || path },
+    robots: post.seoNoIndex ? { index: false, follow: false } : undefined,
+    openGraph: { type: "article", title, description, url: path, images: [ogImage] },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
 }
 
@@ -77,8 +97,30 @@ export default async function BlogPostPage({
   const post = await getPost(slug);
   if (!post) notFound();
 
+  const ogImageUrl = post.coverImage?.asset
+    ? urlForImage(post.coverImage).width(1200).height(630).url()
+    : absoluteUrl("/og/default.png");
+
   return (
     <main>
+      <JsonLd
+        data={blogPostingLd({
+          title: post.title,
+          slug: post.slug,
+          excerpt: post.excerpt,
+          image: ogImageUrl,
+          datePublished: post.publishedAt,
+          dateModified: post._updatedAt,
+          authorName: post.author?.name,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbLd([
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/resources/blog" },
+          { name: post.title, path: `/resources/blog/${post.slug}` },
+        ])}
+      />
       <article className="section section--hero">
         <div className="container" style={{ maxWidth: 820 }}>
           <Link className="textlink reveal in" href="/resources/blog">

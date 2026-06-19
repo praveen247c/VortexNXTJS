@@ -85,6 +85,29 @@ export const postType = defineType({
       rows: 2,
       group: "seo",
       description: "Meta description. Falls back to the excerpt.",
+      validation: (Rule) => Rule.max(160).warning("Keep under ~160 characters."),
+    }),
+    defineField({
+      name: "seoOgImage",
+      title: "Social share image (1200×630)",
+      type: "image",
+      group: "seo",
+      description:
+        "Overrides the cover image for social cards. Falls back to the cover image, then the site default.",
+    }),
+    defineField({
+      name: "seoCanonicalUrl",
+      title: "Canonical URL override",
+      type: "url",
+      group: "seo",
+      description: "Only set if this content also lives at another URL.",
+    }),
+    defineField({
+      name: "seoNoIndex",
+      title: "Hide from search engines",
+      type: "boolean",
+      group: "seo",
+      initialValue: false,
     }),
   ],
   preview: {
