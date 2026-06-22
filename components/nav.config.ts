@@ -91,7 +91,6 @@ export const NAV: NavEntry[] = [
         { label: "Blog", href: "/resources/blog", desc: "Product updates & insights", icon: "blog" },
         { label: "About Us", href: "/about-us", desc: "Who we are and what we build", icon: "about", divider: true },
         { label: "Careers", href: "/careers", desc: "Join the Vortex IQ team", icon: "careers" },
-        { label: "Security & Trust", href: "/trust/trust-center", desc: "ISO 27001, approvals, rollback", icon: "trust" },
         { label: "Contact Us", href: "/contact-us", desc: "Partnerships & enquiries", icon: "contact" },
       ],
     },
