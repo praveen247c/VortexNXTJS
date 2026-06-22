@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { css, html } from "./content";
 
 export const metadata: Metadata = {
-  title: "Actions — Turn Ecommerce Findings Into Work That Ships | Vortex IQ",
-  description: "Actions is the act step of your AI OS. Findings land as tracked work, ranked by revenue at stake, with owners, approval gates, staging-first safety, and two-way Jira, Asana and Linear sync.",
+  title: "Vortex Agents: turn AI findings into work that ships | Vortex IQ",
+  description: "Vortex Agents turns AI-ranked findings into ranked Kanban work with owners, due dates and rules. Approval-gated, reversible, synced to Jira, Asana and Linear.",
 };
 
 export default function Page() {
