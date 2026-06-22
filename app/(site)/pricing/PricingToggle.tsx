@@ -5,13 +5,12 @@ import { useEffect } from "react";
 // Re-implements the inline currency/billing toggle from pricing.html.
 // The ported markup uses inline onclick="setBilling(...)"/"setCurrency(...)",
 // so we expose those on window and run an initial render once mounted.
-type Currency = "USD" | "GBP" | "EUR";
+type Currency = "USD" | "GBP";
 type Billing = "monthly" | "annual";
 
 const PRICES: Record<Currency, { sym: string; [plan: string]: number | string }> = {
   USD: { sym: "$", Foundation: 499, Growth: 1499, Enterprise: 3999, OmniChannel: 5499 },
   GBP: { sym: "£", Foundation: 399, Growth: 1199, Enterprise: 3199, OmniChannel: 4399 },
-  EUR: { sym: "€", Foundation: 469, Growth: 1399, Enterprise: 3699, OmniChannel: 5099 },
 };
 
 export default function PricingToggle() {
@@ -48,7 +47,7 @@ export default function PricingToggle() {
     };
     w.setCurrency = (c: Currency) => {
       state.currency = c;
-      (["USD", "GBP", "EUR"] as Currency[]).forEach((x) =>
+      (["USD", "GBP"] as Currency[]).forEach((x) =>
         document.getElementById("c" + x)?.classList.toggle("on", x === c)
       );
       render();
