@@ -88,7 +88,6 @@ export const NAV: NavEntry[] = [
       },
       items: [
         { label: "Docs", href: "https://docs.vortexiq.ai/", desc: "Technical documentation & reference guides", icon: "docs", external: true },
-        { label: "Academy", href: "https://www.vortexiq.ai/academy/", desc: "Guides, playbooks, and workflows", icon: "academy", external: true },
         { label: "Blog", href: "/resources/blog", desc: "Product updates & insights", icon: "blog" },
         { label: "Customer Stories", href: "/customer-stories", desc: "Real results, line by line", icon: "stories", divider: true },
         { label: "About Us", href: "/about-us", desc: "Who we are and what we build", icon: "about" },

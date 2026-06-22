@@ -136,7 +136,7 @@ export default function Page() {
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Multi-client monitoring</li>
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Paid custom agents</li>
                 </ul>
-                <Link className="ptype-link" href="/solutions/for-agencies">For agencies →</Link>
+                <Link className="ptype-link" href="/partners/agency-program">Agency program →</Link>
               </div>
 
               {/* Technology */}
@@ -155,7 +155,7 @@ export default function Page() {
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Co-selling motions</li>
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Joint go-to-market</li>
                 </ul>
-                <Link className="ptype-link" href="/solutions/for-tech-partners">For tech partners →</Link>
+                <Link className="ptype-link" href="/partners/technology-program">Technology program →</Link>
               </div>
 
               {/* Student */}
