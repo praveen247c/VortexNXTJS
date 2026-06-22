@@ -101,6 +101,13 @@ export default async function BlogPostPage({
     ? urlForImage(post.coverImage).width(1200).height(630).url()
     : absoluteUrl("/og/default.png");
 
+  // The page already renders the title as the H1, but migrated Webflow bodies
+  // often lead with their own H1 (the SEO title), so the title shows twice.
+  // Drop H1 blocks from the body; in-body headings should start at H2.
+  const body = (post.body ?? []).filter(
+    (block) => !("style" in block && (block as { style?: string }).style === "h1")
+  );
+
   return (
     <main>
       <JsonLd
@@ -158,7 +165,7 @@ export default async function BlogPostPage({
           ) : null}
 
           <div className="prose reveal in">
-            {post.body ? <PortableText value={post.body} /> : null}
+            {body.length ? <PortableText value={body} /> : null}
           </div>
         </div>
       </article>
