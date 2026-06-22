@@ -43,8 +43,8 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Programs</h4>
             <Link href="/partners">Partners</Link>
-            <Link href="/solutions/for-agencies">Agency Partners</Link>
-            <Link href="/solutions/for-tech-partners">Technology Partners</Link>
+            <Link href="/partners/agency-program">Agency Partners</Link>
+            <Link href="/partners/technology-program">Technology Partners</Link>
             <Link href="/partners/student-program">Student Partners</Link>
             <Link href="/solutions/integrations">Integrations</Link>
           </div>

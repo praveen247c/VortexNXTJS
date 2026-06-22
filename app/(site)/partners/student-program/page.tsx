@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import HubSpotForm from "@/components/HubSpotForm";
 
 export const metadata: Metadata = {
   title: "Student Program | AI Career Launchpad | Vortex IQ",
@@ -55,6 +56,8 @@ const css = `
 .sp-step p{color:var(--text-body);font-size:.94rem;line-height:1.55}
 .sp-apply-cta{display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem;margin-top:2.8rem}
 .sp-apply-note{font-family:var(--font-mono);font-size:.74rem;color:var(--text-faded);line-height:1.55}
+.sp-form-card{max-width:720px;margin:2.8rem auto 0;text-align:left;background:var(--white);border:1px solid var(--border-dark);border-radius:var(--radius);padding:2.4rem;box-shadow:var(--shadow-sm)}
+.sp-form-note{text-align:center;font-family:var(--font-mono);font-size:.74rem;color:var(--text-faded);line-height:1.55;margin-top:1.4rem}
 
 /* final */
 .sp-final{text-align:center}
@@ -271,20 +274,12 @@ export default function Page() {
                 <p>Get matched with a mentor and a real project, and start building agents that go to production.</p>
               </div>
             </div>
-            <div className="sp-apply-cta reveal">
-              <a className="btn" href="mailto:hey@vortexiq.ai?subject=Student%20Program%20Application">
-                Apply by email
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ width: 17, height: 17 }}>
-                  <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-              </a>
-              <a className="btn btn--ghost" href="https://www.vortexiq.ai/partners/student-program" target="_blank" rel="noopener noreferrer">
-                See the full program →
-              </a>
-              <span className="sp-apply-note">
-                Email <a className="textlink" href="mailto:hey@vortexiq.ai?subject=Student%20Program%20Application">hey@vortexiq.ai</a> — we usually reply within one business day.
-              </span>
+            <div className="sp-form-card reveal">
+              <HubSpotForm portalId="24385350" formId="e31b5ccd-c7a1-4952-b475-a5c6a364bd0a" region="na1" />
             </div>
+            <p className="sp-form-note reveal">
+              Prefer email? Reach us at <a className="textlink" href="mailto:hey@vortexiq.ai?subject=Student%20Program%20Application">hey@vortexiq.ai</a> — we usually reply within one business day.
+            </p>
           </div>
         </section>
 

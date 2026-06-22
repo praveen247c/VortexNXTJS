@@ -151,7 +151,7 @@ export default function Page() {
               Four principles hold up everything we build. They apply to your data at rest, your data in motion,
               and every action an agent takes on your behalf.
             </p>
-            <div className="grid grid-4">
+            <div className="grid grid-2">
               <div className="card reveal">
                 <div className="pillar-ic">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 11 4.6-2.4 8-6 8-11V5l-8-3Z" /><path d="m9 12 2 2 4-4" /></svg>

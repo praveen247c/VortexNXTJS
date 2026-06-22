@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import HubSpotForm from "@/components/HubSpotForm";
 
 export const metadata: Metadata = {
   title: "Careers at Vortex IQ | Join the Team Building the AI OS for Commerce",
@@ -70,6 +71,8 @@ const css = `
 .careers-final h2{max-width:20ch;margin:0 auto 1.3rem}
 .careers-final .lede{margin:0 auto 2.4rem}
 .careers-final .cta-row{justify-content:center}
+.careers-form-card{max-width:720px;margin:0 auto;text-align:left;background:var(--white);border:1px solid var(--border-dark);border-radius:var(--radius);padding:2.4rem;box-shadow:var(--shadow-sm)}
+.careers-form-note{text-align:center;font-family:var(--font-mono);font-size:.74rem;color:var(--text-faded);line-height:1.55;margin-top:1.4rem}
 
 @media(max-width:1024px){
   .mission{grid-template-columns:1fr;gap:2.4rem}
@@ -358,8 +361,8 @@ export default function Page() {
           </div>
         </section>
 
-        {/* FINAL CTA */}
-        <section className="section careers-final">
+        {/* FINAL CTA / APPLY */}
+        <section className="section careers-final" id="apply">
           <div className="container">
             <div className="eyebrow reveal" style={{ justifyContent: "center" }}>Don&apos;t see your role?</div>
             <h2 className="reveal">Introduce yourself anyway.</h2>
@@ -367,10 +370,12 @@ export default function Page() {
               If you&apos;re excited about building the AI Operating System for commerce, we want to hear from you.
               Tell us what you&apos;d love to work on and where you can have the biggest impact.
             </p>
-            <div className="cta-row reveal">
-              <a className="btn" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Introducing%20myself" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Introduce yourself</a>
-              <Link className="btn btn--ghost" href="/about-us" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Read our mission →</Link>
+            <div className="careers-form-card reveal">
+              <HubSpotForm portalId="24385350" formId="f419d113-fb6d-4841-9ca5-f3b4b7337ab2" region="na1" />
             </div>
+            <p className="careers-form-note reveal">
+              Prefer email? Reach us at <a className="textlink" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Introducing%20myself">hey@vortexiq.ai</a> — we usually reply within one business day.
+            </p>
           </div>
         </section>
       </main>

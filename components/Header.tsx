@@ -26,7 +26,6 @@ const ICON_SRC: Record<string, string> = {
   careers: "/assets/icons/careers.svg",
   trust: "/assets/icons/trust.svg",
   contact: "/assets/icons/contact.svg",
-  academy: "/assets/icons/academy.svg",
 };
 
 /* eslint-disable @next/next/no-img-element */
