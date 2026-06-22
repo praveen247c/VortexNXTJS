@@ -326,15 +326,15 @@ export default function Page() {
                   <div className="pillar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M8 12a4 4 0 1 1 8 0c0 1.5-.8 2.5-1.7 3.3-.7.6-1.3 1.2-1.3 2.2v.5M12 22h.01M12 2a7 7 0 0 0-7 7M19 9a7 7 0 0 0-7-7" /></svg></div>
                   <h3>Ask Viq</h3>
                   <p className="muted">The conversational layer. Your agents explain what they find in plain English, and your team can interrogate any result by just asking.</p>
-                  <Link className="pillar-link" href="/ask-viq">Explore Ask Viq →</Link>
+                  <Link className="pillar-link" href="/ai-os-platform/ask-viq">Explore Ask Viq →</Link>
                 </div>
               </div>
               <div className="card card--tint reveal">
                 <div className="pillar">
                   <div className="pillar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="m13 2-3 7h5l-3 7" /><circle cx="12" cy="12" r="9" /></svg></div>
-                  <h3>Actions</h3>
-                  <p className="muted">The hands. When an agent&apos;s fix is approved, Actions executes it safely on your live store — within the rules and limits you set.</p>
-                  <Link className="pillar-link" href="/actions">Explore Actions →</Link>
+                  <h3>Vortex Agents</h3>
+                  <p className="muted">The hands. When an agent&apos;s fix is approved, Vortex Agents execute it safely on your live store — within the rules and limits you set.</p>
+                  <Link className="pillar-link" href="/ai-os-platform/vortex-agents">Explore Vortex Agents →</Link>
                 </div>
               </div>
               <div className="card card--tint reveal">
@@ -342,7 +342,7 @@ export default function Page() {
                   <div className="pillar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a5 5 0 0 0-5 5v1a4 4 0 0 0-1 8 4 4 0 0 0 7 1 4 4 0 0 0 7-1 4 4 0 0 0-1-8V7a5 5 0 0 0-7-5Z" /><path d="M12 7v13" /></svg></div>
                   <h3>Vortex Memory</h3>
                   <p className="muted">The context. Agents remember your store&apos;s history, decisions, and what good looks like — so every fix fits how you actually operate.</p>
-                  <Link className="pillar-link" href="/vortex-memory">Explore Vortex Memory →</Link>
+                  <Link className="pillar-link" href="/ai-os-platform/vortex-memory">Explore Vortex Memory →</Link>
                 </div>
               </div>
             </div>

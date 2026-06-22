@@ -244,8 +244,8 @@ export default function Page() {
                   </div>
                 </div>
                 <div>
-                  <Link className="safe-link" href="/actions">Explore Actions →</Link>
-                  <Link className="safe-link" href="/vortex-apps">Staging & backups →</Link>
+                  <Link className="safe-link" href="/ai-os-platform/vortex-agents">Explore Vortex Agents →</Link>
+                  <Link className="safe-link" href="/ai-os-platform/vortex-apps">Staging & backups →</Link>
                 </div>
               </div>
 

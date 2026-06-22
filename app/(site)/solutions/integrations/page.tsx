@@ -376,7 +376,7 @@ export default function Page() {
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="m9 11 3 3L22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg><span><b style={{ color: "var(--primary)" }}>Staging-first</b> — changes are validated off-live before they ever reach customers.</span></li>
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8" /><path d="M3 3v5h5" /></svg><span><b style={{ color: "var(--primary)" }}>One-click rollback</b> — every write is reversible, with a full audit trail.</span></li>
                   </ul>
-                  <Link className="flow-link" href="/actions">See how Actions ship work →</Link>
+                  <Link className="flow-link" href="/ai-os-platform/vortex-agents">See how Vortex Agents ship work →</Link>
                 </div>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactForm from "./ContactForm";
+import HubSpotForm from "@/components/HubSpotForm";
 
 export const metadata: Metadata = {
   title: "Contact Vortex IQ | Sales, Support & Partnership Enquiries",
@@ -79,6 +80,23 @@ const css = `
 .map-pin .pin{width:46px;height:46px;border-radius:50% 50% 50% 0;background:var(--brand-purple);transform:rotate(-45deg);margin:0 auto;box-shadow:var(--shadow-brand);position:relative}
 .map-pin .pin::after{content:"";position:absolute;inset:13px;background:#fff;border-radius:50%}
 .map-pin .lbl{font-family:var(--font-mono);font-size:.74rem;color:var(--brand-purple);letter-spacing:.04em;margin-top:1.1rem;background:var(--white);border:1px solid var(--border-brand);border-radius:var(--radius-pill);padding:.35rem .8rem;display:inline-block}
+
+/* book a founder call — form left / start-now right */
+.fc-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.fc-bullets{list-style:none;margin:1.3rem 0 2rem;padding:0;display:flex;flex-direction:column;gap:.9rem}
+.fc-bullets li{display:flex;align-items:flex-start;gap:.7rem;color:var(--text-body);font-size:.98rem;line-height:1.5}
+.fc-bullets svg{width:18px;height:18px;flex:none;color:var(--brand-purple);margin-top:.15rem}
+.fc-form-card{background:var(--white);border:1px solid var(--border-dark);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow-md)}
+.fc-card{background:var(--white);border:1px solid var(--border-dark);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.2rem}
+.fc-card--soft{background:var(--surface-soft)}
+.fc-card .lbl{font-family:var(--font-heading);font-weight:600;font-size:1.05rem;margin-bottom:.5rem}
+.fc-card p{color:var(--text-body);font-size:.96rem;line-height:1.55;margin:0}
+.fc-phone{display:block;text-align:center;background:var(--brand-purple);color:#fff;font-family:var(--font-heading);font-weight:600;font-size:1.5rem;padding:.95rem 1rem;border-radius:12px;text-decoration:none;margin-top:.9rem;transition:background .2s}
+.fc-phone:hover{background:var(--brand-purple-mid)}
+.book-card{background:var(--white);border:1px solid var(--border-dark);border-radius:var(--radius);padding:.9rem;box-shadow:var(--shadow-md);overflow:hidden}
+.book-card iframe{display:block;width:100%;height:620px;border:0;border-radius:calc(var(--radius) - 5px)}
+@media(max-width:900px){.fc-grid{grid-template-columns:1fr;gap:2rem}}
+@media(max-width:560px){.book-card iframe{height:560px}}
 
 /* final */
 .contact-final{text-align:center}
@@ -176,6 +194,54 @@ export default function Page() {
           </div>
         </section>
 
+        {/* BOOK A FOUNDER CALL */}
+        <section className="section" id="book">
+          <div className="container">
+            <div className="fc-grid">
+              {/* LEFT — founder call form */}
+              <div className="reveal">
+                <h2 style={{ marginBottom: ".4rem" }}>Book a founder call</h2>
+                <ul className="fc-bullets">
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></svg>
+                    Bring your questions. The people who built Vortex IQ answer them.
+                  </li>
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M16 3h5v5M21 3l-7 7M8 21H3v-5M3 21l7-7M21 16v5h-5M14 14l7 7M3 8V3h5M10 10 3 3" /></svg>
+                    Straight answers in under 20 minutes, no slides, no script.
+                  </li>
+                </ul>
+                <div className="fc-form-card">
+                  <HubSpotForm portalId="24385350" formId="7d444765-fc6a-40ad-b6d9-a6be08a5893d" region="na1" />
+                </div>
+              </div>
+
+              {/* RIGHT — prefer to start right now */}
+              <div className="reveal">
+                <h2 style={{ marginBottom: "1.4rem" }}>Prefer to start right now?</h2>
+                <div className="fc-card fc-card--soft">
+                  <div className="lbl">Call us now</div>
+                  <a className="fc-phone" href="tel:+442045479292">+44 20 4547 9292</a>
+                </div>
+                <div className="fc-card">
+                  <div className="lbl">Start free</div>
+                  <p>Signup, connect your store, and the AI OS for commerce gets to work. Free for 14 days.</p>
+                </div>
+                <div className="book-card">
+                  <iframe
+                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ34uWPumZOzm8_ywsUPOPx04tvlrA1ARfBngiizj0-WoKO2DFatwnpDqDzJ7vy2RgcbT5sIgsnv?gv=true"
+                    title="Book a call with a Vortex IQ founder"
+                    width="100%"
+                    height="620"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ROUTING */}
         <section className="section">
           <div className="container">
@@ -186,7 +252,7 @@ export default function Page() {
                 <div className="route-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18" /><path d="m7 14 3-3 3 3 5-6" /></svg></div>
                 <h3>Sales &amp; demos</h3>
                 <p className="muted">See the platform running on your own catalogue and data, and get pricing for your team.</p>
-                <a className="route-link" href="#message">Book a demo →</a>
+                <a className="route-link" href="#book">Book a demo →</a>
               </div>
               <div className="card reveal">
                 <div className="route-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="3.4" /><path d="m5.6 5.6 3 3M15.4 15.4l3 3M18.4 5.6l-3 3M8.6 15.4l-3 3" /></svg></div>
@@ -264,7 +330,7 @@ export default function Page() {
               explains it in plain English, and fixes it safely on live revenue.
             </p>
             <div className="cta-row reveal">
-              <a className="btn" href="#message" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Book a demo</a>
+              <a className="btn" href="#book" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Book a demo</a>
               <Link className="btn btn--ghost" href="/ai-os-platform" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Explore the platform →</Link>
             </div>
           </div>
