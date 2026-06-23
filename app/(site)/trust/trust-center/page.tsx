@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { policies } from "../policies";
 
 export const metadata: Metadata = {
   title: "Security & Trust Center | ISO 27001, Approvals & Rollback | Vortex IQ",
@@ -73,6 +74,17 @@ const css = `
 .comp-aside p{color:rgba(255,255,255,.78);font-size:.96rem;line-height:1.6}
 .comp-aside .doc-link{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--font-mono);font-size:.82rem;color:#fff;text-decoration:none;margin-top:1.5rem;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:2px;transition:border-color .2s}
 .comp-aside .doc-link:hover{border-color:#fff}
+
+/* policies & documentation list */
+.policy-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2.6rem}
+.policy-item{display:flex;align-items:flex-start;gap:1rem;background:var(--white);border:1px solid var(--border-dark);border-radius:var(--radius);padding:1.3rem 1.4rem;text-decoration:none;transition:border-color .2s,box-shadow .2s,transform .2s}
+.policy-item:hover{border-color:var(--border-brand);box-shadow:var(--shadow-sm);transform:translateY(-2px)}
+.policy-item .pic{width:40px;height:40px;flex:none;border-radius:11px;background:var(--surface-tint);border:1px solid var(--border-brand);color:var(--brand-purple);display:flex;align-items:center;justify-content:center}
+.policy-item .pic svg{width:19px;height:19px}
+.policy-item b{display:block;font-family:var(--font-heading);font-weight:600;font-size:1.02rem;color:var(--primary);transition:color .2s}
+.policy-item span{display:block;font-size:.9rem;color:var(--text-body);line-height:1.5;margin-top:.25rem}
+.policy-item:hover b{color:var(--brand-purple)}
+@media(max-width:680px){.policy-grid{grid-template-columns:1fr}}
 
 /* status section */
 .status-card{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;background:var(--white);border:1px solid var(--border-dark);border-radius:var(--radius);padding:2rem 2.2rem;box-shadow:var(--shadow-sm)}
@@ -346,6 +358,33 @@ export default function Page() {
               We only claim what we hold today: ISO 27001 certification and GDPR alignment. We will not overstate
               our posture — if a framework is on the roadmap rather than in place, we will say so.
             </p>
+          </div>
+        </section>
+
+        {/* POLICIES & DOCUMENTATION */}
+        <section className="section section--soft">
+          <div className="container">
+            <div className="eyebrow reveal">Policies &amp; documentation</div>
+            <h2 className="reveal" style={{ maxWidth: "20ch" }}>
+              Read our security &amp; data-protection policies.
+            </h2>
+            <p className="lede reveal" style={{ marginTop: "1.2rem", maxWidth: "62ch" }}>
+              The policies and documents that govern how we build, run and secure the platform. Each is
+              maintained and dated, and available here in full.
+            </p>
+            <div className="policy-grid reveal">
+              {policies.map((p) => (
+                <Link key={p.slug} className="policy-item" href={`/trust/${p.slug}`}>
+                  <span className="pic">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" /><path d="M14 2v6h6M8 13h8M8 17h6" /></svg>
+                  </span>
+                  <span>
+                    <b>{p.title}</b>
+                    <span>{p.blurb}</span>
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 
