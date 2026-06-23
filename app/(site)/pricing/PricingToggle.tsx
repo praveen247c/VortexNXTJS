@@ -8,10 +8,14 @@ import { useEffect } from "react";
 type Currency = "USD" | "GBP";
 type Billing = "monthly" | "annual";
 
-const PRICES: Record<Currency, { sym: string; [plan: string]: number | string }> = {
-  USD: { sym: "$", Foundation: 499, Growth: 1499, Enterprise: 3999, OmniChannel: 5499 },
-  GBP: { sym: "£", Foundation: 399, Growth: 1199, Enterprise: 3199, OmniChannel: 4399 },
-};
+// USD and GBP show the same figures (symbol only differs).
+const SYM: Record<Currency, string> = { USD: "$", GBP: "£" };
+// Monthly price per plan.
+const MONTHLY: Record<string, number> = { Foundation: 499, Growth: 1499, Enterprise: 3999, OmniChannel: 5499 };
+// Annual price per plan — full yearly amount, shown with /year.
+const ANNUAL: Record<string, number> = { Foundation: 4790, Growth: 14390, Enterprise: 38390, OmniChannel: 52790 };
+// Yearly saving vs paying monthly (Monthly x 12 - Annual), ~20%.
+const SAVING: Record<string, number> = { Foundation: 1198, Growth: 3598, Enterprise: 9598, OmniChannel: 13198 };
 
 export default function PricingToggle() {
   useEffect(() => {
@@ -22,16 +26,21 @@ export default function PricingToggle() {
     const fmt = (n: number) => n.toLocaleString("en-US");
 
     function render() {
-      const c = PRICES[state.currency];
+      const sym = SYM[state.currency];
+      const annual = state.billing === "annual";
       document.querySelectorAll<HTMLElement>(".price[data-plan]").forEach((el) => {
         const plan = el.dataset.plan as string;
-        const base = c[plan] as number;
-        const val = state.billing === "annual" ? Math.round(base * 0.8) : base;
-        el.textContent = c.sym + fmt(val);
-      });
-      const note = state.billing === "annual" ? "billed annually" : "billed monthly";
-      document.querySelectorAll<HTMLElement>("[data-billed]").forEach((el) => {
-        el.textContent = note;
+        const val = annual ? ANNUAL[plan] : MONTHLY[plan];
+        el.textContent = sym + fmt(val);
+        const per = el.parentElement?.querySelector<HTMLElement>(".per");
+        if (per) per.textContent = annual ? "/year" : "/mo";
+        // per-plan note: annual shows the yearly saving, monthly stays "billed monthly"
+        const billed = el.parentElement?.nextElementSibling as HTMLElement | null;
+        if (billed?.hasAttribute("data-billed")) {
+          billed.textContent = annual
+            ? `Billed annually · Save ${sym}${fmt(SAVING[plan])} a year`
+            : "Billed monthly";
+        }
       });
     }
 
