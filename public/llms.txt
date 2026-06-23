@@ -1,0 +1,56 @@
+# Vortex IQ
+
+> Vortex IQ is the AI Operating System for e-commerce. It detects what is broken, explains why, and fixes it safely across every platform a merchant runs. A continuous loop, detect, diagnose, act, safe-deploy, learn, turns raw store signals into resolved work: monitoring KPIs, diagnosing issues, optimising SEO and GEO, automating marketing, and safely staging changes, all from one command centre. Every change is approval-gated with one-click rollback. For enterprises and platforms, Vortex IQ offers grey-label agentic infrastructure to build, deploy and manage bespoke AI agent ecosystems at scale.
+
+## Start here
+
+- [Homepage](https://www.vortexiq.ai): one-page overview of the platform, value proposition, and proof.
+- [AI OS Platform Overview](https://www.vortexiq.ai/ai-os-platform): how the closed loop and the platform modules work together.
+- [Platform](https://www.vortexiq.ai/platform): detailed explainer of the unified command centre.
+- [Pricing](https://www.vortexiq.ai/pricing): Foundation, Growth, Enterprise and OmniChannel plans, feature comparison and add-ons.
+- [Solutions by Role](https://www.vortexiq.ai/solutions): choose your path, merchants, agencies, or tech partners.
+- [Integrations](https://www.vortexiq.ai/solutions/integrations): 200+ connectors and 6,000+ KPIs across e-commerce, marketing, analytics, payments, support and operations.
+- [Customer Stories](https://www.vortexiq.ai/resources/customer-stories): real merchant outcomes.
+- [Docs, Getting Started](https://www.vortexiq.ai/docs/getting-started/): onboarding, account set-up, and a first-five-minutes checklist.
+- [Academy](https://www.vortexiq.ai/academy): structured learning paths, foundations, modules, playbooks and certification.
+- [About Us](https://www.vortexiq.ai/about-us): mission, team and company story.
+- [Contact and Sales](https://www.vortexiq.ai/contact-us): sales enquiries, partnership requests and support.
+
+## What Vortex IQ does (key capabilities)
+
+1. Real-time monitoring and alerting: the Nerve Centre tracks KPIs across the store, payments, ads and infrastructure, surfacing anomalies with their revenue impact before revenue is lost.
+2. AI diagnostics and recommendations: Vortex Mind analyses commerce signals, benchmarks competitors and generates ranked, actionable fix plans.
+3. Conversational AI: Ask Viq lets you query your entire stack in plain English and apply safe fixes, with every answer cited to the data and stored in Vortex Memory.
+4. Agentic actions and workflows: AI-generated, AI-ranked findings flow onto a Kanban board with assignees, due dates and automation rules, syncing to Jira, Asana and Linear. The platform defines the work and tracks it to done.
+5. Agents that act inside the store: create products and landing pages, issue discount codes, run campaigns and execute operational actions through platform APIs, every change approval-gated.
+6. Safe staging, backup and rollback: StagingPro provides production-parity staging and RollbackPro gives one-click rollback for BigCommerce, Shopify and Adobe Commerce, so autonomy is safe to run on live revenue.
+7. The unified commerce graph and Vortex Memory: every connector, fix, deploy and decision is written into one live graph across 200+ integrations and 6,000+ KPIs, compounding with every store, report and question.
+8. AI Enablement for enterprises and platforms: grey-label infrastructure so platforms can build and scale their own agent ecosystems, including custom MCPs.
+
+## Product modules (the closed loop)
+
+- [Nerve Centre](https://www.vortexiq.ai/ai-os-platform/nerve-centre): real-time detection, KPI tracking and automated alerts. Detect.
+- [Vortex Mind](https://www.vortexiq.ai/ai-os-platform/vortex-mind): diagnostic and strategy engine that analyses signals, spots bottlenecks and benchmarks competitors. Diagnose.
+- [Ask Viq](https://www.vortexiq.ai/ai-os-platform/ask-viq): conversational agent spanning all connected systems, cited to the graph. Diagnose and act.
+- Actions: AI-ranked findings become tracked work on a Kanban board with automation rules and Jira, Asana and Linear sync. Act.
+- [Vortex Apps](https://www.vortexiq.ai/ai-os-platform/vortex-apps): safe deployment infrastructure, StagingPro and RollbackPro, for Shopify, BigCommerce and Adobe Commerce. Safe-deploy.
+- Vortex Memory: the compounding data layer and unified commerce graph that every module reads from and writes to. Learn.
+- [Agent Hub](https://www.vortexiq.ai/ai-os-platform/agent-hub): discover, deploy and build specialist AI agents for merchandising, SEO and GEO, paid media, inventory, retention and store maintenance.
+
+## Solutions by audience
+
+- [For Merchants and Brands](https://www.vortexiq.ai/solutions/for-merchants-brands): end-to-end AI operations for D2C brands and retailers.
+- [For Agencies](https://www.vortexiq.ai/solutions/for-agencies): multi-store management, safe deployments and client reporting.
+- [For Tech Partners](https://www.vortexiq.ai/solutions/for-tech-partners): embed AI agents into your own platform or SaaS product.
+
+## Platforms supported
+
+BigCommerce, Shopify, Adobe Commerce (Magento) and WooCommerce.
+
+## Proof and trust
+
+- 1,400% organic traffic growth (Google Analytics) after the SEO and GEO rollout.
+- BigCommerce AI-Pilots partner (Elite). Reference customer: Soak and Sleep.
+- ISO 27001 certified. SOC 2 in progress.
+
+[Full index](https://www.vortexiq.ai/llms-full.txt): exhaustive list of all site resources.
