@@ -15,6 +15,9 @@ const css = `
 .policy-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem;font-family:var(--font-mono);font-size:.74rem;color:var(--text-faded)}
 .policy-meta .chip{display:inline-flex;align-items:center;gap:.45rem;background:var(--surface-tint);border:1px solid var(--border-brand);color:var(--brand-purple);padding:.25rem .65rem;border-radius:var(--radius-pill)}
 .policy-meta .chip svg{width:13px;height:13px}
+.policy-lede{margin-top:1.6rem;font-size:1.18rem;color:var(--text-body);line-height:1.55;max-width:64ch}
+.policy-lede a{color:var(--brand-purple);text-decoration:underline;text-underline-offset:2px}
+.policy-lede strong{color:var(--primary);font-weight:600}
 
 /* body */
 .policy-body{max-width:820px;margin:0 auto}
@@ -88,6 +91,9 @@ export default async function PolicyPage({
                 </span>
                 <span>Vortex IQ Ltd</span>
               </div>
+              {policy.intro ? (
+                <p className="policy-lede" dangerouslySetInnerHTML={{ __html: policy.intro }} />
+              ) : null}
             </div>
           </div>
         </section>
