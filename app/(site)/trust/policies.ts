@@ -10,6 +10,7 @@ export type Policy = {
   slug: string;
   title: string;
   blurb: string;
+  intro?: string;
   lastUpdated: string;
   blocks: PolicyBlock[];
 };
@@ -51,6 +52,7 @@ export const policies: Policy[] = [
     slug: "data-protection-addendum",
     title: "Data Protection Addendum (DPA)",
     blurb: "Controller/processor responsibilities, security measures and international-transfer safeguards for personal data.",
+    intro: `This Data Protection Addendum ("Addendum") forms part of the agreement between <strong>Vortex IQ Limited</strong> ("Data Processor") and the Customer ("Data Controller") concerning the processing of personal data under applicable data protection laws, including the UK GDPR and the Data Protection Act 2018.`,
     lastUpdated: "12 May 2026",
     blocks: [
       { k: "h", t: `1. Definitions` },
@@ -79,6 +81,7 @@ export const policies: Policy[] = [
     slug: "sub-processors",
     title: "Sub-processors",
     blurb: "The vetted cloud and AI sub-processors we use to run the platform, with regions and retention terms.",
+    intro: `Vortex IQ Limited ("Vortex IQ") engages the sub-processors listed below to deliver the Service. All sub-processors are bound by data-protection obligations consistent with our <a href="/trust/data-protection-addendum">Data Protection Addendum</a> and applicable UK and EU data-protection law. Customer data is processed transiently for the requested action only and is not used to train any third-party foundation model.`,
     lastUpdated: "12 May 2026",
     blocks: [
       { k: "h", t: `1. Infrastructure & hosting` },
@@ -99,6 +102,7 @@ export const policies: Policy[] = [
     slug: "incident-response-and-breach-notification-policy",
     title: "Incident Response and Breach Notification Policy",
     blurb: "How we detect, contain, investigate and notify on security incidents and personal-data breaches.",
+    intro: `This policy sets out how Vortex IQ detects, responds to, contains and learns from security incidents, and how we notify affected customers and regulators within defined timeframes.`,
     lastUpdated: "15 June 2026",
     blocks: [
       { k: "h", t: `1. Definition` },
@@ -122,6 +126,7 @@ export const policies: Policy[] = [
     slug: "secure-sdlc-and-change-management-policy",
     title: "Secure SDLC and Change Management Policy",
     blurb: "Secure development, code review, testing and controlled, reversible change management.",
+    intro: `This policy ensures software is developed, tested and released securely, and that changes to customer-facing systems are controlled, reviewed and reversible. It is especially relevant where Vortex IQ supports code, theme and configuration deployment for customers.`,
     lastUpdated: "15 June 2026",
     blocks: [
       { k: "h", t: `1. Scope` },
@@ -142,6 +147,7 @@ export const policies: Policy[] = [
     slug: "ai-model-governance-policy",
     title: "AI and Model Governance Policy",
     blurb: "How we select, govern and monitor AI models, and keep customer data out of model training.",
+    intro: `Vortex IQ is the AI Operating System for e-commerce. This policy sets out how we use artificial intelligence and large language models safely, transparently, and under human control, and how we protect customer data when it is processed by AI.`,
     lastUpdated: "15 June 2026",
     blocks: [
       { k: "h", t: `1. Scope` },
@@ -172,6 +178,7 @@ export const policies: Policy[] = [
     slug: "vendor-and-third-party-risk-policy",
     title: "Vendor and Third-party Risk Policy",
     blurb: "How we assess, tier and monitor third-party vendors and sub-processors for security and compliance.",
+    intro: `This policy ensures third parties that process Vortex IQ or customer data, or that are critical to the service, meet appropriate security and data-protection standards before and during engagement.`,
     lastUpdated: "15 June 2026",
     blocks: [
       { k: "h", t: `1. Scope` },
@@ -194,6 +201,7 @@ export const policies: Policy[] = [
     slug: "corporate-security",
     title: "Corporate Security Plan",
     blurb: "Organisational, physical and personnel security controls that protect the business and its assets.",
+    intro: `<strong>Effective Date: </strong>1 July 2023<strong><br/>Approved by: </strong>Senior Management Team`,
     lastUpdated: "12 May 2026",
     blocks: [
       { k: "h", t: `1. Purpose` },
