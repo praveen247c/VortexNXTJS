@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { NAV, LOGIN_HREF, DEMO_HREF, LOGO_SRC, type MegaItem } from "./nav.config";
 
 // Mega-menu / mobile icons — the actual SVG assets from vortexiq.ai (AI OS icons
@@ -56,6 +57,14 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileGroup, setMobileGroup] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const pathname = usePathname();
+
+  // Close any open menu when the route changes (e.g. after clicking a menu item).
+  useEffect(() => {
+    setOpen(null);
+    setMobileOpen(false);
+    setMobileGroup(null);
+  }, [pathname]);
 
   const enter = (label: string) => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -126,6 +135,7 @@ export default function Header() {
               key={entry.label}
               className={`mega ${entry.panel.layout === "split" ? "mega--split" : "mega--cols"}`}
               onMouseEnter={() => enter(entry.label)}
+              onClick={() => setOpen(null)}
             >
               {entry.panel.overview && entry.panel.layout === "split" ? (
                 <div className="mega-overview">
