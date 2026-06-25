@@ -2,8 +2,31 @@ import Link from "next/link";
 
 const CDN = "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a";
 
+const PLATFORMS = [
+  { src: "/assets/icons/platform-amazon.svg", alt: "Amazon" },
+  { src: "/assets/icons/platform-shopify.svg", alt: "Shopify" },
+  { src: "/assets/icons/platform-magento.svg", alt: "Magento" },
+  { src: "/assets/icons/platform-bigcommerce.svg", alt: "BigCommerce" },
+];
+
 export default function Footer() {
   return (
+    <>
+    {/* eslint-disable @next/next/no-img-element */}
+    <section className="integrate-banner">
+      <div className="container">
+        <h2><span>Integrate directly</span> into your store&apos;s platform</h2>
+        <div className="integrate-right">
+          <div className="integrate-logos">
+            {PLATFORMS.map((p) => (
+              <img key={p.alt} src={p.src} alt={`${p.alt} logo`} />
+            ))}
+          </div>
+          <Link className="integrate-cta" href="/contact-us">Start Free Trial →</Link>
+        </div>
+      </div>
+    </section>
+    {/* eslint-enable @next/next/no-img-element */}
     <footer className="footer">
       <div className="container">
         <div className="footer-top">
@@ -72,5 +95,6 @@ export default function Footer() {
         <p className="footer-copy">© 2025 Vortex IQ. All Rights Reserved.</p>
       </div>
     </footer>
+    </>
   );
 }
