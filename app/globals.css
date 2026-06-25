@@ -311,7 +311,9 @@ em.hl{font-style:normal;color:var(--brand-purple);font-weight:500}
 /* ---- integrate banner (above footer) ---- */
 .integrate-banner{background:var(--brand-gradient);position:relative;overflow:hidden}
 /* grid pattern overlay */
-.integrate-banner::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(90deg,#000,transparent 80%);-webkit-mask-image:linear-gradient(90deg,#000,transparent 80%);pointer-events:none}
+.integrate-banner::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(90deg,#000,transparent 80%);-webkit-mask-image:linear-gradient(90deg,#000,transparent 80%);pointer-events:none;animation:integrate-grid-drift 14s linear infinite}
+@keyframes integrate-grid-drift{from{background-position:0 0}to{background-position:34px 34px}}
+@media(prefers-reduced-motion:reduce){.integrate-banner::before{animation:none}}
 /* soft glow */
 .integrate-banner::after{content:"";position:absolute;width:520px;height:520px;top:-220px;right:-120px;background:radial-gradient(circle,rgba(165,138,243,.45),transparent 65%);pointer-events:none}
 .integrate-banner .container{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;padding-top:2.6rem;padding-bottom:2.6rem}
