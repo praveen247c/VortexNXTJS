@@ -3,7 +3,7 @@ import { css, html } from "./content";
 
 export const metadata: Metadata = {
   title: "Vortex Agents: turn AI findings into work that ships | Vortex IQ",
-  description: "Vortex Agents turns AI-ranked findings into ranked Kanban work with owners, due dates and rules. Approval-gated, reversible, synced to Jira, Asana and Linear.",
+  description: "Vortex Agents turn AI-ranked findings into owned work with deadlines and approval gates. Reversible, staging-first, and synced two ways with Jira, Asana and Linear.",
 };
 
 export default function Page() {

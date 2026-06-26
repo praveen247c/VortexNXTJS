@@ -3,7 +3,7 @@ import Link from "next/link";
 import { policies } from "../policies";
 
 export const metadata: Metadata = {
-  title: "Security & Trust Center | ISO 27001, Approvals & Rollback | Vortex IQ",
+  title: "Security &amp; Trust Centre Centre | ISO 27001, Approvals & Rollback | Vortex IQ",
   description:
     "How Vortex IQ keeps your data and storefront safe: ISO 27001, least-privilege access, human approvals on every change, full audit trails, and one-click rollback.",
 };
@@ -129,7 +129,7 @@ export default function Page() {
         <section className="section section--hero">
           <div className="container">
             <div className="trust-hero">
-              <div className="eyebrow reveal in">Security & Trust</div>
+              <div className="eyebrow reveal in">Security &amp; Trust Centre</div>
               <div className="statusbar reveal in">
                 <span className="shield-dot" />
                 ISO 27001 certified
@@ -171,7 +171,7 @@ export default function Page() {
                 <h3>Certified ISO 27001</h3>
                 <p className="muted">
                   Our information security management system is independently certified to ISO/IEC 27001 — the
-                  global standard for managing risk across people, process and technology.
+                  global standard for managing risk across people, process, and technology.
                 </p>
                 <span className="pillar-tag">Independently audited</span>
               </div>
@@ -273,7 +273,7 @@ export default function Page() {
                   <div className="ap-body">
                     <div className="ap-line">
                       <span className="ic ic--brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg></span>
-                      <span className="tx"><b>Detected: 142 products missing meta titles</b><span>nerve centre · catalogue</span></span>
+                      <span className="tx"><b>Detected: 142 products missing meta titles</b><span>Nerve Centre · catalogue</span></span>
                     </div>
                     <div className="ap-line">
                       <span className="ic ic--brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9" /><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" /></svg></span>
@@ -281,7 +281,7 @@ export default function Page() {
                     </div>
                     <div className="ap-line">
                       <span className="ic ic--ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
-                      <span className="tx"><b>Restore point saved</b><span>rollback ready · vortex apps</span></span>
+                      <span className="tx"><b>Restore point saved</b><span>rollback ready · Vortex Apps</span></span>
                     </div>
                     <div className="ap-foot">
                       <span className="ap-approve">
@@ -470,7 +470,7 @@ export default function Page() {
         {/* FINAL CTA */}
         <section className="section trust-final">
           <div className="container">
-            <div className="eyebrow reveal" style={{ justifyContent: "center" }}>Ready to dig in</div>
+            <div className="eyebrow reveal" style={{ justifyContent: "center" }}>Ready to dig in?</div>
             <h2 className="reveal">Bring your security review. We will meet it.</h2>
             <p className="lede reveal">
               Send us your questionnaire, ask for the ISO 27001 certificate and DPA, or get a walkthrough of how

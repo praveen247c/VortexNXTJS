@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Webinars & Events | Vortex IQ",
+  title: "Live Webinars & Events: AI OS for Commerce in Action | Vortex IQ",
   description:
     "Live webinars, product launches, and on-demand sessions on agentic AI for commerce. See the AI Operating System in action and ask the team anything.",
 };
@@ -158,7 +158,7 @@ export default function Page() {
                   </li>
                   <li>
                     <span className="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
-                    Detect → Explain → Fix in action, with safe staging and one-click rollback
+                    Detect. Explain. Fix. in action, with safe staging and one-click rollback
                   </li>
                   <li>
                     <span className="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
@@ -215,7 +215,7 @@ export default function Page() {
               <div className="card reveal">
                 <div className="take-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z" /><path d="M8 9h8M8 13h5" /></svg></div>
                 <h3>Plain-English explanations</h3>
-                <p className="muted">See how Ask Viq turns dashboards and data into a clear answer to &quot;what changed, and why?&quot; — no SQL required.</p>
+                <p className="muted">See how Ask Viq turns dashboards and data into a clear answer to "what changed, and why?" with no SQL required.</p>
               </div>
               <div className="card reveal">
                 <div className="take-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6a2 2 0 1 0 2.8 2.8l6-6a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.1-2.1Z" /></svg></div>
@@ -291,7 +291,7 @@ export default function Page() {
             </div>
             <div className="cta-row reveal" style={{ marginTop: "2.6rem" }}>
               <a className="btn btn--ghost" href="https://www.youtube.com/@VortexIQ-AI" target="_blank" rel="noopener noreferrer">
-                Browse the full channel →
+                Browse the full YouTube channel →
               </a>
             </div>
           </div>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Join the Vortex IQ Referral Program | Earn for Every Introduction",
+  title: "Vortex IQ Referral Programme | Earn for Every Introduction",
   description:
     "Refer merchants, agencies, and partners to Vortex IQ and earn rewards when they come on board. Simple sign-up, transparent tracking, real payouts.",
 };
@@ -159,7 +159,7 @@ export default function Page() {
                 <div className="reward-ic">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
                 </div>
-                <h3>Competitive commission</h3>
+                <h3>Rewarding commission</h3>
                 <p className="muted">
                   Earn a competitive reward for every referred business that comes on board. The more successful
                   introductions you make, the more you earn — there&apos;s no cap on the relationships you can refer.
@@ -371,7 +371,7 @@ export default function Page() {
             </p>
             <div className="cta-row reveal">
               <Link className="btn" href="/contact-us" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Get in touch</Link>
-              <Link className="btn btn--ghost" href="/ai-os-platform" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Explore the platform →</Link>
+              <Link className="btn btn--ghost" href="/ai-os-platform" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Explore the Vortex IQ platform →</Link>
             </div>
           </div>
         </section>

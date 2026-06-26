@@ -34,7 +34,7 @@ export const NAV: NavEntry[] = [
       layout: "split",
       overview: {
         title: "AI OS Overview",
-        text: "The 5 pillars of the world's first AI Operating System.",
+        text: "The 6 pillars of the world's first AI Operating System.",
         moreLabel: "Explore the Platform →",
         moreHref: "/ai-os-platform",
         works: {

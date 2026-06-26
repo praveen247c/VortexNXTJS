@@ -272,7 +272,7 @@ export default function Page() {
               </div>
             </div>
             <div className="cta-row reveal" style={{ marginTop: "2.8rem" }}>
-              <Link className="btn btn--ghost" href="/ai-os-platform">Explore the platform →</Link>
+              <Link className="btn btn--ghost" href="/ai-os-platform">Explore the Vortex IQ platform →</Link>
               <Link className="textlink" href="/customer-stories">See customer stories</Link>
             </div>
           </div>

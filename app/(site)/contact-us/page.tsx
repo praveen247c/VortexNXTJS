@@ -6,7 +6,7 @@ import HubSpotForm from "@/components/HubSpotForm";
 export const metadata: Metadata = {
   title: "Contact Vortex IQ | Sales, Support & Partnership Enquiries",
   description:
-    "Talk to the team building the AI Operating System for commerce. Book a demo, ask about pricing, explore a partnership, or get help with your store — we usually reply within one business day.",
+    "Talk to the team building the AI Operating System for commerce. Book a demo, ask about pricing, explore a partnership, or get help with your store. We usually reply within one business day.",
 };
 
 const css = `

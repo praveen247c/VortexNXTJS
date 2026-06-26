@@ -12,15 +12,17 @@ type Billing = "monthly" | "annual";
 const SYM: Record<Currency, string> = { USD: "$", GBP: "£" };
 // Monthly price per plan.
 const MONTHLY: Record<string, number> = { Foundation: 499, Growth: 1499, Enterprise: 3999, OmniChannel: 5499 };
-// Annual price per plan — full yearly amount, shown with /year.
+// Annual price per plan — full yearly amount, shown only in the small print.
 const ANNUAL: Record<string, number> = { Foundation: 4790, Growth: 14390, Enterprise: 38390, OmniChannel: 52790 };
+// Annual billing shown as an effective per-month figure (ANNUAL / 12), the headline price on the annual tab.
+const ANNUAL_PERMO: Record<string, number> = { Foundation: 399, Growth: 1199, Enterprise: 3199, OmniChannel: 4399 };
 // Yearly saving vs paying monthly (Monthly x 12 - Annual), ~20%.
 const SAVING: Record<string, number> = { Foundation: 1198, Growth: 3598, Enterprise: 9598, OmniChannel: 13198 };
 
-export default function PricingToggle() {
+export default function PricingToggle({ currency = "USD" }: { currency?: Currency }) {
   useEffect(() => {
     const state: { currency: Currency; billing: Billing } = {
-      currency: "USD",
+      currency,
       billing: "annual",
     };
     const fmt = (n: number) => n.toLocaleString("en-US");
@@ -30,15 +32,16 @@ export default function PricingToggle() {
       const annual = state.billing === "annual";
       document.querySelectorAll<HTMLElement>(".price[data-plan]").forEach((el) => {
         const plan = el.dataset.plan as string;
-        const val = annual ? ANNUAL[plan] : MONTHLY[plan];
+        // Always lead with a per-month figure: effective monthly on annual, true monthly otherwise.
+        const val = annual ? ANNUAL_PERMO[plan] : MONTHLY[plan];
         el.textContent = sym + fmt(val);
         const per = el.parentElement?.querySelector<HTMLElement>(".per");
-        if (per) per.textContent = annual ? "/year" : "/mo";
-        // per-plan note: annual shows the yearly saving, monthly stays "billed monthly"
+        if (per) per.textContent = "/mo";
+        // Small print: annual moves the full yearly total + saving here so the headline stays a small number.
         const billed = el.parentElement?.nextElementSibling as HTMLElement | null;
         if (billed?.hasAttribute("data-billed")) {
           billed.textContent = annual
-            ? `Billed annually · Save ${sym}${fmt(SAVING[plan])} a year`
+            ? `Billed annually at ${sym}${fmt(ANNUAL[plan])} · Save ${sym}${fmt(SAVING[plan])} a year`
             : "Billed monthly";
         }
       });
@@ -67,7 +70,7 @@ export default function PricingToggle() {
       delete w.setBilling;
       delete w.setCurrency;
     };
-  }, []);
+  }, [currency]);
 
   return null;
 }

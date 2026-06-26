@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { SITE_URL } from "@/lib/site";
 
-const DEFAULT_TITLE = "Vortex IQ · The AI Operating System for E-Commerce";
+const DEFAULT_TITLE = "The AI Operating System for E-Commerce · Vortex IQ";
 const DEFAULT_DESCRIPTION =
   "Modern commerce leaks revenue in the gaps between your tools. Vortex IQ watches every channel, explains what broke in plain English, and fixes it safely on live revenue.";
 

@@ -4,7 +4,8 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy | Vortex IQ",
   description:
-    "How Vortex IQ collects, uses, and protects personal data across the AI Operating System for commerce. A plain-English summary of our privacy practices under UK GDPR.",
+    "How Vortex IQ collects, uses, and protects your personal data. A plain-English summary of our privacy practices under UK GDPR and what choices you have.",
+  openGraph: { description: "How Vortex IQ collects, uses, and protects your personal data under UK GDPR. A plain-English summary of our privacy practices and your rights." },
 };
 
 const css = `
@@ -253,7 +254,7 @@ export default function Page() {
                   <p>
                     We protect your data with encryption in transit and at rest, access controls, monitoring, and regular
                     testing. Vortex IQ is ISO 27001 certified. You can learn more about our controls in our{" "}
-                    <Link href="/trust/trust-center">Trust Center</Link>.
+                    <Link href="/trust/trust-center">Trust Centre</Link>.
                     No system is perfectly secure, but we work hard to keep your data safe.
                   </p>
                 </div>
@@ -280,7 +281,7 @@ export default function Page() {
                   <span className="legal-secnum">13</span>
                   <h2>Contact</h2>
                   <p>
-                    Questions about this policy or how we handle your data? We are happy to help — the details are in the
+                    Questions about this policy or how we handle your data? We are happy to help: the details are in the
                     block below.
                   </p>
                 </div>
@@ -314,7 +315,7 @@ export default function Page() {
             </p>
             <div className="cta-row reveal">
               <Link className="btn" href="/contact-us" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Talk to us</Link>
-              <Link className="btn btn--ghost" href="/trust/trust-center" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Visit the Trust Center →</Link>
+              <Link className="btn btn--ghost" href="/trust/trust-center" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Visit the Trust Centre →</Link>
             </div>
           </div>
         </section>

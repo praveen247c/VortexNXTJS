@@ -3,7 +3,7 @@ import Link from "next/link";
 import HubSpotForm from "@/components/HubSpotForm";
 
 export const metadata: Metadata = {
-  title: "Careers at Vortex IQ | Join the Team Building the AI OS for Commerce",
+  title: "Careers at Vortex IQ | Build the AI OS for Commerce",
   description:
     "We are hiring across engineering, AI, product, and go-to-market. Help build the world's first AI Operating System for e-commerce — empowerment, not replacement.",
 };
@@ -244,7 +244,7 @@ export default function Page() {
                   <span className="chip chip--brand">Platform</span>
                   <span className="chip chip--brand">TypeScript</span>
                 </div>
-                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Engineering">Get in touch →</a>
+                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Engineering">Apply for Engineering →</a>
               </div>
 
               <div className="card role-card reveal">
@@ -258,7 +258,7 @@ export default function Page() {
                   <span className="chip chip--brand">LLMs</span>
                   <span className="chip chip--brand">Evals</span>
                 </div>
-                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20AI%2FML">Get in touch →</a>
+                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20AI%2FML">Apply for AI/ML →</a>
               </div>
 
               <div className="card role-card reveal">
@@ -272,7 +272,7 @@ export default function Page() {
                   <span className="chip chip--brand">UX</span>
                   <span className="chip chip--brand">Research</span>
                 </div>
-                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Product%20%26%20Design">Get in touch →</a>
+                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Product%20%26%20Design">Apply for Product & Design →</a>
               </div>
 
               <div className="card role-card reveal">
@@ -286,7 +286,7 @@ export default function Page() {
                   <span className="chip chip--brand">SDR</span>
                   <span className="chip chip--brand">Solutions</span>
                 </div>
-                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Sales">Get in touch →</a>
+                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Sales">Apply for Sales →</a>
               </div>
 
               <div className="card role-card reveal">
@@ -300,7 +300,7 @@ export default function Page() {
                   <span className="chip chip--brand">CSM</span>
                   <span className="chip chip--brand">Support</span>
                 </div>
-                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Customer%20Success">Get in touch →</a>
+                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Customer%20Success">Apply for Customer Success →</a>
               </div>
 
               <div className="card role-card reveal">
@@ -314,12 +314,12 @@ export default function Page() {
                   <span className="chip chip--brand">Demand gen</span>
                   <span className="chip chip--brand">Brand</span>
                 </div>
-                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Marketing%20%26%20Growth">Get in touch →</a>
+                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Marketing%20%26%20Growth">Apply for Marketing & Growth →</a>
               </div>
             </div>
 
             <div className="cta-row reveal" style={{ marginTop: "2.8rem" }}>
-              <a className="btn btn--ghost btn--sm" href="https://www.vortexiq.ai/careers" target="_blank" rel="noopener noreferrer">See all roles →</a>
+              <a className="btn btn--ghost btn--sm" href="https://www.vortexiq.ai/careers" target="_blank" rel="noopener noreferrer">See all open roles at Vortex IQ →</a>
               <span className="muted" style={{ fontSize: ".94rem" }}>
                 Vortex IQ is an equal opportunity employer. We build a diverse team and an inclusive place to do great work.
               </span>

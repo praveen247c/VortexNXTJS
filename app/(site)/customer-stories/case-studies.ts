@@ -32,7 +32,7 @@ export const caseStudies: CaseStudy[] = [
     eyebrow: "Ecommerce growth with AI",
     title: "Deploy or destroy? How The Revere Group eliminated the fear of BigCommerce updates",
     lede:
-      "The Revere Group, a leading industrial packaging solutions provider, faced significant challenges in managing their BigCommerce development workflow. With an ongoing website redesign that included ADA compliance updates and product catalog restructuring, their disconnected staging environment was creating costly inefficiencies and unnecessary risks.",
+      "The Revere Group eliminated deployment fear with Vortex IQ StagingPro: 65% shorter development cycles and 100% incident-free deployments on BigCommerce.",
     logo: "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da28056b56c687e9008e87_image%2036.avif",
     metrics: [
       { value: "65%", label: "Reduction in development cycle" },
@@ -78,11 +78,11 @@ export const caseStudies: CaseStudy[] = [
         lead: "Second, the secure staging environment enabled proper testing of all changes before deployment, including:",
         bullets: [
           "Full ADA compliance validation.",
-          "Complex product reorganizations.",
+          "Complex product reorganisations.",
           "B2B-specific workflows like case quantity.",
         ],
         paras: [
-          "Third, built-in data anonymization allowed safe collaboration with external developers while protecting sensitive customer information.",
+          "Third, built-in data anonymisation allowed safe collaboration with external developers while protecting sensitive customer information.",
         ],
       },
       {
@@ -101,7 +101,7 @@ export const caseStudies: CaseStudy[] = [
     eyebrow: "Ecommerce AI success",
     title: "How Apply Digital enabled Radiant Health to launch dual-market e-commerce stores in record time",
     lede:
-      "Radiant Health, a premium wellness brand specializing in infrared saunas, partnered with digital transformation agency Apply Digital to completely overhaul its digital presence and launch its first e-commerce operations. Facing strict Canadian health regulations and a legacy offline sales process, the team needed a scalable, compliant, and efficient solution to launch region-specific websites.",
+      "Apply Digital used StagingPro to help Radiant Health launch dual-region e-commerce stores in three months, cutting storefront duplication from 7-10 developer days to under one day.",
     logo: "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da2805906c5fe5e3e7ba26_image%2035.avif",
     metrics: [
       { value: "3 Months", label: "Launched dual-region stores within the project deadline" },
@@ -163,7 +163,7 @@ export const caseStudies: CaseStudy[] = [
     eyebrow: "Ecommerce staging",
     title: "Menkind safely implemented a new, business-critical search platform",
     lede:
-      "Leading gift and gadget retailer Menkind needed to implement a new, complex search and merchandising platform (Algolia). Their existing sandbox lacked the complete product catalog, making accurate testing impossible and risking a poor customer experience upon launch.",
+      "Gift and gadget retailer Menkind used StagingPro to mirror their live store, giving Algolia a complete product catalogue and enabling safe, confident search testing before launch.",
     logo: "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da280551fda1d89b0b73a1_image%2037.avif",
     metrics: [
       { value: "100%", label: "Production data available for testing" },
@@ -175,7 +175,7 @@ export const caseStudies: CaseStudy[] = [
         type: "section",
         heading: "The challenge",
         paras: [
-          "Leading gift and gadget retailer Menkind needed to implement a new, complex search and merchandising platform (Algolia). Their existing sandbox lacked the complete product catalog, making accurate testing impossible and risking a poor customer experience upon launch.",
+          "Gift and gadget retailer Menkind used StagingPro to mirror their live store, giving Algolia a complete product catalogue and enabling safe, confident search testing before launch.",
         ],
       },
       {
@@ -185,7 +185,7 @@ export const caseStudies: CaseStudy[] = [
           "Menkind used Vortex IQ's StagingPro to create a high-fidelity staging environment mirroring their live store, enabling:",
         ],
         bullets: [
-          "Replicate the entire product catalog: bulk content migration provided Algolia with complete, real-world data for accurate indexing and testing.",
+          "Replicate the entire product catalogue: bulk content migration provided Algolia with complete, real-world data for accurate indexing and testing.",
           "Test configurations with confidence: the merchandising team could safely test new search configurations and rules in a production-like environment.",
           "Collaborate efficiently with agency: enabled smooth implementation with agency partner IDHL, reducing risk and accelerating deployment.",
         ],
@@ -199,7 +199,7 @@ export const caseStudies: CaseStudy[] = [
         type: "section",
         heading: "From safe integrations to intelligent monitoring",
         paras: [
-          "The ability to safely test and deploy third-party integrations is fundamental to healthy e-commerce operations. Vortex IQ's Agent Hub supercharges this principle — AI agents facilitate safe testing while monitoring third-party tool performance 24/7, alerting to issues and optimization opportunities.",
+          "The ability to safely test and deploy third-party integrations is fundamental to healthy e-commerce operations. Vortex IQ's Agent Hub extends this principle — AI agents facilitate safe testing while monitoring third-party tool performance 24/7, alerting to issues and optimization opportunities.",
         ],
       },
     ],
@@ -210,7 +210,7 @@ export const caseStudies: CaseStudy[] = [
     eyebrow: "Ecommerce growth with AI",
     title: "Crown Packaging builds a transactional B2B storefront with Vortex IQ StagingPro",
     lede:
-      "Crown Packaging, an $800M global packaging leader, embarked on a major digital initiative to launch its first fully transactional B2B ecommerce storefront. Their previous online store was purely informational — customers could browse, but not purchase.",
+      "Crown Packaging, an $800M global packaging leader, embarked on a major digital initiative to launch its first fully transactional B2B ecommerce storefront. Their previous online store was purely informational: customers could browse but could not purchase.",
     logo: "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da28059b19ca42560e8874_image%2038.avif",
     metrics: [
       { value: "30–40%", label: "Faster time to launch" },
@@ -222,7 +222,7 @@ export const caseStudies: CaseStudy[] = [
         type: "section",
         heading: "Introduction",
         paras: [
-          "Crown Packaging, an $800M global packaging leader, embarked on a major digital initiative to launch its first fully transactional B2B ecommerce storefront. Their previous online store was purely informational — customers could browse, but not purchase.",
+          "Crown Packaging, an $800M global packaging leader, embarked on a major digital initiative to launch its first fully transactional B2B ecommerce storefront. Their previous online store was purely informational: customers could browse but could not purchase.",
           "To modernise and support future growth, Crown needed a solution to migrate essential business data, safely test ERP integrations, and streamline the deployment of new features. They selected Vortex IQ's StagingPro, a tool purpose-built for controlled environment management and safe ecommerce development workflows, which came highly recommended from their agency partner VIVID SITES.",
         ],
       },
@@ -230,7 +230,7 @@ export const caseStudies: CaseStudy[] = [
         type: "section",
         heading: "The problem: replatforming without disrupting business operations",
         paras: [
-          "Crown's existing B2B site functioned purely as a digital catalogue, offering no ability for customers to complete purchases online. Orders were handled manually and routed through internal teams via email. With growing sales volumes and a roadmap to reach $1B in revenue, Crown needed to move fast — launching a transactional BigCommerce store while maintaining operational stability.",
+          "Crown's existing B2B site functioned purely as a digital catalogue, offering no ability for customers to complete purchases online. Orders were handled manually and routed through internal teams via email. With growing sales volumes and a roadmap to reach $1B in revenue, Crown needed to move fast, launching a transactional BigCommerce store while maintaining operational stability.",
           "They faced challenges in replicating store configurations, testing JD Edwards ERP integration, and ensuring third-party apps like ShipperHQ worked as intended, all without risking live customer experiences or overloading internal development resources.",
         ],
       },
@@ -254,7 +254,7 @@ export const caseStudies: CaseStudy[] = [
           "GitHub integration for theme and code deployment, with rollback support and release visibility.",
         ],
         paras: [
-          "VIVID SITES, a digital agency led by David Black — an ecommerce, UI/UX, and ERP integration expert — designed and developed Crown Packaging's new BigCommerce storefront. In addition to building the site, VIVID SITES managed the full technical implementation: architecting the infrastructure, integrating with JD Edwards ERP, configuring third-party applications, and overseeing the development workflow.",
+          "VIVID SITES, a digital agency led by David Black (an ecommerce, UI/UX, and ERP integration expert), designed and developed Crown Packaging's new BigCommerce storefront. In addition to building the site, VIVID SITES managed the full technical implementation: architecting the infrastructure, integrating with JD Edwards ERP, configuring third-party applications, and overseeing the development workflow.",
           "They also led the setup and use of StagingPro across multiple environments, ensuring smooth data replication, version control, and safe, test-driven deployments without requiring involvement from Crown's internal teams.",
         ],
       },
@@ -281,7 +281,7 @@ export const caseStudies: CaseStudy[] = [
     eyebrow: "AI ecommerce success",
     title: "How Interlight enabled safe A/B testing on a 2 million SKU catalogue",
     lede:
-      "Interlight is a trusted source for lighting products and replacement parts for both commercial and residential needs. From hard-to-find bulbs to modern LEDs, Interlight supplies a comprehensive catalogue of lighting solutions to thousands of customers across industries.",
+      "Interlight used Vortex IQ StagingPro to safely A/B test changes across a 2 million SKU BigCommerce catalogue, saving 8 hours of manual work per sync and cutting costs by 20%.",
     logo: "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da2805bdf96f07e722e286_Clip%20path%20group.avif",
     metrics: [
       { value: "2M", label: "SKUs in the product catalogue" },
@@ -294,7 +294,7 @@ export const caseStudies: CaseStudy[] = [
         heading: "The challenge: replicating production for testing and evaluation",
         paras: [
           "Interlight is a trusted source for lighting products and replacement parts for both commercial and residential needs. With a robust online presence at interlightus.com, they serve as a go-to destination for energy-efficient and specialty lighting products.",
-          "As Interlight continues to grow, its leadership team — particularly Aaron Gray, COO/CTO — sought to enhance testing capabilities by replicating their BigCommerce production environment into a sandbox environment. This was especially important as Interlight began working with vendors looking to implement tools like VWO for A/B testing, which require a fully operational and populated staging store.",
+          "As Interlight continues to grow, its leadership team, particularly Aaron Gray (COO/CTO), sought to enhance testing capabilities by replicating their BigCommerce production environment into a sandbox environment. This was especially important as Interlight began working with vendors looking to implement tools like VWO for A/B testing, which require a fully operational and populated staging store.",
         ],
         lead: "Their goals included:",
         bullets: [
@@ -358,10 +358,10 @@ export const caseStudies: CaseStudy[] = [
     eyebrow: "Ecommerce AI automation",
     title: "The Tire Man implements Vortex IQ StagingPro for safer BigCommerce development",
     lede:
-      "The Tire Man, a leading tire retailer operating on BigCommerce, faced significant challenges in managing their ecommerce development workflow. With an increasing need to optimize for mobile experiences and prepare for upcoming B2B expansion, their disconnected staging environment was creating costly inefficiencies and unnecessary risks.",
+      "The Tire Man used StagingPro to eliminate disconnected staging environments on BigCommerce, achieving 30% faster mobile optimisation and 100% error-free deployments across all devices.",
     logo: "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da2805a5e493b26156ecc7_image%2039.avif",
     metrics: [
-      { value: "30%", label: "Faster mobile optimization" },
+      { value: "30%", label: "Faster mobile optimisation" },
       { value: "50%", label: "Increase in team productivity" },
       { value: "100%", label: "Error-free mobile deployments" },
     ],
