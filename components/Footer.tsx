@@ -3,10 +3,9 @@ import Link from "next/link";
 const CDN = "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a";
 
 const PLATFORMS = [
-  { src: "/assets/icons/platform-amazon.svg", alt: "Amazon" },
+  { src: "/assets/icons/platform-bigcommerce.svg", alt: "BigCommerce" },
   { src: "/assets/icons/platform-shopify.svg", alt: "Shopify" },
   { src: "/assets/icons/platform-magento.svg", alt: "Magento" },
-  { src: "/assets/icons/platform-bigcommerce.svg", alt: "BigCommerce" },
 ];
 
 export default function Footer() {
@@ -47,6 +46,8 @@ export default function Footer() {
             <h4>Product</h4>
             <Link href="/aistudio">Summit</Link>
             <Link href="/ai-os-platform">Capabilities</Link>
+            <Link href="/free-audit">Free Store Audit</Link>
+            <Link href="/get-started">Get Started</Link>
             <Link href="/customer-stories">Customer Stories</Link>
             <Link href="/trust/trust-center">Security &amp; Trust</Link>
             <a href="https://monitor.vortexiq.ai/" target="_blank" rel="noopener noreferrer">Platform Status</a>
@@ -56,6 +57,7 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Company</h4>
             <Link href="/about-us">About Us</Link>
+            <Link href="/company">Company &amp; Investors</Link>
             <Link href="/resources/blog">Blog</Link>
             <Link href="/careers">Careers</Link>
             <Link href="/branding">Branding</Link>

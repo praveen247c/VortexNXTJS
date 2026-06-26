@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NAV, LOGIN_HREF, DEMO_HREF, LOGO_SRC, type MegaItem } from "./nav.config";
+import { NAV, LOGIN_HREF, DEMO_HREF, GET_STARTED_HREF, LOGO_SRC, type MegaItem } from "./nav.config";
 
 // Mega-menu / mobile icons — the actual SVG assets from vortexiq.ai (AI OS icons
 // are purple gradients; Solutions/Resources are white). The three not published
@@ -20,6 +20,7 @@ const ICON_SRC: Record<string, string> = {
   partners: "/assets/icons/partners.svg",
   enablement: "/assets/icons/enablement.svg",
   integrations: "/assets/icons/integrations.svg",
+  seo: "/assets/icons/docs.svg",
   blog: "/assets/icons/blog.svg",
   docs: "/assets/icons/docs.svg",
   stories: "/assets/icons/stories.svg",
@@ -113,7 +114,8 @@ export default function Header() {
 
         <div className="nav-actions">
           <a className="login" href={LOGIN_HREF} target="_blank" rel="noopener noreferrer">Login</a>
-          <a className="btn btn--sm" href={DEMO_HREF}>Demo</a>
+          <a className="btn btn--ghost btn--sm" href={DEMO_HREF}>Demo</a>
+          <a className="btn btn--sm" href={GET_STARTED_HREF}>Get started</a>
           <button
             className="nav-toggle"
             aria-label="Toggle menu"
@@ -220,7 +222,8 @@ export default function Header() {
             )}
             <div className="m-cta">
               <a className="btn btn--ghost" href={LOGIN_HREF} target="_blank" rel="noopener noreferrer">Login</a>
-              <a className="btn" href={DEMO_HREF}>Demo</a>
+              <a className="btn btn--ghost" href={DEMO_HREF}>Demo</a>
+              <a className="btn" href={GET_STARTED_HREF}>Get started</a>
             </div>
           </div>
         </div>
