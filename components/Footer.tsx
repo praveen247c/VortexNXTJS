@@ -3,7 +3,7 @@ import Link from "next/link";
 const CDN = "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a";
 
 const PLATFORMS = [
-  { src: "/assets/icons/platform-amazon.svg", alt: "Amazon" },
+  { src: "/assets/icons/platform-adobe.svg", alt: "Adobe Commerce" },
   { src: "/assets/icons/platform-shopify.svg", alt: "Shopify" },
   { src: "/assets/icons/platform-magento.svg", alt: "Magento" },
   { src: "/assets/icons/platform-bigcommerce.svg", alt: "BigCommerce" },
@@ -22,7 +22,7 @@ export default function Footer() {
               <img key={p.alt} src={p.src} alt={`${p.alt} logo`} />
             ))}
           </div>
-          <Link className="integrate-cta" href="/contact-us">Start Free Trial →</Link>
+          <a className="integrate-cta" href="https://app.vortexiq.ai/" target="_blank" rel="noopener noreferrer">Start Free Trial →</a>
         </div>
       </div>
     </section>

@@ -322,10 +322,11 @@ em.hl{font-style:normal;color:var(--brand-purple);font-weight:500}
 .integrate-right{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap}
 .integrate-logos{display:flex;align-items:center;gap:1.1rem;background:rgba(255,255,255,.92);border-radius:var(--radius-pill);padding:.6rem 1.1rem}
 .integrate-logos img{height:30px;width:auto;display:block}
+.integrate-logos img[alt="Adobe Commerce logo"]{height:23px}
 .integrate-cta{display:inline-flex;align-items:center;gap:.5rem;height:50px;padding:0 26px;border-radius:var(--radius-pill);background:#fff;color:var(--brand-purple);font-family:var(--font-heading);font-weight:600;font-size:1.02rem;text-decoration:none;white-space:nowrap;transition:box-shadow .2s,transform .2s}
 .integrate-cta:hover{box-shadow:0 12px 30px rgba(0,0,0,.22);transform:translateY(-1px)}
 @media(max-width:760px){.integrate-banner .container{flex-direction:column;align-items:flex-start}.integrate-right{width:100%;justify-content:space-between}}
-@media(max-width:480px){.integrate-right{flex-direction:column;align-items:flex-start;gap:1.2rem}.integrate-logos img{height:26px}}
+@media(max-width:480px){.integrate-right{flex-direction:column;align-items:flex-start;gap:1.2rem}.integrate-logos img{height:26px}.integrate-logos img[alt="Adobe Commerce logo"]{height:20px}}
 
 /* ---- footer (dark) ---- */
 .footer{background:var(--brand-purple-deep);color:#fff;padding:5rem 0 2.5rem;position:relative;overflow:hidden}
