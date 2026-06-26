@@ -3,9 +3,10 @@ import Link from "next/link";
 import HubSpotForm from "@/components/HubSpotForm";
 
 export const metadata: Metadata = {
-  title: "Student Program | AI Career Launchpad | Vortex IQ",
+  title: "Student Programme | AI Career Launchpad | Vortex IQ",
   description:
-    "Launch your AI career with the Vortex IQ Student Program — real projects inside a fast-moving commerce-AI team, mentorship, and a path into the industry.",
+    "Launch your AI career with the Vortex IQ Student Programme: real projects inside a fast-moving commerce-AI team, 1:1 mentorship, and a path into the industry.",
+  openGraph: { description: "Build real agents on a live AI platform. The Vortex IQ Student Programme: real projects, 1:1 mentorship, and a path into an AI commerce career." },
 };
 
 const css = `
@@ -83,7 +84,7 @@ export default function Page() {
         <section className="section section--hero">
           <div className="container">
             <div className="sp-hero">
-              <div className="eyebrow reveal in">Student Program</div>
+              <div className="eyebrow reveal in">Student Programme</div>
               <h1 className="reveal in">
                 Your <span className="grad">AI career launchpad</span> starts here.
               </h1>

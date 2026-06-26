@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Integrations | Connect Every Commerce System | Vortex IQ",
+  title: "Integrations: Connect Your Entire Commerce Stack | Vortex IQ",
   description:
     "Vortex IQ connects the commerce platforms, analytics, marketing, ads, and back-office tools you already run — turning every system into signal, and signal into safe action.",
 };

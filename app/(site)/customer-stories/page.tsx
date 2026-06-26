@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { css, html } from "./content";
 
 export const metadata: Metadata = {
-  title: "Customer Stories | Vortex IQ",
-  description: "Explore how merchants and agencies use Vortex IQ to streamline operations, accelerate development, and drive significant growth. Real results for leading e-commerce brands.",
+  title: "Customer Stories & Case Studies | Vortex IQ",
+  description: "See real results: how e-commerce merchants and agencies cut development time, reduce risk, and grow revenue with Vortex IQ. Case studies from brands around the world.",
 };
 
 export default function Page() {

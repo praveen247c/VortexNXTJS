@@ -92,7 +92,7 @@ export default function Footer() {
             <Link href="/cookie-policy">Cookie Policy</Link>
           </div>
         </div>
-        <p className="footer-copy">© 2025 Vortex IQ. All Rights Reserved.</p>
+        <p className="footer-copy">© {new Date().getFullYear()} Vortex IQ. All Rights Reserved.</p>
       </div>
     </footer>
     </>

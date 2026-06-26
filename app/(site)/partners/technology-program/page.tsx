@@ -3,9 +3,10 @@ import Link from "next/link";
 import HubSpotForm from "@/components/HubSpotForm";
 
 export const metadata: Metadata = {
-  title: "Technology Partner Program | AI Integration | Vortex IQ",
+  title: "Technology Partner Programme | AI Integration | Vortex IQ",
   description:
-    "Make your platform agentic. Connect your app to the Vortex IQ AI Operating System, give shared merchants AI digital workers, and ship AI features in weeks — not years.",
+    "Make your platform agentic. Connect your app to the Vortex IQ AI Operating System, give shared merchants AI digital workers, and ship AI features in weeks, not years.",
+  openGraph: { description: "Make your platform agentic in weeks. Connect to the Vortex IQ AI Operating System, give shared merchants AI digital workers, and co-sell." },
 };
 
 const css = `
@@ -64,13 +65,13 @@ export default function Page() {
         <section className="section section--hero">
           <div className="container">
             <div className="prog-hero">
-              <div className="eyebrow reveal in">Technology Partner Program</div>
+              <div className="eyebrow reveal in">Technology Partner Programme</div>
               <h1 className="reveal in">
                 Make your platform <span className="grad">agentic.</span>
               </h1>
               <p className="lede reveal in">
                 Connect your platform or app to the Vortex IQ AI Operating System. Give shared merchants AI digital
-                workers that act on your data, and ship AI features in weeks — not years — without building an
+                workers that act on your data, and ship AI features in weeks, not years — without building an
                 agent stack from scratch.
               </p>
               <div className="cta-row reveal in">
@@ -165,7 +166,7 @@ export default function Page() {
             <div className="prog-head reveal">
               <div className="eyebrow">How it works</div>
               <h2>From integration to joint go-to-market.</h2>
-              <p className="lede">Becoming a technology partner is straightforward. Here is the path most platforms take.</p>
+              <p className="lede">Becoming a technology partner is straightforward. Here is how most platforms get started.</p>
             </div>
             <div className="prog-steps">
               <div className="prog-step reveal">
@@ -218,7 +219,7 @@ export default function Page() {
             </p>
             <div className="cta-row reveal">
               <a className="btn" href="#apply" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Become a partner</a>
-              <Link className="btn btn--ghost" href="/partners" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>All partner programs →</Link>
+              <Link className="btn btn--ghost" href="/partners" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>View all partner programmes →</Link>
             </div>
           </div>
         </section>

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { css, html } from "./content";
 
 export const metadata: Metadata = {
-  title: "About Us | The Team Behind the AI Ecommerce OS | Vortex IQ",
-  description: "The world is drowning in data but starved for action. Our mission is to empower every merchant, agency, and developer with proactive AI agents that don't just find insights, they act on them.",
+  title: "About Us | The Team Behind the AI E-Commerce OS | Vortex IQ",
+  description: "Meet the team behind Vortex IQ, the AI Operating System for e-commerce. We give every merchant proactive AI agents that find issues and act on them safely.",
 };
 
 export default function Page() {

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Partner Program | Build, Resell & Grow with Vortex IQ",
+  title: "Partner Programme | Build, Resell & Grow with Vortex IQ",
   description:
-    "Join the Vortex IQ partner ecosystem. Whether you are an agency, technology platform, reseller, or student, there is a program designed to help you grow.",
+    "Join the Vortex IQ partner ecosystem. Whether you are an agency, technology platform, reseller, or student, there is a programme designed to help you grow.",
 };
 
 const css = `
@@ -85,7 +85,7 @@ export default function Page() {
               <p className="lede reveal in">
                 Agencies, technology platforms, resellers and students all build on the same engine: the
                 AI Operating System that detects, explains and fixes problems across a merchant&apos;s store.
-                Pick the program that fits how you work — and put an army of AI agents to work for your clients.
+                Pick the program that fits how you work — and put a fleet of AI agents to work for your clients.
               </p>
               <div className="cta-row reveal in">
                 <Link className="btn" href="/contact-us">Become a partner</Link>
@@ -136,7 +136,7 @@ export default function Page() {
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Multi-client monitoring</li>
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Paid custom agents</li>
                 </ul>
-                <Link className="ptype-link" href="/partners/agency-program">Agency program →</Link>
+                <Link className="ptype-link" href="/partners/agency-program">Agency programme →</Link>
               </div>
 
               {/* Technology */}
@@ -155,7 +155,7 @@ export default function Page() {
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Co-selling motions</li>
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Joint go-to-market</li>
                 </ul>
-                <Link className="ptype-link" href="/partners/technology-program">Technology program →</Link>
+                <Link className="ptype-link" href="/partners/technology-program">Technology programme →</Link>
               </div>
 
               {/* Student */}
@@ -163,7 +163,7 @@ export default function Page() {
                 <div className="ptype-ic">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z" /><path d="M6 12v5c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-5" /></svg>
                 </div>
-                <span className="ptype-tag">Student Program</span>
+                <span className="ptype-tag">Student Programme</span>
                 <h3>Start your AI career.</h3>
                 <p className="muted">
                   Get hands-on inside a fast-moving commerce-AI team. Work on real agents, learn how the AI OS is
@@ -174,7 +174,7 @@ export default function Page() {
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Mentorship from builders</li>
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Portfolio-ready work</li>
                 </ul>
-                <Link className="ptype-link" href="/partners/student-program">Join the program →</Link>
+                <Link className="ptype-link" href="/partners/student-program">Join the programme →</Link>
               </div>
 
               {/* Referral */}
@@ -182,7 +182,7 @@ export default function Page() {
                 <div className="ptype-ic">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v12" /><path d="m8 7 4-4 4 4" /><path d="M4 13v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5" /></svg>
                 </div>
-                <span className="ptype-tag">Referral Program</span>
+                <span className="ptype-tag">Referral Programme</span>
                 <h3>Refer and earn.</h3>
                 <p className="muted">
                   Know a merchant who&apos;d benefit from the AI OS? Send them our way and earn rewards when they
@@ -193,7 +193,7 @@ export default function Page() {
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Reward per referral</li>
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Track your sign-ups</li>
                 </ul>
-                <Link className="ptype-link" href="/register">Join referral program →</Link>
+                <Link className="ptype-link" href="/register">Join referral programme →</Link>
               </div>
             </div>
           </div>
@@ -305,7 +305,7 @@ export default function Page() {
             <h2 className="reveal">Become a Vortex IQ partner.</h2>
             <p className="lede reveal">
               Tell us how you work and we&apos;ll match you to the right program — agency, technology, reseller or
-              student. The first conversation is short, and the upside is recurring.
+              student. The first conversation is short, and the revenue opportunity is recurring.
             </p>
             <div className="cta-row reveal">
               <Link className="btn" href="/contact-us" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Become a partner</Link>

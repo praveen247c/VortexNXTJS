@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Terms of Service | Vortex IQ",
   description:
     "The terms that govern your use of the Vortex IQ AI Operating System for e-commerce. A plain-English summary of the agreement between you and Vortex IQ Ltd.",
+  openGraph: { description: "The terms that govern your use of the Vortex IQ AI Operating System for e-commerce, in plain English. The agreement between you and Vortex IQ Ltd." },
 };
 
 const css = `
@@ -205,6 +206,12 @@ export default function Page() {
                     renewal date. We may adjust pricing with reasonable notice. Current plans are on our{" "}
                     <Link href="/pricing">pricing page</Link>.
                   </p>
+                  <p>
+                    Prices are shown and charged in pounds sterling (GBP, £) for customers located in the United Kingdom,
+                    and in US dollars (USD, $) for customers located anywhere else. The currency displayed is determined by
+                    your location at the time you access the site, and the currency of your Order applies for the duration
+                    of that subscription term.
+                  </p>
                 </div>
 
                 <div className="legal-sec" id="customer-data">
@@ -301,7 +308,7 @@ export default function Page() {
                   <span className="legal-secnum">16</span>
                   <h2>Contact</h2>
                   <p>
-                    Questions about these terms? We are happy to help — the details are in the block below.
+                    Questions about these terms? We are happy to help: the details are in the block below.
                   </p>
                 </div>
 

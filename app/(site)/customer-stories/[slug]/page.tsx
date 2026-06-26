@@ -16,7 +16,7 @@ export async function generateMetadata({
   const study = caseStudyBySlug(slug);
   if (!study) return { title: "Customer Story | Vortex IQ" };
   return {
-    title: `${study.company} — ${study.title} | Vortex IQ`,
+    title: `${study.company}: ${study.title} | Vortex IQ`,
     description: study.lede,
   };
 }

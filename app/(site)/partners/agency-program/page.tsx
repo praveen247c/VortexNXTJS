@@ -3,9 +3,10 @@ import Link from "next/link";
 import HubSpotForm from "@/components/HubSpotForm";
 
 export const metadata: Metadata = {
-  title: "Agency Partner Program | Grow with AI | Vortex IQ",
+  title: "Agency Partner Programme | Grow with AI | Vortex IQ",
   description:
-    "Turn your agency into a proactive AI operations partner. Monitor every client store, bill for outcomes, and earn recurring revenue with the Vortex IQ Agency Partner Program.",
+    "Turn your agency into a proactive AI operations partner. Monitor every client store, bill for outcomes, and earn recurring revenue with the Vortex IQ Agency Partner Programme.",
+  openGraph: { description: "Grow your client base without growing headcount. The Vortex IQ Agency Partner Programme: always-on monitoring, recurring revenue share, and co-sell." },
 };
 
 const css = `
@@ -70,7 +71,7 @@ export default function Page() {
         <section className="section section--hero">
           <div className="container">
             <div className="prog-hero">
-              <div className="eyebrow reveal in">Agency Partner Program</div>
+              <div className="eyebrow reveal in">Agency Partner Programme</div>
               <h1 className="reveal in">
                 Scale your portfolio, <span className="grad">not your headcount.</span>
               </h1>
@@ -117,7 +118,7 @@ export default function Page() {
                 <div className="prog-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg></div>
                 <h3>Multi-client monitoring</h3>
                 <p className="muted">Watch every connected store from one place. Agents detect issues across SEO, performance, data and operations before your clients ever notice.</p>
-                <span className="prog-card-note">Detect · Explain · Fix</span>
+                <span className="prog-card-note">Detect. Explain. Fix.</span>
               </div>
               <div className="card reveal">
                 <div className="prog-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg></div>
@@ -171,7 +172,7 @@ export default function Page() {
             <div className="prog-head reveal">
               <div className="eyebrow">How it works</div>
               <h2>From first conversation to first revenue.</h2>
-              <p className="lede">Becoming an agency partner is straightforward. Here is the path most agencies take.</p>
+              <p className="lede">Becoming an agency partner is straightforward. Here is the path most agencies follow.</p>
             </div>
             <div className="prog-steps">
               <div className="prog-step reveal">
@@ -219,12 +220,12 @@ export default function Page() {
             <div className="eyebrow reveal" style={{ justifyContent: "center" }}>Let&apos;s grow together</div>
             <h2 className="reveal">Run more clients, profitably.</h2>
             <p className="lede reveal">
-              Run more clients, profitably — with an army of AI agents working in the background. The first
+              Run more clients, profitably. An army of AI agents works in the background. The first
               conversation is short, and the upside is recurring.
             </p>
             <div className="cta-row reveal">
               <a className="btn" href="#apply" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Become a partner</a>
-              <Link className="btn btn--ghost" href="/partners" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>All partner programs →</Link>
+              <Link className="btn btn--ghost" href="/partners" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>View all partner programmes →</Link>
             </div>
           </div>
         </section>

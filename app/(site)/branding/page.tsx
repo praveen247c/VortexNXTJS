@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Brand & Media Assets | Vortex IQ",
+  title: "Brand Assets, Logos & Colour Palette | Vortex IQ",
   description:
-    "Logos, colours, and typography for partners, press, and event organisers — everything you need to represent the Vortex IQ brand correctly.",
+    "Logos, colours, and typography for partners, press, and event organisers. Everything you need to represent the Vortex IQ brand correctly.",
 };
 
 const CDN = "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a";
@@ -144,7 +144,7 @@ export default function Page() {
                   </svg>
                 </a>
                 <a className="btn btn--ghost" href="mailto:hey@vortexiq.ai?subject=Brand%20assets">
-                  Press contact →
+                  Contact the press team →
                 </a>
               </div>
             </div>
@@ -356,7 +356,7 @@ export default function Page() {
                 Contact the team
               </Link>
               <a className="btn btn--ghost" href="mailto:hey@vortexiq.ai?subject=Brand%20assets" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>
-                Email press →
+                Email the press team →
               </a>
             </div>
           </div>

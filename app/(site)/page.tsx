@@ -23,7 +23,7 @@ const homeFaq: Faq[] = [
   { question: "How does it keep my store safe?", answer: "Test every change on StagingPro before it goes live, and keep a full backup with one-click rollback through RollbackPro. You always have a recent restore point, and we never lose anything you delete." },
   { question: "What does it cost?", answer: "Start with a 14-day free trial, then $499 a month. Higher plans add SEO and GEO, more connectors, deeper retention, and dedicated support. See full pricing for details." },
   { question: "How is my data used and is it secure?", answer: "Your data powers your own insights and recommendations. It is not used to train shared AI models. We are ISO 27001 certified with SOC 2 in progress, and your data is processed in the United Kingdom under our Privacy Policy." },
-  { question: "What results can I expect?", answer: "Across 60+ store audits we surfaced 749 issues and resolve 55% of them automatically, approval-gated and reversible. When the SEO and GEO engine runs, growth compounds; one recent deployment saw organic search rise 1,750% in 28 days." },
+  { question: "What results can I expect?", answer: "Across 60+ store audits we surfaced 749 issues and resolved 55% of them automatically, approval-gated and reversible. When the SEO and GEO engine runs, growth compounds; one recent deployment saw organic search rise 1,400%." },
 ];
 
 const Check = () => (
