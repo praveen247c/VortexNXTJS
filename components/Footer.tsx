@@ -47,6 +47,8 @@ export default function Footer() {
             <h4>Product</h4>
             <Link href="/aistudio">Summit</Link>
             <Link href="/ai-os-platform">Capabilities</Link>
+            <Link href="/free-audit">Free Store Audit</Link>
+            <Link href="/get-started">Get Started</Link>
             <Link href="/customer-stories">Customer Stories</Link>
             <Link href="/trust/trust-center">Security &amp; Trust</Link>
             <a href="https://monitor.vortexiq.ai/" target="_blank" rel="noopener noreferrer">Platform Status</a>
@@ -56,6 +58,7 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Company</h4>
             <Link href="/about-us">About Us</Link>
+            <Link href="/company">Company &amp; Investors</Link>
             <Link href="/resources/blog">Blog</Link>
             <Link href="/careers">Careers</Link>
             <Link href="/branding">Branding</Link>
