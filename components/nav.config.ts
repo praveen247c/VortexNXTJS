@@ -70,6 +70,7 @@ export const NAV: NavEntry[] = [
         { label: "For Merchants & Brands", href: "/solutions/for-merchants-brands", desc: "Protect revenue, reduce firefighting", icon: "merchants" },
         { label: "For Agencies", href: "/solutions/for-agencies", desc: "Scale clients without scaling headcount", icon: "agencies" },
         { label: "For Tech Partners", href: "/solutions/for-tech-partners", desc: "Make your platform agentic", icon: "partners" },
+        { label: "Enterprise", href: "/solutions/enterprise", desc: "Governance, security and the committee bundle", icon: "trust" },
         { label: "AI Enablement", href: "/solutions/ai-enablement", desc: "Launch your own AI agents", icon: "enablement" },
         { label: "SEO & GEO at Scale", href: "/solutions/seo-geo", desc: "Optimise for Search & AI Discovery", icon: "seo" },
         { label: "Integrations", href: "/solutions/integrations", desc: "Connect every commerce system", icon: "integrations" },
@@ -89,6 +90,7 @@ export const NAV: NavEntry[] = [
       },
       items: [
         { label: "Docs", href: "https://docs.vortexiq.ai/", desc: "Technical documentation & reference guides", icon: "docs", external: true },
+        { label: "Developers", href: "/developers", desc: "API, sandbox & architecture", icon: "partners" },
         { label: "Blog", href: "/resources/blog", desc: "Product updates & insights", icon: "blog" },
         { label: "About Us", href: "/about-us", desc: "Who we are and what we build", icon: "about", divider: true },
         { label: "Careers", href: "/careers", desc: "Join the Vortex IQ team", icon: "careers" },

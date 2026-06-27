@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ConnectorDirectory from "./ConnectorDirectory";
+import { CONNECTOR_STATS } from "./connectors";
 
 export const metadata: Metadata = {
   title: "Integrations: Connect Your Entire Commerce Stack | Vortex IQ",
@@ -75,6 +77,24 @@ const css = `
 @media(max-width:900px){
   .split{gap:2.4rem}
 }
+
+/* connector directory */
+.int-dir{margin-top:2.4rem}
+.int-dir-controls{display:flex;flex-direction:column;gap:1rem;margin-bottom:1.8rem}
+.int-dir-search{width:100%;max-width:420px;padding:.7rem 1rem;border:1px solid var(--border-dark);border-radius:10px;background:var(--white);font-size:.95rem;color:var(--primary)}
+.int-dir-search:focus{outline:none;border-color:var(--border-brand);box-shadow:var(--shadow-md)}
+.int-dir-cats{display:flex;flex-wrap:wrap;gap:.5rem}
+.int-dir-cats button{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.02em;padding:.42rem .8rem;border-radius:999px;border:1px solid var(--border-dark);background:var(--white);color:var(--text-body);cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.int-dir-cats button:hover{border-color:var(--border-brand);color:var(--primary)}
+.int-dir-cats button.on{background:var(--surface-tint);border-color:var(--border-brand);color:var(--brand-purple)}
+.int-dir-cats button span{opacity:.55;margin-left:.3rem}
+.int-dir-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:.7rem}
+.int-dir-tile{display:flex;align-items:center;gap:.7rem;padding:.7rem .85rem;border:1px solid var(--border-dark);border-radius:12px;background:var(--white);transition:border-color .2s,box-shadow .3s,transform .2s}
+.int-dir-tile:hover{border-color:var(--border-brand);box-shadow:var(--shadow-md);transform:translateY(-1px)}
+.int-dir-mono{flex:none;width:34px;height:34px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;background:var(--surface-tint);border:1px solid var(--border-brand);font-family:var(--font-heading);font-weight:600;font-size:.8rem;color:var(--brand-purple)}
+.int-dir-name{font-size:.9rem;color:var(--primary);font-weight:500;line-height:1.2;flex:1;min-width:0}
+.int-dir-soon{flex:none;font-family:var(--font-mono);font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-faded);background:var(--surface-soft);border:1px solid var(--border-dark);border-radius:999px;padding:.18rem .45rem}
+.int-dir-empty{margin-top:1.5rem}
 `;
 
 export default function Page() {
@@ -315,6 +335,21 @@ export default function Page() {
                 Available connectors depend on your plan and stack; ask us about a specific tool.
               </span>
             </div>
+          </div>
+        </section>
+
+        {/* CONNECTOR DIRECTORY */}
+        <section className="section">
+          <div className="container">
+            <div className="int-head reveal">
+              <div className="eyebrow">The directory</div>
+              <h2>Browse every integration.</h2>
+              <p className="muted" style={{ fontSize: "1.06rem" }}>
+                {CONNECTOR_STATS.live} integrations are live today, with {CONNECTOR_STATS.planned} more on the
+                roadmap. Search the list or filter by category. New connectors ship continuously.
+              </p>
+            </div>
+            <ConnectorDirectory />
           </div>
         </section>
 
