@@ -44,6 +44,10 @@ const css = `
 .roi-page .roi-capture{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin-top:.4rem}
 .roi-page .roi-form{width:100%;background:var(--surface-soft);border:1px solid var(--border-dark);border-radius:14px;padding:1.3rem}
 .roi-page .roi-form-lede{font-size:.92rem;color:var(--primary);margin-bottom:1rem}
+.roi-page .roi-recalc{width:100%;justify-content:center;margin-top:.5rem}
+.roi-page .roi-recalc.is-dirty{animation:roi-pulse 1.6s ease-in-out infinite}
+.roi-page .roi-recalc-hint{font-family:var(--font-mono);font-size:.7rem;color:var(--brand-purple);text-align:center;margin-top:.6rem;line-height:1.4}
+@keyframes roi-pulse{0%,100%{box-shadow:0 0 0 0 rgba(85,41,214,0)}50%{box-shadow:0 0 0 4px rgba(85,41,214,.18)}}
 
 /* methodology / sources */
 .roi-page .roi-method{max-width:900px;margin:0 auto}
