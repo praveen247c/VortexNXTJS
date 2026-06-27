@@ -43,7 +43,7 @@ const css = `
 .roi-page .roi-hint b{color:var(--brand-purple);font-weight:600}
 .roi-page .roi-money-in{position:relative;display:flex;align-items:center}
 .roi-page .roi-money-in i{position:absolute;left:.8rem;font-style:normal;color:var(--text-faded);font-size:.95rem}
-.roi-page .roi-money-in input{padding-left:1.7rem}
+.roi-page .roi-money-in input[type=text]{padding-left:2rem}
 
 /* slider */
 .roi-page .roi-slider{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:999px;background:var(--surface-tint);outline:none;border:1px solid var(--border-brand);margin:.3rem 0}
