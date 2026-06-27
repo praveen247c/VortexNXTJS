@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 
 // Signed-off, sourced, conservative multipliers (see "How we calculate this").
@@ -60,23 +60,38 @@ function compute(c: Inputs) {
 function Confetti({ token }: { token: number }) {
   const pieces = useMemo(
     () =>
-      Array.from({ length: 42 }, (_, i) => ({
+      Array.from({ length: 50 }, (_, i) => ({
         id: i,
-        left: 30 + Math.random() * 40,
-        tx: Math.round((Math.random() - 0.5) * 440),
-        ty: Math.round(150 + Math.random() * 220),
+        left: 26 + Math.random() * 48,
+        tx: Math.round((Math.random() - 0.5) * 480),
+        ty: Math.round(170 + Math.random() * 250),
         rot: Math.round(Math.random() * 720 - 360),
-        delay: (Math.random() * 0.12).toFixed(2),
+        delay: Math.random() * 0.1,
         color: CONFETTI_COLORS[i % CONFETTI_COLORS.length],
       })),
     [token]
   );
+  // Transition-based burst (no keyframes/custom-props): render at origin, then flip to the
+  // scattered/faded end state on the next frame so the CSS transition animates it.
+  const [go, setGo] = useState(false);
+  useEffect(() => {
+    setGo(false);
+    let id2 = 0;
+    const id1 = requestAnimationFrame(() => { id2 = requestAnimationFrame(() => setGo(true)); });
+    return () => { cancelAnimationFrame(id1); cancelAnimationFrame(id2); };
+  }, [token]);
   return (
     <div className="roi-confetti" aria-hidden="true">
       {pieces.map((p) => (
         <span
-          key={`${token}-${p.id}`}
-          style={{ left: `${p.left}%`, background: p.color, ["--tx"]: `${p.tx}px`, ["--ty"]: `${p.ty}px`, ["--rot"]: `${p.rot}deg`, animationDelay: `${p.delay}s` } as CSSProperties}
+          key={p.id}
+          style={{
+            left: `${p.left}%`,
+            background: p.color,
+            transitionDelay: `${p.delay}s`,
+            transform: go ? `translate(${p.tx}px, ${p.ty}px) rotate(${p.rot}deg)` : "translate(0, 0) rotate(0deg)",
+            opacity: go ? 0 : 1,
+          }}
         />
       ))}
     </div>
@@ -90,6 +105,7 @@ export default function RoiCalculator() {
   const [deployCostRaw, setDeployCostRaw] = useState("2,000");
   const [hours, setHours] = useState(8);
   const [deploys, setDeploys] = useState(4);
+  const [selectedPreset, setSelectedPreset] = useState<string | null>(null);
 
   const draft: Inputs = {
     cur,
@@ -113,7 +129,8 @@ export default function RoiCalculator() {
     (cur !== calc.cur || draft.revenue !== calc.revenue || draft.products !== calc.products ||
       draft.deployCost !== calc.deployCost || hours !== calc.hours || deploys !== calc.deploys);
 
-  function applyPreset(v: Omit<Inputs, "cur">) {
+  function applyPreset(key: string, v: Omit<Inputs, "cur">) {
+    setSelectedPreset(key);
     setRevenueRaw(group(v.revenue));
     setProductsRaw(group(v.products));
     setDeployCostRaw(group(v.deployCost));
@@ -156,7 +173,7 @@ export default function RoiCalculator() {
           <span className="roi-presets-lbl">Pick your scale</span>
           <div className="roi-preset-row">
             {PRESETS.map((p) => (
-              <button type="button" key={p.key} className="roi-preset" onClick={() => applyPreset(p.v)}>
+              <button type="button" key={p.key} className={`roi-preset${selectedPreset === p.key ? " on" : ""}`} onClick={() => applyPreset(p.key, p.v)}>
                 <b>{p.key}</b><span>~ {SYM[cur]}{compactK(p.v.revenue)}/mo</span>
               </button>
             ))}
@@ -173,7 +190,7 @@ export default function RoiCalculator() {
           <div className="roi-money-in">
             <i>{SYM[cur]}</i>
             <input type="text" inputMode="numeric" value={revenueRaw}
-              onChange={(e) => setRevenueRaw(e.target.value)}
+              onChange={(e) => { setSelectedPreset(null); setRevenueRaw(e.target.value); }}
               onBlur={() => setRevenueRaw(group(parseNum(revenueRaw)))} placeholder="e.g. 100k" />
           </div>
           <small className="roi-hint">Type <b>100k</b> or <b>1.2m</b> &mdash; we format it.</small>
@@ -182,19 +199,19 @@ export default function RoiCalculator() {
         <label className="roi-field">
           <span>Number of products</span>
           <input type="text" inputMode="numeric" value={productsRaw}
-            onChange={(e) => setProductsRaw(e.target.value)}
+            onChange={(e) => { setSelectedPreset(null); setProductsRaw(e.target.value); }}
             onBlur={() => setProductsRaw(group(parseNum(productsRaw)))} placeholder="e.g. 2,000" />
           <small className="roi-hint">Drives your SEO-page forecast.</small>
         </label>
 
         <label className="roi-field">
           <span>Hours/week on manual reporting <b className="roi-val">{hours}h</b></span>
-          <input className="roi-slider" type="range" min={0} max={40} step={1} value={hours} onChange={(e) => setHours(+e.target.value)} />
+          <input className="roi-slider" type="range" min={0} max={40} step={1} value={hours} onChange={(e) => { setSelectedPreset(null); setHours(+e.target.value); }} />
         </label>
 
         <label className="roi-field">
           <span>Store changes / deploys per month <b className="roi-val">{deploys}</b></span>
-          <input className="roi-slider" type="range" min={0} max={30} step={1} value={deploys} onChange={(e) => setDeploys(+e.target.value)} />
+          <input className="roi-slider" type="range" min={0} max={30} step={1} value={deploys} onChange={(e) => { setSelectedPreset(null); setDeploys(+e.target.value); }} />
         </label>
 
         <label className="roi-field">
@@ -202,7 +219,7 @@ export default function RoiCalculator() {
           <div className="roi-money-in">
             <i>{SYM[cur]}</i>
             <input type="text" inputMode="numeric" value={deployCostRaw}
-              onChange={(e) => setDeployCostRaw(e.target.value)}
+              onChange={(e) => { setSelectedPreset(null); setDeployCostRaw(e.target.value); }}
               onBlur={() => setDeployCostRaw(group(parseNum(deployCostRaw)))} placeholder="e.g. 2,000" />
           </div>
         </label>

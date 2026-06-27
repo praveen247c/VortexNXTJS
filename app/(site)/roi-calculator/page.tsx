@@ -25,6 +25,8 @@ const css = `
 .roi-page .roi-preset-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
 .roi-page .roi-preset{display:flex;flex-direction:column;align-items:flex-start;gap:.05rem;padding:.55rem .7rem;border:1px solid var(--border-dark);border-radius:10px;background:var(--surface-soft);cursor:pointer;transition:border-color .2s,background .2s}
 .roi-page .roi-preset:hover{border-color:var(--border-brand);background:var(--surface-tint)}
+.roi-page .roi-preset.on{border-color:var(--brand-purple);background:var(--surface-tint);box-shadow:inset 0 0 0 1px var(--brand-purple)}
+.roi-page .roi-preset.on b{color:var(--brand-purple)}
 .roi-page .roi-preset b{font-family:var(--font-heading);font-size:.9rem;color:var(--primary)}
 .roi-page .roi-preset span{font-family:var(--font-mono);font-size:.6rem;color:var(--text-faded)}
 
@@ -60,8 +62,7 @@ const css = `
 .roi-page .roi-outputs{display:flex;flex-direction:column;gap:1.2rem}
 .roi-page .roi-headline{position:relative;background:linear-gradient(135deg,var(--surface-tint),var(--surface-soft));border:1px solid var(--border-brand);border-radius:16px;padding:1.6rem 1.8rem;text-align:center}
 .roi-page .roi-confetti{position:absolute;left:0;right:0;top:0;height:0;pointer-events:none;z-index:3}
-.roi-page .roi-confetti span{position:absolute;top:18px;width:8px;height:13px;border-radius:2px;opacity:0;animation:roi-confetti 1.3s cubic-bezier(.2,.6,.3,1) forwards}
-@keyframes roi-confetti{0%{opacity:1;transform:translate(0,0) rotate(0)}100%{opacity:0;transform:translate(var(--tx,0),var(--ty,200px)) rotate(var(--rot,180deg))}}
+.roi-page .roi-confetti span{position:absolute;top:14px;width:9px;height:14px;border-radius:2px;will-change:transform,opacity;transition:transform 1.3s cubic-bezier(.2,.6,.3,1),opacity 1.3s ease}
 .roi-page .roi-head-eyebrow{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brand-purple);display:block}
 .roi-page .roi-head-num{font-family:var(--font-heading);font-weight:700;font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.05;letter-spacing:-.03em;color:var(--primary);margin:.5rem 0;display:flex;align-items:center;justify-content:center;gap:.4rem;flex-wrap:wrap}
 .roi-page .roi-head-dash{color:var(--text-faded);font-weight:400}
