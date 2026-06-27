@@ -69,6 +69,8 @@ const css = `
 .roi-page .roi-head-per{font-family:var(--font-mono);font-size:.9rem;font-weight:400;color:var(--text-faded);letter-spacing:0;margin-left:.25rem}
 .roi-page .roi-head-num--locked{color:var(--text-faded);letter-spacing:.04em}
 .roi-page .roi-head-sub{font-size:.88rem;color:var(--text-body);line-height:1.5;max-width:48ch;margin:0 auto}
+.roi-page .roi-bank{margin:1rem auto 0;font-size:.92rem;color:var(--primary);background:var(--white);border:1px solid var(--border-brand);border-radius:999px;padding:.5rem 1.1rem;display:inline-block}
+.roi-page .roi-bank b{color:var(--brand-purple)}
 .roi-page .roi-share{margin-top:1rem}
 .roi-page .roi-share-btn{font-family:var(--font-mono);font-size:.74rem;padding:.5rem 1.1rem;border-radius:999px;border:1px solid var(--border-brand);background:var(--white);color:var(--brand-purple);cursor:pointer;transition:background .2s}
 .roi-page .roi-share-btn:hover{background:var(--surface-tint)}
@@ -130,17 +132,23 @@ export default function Page() {
         <section className="section section--soft">
           <div className="container roi-method">
             <div className="eyebrow reveal">How we calculate this</div>
-            <h2 className="reveal" style={{ maxWidth: "24ch" }}>Every multiplier is conservative and publicly sourced.</h2>
+            <h2 className="reveal" style={{ maxWidth: "26ch" }}>Built on what the work would cost your team in-house.</h2>
             <p className="lede reveal" style={{ margin: "1.2rem 0 0", maxWidth: "70ch" }}>
-              We would rather under-promise. Each figure below names its public source, and anything we could
-              not source credibly we left out of the maths entirely rather than guess.
+              We would rather under-promise. Every saving below is the conservative in-house effort Vortex IQ
+              removes, valued at a loaded hourly rate. Each figure names its basis, and anything we could not
+              ground credibly we left out of the maths rather than guess. Defaults are editable; we always start from them.
             </p>
 
             <div className="roi-src reveal">
               <div className="roi-src-row">
-                <b>Hours saved &mdash; automatable reporting time</b>
-                <span className="v">50% (range 40&ndash;65%) x your hours x 52 x loaded hourly cost</span>
-                <span className="s">McKinsey Global Institute, <i>A Future That Works</i> &mdash; data-collection and processing activities are ~64&ndash;69% technically automatable; we map routine reporting down to a conservative 50%.</span>
+                <b>SEO/GEO content production</b>
+                <span className="v">~3&ndash;5 in-house hrs per optimised article x articles/month x 12 x loaded rate</span>
+                <span className="s">Orbit Media Studios annual blogging survey &mdash; an optimised article takes several hours to research, write and optimise in-house. Vortex IQ produces it; you approve the tone-of-voice and publish.</span>
+              </div>
+              <div className="roi-src-row">
+                <b>Reporting, briefings &amp; per-connector audits</b>
+                <span className="v">your weekly reporting hours (70&ndash;100%) + ~1&ndash;2 hrs/connector/month of audit &amp; QA, x loaded rate</span>
+                <span className="s">Conservative in-house effort for the work that Vortex Mind briefings, cohort/QBR reports and the 80+ check per-connector audits do for you, continuously.</span>
               </div>
               <div className="roi-src-row">
                 <b>Loaded analyst cost</b>
