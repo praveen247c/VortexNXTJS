@@ -130,6 +130,8 @@ export default function RoiCalculator() {
   const [prog, setProg] = useState(1);
   const [burst, setBurst] = useState(0);
   const rafRef = useRef<number | null>(null);
+  const timerRef = useRef<number | null>(null);
+  const headlineRef = useRef<HTMLDivElement>(null);
 
   const r = compute(calc ?? draft);
   const revealed = calc !== null;
@@ -154,19 +156,27 @@ export default function RoiCalculator() {
 
   function calculate() {
     setCalc(draft);
-    setBurst((b) => b + 1);
+    setProg(0); // numbers reset to zero while we scroll the user up
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
-    const t0 = performance.now();
-    const dur = 900;
-    const tick = (now: number) => {
-      const p = Math.min(1, (now - t0) / dur);
-      setProg(1 - Math.pow(1 - p, 3));
-      if (p < 1) rafRef.current = requestAnimationFrame(tick);
-    };
-    setProg(0);
-    rafRef.current = requestAnimationFrame(tick);
+    if (timerRef.current) clearTimeout(timerRef.current);
+    // 1) bring the results into view, then 2) run the count-up + confetti once the user is there
+    requestAnimationFrame(() => headlineRef.current?.scrollIntoView({ behavior: "smooth", block: "center" }));
+    timerRef.current = window.setTimeout(() => {
+      setBurst((b) => b + 1);
+      const t0 = performance.now();
+      const dur = 900;
+      const tick = (now: number) => {
+        const p = Math.min(1, (now - t0) / dur);
+        setProg(1 - Math.pow(1 - p, 3));
+        if (p < 1) rafRef.current = requestAnimationFrame(tick);
+      };
+      rafRef.current = requestAnimationFrame(tick);
+    }, 650);
   }
-  useEffect(() => () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); }, []);
+  useEffect(() => () => {
+    if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    if (timerRef.current) clearTimeout(timerRef.current);
+  }, []);
 
   const [copied, setCopied] = useState(false);
   function share() {
@@ -256,7 +266,7 @@ export default function RoiCalculator() {
 
       {/* OUTPUTS */}
       <div className={`roi-outputs${revealed ? " is-revealed" : ""}`}>
-        <div className="roi-headline">
+        <div className="roi-headline" ref={headlineRef}>
           {revealed ? <Confetti token={burst} /> : null}
           <span className="roi-head-eyebrow">Revenue riding on search &amp; AI visibility</span>
           {revealed ? (
