@@ -65,6 +65,7 @@ const css = `
 .roi-page .roi-head-eyebrow{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brand-purple);display:block}
 .roi-page .roi-head-num{font-family:var(--font-heading);font-weight:700;font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.05;letter-spacing:-.03em;color:var(--primary);margin:.5rem 0;display:flex;align-items:center;justify-content:center;gap:.4rem;flex-wrap:wrap}
 .roi-page .roi-head-dash{color:var(--text-faded);font-weight:400}
+.roi-page .roi-head-per{font-family:var(--font-mono);font-size:.9rem;font-weight:400;color:var(--text-faded);letter-spacing:0;margin-left:.25rem}
 .roi-page .roi-head-num--locked{color:var(--text-faded);letter-spacing:.04em}
 .roi-page .roi-head-sub{font-size:.88rem;color:var(--text-body);line-height:1.5;max-width:48ch;margin:0 auto}
 .roi-page .roi-share{margin-top:1rem}

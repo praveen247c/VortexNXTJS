@@ -139,7 +139,7 @@ export default function RoiCalculator() {
 
   const [copied, setCopied] = useState(false);
   function share() {
-    const txt = `Vortex IQ estimates ${fmtMoney(r.upLow, calc!.cur)}-${fmtMoney(r.upHigh, calc!.cur)}/yr of value for my store (time saved + revenue protected). Calculate yours: https://www.vortexiq.ai/roi-calculator`;
+    const txt = `${fmtMoney(r.orgLow, calc!.cur)}-${fmtMoney(r.orgHigh, calc!.cur)}/yr of my store revenue rides on search and AI visibility, and Vortex IQ keeps it optimised (plus ${fmtMoney(r.upLow, calc!.cur)}-${fmtMoney(r.upHigh, calc!.cur)}/yr in direct savings). Calculate yours: https://www.vortexiq.ai/roi-calculator`;
     if (typeof navigator !== "undefined" && navigator.clipboard) {
       navigator.clipboard.writeText(txt).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2200); }).catch(() => {});
     }
@@ -217,11 +217,11 @@ export default function RoiCalculator() {
       <div className={`roi-outputs${revealed ? " is-revealed" : ""}`}>
         <div className="roi-headline">
           {revealed ? <Confetti token={burst} /> : null}
-          <span className="roi-head-eyebrow">Estimated annual value</span>
+          <span className="roi-head-eyebrow">Revenue riding on search &amp; AI visibility</span>
           {revealed ? (
             <>
-              <div className="roi-head-num">{fmtMoney(D(r.upLow), outCur)}<span className="roi-head-dash">&ndash;</span>{fmtMoney(D(r.upHigh), outCur)}</div>
-              <p className="roi-head-sub">Time saved + revenue protected, per year. Organic upside is shown separately below.</p>
+              <div className="roi-head-num">{fmtMoney(D(r.orgLow), outCur)}<span className="roi-head-dash">&ndash;</span>{fmtMoney(D(r.orgHigh), outCur)}<small className="roi-head-per">/yr</small></div>
+              <p className="roi-head-sub">The slice of your revenue that depends on how you show up in search and AI answers, spread across <b>~{group(r.seoPages)} pages</b>. Keeping every one optimised, continuously, is exactly what Vortex IQ does.</p>
               <div className="roi-share">
                 <button type="button" className="roi-share-btn" onClick={share}>
                   {copied ? "Copied to clipboard" : "Copy my result"}
@@ -230,8 +230,8 @@ export default function RoiCalculator() {
             </>
           ) : (
             <>
-              <div className="roi-head-num roi-head-num--locked">{SYM[cur]}&bull;&bull;&bull;,&bull;&bull;&bull;</div>
-              <p className="roi-head-sub">Set your numbers, then hit <b>Calculate</b> to reveal your range.</p>
+              <div className="roi-head-num roi-head-num--locked">{SYM[cur]}&bull;,&bull;&bull;&bull;,&bull;&bull;&bull;</div>
+              <p className="roi-head-sub">Set your numbers, then hit <b>Calculate</b> to reveal what is at stake.</p>
             </>
           )}
         </div>
@@ -239,20 +239,20 @@ export default function RoiCalculator() {
         {revealed ? (
           <>
             <div className="roi-out-grid">
-              <div className="roi-out-card">
-                <h4>Hours saved</h4>
-                <div className="roi-out-val">{group(D(r.hoursLow))}&ndash;{group(D(r.hoursHigh))} <small>hrs/yr</small></div>
-                <p className="roi-out-sub">Worth {fmtMoney(D(r.moneyLow), outCur)}&ndash;{fmtMoney(D(r.moneyHigh), outCur)} of analyst time off manual reporting.</p>
-              </div>
               <div className="roi-out-card roi-out-card--brand">
+                <h4>Direct savings you can bank</h4>
+                <div className="roi-out-val">{fmtMoney(D(r.upLow), outCur)}&ndash;{fmtMoney(D(r.upHigh), outCur)} <small>/yr</small></div>
+                <p className="roi-out-sub">Team time saved + revenue protected, <b>on top of</b> the organic revenue above.</p>
+              </div>
+              <div className="roi-out-card">
+                <h4>Analyst time saved</h4>
+                <div className="roi-out-val">{group(D(r.hoursLow))}&ndash;{group(D(r.hoursHigh))} <small>hrs/yr</small></div>
+                <p className="roi-out-sub">Worth {fmtMoney(D(r.moneyLow), outCur)}&ndash;{fmtMoney(D(r.moneyHigh), outCur)} off manual reporting.</p>
+              </div>
+              <div className="roi-out-card">
                 <h4>Revenue protected</h4>
                 <div className="roi-out-val">{fmtMoney(D(r.protLow), outCur)}&ndash;{fmtMoney(D(r.protHigh), outCur)}</div>
-                <p className="roi-out-sub">Downside from failed changes that staging-first + one-click rollback is built to catch.</p>
-              </div>
-              <div className="roi-out-card">
-                <h4>Organic opportunity</h4>
-                <div className="roi-out-val">{fmtMoney(D(r.orgLow), outCur)}&ndash;{fmtMoney(D(r.orgHigh), outCur)}</div>
-                <p className="roi-out-sub">Revenue organic search influences. We would audit and keep <b>~{group(r.seoPages)} pages</b> optimised for search and AI answers.</p>
+                <p className="roi-out-sub">Downside from failed changes that staging-first + one-click rollback catches.</p>
               </div>
             </div>
             <p className="roi-out-foot">Illustrative range from conservative, publicly-sourced multipliers and your inputs. We verify the real numbers on your store.</p>
