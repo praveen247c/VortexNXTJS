@@ -160,7 +160,12 @@ export default function RoiCalculator() {
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
     if (timerRef.current) clearTimeout(timerRef.current);
     // 1) bring the results into view, then 2) run the count-up + confetti once the user is there
-    requestAnimationFrame(() => headlineRef.current?.scrollIntoView({ behavior: "smooth", block: "center" }));
+    requestAnimationFrame(() => {
+      const el = headlineRef.current;
+      if (!el || typeof window === "undefined") return;
+      const top = el.getBoundingClientRect().top + window.scrollY - 100; // clear the sticky nav
+      window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+    });
     timerRef.current = window.setTimeout(() => {
       setBurst((b) => b + 1);
       const t0 = performance.now();
