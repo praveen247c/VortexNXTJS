@@ -1,14 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Script from "next/script";
-import { GoogleAnalytics } from "@next/third-parties/google";
-import { Analytics } from "@vercel/analytics/next";
+import SiteAnalytics from "@/components/SiteAnalytics";
 import { SITE_URL } from "@/lib/site";
-
-// GA4 measurement ID. Reads NEXT_PUBLIC_GA_ID (set on Vercel); falls back to the
-// known Vortex IQ Website stream so tracking keeps firing even if the env var is
-// absent in a given environment.
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-5LM3LFL3QL";
 
 const DEFAULT_TITLE = "The AI Operating System for E-Commerce · Vortex IQ";
 const DEFAULT_DESCRIPTION =
@@ -49,23 +42,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body suppressHydrationWarning>
-        {children}
-        {/* Vercel Web Analytics — page views & visitors */}
-        <Analytics />
-      </body>
-      {/* HubSpot tracking code (portal 24385350) — site-wide analytics loader */}
-      <Script
-        id="hs-script-loader"
-        src="//js.hs-scripts.com/24385350.js"
-        strategy="afterInteractive"
-      />
-      {/* Google Analytics 4 (Vortex IQ Website stream) */}
-      {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
-      {/* Leadfeeder / Dealfront visitor identification (tracker p1e024BqoPQ7GB6d) */}
-      <Script id="ld-tracker" strategy="afterInteractive">
-        {`(function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('p1e024BqoPQ7GB6d');`}
-      </Script>
+      <body suppressHydrationWarning>{children}</body>
+      {/* Site-wide analytics & tracking (GA4, HubSpot, Leadfeeder, Vercel).
+          Managed in components/SiteAnalytics.tsx — do not remove. */}
+      <SiteAnalytics />
     </html>
   );
 }
