@@ -247,6 +247,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* WHAT: ROI calculator */}
+      <section className="section" id="roi">
+        <div className="container" style={{ textAlign: "center" }}>
+          <div className="eyebrow reveal" style={{ justifyContent: "center", display: "flex" }}>See the number</div>
+          <h2 className="reveal" style={{ maxWidth: "22ch", margin: "0 auto" }}>How much revenue is riding on your store right now?</h2>
+          <p className="lede reveal" style={{ margin: "1.4rem auto 2.6rem", maxWidth: "56ch" }}>A conservative, plain-English estimate built on publicly-sourced numbers and your own inputs: the hours Vortex IQ takes off your team, the revenue protected by staging-first deploys, and the organic revenue your SEO issues sit on.</p>
+          <div className="cta-row reveal" style={{ justifyContent: "center" }}>
+            <a className="btn" href="/roi-calculator">Calculate your ROI &rarr;</a>
+            <a className="textlink" href="/free-audit">Or run a free audit &rarr;</a>
+          </div>
+        </div>
+      </section>
+
       {/* WHAT: trust */}
       <section className="section section--soft">
         <div className="container">
