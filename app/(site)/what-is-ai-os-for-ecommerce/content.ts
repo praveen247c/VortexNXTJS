@@ -24,7 +24,7 @@ export const css = `
 .whatis-page .proof-card p{font-size:.88rem;color:var(--text-body);line-height:1.5;margin:.6rem 0 0}
 @media(max-width:820px){.whatis-page .proof-grid{grid-template-columns:1fr}}
 
-/* modules index */
+/* pillars index */
 .whatis-page .mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.6rem}
 .whatis-page .mod-card{display:flex;flex-direction:column;gap:.35rem;background:var(--white);border:1px solid var(--border-dark);border-radius:12px;padding:1.1rem 1.2rem;text-decoration:none;transition:border-color .2s,transform .2s}
 .whatis-page .mod-card:hover{border-color:var(--border-brand);transform:translateY(-2px)}
@@ -115,7 +115,7 @@ export const html = `<div class="whatis-page">
     </div>
   </section>
 
-  <!-- THE MODULES -->
+  <!-- THE PILLARS -->
   <section class="section">
     <div class="container">
       <div class="eyebrow reveal">The pillars</div>

@@ -188,8 +188,8 @@ export default function Home() {
       <section className="section section--soft" id="product">
         <div className="container">
           <div className="eyebrow reveal">What you actually get</div>
-          <h2 className="reveal" style={{ maxWidth: "18ch" }}>Five products. One loop. Every store you run.</h2>
-          <p className="lede reveal" style={{ margin: "1.4rem 0" }}>Each part of the platform does one job in the loop, and hands off cleanly to the next.</p>
+          <h2 className="reveal" style={{ maxWidth: "18ch" }}>One loop. Five steps. Every store you run.</h2>
+          <p className="lede reveal" style={{ margin: "1.4rem 0" }}>Six pillars run one continuous loop, from detect to learn. Each step does one job and hands off cleanly to the next.</p>
         </div>
 
         <PlatformTabs />

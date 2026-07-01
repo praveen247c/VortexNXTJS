@@ -151,7 +151,7 @@ export const policies: Policy[] = [
     lastUpdated: "15 June 2026",
     blocks: [
       { k: "h", t: `1. Scope` },
-      { k: "p", t: `Applies to all Vortex IQ products and modules (Nerve Centre, Vortex Mind, Ask Viq, Actions, Vortex Apps, Vortex Memory) and to all AI models and providers used to deliver them.` },
+      { k: "p", t: `Applies to all Vortex IQ products and pillars (Nerve Centre, Vortex Mind, Ask Viq, Vortex Agents, Vortex Apps, Vortex Memory) and to all AI models and providers used to deliver them.` },
       { k: "p", t: `<strong>2. Principles</strong><br/>` },
       { k: "ul", items: [`<strong>Human accountability</strong>. AI assists people; it does not replace their authority. A person is accountable for any change to a customer&#x27;s systems.`, `<strong>Least data</strong>. We send the model only the data a task requires.`, `<strong>Transparency</strong>. Customers can see what the AI did, why, and on what evidence.`, `<strong>Safety by default</strong>. Higher-impact actions require stronger controls and explicit approval.`, `<strong>No training on customer data</strong>. Customer data is not used to train models, ours or our providers`] },
       { k: "p", t: `<strong>3</strong>.<strong>Models and providers</strong>` },
