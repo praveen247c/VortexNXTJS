@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { client } from "@/sanity/lib/client";
 import { sitemapPostsQuery, sitemapCategoriesQuery } from "@/sanity/lib/queries";
 import { caseStudies } from "@/app/(site)/customer-stories/case-studies";
+import { comparisonSlugs } from "@/app/(site)/vs/comparisons";
 import { SITE_URL } from "@/lib/site";
 
 export const revalidate = 3600; // regenerate hourly
@@ -20,23 +21,39 @@ const STATIC_PATHS: { path: string; changeFrequency: MetadataRoute.Sitemap[numbe
   { path: "/ai-os-platform/ask-viq", changeFrequency: "monthly", priority: 0.8 },
   { path: "/ai-os-platform/vortex-agents", changeFrequency: "monthly", priority: 0.8 },
   { path: "/aistudio", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/product-tour", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/roi-calculator", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/what-is-ai-os-for-ecommerce", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/vs", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/stagingpro-to-ai-os", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/changelog", changeFrequency: "weekly", priority: 0.5 },
   { path: "/solutions", changeFrequency: "monthly", priority: 0.7 },
   { path: "/solutions/for-merchants-brands", changeFrequency: "monthly", priority: 0.7 },
   { path: "/solutions/for-agencies", changeFrequency: "monthly", priority: 0.7 },
   { path: "/solutions/for-tech-partners", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/solutions/enterprise", changeFrequency: "monthly", priority: 0.7 },
   { path: "/solutions/ai-enablement", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/solutions/seo-geo", changeFrequency: "monthly", priority: 0.7 },
   { path: "/solutions/integrations", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/developers", changeFrequency: "monthly", priority: 0.6 },
   { path: "/customer-stories", changeFrequency: "weekly", priority: 0.7 },
   { path: "/partners", changeFrequency: "monthly", priority: 0.6 },
   { path: "/partners/agency-program", changeFrequency: "monthly", priority: 0.5 },
   { path: "/partners/technology-program", changeFrequency: "monthly", priority: 0.5 },
   { path: "/partners/student-program", changeFrequency: "monthly", priority: 0.5 },
   { path: "/start-with-vortexiq", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/get-started", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/free-audit", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/golden-circle", changeFrequency: "monthly", priority: 0.5 },
+  { path: "/join-viq", changeFrequency: "monthly", priority: 0.4 },
   { path: "/about-us", changeFrequency: "monthly", priority: 0.6 },
+  { path: "/company", changeFrequency: "monthly", priority: 0.5 },
   { path: "/careers", changeFrequency: "weekly", priority: 0.5 },
   { path: "/contact-us", changeFrequency: "yearly", priority: 0.6 },
   { path: "/branding", changeFrequency: "yearly", priority: 0.4 },
+  { path: "/press", changeFrequency: "monthly", priority: 0.5 },
   { path: "/trust/trust-center", changeFrequency: "monthly", priority: 0.5 },
+  { path: "/trust/limits", changeFrequency: "monthly", priority: 0.4 },
   { path: "/trust/information-security-policy", changeFrequency: "yearly", priority: 0.3 },
   { path: "/trust/data-protection-addendum", changeFrequency: "yearly", priority: 0.3 },
   { path: "/trust/sub-processors", changeFrequency: "monthly", priority: 0.3 },
@@ -81,6 +98,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
+  const vsRoutes: MetadataRoute.Sitemap = comparisonSlugs.map((slug) => ({
+    url: `${SITE_URL}/vs/${slug}`,
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
   const postRoutes: MetadataRoute.Sitemap = posts.map((p) => ({
     url: `${SITE_URL}/resources/blog/${p.slug}`,
     lastModified: p._updatedAt,
@@ -95,5 +118,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
-  return [...staticRoutes, ...caseStudyRoutes, ...postRoutes, ...categoryRoutes];
+  return [...staticRoutes, ...vsRoutes, ...caseStudyRoutes, ...postRoutes, ...categoryRoutes];
 }

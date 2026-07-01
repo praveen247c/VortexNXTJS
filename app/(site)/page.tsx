@@ -188,8 +188,8 @@ export default function Home() {
       <section className="section section--soft" id="product">
         <div className="container">
           <div className="eyebrow reveal">What you actually get</div>
-          <h2 className="reveal" style={{ maxWidth: "18ch" }}>Five products. One loop. Every store you run.</h2>
-          <p className="lede reveal" style={{ margin: "1.4rem 0" }}>Each part of the platform does one job in the loop, and hands off cleanly to the next.</p>
+          <h2 className="reveal" style={{ maxWidth: "18ch" }}>One loop. Five steps. Every store you run.</h2>
+          <p className="lede reveal" style={{ margin: "1.4rem 0" }}>Six pillars run one continuous loop, from detect to learn. Each step does one job and hands off cleanly to the next.</p>
         </div>
 
         <PlatformTabs />
@@ -243,6 +243,19 @@ export default function Home() {
           <div className="cta-row reveal" style={{ marginTop: "2.4rem" }}>
             <a className="btn" href="#audit">Run a free audit</a>
             <a className="textlink" href="/customer-stories">Read the customer stories &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT: ROI calculator */}
+      <section className="section" id="roi">
+        <div className="container" style={{ textAlign: "center" }}>
+          <div className="eyebrow reveal" style={{ justifyContent: "center", display: "flex" }}>See the number</div>
+          <h2 className="reveal" style={{ maxWidth: "22ch", margin: "0 auto" }}>How much revenue is riding on your store right now?</h2>
+          <p className="lede reveal" style={{ margin: "1.4rem auto 2.6rem", maxWidth: "56ch" }}>A conservative, plain-English estimate built on publicly-sourced numbers and your own inputs: the hours Vortex IQ takes off your team, the revenue protected by staging-first deploys, and the organic revenue your SEO issues sit on.</p>
+          <div className="cta-row reveal" style={{ justifyContent: "center" }}>
+            <a className="btn" href="/roi-calculator">Calculate your ROI &rarr;</a>
+            <a className="textlink" href="/free-audit">Or run a free audit &rarr;</a>
           </div>
         </div>
       </section>

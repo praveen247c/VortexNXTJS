@@ -5,7 +5,7 @@
 ## Start here
 
 - [Homepage](https://www.vortexiq.ai): one-page overview of the platform, value proposition, and proof.
-- [AI OS Platform Overview](https://www.vortexiq.ai/ai-os-platform): how the closed loop and the platform modules work together.
+- [AI OS Platform Overview](https://www.vortexiq.ai/ai-os-platform): how the closed loop and the platform pillars work together.
 - [Platform](https://www.vortexiq.ai/platform): detailed explainer of the unified command centre.
 - [Pricing](https://www.vortexiq.ai/pricing): Foundation, Growth, Enterprise and OmniChannel plans, feature comparison and add-ons.
 - [Solutions by Role](https://www.vortexiq.ai/solutions): choose your path, merchants, agencies, or tech partners.
@@ -27,14 +27,14 @@
 7. The unified commerce graph and Vortex Memory: every connector, fix, deploy and decision is written into one live graph across 200+ integrations and 6,000+ KPIs, compounding with every store, report and question.
 8. AI Enablement for enterprises and platforms: grey-label infrastructure so platforms can build and scale their own agent ecosystems, including custom MCPs.
 
-## Product modules (the closed loop)
+## Product pillars (the closed loop)
 
 - [Nerve Centre](https://www.vortexiq.ai/ai-os-platform/nerve-centre): real-time detection, KPI tracking and automated alerts. Detect.
 - [Vortex Mind](https://www.vortexiq.ai/ai-os-platform/vortex-mind): diagnostic and strategy engine that analyses signals, spots bottlenecks and benchmarks competitors. Diagnose.
 - [Ask Viq](https://www.vortexiq.ai/ai-os-platform/ask-viq): conversational agent spanning all connected systems, cited to the graph. Diagnose and act.
 - Actions: AI-ranked findings become tracked work on a Kanban board with automation rules and Jira, Asana and Linear sync. Act.
 - [Vortex Apps](https://www.vortexiq.ai/ai-os-platform/vortex-apps): safe deployment infrastructure, StagingPro and RollbackPro, for Shopify, BigCommerce and Adobe Commerce. Safe-deploy.
-- Vortex Memory: the compounding data layer and unified commerce graph that every module reads from and writes to. Learn.
+- Vortex Memory: the compounding data layer and unified commerce graph that every pillar reads from and writes to. Learn.
 - [Agent Hub](https://www.vortexiq.ai/ai-os-platform/agent-hub): discover, deploy and build specialist AI agents for merchandising, SEO and GEO, paid media, inventory, retention and store maintenance.
 
 ## Solutions by audience

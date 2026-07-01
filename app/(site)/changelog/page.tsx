@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { css, html } from "./content";
 
 export const metadata: Metadata = {
-  title: "The AI Operating System for E-Commerce | Vortex IQ",
-  description: "The how-it-works layer of Vortex IQ. Six pillars, one platform. Unified signals, stateful agents, and safe execution across your entire commerce stack.",
+  title: "Changelog | Vortex IQ",
+  description:
+    "New connectors, capabilities and fixes in the Vortex IQ AI Operating System, dated as they ship. Breaking changes announced with notice.",
+  alternates: { canonical: "/changelog" },
 };
 
 export default function Page() {
