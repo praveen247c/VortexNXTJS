@@ -51,7 +51,9 @@ export default function Footer() {
             <Link href="/get-started">Get Started</Link>
             <Link href="/customer-stories">Customer Stories</Link>
             <Link href="/trust/trust-center">Security &amp; Trust</Link>
+            <Link href="/trust/limits">Limits &amp; Guardrails</Link>
             <a href="https://monitor.vortexiq.ai/" target="_blank" rel="noopener noreferrer">Platform Status</a>
+            <Link href="/changelog">Changelog</Link>
             <Link href="/join-viq">Brochure</Link>
             <Link href="/register">Join Referral Program</Link>
           </div>

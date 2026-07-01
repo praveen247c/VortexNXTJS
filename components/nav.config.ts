@@ -92,6 +92,8 @@ export const NAV: NavEntry[] = [
         { label: "Docs", href: "https://docs.vortexiq.ai/", desc: "Technical documentation & reference guides", icon: "docs", external: true },
         { label: "Developers", href: "/developers", desc: "API, sandbox & architecture", icon: "partners" },
         { label: "Blog", href: "/resources/blog", desc: "Product updates & insights", icon: "blog" },
+        { label: "What is an AI OS?", href: "/what-is-ai-os-for-ecommerce", desc: "The category, defined in plain English", icon: "about" },
+        { label: "Compare", href: "/vs", desc: "Vortex IQ vs the alternatives", icon: "seo" },
         { label: "About Us", href: "/about-us", desc: "Who we are and what we build", icon: "about", divider: true },
         { label: "Careers", href: "/careers", desc: "Join the Vortex IQ team", icon: "careers" },
         { label: "Contact Us", href: "/contact-us", desc: "Partnerships & enquiries", icon: "contact" },
