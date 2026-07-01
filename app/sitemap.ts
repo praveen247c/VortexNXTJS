@@ -46,6 +46,7 @@ const STATIC_PATHS: { path: string; changeFrequency: MetadataRoute.Sitemap[numbe
   { path: "/careers", changeFrequency: "weekly", priority: 0.5 },
   { path: "/contact-us", changeFrequency: "yearly", priority: 0.6 },
   { path: "/branding", changeFrequency: "yearly", priority: 0.4 },
+  { path: "/press", changeFrequency: "monthly", priority: 0.5 },
   { path: "/trust/trust-center", changeFrequency: "monthly", priority: 0.5 },
   { path: "/trust/information-security-policy", changeFrequency: "yearly", priority: 0.3 },
   { path: "/trust/data-protection-addendum", changeFrequency: "yearly", priority: 0.3 },

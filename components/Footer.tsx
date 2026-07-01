@@ -62,6 +62,7 @@ export default function Footer() {
             <Link href="/resources/blog">Blog</Link>
             <Link href="/careers">Careers</Link>
             <Link href="/branding">Branding</Link>
+            <Link href="/press">Press</Link>
             <Link href="/contact-us">Contact Us</Link>
             <a href="https://www.vortexiq.ai/sitemap.xml">Sitemap</a>
             <Link href="/launch-event">Webinar and Events</Link>
