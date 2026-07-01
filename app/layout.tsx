@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import Script from "next/script";
 import { SITE_URL } from "@/lib/site";
 
 const DEFAULT_TITLE = "The AI Operating System for E-Commerce · Vortex IQ";
@@ -42,6 +43,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body suppressHydrationWarning>{children}</body>
+      {/* HubSpot tracking code (portal 24385350) — site-wide analytics loader */}
+      <Script
+        id="hs-script-loader"
+        src="//js.hs-scripts.com/24385350.js"
+        strategy="afterInteractive"
+      />
     </html>
   );
 }
