@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 import { SITE_URL } from "@/lib/site";
 
 // GA4 measurement ID. Reads NEXT_PUBLIC_GA_ID (set on Vercel); falls back to the
@@ -48,7 +49,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        {children}
+        {/* Vercel Web Analytics — page views & visitors */}
+        <Analytics />
+      </body>
       {/* HubSpot tracking code (portal 24385350) — site-wide analytics loader */}
       <Script
         id="hs-script-loader"
