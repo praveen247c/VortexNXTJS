@@ -202,7 +202,7 @@ export default function Home() {
           <h2 className="reveal" style={{ maxWidth: "18ch" }}>Results you can verify, line by line.</h2>
           <p className="lede reveal" style={{ margin: "1.4rem 0 2.6rem" }}>Real stores, dated and attributed. Revenue and conversion figures are top-quartile merchant results in the first 90 days.</p>
           <div className="grid grid-4">
-            <div className="card card--brand reveal"><div className="stat stat--on-brand">1,400%</div><div className="stat-label">organic growth · Soak &amp; Sleep, Google Analytics</div></div>
+            <div className="card card--brand reveal"><div className="stat stat--on-brand">1,400%</div><div className="stat-label">organic growth · merchant store, Google Analytics</div></div>
             <div className="card reveal"><div className="stat">+35%</div><div className="stat-label">revenue recovered from cross-channel fixes</div></div>
             <div className="card reveal"><div className="stat">+30%</div><div className="stat-label">higher conversion · top-quartile merchants</div></div>
             <div className="card reveal"><div className="stat">50%</div><div className="stat-label">faster problem resolution · the closed loop</div></div>

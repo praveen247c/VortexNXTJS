@@ -108,7 +108,7 @@ export const html = `<div class="whatis-page">
         </div>
         <div class="proof-card">
           <div class="stat">1,400%</div>
-          <p>Organic growth at Soak &amp; Sleep (Google Analytics) when the SEO and GEO engine ran.</p>
+          <p>Organic growth at a merchant store (Google Analytics) when the SEO and GEO engine ran.</p>
         </div>
       </div>
       <p class="muted reveal" style="margin-top:1.4rem;font-size:.86rem">Figures are drawn from Vortex IQ&rsquo;s own audits and named-customer analytics. We verify the real numbers on your store with a free audit.</p>
