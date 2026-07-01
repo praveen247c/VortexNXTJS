@@ -57,6 +57,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       />
       {/* Google Analytics 4 (Vortex IQ Website stream) */}
       {GA_ID ? <GoogleAnalytics gaId={GA_ID} /> : null}
+      {/* Leadfeeder / Dealfront visitor identification (tracker p1e024BqoPQ7GB6d) */}
+      <Script id="ld-tracker" strategy="afterInteractive">
+        {`(function(ss,ex){ window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));}; (function(d,s){ fs=d.getElementsByTagName(s)[0]; function ce(src){ var cs=d.createElement(s); cs.src=src; cs.async=1; fs.parentNode.insertBefore(cs,fs); }; ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,'script'); })('p1e024BqoPQ7GB6d');`}
+      </Script>
     </html>
   );
 }
