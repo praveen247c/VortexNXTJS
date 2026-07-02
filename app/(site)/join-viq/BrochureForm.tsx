@@ -2,34 +2,77 @@
 
 import { useState } from "react";
 
+// Reads the HubSpot tracking cookie so a submission links to the visitor's
+// analytics session. Returns "" when the cookie isn't present.
+function getHutk(): string {
+  if (typeof document === "undefined") return "";
+  const m = document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]+)/);
+  return m ? decodeURIComponent(m[1]) : "";
+}
+
+// Fallback: open the user's mail client (the original behaviour) if the API
+// isn't reachable/configured, so a request is never lost.
+function mailtoFallback(fullName: string, email: string, company: string) {
+  const body = [
+    `Name: ${fullName}`,
+    `Email: ${email}`,
+    company ? `Company: ${company}` : null,
+    "",
+    "Please send me the Vortex IQ brochure.",
+  ]
+    .filter(Boolean)
+    .join("\n");
+  window.location.href = `mailto:hey@vortexiq.ai?subject=${encodeURIComponent(
+    "Brochure request"
+  )}&body=${encodeURIComponent(body)}`;
+}
+
 export default function BrochureForm() {
   const [sent, setSent] = useState(false);
   const [name, setName] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const fullName = String(form.get("name") || "");
     const email = String(form.get("email") || "");
     const company = String(form.get("company") || "");
 
-    const body = [
-      `Name: ${fullName}`,
-      `Email: ${email}`,
-      company ? `Company: ${company}` : null,
-      "",
-      "Please send me the Vortex IQ brochure.",
-    ]
-      .filter(Boolean)
-      .join("\n");
-
-    const href = `mailto:hey@vortexiq.ai?subject=${encodeURIComponent(
-      "Brochure request"
-    )}&body=${encodeURIComponent(body)}`;
-
     setName(fullName);
-    setSent(true);
-    window.location.href = href;
+    setError("");
+    setSubmitting(true);
+
+    try {
+      const res = await fetch("/api/brochure", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: fullName,
+          email,
+          company,
+          hutk: getHutk(),
+          pageUri: window.location.href,
+          pageName: document.title,
+        }),
+      });
+
+      if (res.ok) {
+        setSent(true);
+        return;
+      }
+
+      // If the form isn't configured yet (503) or HubSpot errors, fall back to
+      // the mailto path so the lead still reaches us.
+      mailtoFallback(fullName, email, company);
+      setSent(true);
+    } catch {
+      mailtoFallback(fullName, email, company);
+      setSent(true);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (sent) {
@@ -83,12 +126,14 @@ export default function BrochureForm() {
         <input id="bf-company" name="company" type="text" placeholder="Company name" autoComplete="organization" />
       </div>
       <div className="bf-actions">
-        <button type="submit" className="btn">
-          Get the brochure
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ width: 17, height: 17 }}>
-            <path d="M12 3v12M7 11l5 5 5-5" />
-            <path d="M5 21h14" />
-          </svg>
+        <button type="submit" className="btn" disabled={submitting}>
+          {submitting ? "Sending..." : "Get the brochure"}
+          {!submitting && (
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ width: 17, height: 17 }}>
+              <path d="M12 3v12M7 11l5 5 5-5" />
+              <path d="M5 21h14" />
+            </svg>
+          )}
         </button>
         <span className="promise">
           <span className="dot" />PDF · no spam
