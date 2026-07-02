@@ -10,9 +10,8 @@ import { NextResponse } from "next/server";
 // The portal id falls back to the known Vortex IQ portal; the form GUID has no
 // safe default, so if it is absent we return a clear error the client can show.
 
-const PORTAL_ID = process.env.HUBSPOT_PORTAL_ID ?? "24385350";
-const FORM_GUID = process.env.HUBSPOT_BROCHURE_FORM_GUID;
-
+// Read env at build time for the module scope, but the handler re-reads at
+// request time (below) so a runtime-only env var is always picked up.
 type Payload = {
   name?: string;
   email?: string;
@@ -25,6 +24,10 @@ type Payload = {
 };
 
 export async function POST(request: Request) {
+  // Read at request time so a runtime env var is always honoured.
+  const PORTAL_ID = process.env.HUBSPOT_PORTAL_ID ?? "24385350";
+  const FORM_GUID = process.env.HUBSPOT_BROCHURE_FORM_GUID;
+
   let data: Payload;
   try {
     data = await request.json();
