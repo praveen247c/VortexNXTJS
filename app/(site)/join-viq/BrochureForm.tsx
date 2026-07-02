@@ -85,21 +85,16 @@ export default function BrochureForm() {
             </svg>
           </div>
           <h3>Thanks{name ? `, ${name.split(" ")[0]}` : ""}: the brochure is on its way.</h3>
-          <p className="muted" style={{ marginTop: ".7rem", maxWidth: "44ch", marginInline: "auto" }}>
-            Your email client should have opened with your request ready to send. If it didn&apos;t, email us
-            directly at <a href="mailto:hey@vortexiq.ai" style={{ color: "var(--brand-purple)" }}>hey@vortexiq.ai</a>{" "}
-            or read it online below.
+          <p className="muted" style={{ marginTop: ".7rem", maxWidth: "46ch", marginInline: "auto" }}>
+            We&apos;ll email the PDF to you shortly. No need to wait, though: read the whole brochure
+            online right now. Any questions, we&apos;re at{" "}
+            <a href="mailto:hey@vortexiq.ai" style={{ color: "var(--brand-purple)" }}>hey@vortexiq.ai</a>.
           </p>
           <div className="bf-success-actions">
-            <a
-              className="btn btn--sm"
-              href="https://www.vortexiq.ai/join-viq"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View online
+            <a className="btn btn--sm" href="/join-viq/brochure">
+              Read the brochure now
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ width: 15, height: 15 }}>
-                <path d="M7 17 17 7M9 7h8v8" />
+                <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
             </a>
             <button type="button" className="btn btn--ghost btn--sm" onClick={() => setSent(false)}>
@@ -140,7 +135,7 @@ export default function BrochureForm() {
         </span>
       </div>
       <p className="bf-note">
-        Prefer to read it online? <a href="https://www.vortexiq.ai/join-viq" target="_blank" rel="noopener noreferrer">View the live brochure</a>.
+        Prefer to read it online? <a href="/join-viq/brochure">View the live brochure</a>.
         By requesting it you agree to our <a href="https://www.vortexiq.ai/privacy-policy">Privacy Policy</a>.
       </p>
     </form>

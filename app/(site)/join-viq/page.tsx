@@ -181,7 +181,7 @@ export default function Page() {
                   <span className="inside-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a3 3 0 0 0-3 3 3 3 0 0 0-3 3 3 3 0 0 0 0 6 3 3 0 0 0 3 5 3 3 0 0 0 6 0 3 3 0 0 0 3-5 3 3 0 0 0 0-6 3 3 0 0 0-3-3 3 3 0 0 0-3-3Z" /><path d="M12 8v8M9 12h6" /></svg></span>
                   <div>
                     <h3>The six AI pillars</h3>
-                    <p>Nerve Centre, Vortex Mind, Ask Viq, Vortex Apps, Actions, and Vortex Memory: what each one does and how they work together.</p>
+                    <p>Nerve Centre, Vortex Mind, Ask Viq, Vortex Apps, Vortex Agents, and Vortex Memory: what each one does and how they work together.</p>
                   </div>
                 </div>
               </div>
@@ -201,7 +201,7 @@ export default function Page() {
                   <span className="inside-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M14 7h3a4 4 0 0 1 0 8h-3M10 17H7a4 4 0 0 1 0-8h3" /><path d="M8 12h8" /></svg></span>
                   <div>
                     <h3>Integrations</h3>
-                    <p>Works with Shopify Plus, BigCommerce, and Adobe Commerce, plus how data flows in and actions flow back out to your stack.</p>
+                    <p>Works with BigCommerce, Shopify, Adobe Commerce and WooCommerce, plus how data flows in and actions flow back out to your stack.</p>
                   </div>
                 </div>
               </div>

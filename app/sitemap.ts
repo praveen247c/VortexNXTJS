@@ -46,6 +46,7 @@ const STATIC_PATHS: { path: string; changeFrequency: MetadataRoute.Sitemap[numbe
   { path: "/free-audit", changeFrequency: "monthly", priority: 0.7 },
   { path: "/golden-circle", changeFrequency: "monthly", priority: 0.5 },
   { path: "/join-viq", changeFrequency: "monthly", priority: 0.4 },
+  { path: "/join-viq/brochure", changeFrequency: "monthly", priority: 0.5 },
   { path: "/about-us", changeFrequency: "monthly", priority: 0.6 },
   { path: "/company", changeFrequency: "monthly", priority: 0.5 },
   { path: "/careers", changeFrequency: "weekly", priority: 0.5 },
