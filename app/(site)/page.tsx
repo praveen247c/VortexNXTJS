@@ -116,6 +116,76 @@ export default function Home() {
         </div>
       </section>
 
+      {/* WHAT: the six pillars (mechanism + outcome) */}
+      <section className="section" id="pillars">
+        <div className="container">
+          <div className="eyebrow reveal">The six pillars</div>
+          <h2 className="reveal" style={{ maxWidth: "20ch" }}>Six pillars. One platform. What each one does for you.</h2>
+          <p className="lede reveal" style={{ margin: "1.4rem 0 2.8rem" }}>The loop runs on six pillars. Here is what each one is, and what you actually get from it.</p>
+          <div className="grid grid-3">
+            <a className="card reveal" href="/ai-os-platform/nerve-centre" style={{ textDecoration: "none", color: "inherit" }}>
+              <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Detect</span>
+              <h3>Nerve Centre</h3>
+              <p className="muted" style={{ margin: ".5rem 0 .9rem" }}>Real-time detection across 200+ connectors.</p>
+              <p style={{ fontWeight: 500 }}>You get: revenue leaks caught before your customers do, ranked by the money at stake.</p>
+            </a>
+            <a className="card reveal" href="/ai-os-platform/vortex-mind" style={{ textDecoration: "none", color: "inherit" }}>
+              <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Diagnose</span>
+              <h3>Vortex Mind</h3>
+              <p className="muted" style={{ margin: ".5rem 0 .9rem" }}>Diagnostics and strategy across every channel.</p>
+              <p style={{ fontWeight: 500 }}>You get: the root cause in plain English, not another chart to interpret yourself.</p>
+            </a>
+            <a className="card reveal" href="/ai-os-platform/ask-viq" style={{ textDecoration: "none", color: "inherit" }}>
+              <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Converse</span>
+              <h3>Ask Viq&trade;</h3>
+              <p className="muted" style={{ margin: ".5rem 0 .9rem" }}>Conversational AI over your whole stack.</p>
+              <p style={{ fontWeight: 500 }}>You get: answers to plain questions like &ldquo;where am I losing revenue?&rdquo;, cited to your data.</p>
+            </a>
+            <a className="card card--brand reveal" href="/ai-os-platform/vortex-agents" style={{ textDecoration: "none" }}>
+              <span className="chip" style={{ marginBottom: "1rem", background: "rgba(255,255,255,.18)", borderColor: "rgba(255,255,255,.35)", color: "#fff" }}>Act</span>
+              <h3 style={{ color: "#fff" }}>Vortex Agents</h3>
+              <p className="muted" style={{ margin: ".5rem 0 .9rem", color: "rgba(255,255,255,.75)" }}>Execute changes safely, on your approval.</p>
+              <p style={{ fontWeight: 500, color: "#fff" }}>You get: agents that do the work, SEO &amp; GEO, merchandising, paid media, inventory and retention, staging-first and reversible.</p>
+            </a>
+            <a className="card reveal" href="/ai-os-platform/vortex-apps" style={{ textDecoration: "none", color: "inherit" }}>
+              <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Deploy</span>
+              <h3>Vortex Apps</h3>
+              <p className="muted" style={{ margin: ".5rem 0 .9rem" }}>Staging, backup and governance.</p>
+              <p style={{ fontWeight: 500 }}>You get: every change previewed on a copy of your store first, with one-click rollback and a full audit trail.</p>
+            </a>
+            <a className="card reveal" href="/ai-os-platform/vortex-memory" style={{ textDecoration: "none", color: "inherit" }}>
+              <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Learn</span>
+              <h3>Vortex Memory</h3>
+              <p className="muted" style={{ margin: ".5rem 0 .9rem" }}>Learns from every signal, fix and decision.</p>
+              <p style={{ fontWeight: 500 }}>You get: a system that starts from everything you have already fixed, so the second fix is faster than the first.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT: SEO & GEO spotlight (most-demanded product) */}
+      <section className="section section--soft" id="seo-geo">
+        <div className="container">
+          <div className="split">
+            <div className="reveal">
+              <div className="eyebrow">Most in demand</div>
+              <h2 style={{ maxWidth: "18ch" }}>Win Search and AI Discovery, at scale.</h2>
+              <p className="lede" style={{ margin: "1.4rem 0 1.2rem" }}>SEO &amp; GEO is the agent our merchants reach for first. It runs the SEO and GEO engine on a schedule: generating, localising and scaling high-intent content across the regions and demographics you are targeting, so you capture organic search and get cited by AI answer engines.</p>
+              <p className="muted" style={{ marginBottom: "1.8rem" }}>It runs as a Vortex Agent: detected by the Nerve Centre, diagnosed by Vortex Mind, executed staging-first with one-click rollback.</p>
+              <div className="cta-row">
+                <a className="btn" href="/solutions/seo-geo">Explore SEO &amp; GEO &rarr;</a>
+                <a className="textlink" href="/free-audit">See your organic gaps in a free audit &rarr;</a>
+              </div>
+            </div>
+            <div className="grid reveal" style={{ gap: ".9rem" }}>
+              <div className="card card--brand"><div className="stat stat--on-brand">1,400%</div><div className="stat-label">organic growth at a merchant store (Google Analytics) when the engine ran</div></div>
+              <div className="card"><h3 style={{ fontSize: "1rem" }}>Generate &amp; localise</h3><p className="muted" style={{ fontSize: ".9rem" }}>High-intent content produced, localised and scaled across your target regions.</p></div>
+              <div className="card"><h3 style={{ fontSize: "1rem" }}>Optimise for AI answers</h3><p className="muted" style={{ fontSize: ".9rem" }}>Structured so answer engines can find, quote and cite your store.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ============ HOW ============ */}
       <section className="section" id="how">
         <div className="container">
@@ -193,76 +263,6 @@ export default function Home() {
         </div>
 
         <PlatformTabs />
-      </section>
-
-      {/* WHAT: the six pillars (mechanism + outcome) */}
-      <section className="section" id="pillars">
-        <div className="container">
-          <div className="eyebrow reveal">The six pillars</div>
-          <h2 className="reveal" style={{ maxWidth: "20ch" }}>Six pillars. One platform. What each one does for you.</h2>
-          <p className="lede reveal" style={{ margin: "1.4rem 0 2.8rem" }}>The loop runs on six pillars. Here is what each one is, and what you actually get from it.</p>
-          <div className="grid grid-3">
-            <a className="card reveal" href="/ai-os-platform/nerve-centre" style={{ textDecoration: "none", color: "inherit" }}>
-              <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Detect</span>
-              <h3>Nerve Centre</h3>
-              <p className="muted" style={{ margin: ".5rem 0 .9rem" }}>Real-time detection across 200+ connectors.</p>
-              <p style={{ fontWeight: 500 }}>You get: revenue leaks caught before your customers do, ranked by the money at stake.</p>
-            </a>
-            <a className="card reveal" href="/ai-os-platform/vortex-mind" style={{ textDecoration: "none", color: "inherit" }}>
-              <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Diagnose</span>
-              <h3>Vortex Mind</h3>
-              <p className="muted" style={{ margin: ".5rem 0 .9rem" }}>Diagnostics and strategy across every channel.</p>
-              <p style={{ fontWeight: 500 }}>You get: the root cause in plain English, not another chart to interpret yourself.</p>
-            </a>
-            <a className="card reveal" href="/ai-os-platform/ask-viq" style={{ textDecoration: "none", color: "inherit" }}>
-              <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Converse</span>
-              <h3>Ask Viq&trade;</h3>
-              <p className="muted" style={{ margin: ".5rem 0 .9rem" }}>Conversational AI over your whole stack.</p>
-              <p style={{ fontWeight: 500 }}>You get: answers to plain questions like &ldquo;where am I losing revenue?&rdquo;, cited to your data.</p>
-            </a>
-            <a className="card card--brand reveal" href="/ai-os-platform/vortex-agents" style={{ textDecoration: "none", color: "inherit" }}>
-              <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Act</span>
-              <h3>Vortex Agents</h3>
-              <p className="muted" style={{ margin: ".5rem 0 .9rem" }}>Execute changes safely, on your approval.</p>
-              <p style={{ fontWeight: 500 }}>You get: agents that do the work, SEO &amp; GEO, merchandising, paid media, inventory and retention, staging-first and reversible.</p>
-            </a>
-            <a className="card reveal" href="/ai-os-platform/vortex-apps" style={{ textDecoration: "none", color: "inherit" }}>
-              <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Deploy</span>
-              <h3>Vortex Apps</h3>
-              <p className="muted" style={{ margin: ".5rem 0 .9rem" }}>Staging, backup and governance.</p>
-              <p style={{ fontWeight: 500 }}>You get: every change previewed on a copy of your store first, with one-click rollback and a full audit trail.</p>
-            </a>
-            <a className="card reveal" href="/ai-os-platform/vortex-memory" style={{ textDecoration: "none", color: "inherit" }}>
-              <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Learn</span>
-              <h3>Vortex Memory</h3>
-              <p className="muted" style={{ margin: ".5rem 0 .9rem" }}>Learns from every signal, fix and decision.</p>
-              <p style={{ fontWeight: 500 }}>You get: a system that starts from everything you have already fixed, so the second fix is faster than the first.</p>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* WHAT: SEO & GEO spotlight (most-demanded product) */}
-      <section className="section section--soft" id="seo-geo">
-        <div className="container">
-          <div className="split">
-            <div className="reveal">
-              <div className="eyebrow">Most in demand</div>
-              <h2 style={{ maxWidth: "18ch" }}>Win Search and AI Discovery, at scale.</h2>
-              <p className="lede" style={{ margin: "1.4rem 0 1.2rem" }}>SEO &amp; GEO is the agent our merchants reach for first. It runs the SEO and GEO engine on a schedule: generating, localising and scaling high-intent content across the regions and demographics you are targeting, so you capture organic search and get cited by AI answer engines.</p>
-              <p className="muted" style={{ marginBottom: "1.8rem" }}>It runs as a Vortex Agent: detected by the Nerve Centre, diagnosed by Vortex Mind, executed staging-first with one-click rollback.</p>
-              <div className="cta-row">
-                <a className="btn" href="/solutions/seo-geo">Explore SEO &amp; GEO &rarr;</a>
-                <a className="textlink" href="/free-audit">See your organic gaps in a free audit &rarr;</a>
-              </div>
-            </div>
-            <div className="grid reveal" style={{ gap: ".9rem" }}>
-              <div className="card card--brand"><div className="stat stat--on-brand">1,400%</div><div className="stat-label">organic growth at a merchant store (Google Analytics) when the engine ran</div></div>
-              <div className="card"><h3 style={{ fontSize: "1rem" }}>Generate &amp; localise</h3><p className="muted" style={{ fontSize: ".9rem" }}>High-intent content produced, localised and scaled across your target regions.</p></div>
-              <div className="card"><h3 style={{ fontSize: "1rem" }}>Optimise for AI answers</h3><p className="muted" style={{ fontSize: ".9rem" }}>Structured so answer engines can find, quote and cite your store.</p></div>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* WHAT: proof */}
