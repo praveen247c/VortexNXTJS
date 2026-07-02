@@ -6,7 +6,7 @@ const TABS = [
   { id: "detect", step: "01 · Detect", label: "Nerve Centre" },
   { id: "diagnose", step: "02 · Diagnose", label: "Vortex Mind + Ask Viq" },
   { id: "cross", step: "Cross-channel", label: "Cross-Channel Insights" },
-  { id: "act", step: "03–04 · Act + Deploy", label: "Actions + Vortex Apps" },
+  { id: "act", step: "03-04 · Act + Deploy", label: "Actions + Vortex Apps" },
   { id: "learn", step: "05 · Learn", label: "Vortex Memory" },
 ];
 
@@ -109,7 +109,7 @@ export default function PlatformTabs() {
         <div className={`tabpanel${active === "act" ? " active" : ""}`} id="panel-act" role="tabpanel" aria-labelledby="tab-act">
           <div className="split">
             <div>
-              <span className="tag">03–04 / Act + Deploy · Actions + Vortex Apps</span>
+              <span className="tag">03-04 / Act + Deploy · Actions + Vortex Apps</span>
               <h2>Act on findings. Ship safely. Undo in one click.</h2>
               <p className="lede" style={{ marginTop: "1.2rem" }}>Knowing is not fixing. Actions turns every finding into real work on a Kanban board with owners and due dates, runs the SEO &amp; GEO engine on a schedule, and edits thousands of products in a single pass. It syncs both ways with the tools your team already lives in.</p>
               <p className="muted" style={{ marginTop: "1rem" }}>Then Vortex Apps makes that autonomy safe: preview on StagingPro, approve, ship, and roll back in one click with RollbackPro.</p>

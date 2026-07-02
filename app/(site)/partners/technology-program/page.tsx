@@ -71,7 +71,7 @@ export default function Page() {
               </h1>
               <p className="lede reveal in">
                 Connect your platform or app to the Vortex IQ AI Operating System. Give shared merchants AI digital
-                workers that act on your data, and ship AI features in weeks, not years — without building an
+                workers that act on your data, and ship AI features in weeks, not years, without building an
                 agent stack from scratch.
               </p>
               <div className="cta-row reveal in">
@@ -104,7 +104,7 @@ export default function Page() {
               <h2>Ship AI features in weeks, not years.</h2>
               <p className="lede">
                 Plug into a production-grade agent platform and put it to work on your data. We bring the AI OS,
-                the safety layer and the merchant base — you bring the platform your customers already love.
+                the safety layer and the merchant base. You bring the platform your customers already love.
               </p>
             </div>
             <div className="grid grid-4" style={{ marginTop: "2.8rem" }}>
@@ -117,13 +117,13 @@ export default function Page() {
               <div className="card reveal">
                 <div className="prog-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" /></svg></div>
                 <h3>AI digital workers</h3>
-                <p className="muted">Give shared merchants always-on agents that detect, explain and fix — powered by your platform&apos;s data, without you building an agent runtime.</p>
+                <p className="muted">Give shared merchants always-on agents that detect, explain and fix, powered by your platform&apos;s data, without you building an agent runtime.</p>
                 <span className="prog-card-note">Built on the AI OS</span>
               </div>
               <div className="card reveal">
                 <div className="prog-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3 7 4v6c0 4.5-3 7-7 8-4-1-7-3.5-7-8V7Z" /><path d="m9 12 2 2 4-4" /></svg></div>
                 <h3>Built-in safety layer</h3>
-                <p className="muted">Staging, backup, governance and rollback are part of the platform. Merchants get agentic AI they can trust against live revenue — and so do you.</p>
+                <p className="muted">Staging, backup, governance and rollback are part of the platform. Merchants get agentic AI they can trust against live revenue, and so do you.</p>
                 <span className="prog-card-note">ISO 27001</span>
               </div>
               <div className="card reveal">
@@ -150,7 +150,7 @@ export default function Page() {
               </div>
               <div className="card card--tint prog-eco reveal">
                 <div className="stat stat--accent">Weeks</div>
-                <div className="stat-label">to live AI features for shared merchants — instead of the years it takes to build an agent platform in-house.</div>
+                <div className="stat-label">to live AI features for shared merchants, instead of the years it takes to build an agent platform in-house.</div>
               </div>
               <div className="card card--tint prog-eco reveal">
                 <div className="stat stat--accent">Elite</div>
@@ -177,7 +177,7 @@ export default function Page() {
               <div className="prog-step reveal">
                 <span className="num">02</span>
                 <h3>Integrate</h3>
-                <p>Connect to the AI OS with documented connectors and our team&apos;s support — no agent runtime to build.</p>
+                <p>Connect to the AI OS with documented connectors and our team&apos;s support. No agent runtime to build.</p>
               </div>
               <div className="prog-step reveal">
                 <span className="num">03</span>
@@ -214,7 +214,7 @@ export default function Page() {
             <div className="eyebrow reveal" style={{ justifyContent: "center" }}>Let&apos;s build together</div>
             <h2 className="reveal">Make your platform agentic.</h2>
             <p className="lede reveal">
-              Reach a growing base of commerce teams — without building the agent stack yourself. The first
+              Reach a growing base of commerce teams, without building the agent stack yourself. The first
               conversation is short.
             </p>
             <div className="cta-row reveal">

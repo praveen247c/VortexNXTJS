@@ -222,7 +222,7 @@ export default function RoiCalculator() {
               onChange={(e) => { clearPreset(); setRevenueRaw(e.target.value); }}
               onBlur={() => setRevenueRaw(group(parseNum(revenueRaw)))} placeholder="e.g. 100k" />
           </div>
-          <small className="roi-hint">Type <b>100k</b> or <b>1.2m</b> &mdash; we format it.</small>
+          <small className="roi-hint">Type <b>100k</b> or <b>1.2m</b>. We format it.</small>
         </label>
 
         <label className="roi-field">
@@ -276,9 +276,9 @@ export default function RoiCalculator() {
           <span className="roi-head-eyebrow">Revenue riding on search &amp; AI visibility</span>
           {revealed ? (
             <>
-              <div className="roi-head-num">{fmtMoney(D(r.orgLow), outCur)}<span className="roi-head-dash">&ndash;</span>{fmtMoney(D(r.orgHigh), outCur)}<small className="roi-head-per">/yr</small></div>
+              <div className="roi-head-num">{fmtMoney(D(r.orgLow), outCur)}<span className="roi-head-dash"> to </span>{fmtMoney(D(r.orgHigh), outCur)}<small className="roi-head-per">/yr</small></div>
               <p className="roi-head-sub">The slice of your revenue that depends on how you show up in search and AI answers, across <b>~{group(r.seoPages)} pages</b> Vortex IQ keeps optimised.</p>
-              <div className="roi-bank">Plus <b>{fmtMoney(D(r.directLow), outCur)}&ndash;{fmtMoney(D(r.directHigh), outCur)}/yr</b> of in-house work it takes off your team</div>
+              <div className="roi-bank">Plus <b>{fmtMoney(D(r.directLow), outCur)} to {fmtMoney(D(r.directHigh), outCur)}/yr</b> of in-house work it takes off your team</div>
               <div className="roi-share">
                 <button type="button" className="roi-share-btn" onClick={share}>
                   {copied ? "Copied to clipboard" : "Copy my result"}
@@ -299,16 +299,16 @@ export default function RoiCalculator() {
               <div className="roi-out-card roi-out-card--brand">
                 <h4>SEO/GEO content shipped</h4>
                 <div className="roi-out-val">{group(D(r.articlesYr))} <small>articles/yr</small></div>
-                <p className="roi-out-sub">Worth {fmtMoney(D(r.contentMoneyLow), outCur)}&ndash;{fmtMoney(D(r.contentMoneyHigh), outCur)}: the <b>~{group(r.contentHrsLow)}&ndash;{group(r.contentHrsHigh)} hrs</b> your team would spend writing and optimising these in-house.</p>
+                <p className="roi-out-sub">Worth {fmtMoney(D(r.contentMoneyLow), outCur)} to {fmtMoney(D(r.contentMoneyHigh), outCur)}: the <b>~{group(r.contentHrsLow)} to {group(r.contentHrsHigh)} hrs</b> your team would spend writing and optimising these in-house.</p>
               </div>
               <div className="roi-out-card">
                 <h4>Reporting &amp; audits automated</h4>
-                <div className="roi-out-val">{group(D(r.repAuditHrsLow))}&ndash;{group(D(r.repAuditHrsHigh))} <small>hrs/yr</small></div>
-                <p className="roi-out-sub">Worth {fmtMoney(D(r.repAuditMoneyLow), outCur)}&ndash;{fmtMoney(D(r.repAuditMoneyHigh), outCur)} of briefings, cohort/QBR reports and per-connector audits, done for you.</p>
+                <div className="roi-out-val">{group(D(r.repAuditHrsLow))} to {group(D(r.repAuditHrsHigh))} <small>hrs/yr</small></div>
+                <p className="roi-out-sub">Worth {fmtMoney(D(r.repAuditMoneyLow), outCur)} to {fmtMoney(D(r.repAuditMoneyHigh), outCur)} of briefings, cohort/QBR reports and per-connector audits, done for you.</p>
               </div>
               <div className="roi-out-card">
                 <h4>Revenue protected</h4>
-                <div className="roi-out-val">{fmtMoney(D(r.protLow), outCur)}&ndash;{fmtMoney(D(r.protHigh), outCur)}</div>
+                <div className="roi-out-val">{fmtMoney(D(r.protLow), outCur)} to {fmtMoney(D(r.protHigh), outCur)}</div>
                 <p className="roi-out-sub">Downside from failed changes that staging-first + one-click rollback catches.</p>
               </div>
             </div>

@@ -77,7 +77,7 @@ export default function Page() {
               </h1>
               <p className="lede reveal in">
                 Turn your agency into a proactive AI operations partner. Monitor every client store with always-on
-                agents, surface issues before the phone rings, and bill for outcomes instead of hours — all on the
+                agents, surface issues before the phone rings, and bill for outcomes instead of hours, all on the
                 AI Operating System for commerce.
               </p>
               <div className="cta-row reveal in">
@@ -109,7 +109,7 @@ export default function Page() {
               <div className="eyebrow">What you get</div>
               <h2>Turn maintenance into margin.</h2>
               <p className="lede">
-                Everything you need to run more clients profitably — without adding people. The platform does the
+                Everything you need to run more clients profitably, without adding people. The platform does the
                 watching and the heavy lifting, so your team can focus on strategy and growth.
               </p>
             </div>
@@ -129,7 +129,7 @@ export default function Page() {
               <div className="card reveal">
                 <div className="prog-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3 7 4v6c0 4.5-3 7-7 8-4-1-7-3.5-7-8V7Z" /><path d="m9 12 2 2 4-4" /></svg></div>
                 <h3>Safe, reversible fixes</h3>
-                <p className="muted">Every action is staged, governed and reversible. Run agents against live client revenue with confidence — and a full audit trail behind you.</p>
+                <p className="muted">Every action is staged, governed and reversible. Run agents against live client revenue with confidence, and a full audit trail behind you.</p>
                 <span className="prog-card-note">Staging · Backup · Rollback</span>
               </div>
               <div className="card reveal">

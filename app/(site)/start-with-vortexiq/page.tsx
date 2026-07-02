@@ -5,7 +5,7 @@ import HubSpotForm from "@/components/HubSpotForm";
 export const metadata: Metadata = {
   title: "Start with Vortex IQ | Book a Demo or 14-Day Free Trial",
   description:
-    "Get started with the AI Operating System for commerce. Start a 14-day free trial or book a live demo — connect your store and put AI agents to work in minutes.",
+    "Get started with the AI Operating System for commerce. Start a 14-day free trial or book a live demo. Connect your store and put AI agents to work in minutes.",
 };
 
 const css = `
@@ -72,7 +72,7 @@ export default function Page() {
               </h1>
               <p className="lede reveal in">
                 Connect your store to the AI Operating System for commerce and let agents detect, explain and fix
-                problems across your stack. Start free, or see it run live on a guided demo — whichever suits you.
+                problems across your stack. Start free, or see it run live on a guided demo, whichever suits you.
               </p>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function Page() {
                 <h3>Start a 14-day free trial</h3>
                 <p className="muted">
                   Sign up with just your email, connect your store, and the AI OS gets to work. No credit card
-                  required — see real value on your own data before you commit.
+                  required. See real value on your own data before you commit.
                 </p>
                 <ul className="start-feats">
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>No credit card required</li>
@@ -108,7 +108,7 @@ export default function Page() {
                 <div className="prog-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></svg></div>
                 <h3>Book a live demo</h3>
                 <p className="muted">
-                  Prefer to see it first? Get straight answers in under 20 minutes — no slides, no script. We&apos;ll
+                  Prefer to see it first? Get straight answers in under 20 minutes, no slides, no script. We&apos;ll
                   show the platform running against a real store and map it to your stack.
                 </p>
                 <ul className="start-feats">
@@ -144,7 +144,7 @@ export default function Page() {
               <div className="start-step reveal">
                 <span className="num">02</span>
                 <h3>Agents get to work</h3>
-                <p>Always-on agents start monitoring SEO, performance, data and operations — and explain what they find in plain English.</p>
+                <p>Always-on agents start monitoring SEO, performance, data and operations, and explain what they find in plain English.</p>
               </div>
               <div className="start-step reveal">
                 <span className="num">03</span>
@@ -161,7 +161,7 @@ export default function Page() {
             <div className="eyebrow reveal" style={{ justifyContent: "center" }}>Book a demo</div>
             <h2 className="reveal">See it run on a real store.</h2>
             <p className="lede reveal">
-              Tell us a little about your store and we&apos;ll get straight to it — answers in under 20 minutes, no
+              Tell us a little about your store and we&apos;ll get straight to it: answers in under 20 minutes, no
               slides, no script.
             </p>
             <div className="start-form-card reveal">
@@ -177,7 +177,7 @@ export default function Page() {
             <h2 className="reveal">Start with Vortex IQ today.</h2>
             <p className="lede reveal">
               Spin up a free trial in minutes, or talk to us first. Either way, you&apos;ll see the AI OS for
-              commerce working on a real store — detect, explain, fix.
+              commerce working on a real store: detect, explain, fix.
             </p>
             <div className="cta-row reveal">
               <a className="btn" href="https://app.vortexiq.ai/login" target="_blank" rel="noopener noreferrer" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Start free</a>

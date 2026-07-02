@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { css, html } from "./content";
 
 export const metadata: Metadata = {
-  title: "Ask Viq — AI Chatbot for Ecommerce: Ask, Answer, Act | Vortex IQ",
+  title: "Ask Viq, AI Chatbot for Ecommerce: Ask, Answer, Act | Vortex IQ",
   description: "Ask Viq is the command centre for your commerce stack. It pulls live data, delegates to specialised agents, and proposes safe fixes you can approve and ship.",
 };
 

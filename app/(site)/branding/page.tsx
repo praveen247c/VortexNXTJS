@@ -133,7 +133,7 @@ export default function Page() {
               </h1>
               <p className="lede reveal in">
                 Logos, colours, and typography for partners, press, and event organisers. Everything you
-                need to put the AI Operating System for e-commerce in front of an audience — on brand, every
+                need to put the AI Operating System for e-commerce in front of an audience. On brand, every
                 time.
               </p>
               <div className="cta-row reveal in">
@@ -299,7 +299,7 @@ export default function Page() {
               <div className="eyebrow">Typography</div>
               <h2>Geist, end to end.</h2>
               <p className="muted">
-                Geist sets every headline and paragraph. Geist Mono handles eyebrows, labels, and code —
+                Geist sets every headline and paragraph. Geist Mono handles eyebrows, labels, and code:
                 the small, precise type that gives the brand its technical edge.
               </p>
             </div>

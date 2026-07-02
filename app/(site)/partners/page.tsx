@@ -85,7 +85,7 @@ export default function Page() {
               <p className="lede reveal in">
                 Agencies, technology platforms, resellers and students all build on the same engine: the
                 AI Operating System that detects, explains and fixes problems across a merchant&apos;s store.
-                Pick the program that fits how you work — and put a fleet of AI agents to work for your clients.
+                Pick the program that fits how you work, and put a fleet of AI agents to work for your clients.
               </p>
               <div className="cta-row reveal in">
                 <Link className="btn" href="/contact-us">Become a partner</Link>
@@ -115,8 +115,8 @@ export default function Page() {
             <div className="eyebrow reveal">Choose your program</div>
             <h2 className="reveal" style={{ maxWidth: "22ch" }}>One platform, four ways to partner with Vortex IQ.</h2>
             <p className="lede reveal" style={{ marginTop: "1.2rem", maxWidth: "62ch" }}>
-              Every program shares the same foundation — real-time monitoring, plain-English explanations, and
-              safe, reversible fixes — and adds the commercial model that suits how you grow.
+              Every program shares the same foundation (real-time monitoring, plain-English explanations, and
+              safe, reversible fixes) and adds the commercial model that suits how you grow.
             </p>
 
             <div className="grid grid-4" style={{ marginTop: "2.8rem" }}>
@@ -129,7 +129,7 @@ export default function Page() {
                 <h3>Run more clients, profitably.</h3>
                 <p className="muted">
                   Turn your agency into a proactive operations partner. Monitor every client store, surface issues
-                  before they call, and bill for outcomes — not just hours.
+                  before they call, and bill for outcomes, not just hours.
                 </p>
                 <ul className="ptype-feats">
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Recurring revenue share</li>
@@ -203,7 +203,7 @@ export default function Page() {
         <section className="section">
           <div className="container">
             <div className="eyebrow reveal">Why partner with us</div>
-            <h2 className="reveal" style={{ maxWidth: "20ch" }}>Built to make partners look good — and grow faster.</h2>
+            <h2 className="reveal" style={{ maxWidth: "20ch" }}>Built to make partners look good, and grow faster.</h2>
             <p className="lede reveal" style={{ marginTop: "1.2rem", maxWidth: "60ch" }}>
               We do the heavy lifting on product, enablement and support so you can focus on your clients and your
               numbers. Here is what every Vortex IQ partner gets.
@@ -237,7 +237,7 @@ export default function Page() {
               <div className="card reveal">
                 <div className="benefit-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 11 22 2l-9 19-2-8-8-2Z" /></svg></div>
                 <h3>Marketing support</h3>
-                <p className="muted">Co-branded assets, joint campaigns, webinars and a partner directory listing — so the work you do together gets seen by the right buyers.</p>
+                <p className="muted">Co-branded assets, joint campaigns, webinars and a partner directory listing, so the work you do together gets seen by the right buyers.</p>
               </div>
 
               <div className="card reveal">
@@ -304,7 +304,7 @@ export default function Page() {
             <div className="eyebrow reveal" style={{ justifyContent: "center" }}>Let&apos;s build together</div>
             <h2 className="reveal">Become a Vortex IQ partner.</h2>
             <p className="lede reveal">
-              Tell us how you work and we&apos;ll match you to the right program — agency, technology, reseller or
+              Tell us how you work and we&apos;ll match you to the right program: agency, technology, reseller or
               student. The first conversation is short, and the revenue opportunity is recurring.
             </p>
             <div className="cta-row reveal">

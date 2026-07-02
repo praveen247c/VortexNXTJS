@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Request received — Free Store Health Check | Vortex IQ",
-  description: "Thanks — your free Store Health Check request is in. We'll read your public pages, verify every finding, and email your revenue-ranked report.",
+  title: "Request received. Free Store Health Check | Vortex IQ",
+  description: "Thanks. Your free Store Health Check request is in. We'll read your public pages, verify every finding, and email your revenue-ranked report.",
   robots: { index: false, follow: true },
 };
 
@@ -16,7 +16,7 @@ export default function Page() {
           Request received. <em className="hl">Check your inbox.</em>
         </h1>
         <p className="lede" style={{ margin: "1.4rem auto 0", maxWidth: 560 }}>
-          Thanks — your request is in. We&apos;ll read your store&apos;s public pages, verify every
+          Thanks. Your request is in. We&apos;ll read your store&apos;s public pages, verify every
           finding against your live site, and email your revenue-ranked report to the address you
           gave us. No connectors, no developer, no sales call.
         </p>

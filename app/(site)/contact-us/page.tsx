@@ -129,7 +129,7 @@ export default function Page() {
               </h1>
               <p className="lede reveal in">
                 Book a demo, ask about pricing, explore a partnership, or get product help. Tell us what you
-                need and the right person will reply — usually within one business day.
+                need and the right person will reply, usually within one business day.
               </p>
               <div className="quick-row reveal in">
                 <a className="quick-chip" href="mailto:hey@vortexiq.ai">
@@ -301,7 +301,7 @@ export default function Page() {
                 </div>
                 <div className="office-detail">
                   <span className="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg></span>
-                  <div><b>Hours</b><span>Monday–Friday, 9:00–18:00 GMT</span></div>
+                  <div><b>Hours</b><span>Monday to Friday, 9:00 to 18:00 GMT</span></div>
                 </div>
                 <div className="office-detail">
                   <span className="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14" /><path d="M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01" /></svg></span>

@@ -90,7 +90,7 @@ export default function Page() {
               </h1>
               <p className="lede reveal in">
                 Spend it building. The Vortex IQ Student Program drops you into real projects inside a
-                fast-moving commerce-AI team — shipping agents on the AI Operating System, learning from
+                fast-moving commerce-AI team, shipping agents on the AI Operating System, learning from
                 people who do this every day, and walking away with work you can actually show.
               </p>
               <div className="cta-row reveal in">
@@ -123,14 +123,14 @@ export default function Page() {
               <h2>Build, ship, and learn agentic AI on a real platform.</h2>
               <p className="lede">
                 You won&apos;t be fetching coffee or staring at a sandbox. You&apos;ll work on the same AI
-                Operating System our merchants and agencies rely on — with mentors guiding the way.
+                Operating System our merchants and agencies rely on, with mentors guiding the way.
               </p>
             </div>
             <div className="grid grid-4" style={{ marginTop: "2.8rem" }}>
               <div className="card reveal">
                 <div className="sp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z" /><path d="m2 17 10 5 10-5M2 12l10 5 10-5" /></svg></div>
                 <h3>Real projects on the AI OS</h3>
-                <p className="muted">Tackle live commerce problems — monitoring, reporting, optimisation and workflow automation — on the platform itself, with real data and real outcomes.</p>
+                <p className="muted">Tackle live commerce problems (monitoring, reporting, optimisation and workflow automation) on the platform itself, with real data and real outcomes.</p>
                 <span className="sp-card-note">Detect · Explain · Fix</span>
               </div>
               <div className="card reveal">
@@ -165,15 +165,15 @@ export default function Page() {
                 <ul className="sp-checklist">
                   <li>
                     <span className="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
-                    <div><b>Students &amp; recent grads</b><span>Studying AI, computer science, commerce, design or something adjacent — or just finished and looking for your first real shot.</span></div>
+                    <div><b>Students &amp; recent grads</b><span>Studying AI, computer science, commerce, design or something adjacent, or just finished and looking for your first real shot.</span></div>
                   </li>
                   <li>
                     <span className="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
-                    <div><b>Builders</b><span>You ship things. Side projects, hackathons, small scripts, half-finished experiments — we care more about what you&apos;ve made than your grades.</span></div>
+                    <div><b>Builders</b><span>You ship things. Side projects, hackathons, small scripts, half-finished experiments. We care more about what you&apos;ve made than your grades.</span></div>
                   </li>
                   <li>
                     <span className="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
-                    <div><b>Curious minds</b><span>You ask why, you read the docs, you want to understand how AI agents actually work under the hood — not just use them.</span></div>
+                    <div><b>Curious minds</b><span>You ask why, you read the docs, you want to understand how AI agents actually work under the hood, not just use them.</span></div>
                   </li>
                 </ul>
               </div>
@@ -203,7 +203,7 @@ export default function Page() {
               <div className="eyebrow">Perks</div>
               <h2>What you take away from the program.</h2>
               <p className="lede">
-                Hands-on time on the AI OS is the headline — but it&apos;s the experience, the network and the
+                Hands-on time on the AI OS is the headline, but it&apos;s the experience, the network and the
                 path forward that compound long after the program ends.
               </p>
             </div>
@@ -216,12 +216,12 @@ export default function Page() {
               <div className="card reveal">
                 <div className="sp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" /><path d="M14 2v6h6M8 13h8M8 17h6" /></svg></div>
                 <h3>Real experience</h3>
-                <p className="muted">A portfolio of deployed agents, connector work and measurable outcomes — the kind of work that stands out in any interview.</p>
+                <p className="muted">A portfolio of deployed agents, connector work and measurable outcomes: the kind of work that stands out in any interview.</p>
               </div>
               <div className="card reveal">
                 <div className="sp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="9" r="6" /><path d="m9 14.5-1.5 7 4.5-2.5 4.5 2.5-1.5-7" /></svg></div>
                 <h3>Certificate</h3>
-                <p className="muted">Finish strong and earn recognition as an AI Commerce Specialist — proof you can design, build and ship agentic AI.</p>
+                <p className="muted">Finish strong and earn recognition as an AI Commerce Specialist: proof you can design, build and ship agentic AI.</p>
               </div>
               <div className="card reveal">
                 <div className="sp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z" /></svg></div>
@@ -236,7 +236,7 @@ export default function Page() {
               <div className="card card--tint reveal">
                 <div className="sp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z" /><path d="m2 17 10 5 10-5M2 12l10 5 10-5" /></svg></div>
                 <h3>Built on the real thing</h3>
-                <p className="muted">Everything happens on a platform that works with Shopify Plus, BigCommerce and Adobe Commerce — and is certified ISO 27001. Real stack, real standards.</p>
+                <p className="muted">Everything happens on a platform that works with Shopify Plus, BigCommerce and Adobe Commerce, and is certified ISO 27001. Real stack, real standards.</p>
               </div>
             </div>
           </div>
@@ -279,7 +279,7 @@ export default function Page() {
               <HubSpotForm portalId="24385350" formId="e31b5ccd-c7a1-4952-b475-a5c6a364bd0a" region="na1" />
             </div>
             <p className="sp-form-note reveal">
-              Prefer email? Reach us at <a className="textlink" href="mailto:hey@vortexiq.ai?subject=Student%20Program%20Application">hey@vortexiq.ai</a> — we usually reply within one business day.
+              Prefer email? Reach us at <a className="textlink" href="mailto:hey@vortexiq.ai?subject=Student%20Program%20Application">hey@vortexiq.ai</a>. We usually reply within one business day.
             </p>
           </div>
         </section>
@@ -290,7 +290,7 @@ export default function Page() {
             <div className="eyebrow reveal" style={{ justifyContent: "center" }}>Ready to launch?</div>
             <h2 className="reveal">Start your AI career where the work is real.</h2>
             <p className="lede reveal">
-              Join a team building the AI Operating System for commerce — detect, explain, fix — and learn by
+              Join a team building the AI Operating System for commerce (detect, explain, fix) and learn by
               shipping alongside people who do it every day. Not sure if it&apos;s for you? Just talk to us.
             </p>
             <div className="cta-row reveal">

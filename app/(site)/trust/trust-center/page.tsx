@@ -135,7 +135,7 @@ export default function Page() {
                 ISO 27001 certified
               </div>
               <h1 className="reveal in">
-                AI that acts on your store — with <span className="grad">guardrails built in.</span>
+                AI that acts on your store, with <span className="grad">guardrails built in.</span>
               </h1>
               <p className="lede reveal in">
                 Vortex IQ runs agents on live revenue, so trust is the product. Every change is least-privilege,
@@ -170,7 +170,7 @@ export default function Page() {
                 </div>
                 <h3>Certified ISO 27001</h3>
                 <p className="muted">
-                  Our information security management system is independently certified to ISO/IEC 27001 — the
+                  Our information security management system is independently certified to ISO/IEC 27001: the
                   global standard for managing risk across people, process, and technology.
                 </p>
                 <span className="pillar-tag">Independently audited</span>
@@ -192,7 +192,7 @@ export default function Page() {
                 </div>
                 <h3>Least-privilege access</h3>
                 <p className="muted">
-                  Agents and people get the narrowest scopes that get the job done — nothing more. Access is
+                  Agents and people get the narrowest scopes that get the job done, nothing more. Access is
                   role-based, time-bound and revocable, and we only request the store permissions we need.
                 </p>
                 <span className="pillar-tag">Scoped & revocable</span>
@@ -222,7 +222,7 @@ export default function Page() {
                   Nothing changes on your store <span className="grad">without you.</span>
                 </h2>
                 <p className="lede" style={{ marginTop: "1.2rem", marginBottom: "1.6rem" }}>
-                  An agent can detect a problem and draft the fix — but it does not act on its own. Every Action
+                  An agent can detect a problem and draft the fix, but it does not act on its own. Every Action
                   follows the same safe path, end to end.
                 </p>
                 <div className="safe-steps">
@@ -237,7 +237,7 @@ export default function Page() {
                     <span className="safe-num">2</span>
                     <div>
                       <b>Full audit trail</b>
-                      <p>Who proposed it, who approved it, what changed and when — every Action is logged immutably, so you always have a defensible record of what happened.</p>
+                      <p>Who proposed it, who approved it, what changed and when: every Action is logged immutably, so you always have a defensible record of what happened.</p>
                     </div>
                   </div>
                   <div className="safe-step">
@@ -327,7 +327,7 @@ export default function Page() {
                   <span className="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" /><path d="M14 2v6h6" /><path d="M9 15h6M9 18h4" /></svg></span>
                   <div className="comp-tx">
                     <b>Data Processing Agreement (DPA)</b>
-                    <span>A DPA covering controller/processor responsibilities and international transfers is available on request — just <Link href="/contact-us">talk to us</Link>.</span>
+                    <span>A DPA covering controller/processor responsibilities and international transfers is available on request. Just <Link href="/contact-us">talk to us</Link>.</span>
                   </div>
                 </div>
                 <div className="comp-row">
@@ -356,7 +356,7 @@ export default function Page() {
             </div>
             <p className="muted reveal" style={{ fontSize: ".88rem", marginTop: "2rem", maxWidth: "70ch" }}>
               We only claim what we hold today: ISO 27001 certification and GDPR alignment. We will not overstate
-              our posture — if a framework is on the roadmap rather than in place, we will say so.
+              our posture. If a framework is on the roadmap rather than in place, we will say so.
             </p>
           </div>
         </section>

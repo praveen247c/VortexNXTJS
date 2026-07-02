@@ -148,7 +148,7 @@ export default function Page() {
                   <p>
                     Vortex IQ Ltd (&ldquo;Vortex IQ&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) builds the AI Operating
                     System for e-commerce. This policy explains, in plain English, what personal data we handle when you
-                    visit our site, talk to our team, or use the platform — and the choices you have.
+                    visit our site, talk to our team, or use the platform, and the choices you have.
                   </p>
                   <p>
                     For the data inside your store that you connect to Vortex IQ, you are the data controller and we act
@@ -162,10 +162,10 @@ export default function Page() {
                   <h2>Information we collect</h2>
                   <p>We keep collection to what we genuinely need to run the service and support you:</p>
                   <ul>
-                    <li><b>Account &amp; contact details</b> — name, work email, company, and role when you sign up or enquire.</li>
-                    <li><b>Commerce &amp; usage data</b> — store, catalogue, and operational data you connect, plus how you use the platform.</li>
-                    <li><b>Technical data</b> — IP address, device, browser, and log data collected automatically for security and performance.</li>
-                    <li><b>Communications</b> — messages, support tickets, and demo requests you send us.</li>
+                    <li><b>Account &amp; contact details</b>: name, work email, company, and role when you sign up or enquire.</li>
+                    <li><b>Commerce &amp; usage data</b>: store, catalogue, and operational data you connect, plus how you use the platform.</li>
+                    <li><b>Technical data</b>: IP address, device, browser, and log data collected automatically for security and performance.</li>
+                    <li><b>Communications</b>: messages, support tickets, and demo requests you send us.</li>
                   </ul>
                 </div>
 
@@ -184,10 +184,10 @@ export default function Page() {
                   <h2>Legal bases (UK GDPR)</h2>
                   <p>Where we act as controller, we rely on one of these lawful bases:</p>
                   <ul>
-                    <li><b>Contract</b> — to deliver the service you have signed up for.</li>
-                    <li><b>Legitimate interests</b> — to secure, improve, and market our products, balanced against your rights.</li>
-                    <li><b>Consent</b> — for optional cookies and certain marketing, which you can withdraw at any time.</li>
-                    <li><b>Legal obligation</b> — where the law requires us to retain or disclose information.</li>
+                    <li><b>Contract</b>: to deliver the service you have signed up for.</li>
+                    <li><b>Legitimate interests</b>: to secure, improve, and market our products, balanced against your rights.</li>
+                    <li><b>Consent</b>: for optional cookies and certain marketing, which you can withdraw at any time.</li>
+                    <li><b>Legal obligation</b>: where the law requires us to retain or disclose information.</li>
                   </ul>
                 </div>
 
@@ -227,8 +227,8 @@ export default function Page() {
                   <h2>International transfers</h2>
                   <p>
                     We are based in the UK and primarily process data here and in the EEA. Where data is transferred
-                    outside the UK or EEA, we put appropriate safeguards in place — such as the UK International Data
-                    Transfer Agreement or Standard Contractual Clauses — so your data stays protected.
+                    outside the UK or EEA, we put appropriate safeguards in place (such as the UK International Data
+                    Transfer Agreement or Standard Contractual Clauses) so your data stays protected.
                   </p>
                 </div>
 
@@ -310,7 +310,7 @@ export default function Page() {
             <div className="eyebrow reveal" style={{ justifyContent: "center" }}>Built on trust</div>
             <h2 className="reveal">Security and privacy, built in from day one.</h2>
             <p className="lede reveal">
-              See how the AI Operating System for commerce detects, explains, and fixes issues on your store — without
+              See how the AI Operating System for commerce detects, explains, and fixes issues on your store, without
               compromising on how your data is handled.
             </p>
             <div className="cta-row reveal">

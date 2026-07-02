@@ -41,7 +41,7 @@ export default function BrochureForm() {
               <path d="M20 6 9 17l-5-5" />
             </svg>
           </div>
-          <h3>Thanks{name ? `, ${name.split(" ")[0]}` : ""} — the brochure is on its way.</h3>
+          <h3>Thanks{name ? `, ${name.split(" ")[0]}` : ""}: the brochure is on its way.</h3>
           <p className="muted" style={{ marginTop: ".7rem", maxWidth: "44ch", marginInline: "auto" }}>
             Your email client should have opened with your request ready to send. If it didn&apos;t, email us
             directly at <a href="mailto:hey@vortexiq.ai" style={{ color: "var(--brand-purple)" }}>hey@vortexiq.ai</a>{" "}

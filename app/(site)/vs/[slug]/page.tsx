@@ -21,7 +21,7 @@ export async function generateMetadata({
     description: `A neutral, source-cited comparison of Vortex IQ and ${c.name}, side by side across platforms, scope, actions, approval and rollback. Facts only, then verify on your store.`,
     alternates: { canonical: `/vs/${c.slug}` },
     openGraph: {
-      description: `How Vortex IQ, the AI Operating System for e-commerce, compares with ${c.name} — checkable facts from public sources.`,
+      description: `How Vortex IQ, the AI Operating System for e-commerce, compares with ${c.name}: checkable facts from public sources.`,
     },
   };
 }

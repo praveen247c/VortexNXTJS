@@ -59,7 +59,7 @@ export const html = `<div class="press-page">
           <div class="news-body">
             <span class="news-src">RAISE Your Hack 2025</span>
             <h3>Winner, Vultr Track</h3>
-            <p>Recognised for &ldquo;Autonomous Agents from APIs&rdquo; &mdash; a zero-code builder that turns any API into an autonomous agent.</p>
+            <p>Recognised for &ldquo;Autonomous Agents from APIs&rdquo;, a zero-code builder that turns any API into an autonomous agent.</p>
           </div>
           <a class="textlink" href="https://lablab.ai/event/raise-your-hack/autonomous-agents-from-apis-vultr-track/autonomous-agents-from-apis-zero-code-builder" target="_blank" rel="noopener noreferrer">Read more &rarr;</a>
         </div>
@@ -78,7 +78,7 @@ export const html = `<div class="press-page">
           <span class="news-date">2025</span>
           <div class="news-body">
             <span class="news-src">Business Cloud</span>
-            <h3>RetailTech 50 &mdash; ranked #20</h3>
+            <h3>RetailTech 50, ranked #20</h3>
             <p>Listed among the UK&rsquo;s most innovative retail technology creators for 2025.</p>
           </div>
           <a class="textlink" href="https://businesscloud.co.uk/retailtech-50-uks-most-innovative-retail-technology-creators-for-2025/" target="_blank" rel="noopener noreferrer">Read more &rarr;</a>
@@ -142,7 +142,7 @@ export const html = `<div class="press-page">
       <div class="quote-grid reveal">
         <figure class="card quote-card">
           <blockquote>&ldquo;A dashboard tells you a number went down. An operating system finds out why, fixes it, and remembers, so it never costs you twice.&rdquo;</blockquote>
-          <figcaption>Vortex IQ &mdash; on the category</figcaption>
+          <figcaption>Vortex IQ, on the category</figcaption>
         </figure>
         <figure class="card quote-card">
           <blockquote>&ldquo;A genuine step change in how we run the store.&rdquo;</blockquote>
@@ -154,7 +154,7 @@ export const html = `<div class="press-page">
         </figure>
         <figure class="card quote-card">
           <blockquote>&ldquo;The work has outgrown the dashboard. It needs an operating system.&rdquo;</blockquote>
-          <figcaption>Vortex IQ &mdash; on why now</figcaption>
+          <figcaption>Vortex IQ, on why now</figcaption>
         </figure>
       </div>
     </div>

@@ -49,9 +49,9 @@ export const comparisons: Comparison[] = [
       },
       {
         dimension: "Takes actions in the store",
-        viq: "Yes. Acts inside the store via platform APIs — creates products, landing pages, discount codes and campaigns. Read-only by default until a fix is approved.",
+        viq: "Yes. Acts inside the store via platform APIs: creates products, landing pages, discount codes and campaigns. Read-only by default until a fix is approved.",
         competitor:
-          "Yes: Moby 2 is designed to take action across ecommerce and marketing systems — managing Meta ads and bids, building and sending Klaviyo campaigns, generating ad creative, building segments, creating Shopify landing pages and helping place inventory purchase orders. Several action-taking Specialists are marketed as “coming soon.”",
+          "Yes: Moby 2 is designed to take action across ecommerce and marketing systems: managing Meta ads and bids, building and sending Klaviyo campaigns, generating ad creative, building segments, creating Shopify landing pages and helping place inventory purchase orders. Several action-taking Specialists are marketed as “coming soon.”",
       },
       {
         dimension: "Approval + rollback",
@@ -73,8 +73,8 @@ export const comparisons: Comparison[] = [
       },
     ],
     switchReasons: [
-      "You run on multiple commerce platforms (including Adobe Commerce/Magento) and want one operating layer across BigCommerce, Shopify, Adobe Commerce and WooCommerce — Triple Whale is Shopify-first, with BigCommerce and WooCommerce integrations and no listed Adobe Commerce support.",
-      "You want changes deployed staging-first with one-click rollback and a full audit trail — Triple Whale provides Copilot approval-queuing and guardrails but does not publicly state a staging environment or one-click rollback.",
+      "You run on multiple commerce platforms (including Adobe Commerce/Magento) and want one operating layer across BigCommerce, Shopify, Adobe Commerce and WooCommerce. Triple Whale is Shopify-first, with BigCommerce and WooCommerce integrations and no listed Adobe Commerce support.",
+      "You want changes deployed staging-first with one-click rollback and a full audit trail. Triple Whale provides Copilot approval-queuing and guardrails but does not publicly state a staging environment or one-click rollback.",
       "Your priority is detecting and fixing issues across the whole store stack rather than primarily marketing analytics, attribution and ad/email execution, which is Triple Whale’s centre of gravity.",
       "The two can be complementary: Triple Whale remains a strong choice for unified measurement, attribution and AI-driven marketing execution.",
     ],
@@ -103,7 +103,7 @@ export const comparisons: Comparison[] = [
         dimension: "What it is",
         viq: "An AI Operating System for e-commerce: a cross-stack operating layer that detects issues across the whole stack in real time, diagnoses root cause in plain English, and turns findings into ranked, approval-gated fixes.",
         competitor:
-          "A conversational AI platform for ecommerce, described on its site as “The #1 AI-powered helpdesk for ecommerce” — an omnichannel helpdesk plus an AI Agent that automates customer support and supports sales through conversations.",
+          "A conversational AI platform for ecommerce, described on its site as “The #1 AI-powered helpdesk for ecommerce”, an omnichannel helpdesk plus an AI Agent that automates customer support and supports sales through conversations.",
       },
       {
         dimension: "Platforms",
@@ -113,7 +113,7 @@ export const comparisons: Comparison[] = [
       },
       {
         dimension: "Scope",
-        viq: "Cross-stack operations across the whole store — creating products, landing pages, discount codes and campaigns via platform APIs — spanning issues detected across the stack.",
+        viq: "Cross-stack operations across the whole store, creating products, landing pages, discount codes and campaigns via platform APIs, spanning issues detected across the stack.",
         competitor:
           "Centred on the customer-experience / support layer: post-purchase support and pre-purchase shopping assistance delivered through conversations. Not marketed as operating across ads, SEO or broader marketing analytics.",
       },
@@ -127,7 +127,7 @@ export const comparisons: Comparison[] = [
         dimension: "Approval + rollback",
         viq: "Ranked, approval-gated fixes deployed staging-first with one-click rollback and a full audit trail.",
         competitor:
-          "For irreversible actions (e.g. cancelling an order), “Require customer confirmation” is on automatically so the shopper confirms before completion, and merchants can require confirmation on any action; oversight is via automatic human handover. Per its docs, no preview-on-staging environment or one-click rollback is documented — changes are written directly into the store.",
+          "For irreversible actions (e.g. cancelling an order), “Require customer confirmation” is on automatically so the shopper confirms before completion, and merchants can require confirmation on any action; oversight is via automatic human handover. Per its docs, no preview-on-staging environment or one-click rollback is documented: changes are written directly into the store.",
       },
       {
         dimension: "Detection model",
@@ -143,10 +143,10 @@ export const comparisons: Comparison[] = [
       },
     ],
     switchReasons: [
-      "You need a cross-stack operating layer that detects and diagnoses issues across the whole store — not only within customer conversations. Vortex IQ complements a support tool like Gorgias by covering the operational surface beyond the support inbox.",
+      "You need a cross-stack operating layer that detects and diagnoses issues across the whole store, not only within customer conversations. Vortex IQ complements a support tool like Gorgias by covering the operational surface beyond the support inbox.",
       "Your workflow needs merchant-facing approval-gating with staging-first deployment, one-click rollback and a full audit trail, in addition to Gorgias’s shopper-confirmation and human-handover safeguards on support actions.",
       "You want proactive, continuous real-time detection across the stack independent of customer contact, alongside Gorgias’s reactive, conversation-triggered AI Agent.",
-      "The actions you need span the broader store — products, landing pages, discount codes and campaigns — rather than the support-focused order edits, refunds and shipping updates Gorgias’s AI Agent performs.",
+      "The actions you need span the broader store, products, landing pages, discount codes and campaigns, rather than the support-focused order edits, refunds and shipping updates Gorgias’s AI Agent performs.",
     ],
     sources: [
       "https://www.gorgias.com/",

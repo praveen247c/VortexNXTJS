@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Summit by Vortex IQ | The AI Studio for Commerce Agents",
   description:
-    "Summit is the AI Studio where teams design, test, and deploy their own commerce AI agents on the Vortex IQ operating system — no data-science team required.",
+    "Summit is the AI Studio where teams design, test, and deploy their own commerce AI agents on the Vortex IQ operating system. No data-science team required.",
 };
 
 const css = `
@@ -124,11 +124,11 @@ export default function Page() {
               </div>
               <div className="eyebrow reveal in">Summit · AI Studio</div>
               <h1 className="reveal in">
-                Build your own <span className="grad">commerce AI agents</span> — no data-science team required.
+                Build your own <span className="grad">commerce AI agents</span>. No data-science team required.
               </h1>
               <p className="lede reveal in">
                 Summit is the AI Studio on the Vortex IQ operating system. Design an agent, give it a job,
-                set the guardrails, and deploy it to watch your store 24/7 — all from one visual canvas.
+                set the guardrails, and deploy it to watch your store 24/7, all from one visual canvas.
               </p>
               <div className="cta-row reveal in">
                 <Link className="btn" href="/contact-us">Get early access</Link>
@@ -160,7 +160,7 @@ export default function Page() {
                 <ul className="summit-points">
                   <li>
                     <span className="pk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="m9 11 3 3L22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg></span>
-                    <div><b>Built in plain English</b><span>Describe the job in words. Summit assembles the agent from the AI OS&apos;s building blocks — no notebooks, no pipelines.</span></div>
+                    <div><b>Built in plain English</b><span>Describe the job in words. Summit assembles the agent from the AI OS&apos;s building blocks: no notebooks, no pipelines.</span></div>
                   </li>
                   <li>
                     <span className="pk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" /></svg></span>
@@ -205,7 +205,7 @@ export default function Page() {
                         <span className="nt">Action · awaiting approval</span>
                       </div>
                       <b>Fix 38 listings</b>
-                      <span className="nm">Draft fixes ready — one click to approve, or let the agent ship automatically inside your rules.</span>
+                      <span className="nm">Draft fixes ready. One click to approve, or let the agent ship automatically inside your rules.</span>
                     </div>
                   </div>
                 </div>
@@ -220,7 +220,7 @@ export default function Page() {
             <div className="eyebrow reveal">Build it visually</div>
             <h2 className="reveal" style={{ maxWidth: "22ch" }}>From idea to a working agent in four steps.</h2>
             <p className="lede reveal" style={{ marginTop: "1.2rem" }}>
-              No pipelines to wire up. Summit walks you from connected data to a live, monitored agent — and
+              No pipelines to wire up. Summit walks you from connected data to a live, monitored agent, and
               you stay in control at every step.
             </p>
             <div className="build-steps">
@@ -234,7 +234,7 @@ export default function Page() {
                 <div className="num">Step</div>
                 <div className="bi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.9 6.9a2.12 2.12 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.94-7.94l-3.76 3.76Z" /></svg></div>
                 <h3>Define the agent&apos;s job</h3>
-                <p>Describe what it should watch for and what a good fix looks like — in plain English. Summit turns it into a repeatable agent on the AI OS.</p>
+                <p>Describe what it should watch for and what a good fix looks like, in plain English. Summit turns it into a repeatable agent on the AI OS.</p>
               </div>
               <div className="bstep reveal">
                 <div className="num">Step</div>
@@ -265,14 +265,14 @@ export default function Page() {
             <h2 className="reveal" style={{ maxWidth: "20ch" }}>Start from a template, or build your own.</h2>
             <p className="lede reveal" style={{ marginTop: "1.2rem" }}>
               These are the kinds of agents teams stand up first in Summit. Each one watches a part of the
-              store, explains what it finds, and proposes a fix — you decide what ships.
+              store, explains what it finds, and proposes a fix. You decide what ships.
             </p>
             <div className="grid grid-3" style={{ marginTop: "2.8rem" }}>
               <div className="card reveal">
                 <div className="agent-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /><path d="m3.3 7 8.7 5 8.7-5M12 22V12" /></svg></div>
                 <span className="agent-tag">Catalogue</span>
                 <h3>Catalogue QA agent</h3>
-                <p className="muted">Scans every listing for missing specs, broken images, empty descriptions, and stray duplicates — then drafts the fixes for review.</p>
+                <p className="muted">Scans every listing for missing specs, broken images, empty descriptions, and stray duplicates, then drafts the fixes for review.</p>
               </div>
               <div className="card reveal">
                 <div className="agent-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg></div>
@@ -296,7 +296,7 @@ export default function Page() {
                 <div className="agent-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg></div>
                 <span className="agent-tag">Inventory</span>
                 <h3>Stock &amp; availability agent</h3>
-                <p className="muted">Spots out-of-stock bestsellers, broken availability, and orphaned variants — and surfaces them before customers hit a dead end.</p>
+                <p className="muted">Spots out-of-stock bestsellers, broken availability, and orphaned variants, and surfaces them before customers hit a dead end.</p>
               </div>
               <div className="card reveal">
                 <div className="agent-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /><path d="M11 8v6M8 11h6" /></svg></div>
@@ -317,7 +317,7 @@ export default function Page() {
             <div className="eyebrow reveal">Built on the AI OS</div>
             <h2 className="reveal" style={{ maxWidth: "20ch" }}>Every Summit agent stands on the same engine.</h2>
             <p className="lede reveal" style={{ marginTop: "1.2rem" }}>
-              Summit isn&apos;t a separate tool bolted on the side — it&apos;s a studio on top of the Vortex IQ
+              Summit isn&apos;t a separate tool bolted on the side. It&apos;s a studio on top of the Vortex IQ
               operating system. The pillars that power our own agents power yours too.
             </p>
             <div className="grid grid-3" style={{ marginTop: "2.8rem" }}>
@@ -333,7 +333,7 @@ export default function Page() {
                 <div className="pillar">
                   <div className="pillar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="m13 2-3 7h5l-3 7" /><circle cx="12" cy="12" r="9" /></svg></div>
                   <h3>Vortex Agents</h3>
-                  <p className="muted">The hands. When an agent&apos;s fix is approved, Vortex Agents execute it safely on your live store — within the rules and limits you set.</p>
+                  <p className="muted">The hands. When an agent&apos;s fix is approved, Vortex Agents execute it safely on your live store, within the rules and limits you set.</p>
                   <Link className="pillar-link" href="/ai-os-platform/vortex-agents">Explore Vortex Agents →</Link>
                 </div>
               </div>
@@ -341,7 +341,7 @@ export default function Page() {
                 <div className="pillar">
                   <div className="pillar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a5 5 0 0 0-5 5v1a4 4 0 0 0-1 8 4 4 0 0 0 7 1 4 4 0 0 0 7-1 4 4 0 0 0-1-8V7a5 5 0 0 0-7-5Z" /><path d="M12 7v13" /></svg></div>
                   <h3>Vortex Memory</h3>
-                  <p className="muted">The context. Agents remember your store&apos;s history, decisions, and what good looks like — so every fix fits how you actually operate.</p>
+                  <p className="muted">The context. Agents remember your store&apos;s history, decisions, and what good looks like, so every fix fits how you actually operate.</p>
                   <Link className="pillar-link" href="/ai-os-platform/vortex-memory">Explore Vortex Memory →</Link>
                 </div>
               </div>
@@ -358,7 +358,7 @@ export default function Page() {
             <div className="eyebrow reveal" style={{ justifyContent: "center" }}>Get early access</div>
             <h2 className="reveal">Put your first agent to work in Summit.</h2>
             <p className="lede reveal">
-              We&apos;re onboarding teams into Summit now. Bring a job you wish ran itself — we&apos;ll show you
+              We&apos;re onboarding teams into Summit now. Bring a job you wish ran itself. We&apos;ll show you
               how to build the agent, set its guardrails, and deploy it safely on your live store.
             </p>
             <div className="cta-row reveal">

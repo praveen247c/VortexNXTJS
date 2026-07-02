@@ -124,7 +124,7 @@ export default function Page() {
                 <h3>Get your referral link</h3>
                 <p className="muted">
                   Create your referrer account in a couple of minutes and grab a unique link. Drop it in an email,
-                  a DM, a deck, or your site — every click is attributed to you for 90 days.
+                  a DM, a deck, or your site. Every click is attributed to you for 90 days.
                 </p>
               </div>
               <div className="card step-card reveal">
@@ -142,7 +142,7 @@ export default function Page() {
                 <h3>Get paid when they onboard</h3>
                 <p className="muted">
                   When your referral signs up and goes live, you earn. Track every introduction, its status, and your
-                  rewards from one transparent dashboard — no chasing, no surprises.
+                  rewards from one transparent dashboard: no chasing, no surprises.
                 </p>
               </div>
             </div>
@@ -162,7 +162,7 @@ export default function Page() {
                 <h3>Rewarding commission</h3>
                 <p className="muted">
                   Earn a competitive reward for every referred business that comes on board. The more successful
-                  introductions you make, the more you earn — there&apos;s no cap on the relationships you can refer.
+                  introductions you make, the more you earn. There&apos;s no cap on the relationships you can refer.
                 </p>
               </div>
               <div className="card reward-card reveal">
@@ -191,7 +191,7 @@ export default function Page() {
                 </div>
                 <h3>Real, reliable payouts</h3>
                 <p className="muted">
-                  When your referral becomes a customer, you get paid — straightforwardly and on a predictable cadence.
+                  When your referral becomes a customer, you get paid: straightforwardly and on a predictable cadence.
                   No points, no vouchers, no hoops.
                 </p>
               </div>
@@ -211,7 +211,7 @@ export default function Page() {
                 </div>
                 <h3>Refer from anywhere</h3>
                 <p className="muted">
-                  We work with merchants worldwide. Wherever your network lives, your link works — and so do the rewards
+                  We work with merchants worldwide. Wherever your network lives, your link works, and so do the rewards
                   when an introduction converts.
                 </p>
               </div>
@@ -285,7 +285,7 @@ export default function Page() {
               <h2>Sign up once, refer for as long as you like.</h2>
               <p>
                 Create your account, get your unique referral link, and start introducing businesses to the AI Operating
-                System for e-commerce. It&apos;s free to join — you only ever earn from it.
+                System for e-commerce. It&apos;s free to join: you only ever earn from it.
               </p>
               <div className="cta-row">
                 <a className="btn btn--light" href="https://app.vortexiq.ai/login" target="_blank" rel="noopener noreferrer" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>
@@ -311,7 +311,7 @@ export default function Page() {
               <details className="faq-item reveal">
                 <summary>Who can join the referral program?</summary>
                 <p>
-                  Anyone who knows e-commerce businesses that could benefit from Vortex IQ — agencies, consultants,
+                  Anyone who knows e-commerce businesses that could benefit from Vortex IQ: agencies, consultants,
                   freelancers, creators, communities, and existing customers. If you can make a credible introduction,
                   you can sign up.
                 </p>
@@ -328,7 +328,7 @@ export default function Page() {
                 <summary>When and how do I get paid?</summary>
                 <p>
                   You earn when a business you referred signs up and goes live as a customer. Payouts are real and
-                  predictable — not points or credits. For the specifics on commission and payment cadence, reach out to
+                  predictable, not points or credits. For the specifics on commission and payment cadence, reach out to
                   the team and we&apos;ll walk you through the current terms.
                 </p>
               </details>
@@ -336,7 +336,7 @@ export default function Page() {
                 <summary>How much can I earn per referral?</summary>
                 <p>
                   Referrers earn a competitive commission for each business that comes on board, with no cap on how many
-                  introductions you make. Exact amounts depend on the current program terms — drop us a line at{" "}
+                  introductions you make. Exact amounts depend on the current program terms. Drop us a line at{" "}
                   <a href="mailto:hey@vortexiq.ai?subject=Referral%20Program" style={{ color: "var(--brand-purple)" }}>hey@vortexiq.ai</a>{" "}
                   for details.
                 </p>
@@ -345,14 +345,14 @@ export default function Page() {
                 <summary>Is there a cost to join?</summary>
                 <p>
                   No. Joining the referral program is free. You create an account, get your link, and earn when your
-                  introductions convert — there are no fees or minimums to take part.
+                  introductions convert. There are no fees or minimums to take part.
                 </p>
               </details>
               <details className="faq-item reveal">
                 <summary>What kinds of businesses should I refer?</summary>
                 <p>
                   Online retailers and brands running on platforms like Shopify Plus, BigCommerce, and Adobe Commerce are
-                  the best fit. Vortex IQ is the AI Operating System for e-commerce — it detects issues, explains them in
+                  the best fit. Vortex IQ is the AI Operating System for e-commerce: it detects issues, explains them in
                   plain English, and fixes them safely, so any merchant who wants that will benefit.
                 </p>
               </details>

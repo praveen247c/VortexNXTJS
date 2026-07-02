@@ -5,7 +5,7 @@ import HubSpotForm from "@/components/HubSpotForm";
 export const metadata: Metadata = {
   title: "Careers at Vortex IQ | Build the AI OS for Commerce",
   description:
-    "We are hiring across engineering, AI, product, and go-to-market. Help build the world's first AI Operating System for e-commerce — empowerment, not replacement.",
+    "We are hiring across engineering, AI, product, and go-to-market. Help build the world's first AI Operating System for e-commerce: empowerment, not replacement.",
 };
 
 const css = `
@@ -132,12 +132,12 @@ export default function Page() {
                 <p className="mission-quote">
                   The world is drowning in data but starved for action. We&apos;re building the AI OS for
                   e-commerce so every merchant has{" "}
-                  <span className="why">an army of AI agents</span> working 24/7 — and we mean it when we say{" "}
+                  <span className="why">an army of AI agents</span> working 24/7. And we mean it when we say{" "}
                   <span className="why">empowerment, not replacement</span>.
                 </p>
                 <p className="muted" style={{ marginTop: "1.4rem", maxWidth: "54ch" }}>
                   That belief shapes how we build and how we hire. We extend what every person can do rather
-                  than replace them — and we want teammates who feel the same about the people who use our
+                  than replace them, and we want teammates who feel the same about the people who use our
                   product and the colleagues they work alongside.
                 </p>
               </div>
@@ -173,7 +173,7 @@ export default function Page() {
               <div className="card">
                 <div className="value-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg></div>
                 <h3>Customer-obsessed</h3>
-                <p className="muted">We start from the merchant&apos;s problem, in plain English, and work back to the elegant fix — never the other way around.</p>
+                <p className="muted">We start from the merchant&apos;s problem, in plain English, and work back to the elegant fix, never the other way around.</p>
               </div>
               <div className="card">
                 <div className="value-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="3" /><path d="M9 9h6v6H9zM4 10h-2M4 14h-2M22 10h-2M22 14h-2M10 4v-2M14 4v-2M10 22v-2M14 22v-2" /></svg></div>
@@ -209,11 +209,11 @@ export default function Page() {
               </div>
               <div className="card benefit">
                 <span className="bi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="3" /><path d="M9 9h6v6H9zM4 10h-2M22 10h-2M10 4v-2M14 4v-2M10 22v-2M14 22v-2" /></svg></span>
-                <div><b>Latest AI tooling</b><span>The best models, copilots, and infrastructure to build with — because that&apos;s the product we make.</span></div>
+                <div><b>Latest AI tooling</b><span>The best models, copilots, and infrastructure to build with, because that&apos;s the product we make.</span></div>
               </div>
               <div className="card benefit">
                 <span className="bi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg></span>
-                <div><b>Regular onsites</b><span>We come together in person to plan, build, and celebrate — the energy that keeps a remote team close.</span></div>
+                <div><b>Regular onsites</b><span>We come together in person to plan, build, and celebrate: the energy that keeps a remote team close.</span></div>
               </div>
               <div className="card benefit">
                 <span className="bi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.5-1.5 3-3.3 3-5.5A4.5 4.5 0 0 0 12 6 4.5 4.5 0 0 0 2 8.5C2 10.7 3.5 12.5 5 14l7 7Z" /></svg></span>
@@ -229,7 +229,7 @@ export default function Page() {
             <div className="eyebrow reveal">Open roles</div>
             <h2 className="reveal" style={{ maxWidth: "22ch" }}>We&apos;re hiring across the team.</h2>
             <p className="lede reveal" style={{ marginTop: "1.2rem", marginBottom: "2.8rem" }}>
-              Pick the team that fits you best and introduce yourself — even if you don&apos;t see an exact title.
+              Pick the team that fits you best and introduce yourself, even if you don&apos;t see an exact title.
               We move quickly for the right people.
             </p>
             <div className="grid grid-3">
@@ -238,7 +238,7 @@ export default function Page() {
                   <span className="role-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14" /></svg></span>
                   <h3>Engineering</h3>
                 </div>
-                <p className="muted">Build the platform that runs 24/7 across merchant stores — backend, data, and the integrations powering Detect, Explain, Fix.</p>
+                <p className="muted">Build the platform that runs 24/7 across merchant stores: backend, data, and the integrations powering Detect, Explain, Fix.</p>
                 <div className="role-tags">
                   <span className="chip chip--brand">Backend</span>
                   <span className="chip chip--brand">Platform</span>
@@ -252,7 +252,7 @@ export default function Page() {
                   <span className="role-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="3" /><path d="M9 9h6v6H9zM4 10h-2M22 10h-2M10 4v-2M14 4v-2M10 22v-2M14 22v-2" /></svg></span>
                   <h3>AI / ML</h3>
                 </div>
-                <p className="muted">Design the agent reasoning layer — the models, retrieval, and evals that let Ask Viq answer and act with confidence.</p>
+                <p className="muted">Design the agent reasoning layer: the models, retrieval, and evals that let Ask Viq answer and act with confidence.</p>
                 <div className="role-tags">
                   <span className="chip chip--brand">Agents</span>
                   <span className="chip chip--brand">LLMs</span>
@@ -266,7 +266,7 @@ export default function Page() {
                   <span className="role-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg></span>
                   <h3>Product &amp; Design</h3>
                 </div>
-                <p className="muted">Shape how merchants experience the AI OS — turning complex agent workflows into something plain-English and effortless.</p>
+                <p className="muted">Shape how merchants experience the AI OS, turning complex agent workflows into something plain-English and effortless.</p>
                 <div className="role-tags">
                   <span className="chip chip--brand">Product</span>
                   <span className="chip chip--brand">UX</span>
@@ -294,7 +294,7 @@ export default function Page() {
                   <span className="role-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.5-1.5 3-3.3 3-5.5A4.5 4.5 0 0 0 12 6 4.5 4.5 0 0 0 2 8.5C2 10.7 3.5 12.5 5 14l7 7Z" /></svg></span>
                   <h3>Customer Success</h3>
                 </div>
-                <p className="muted">Onboard customers and help them get measurable value fast — the trusted partner who makes the AI OS feel like part of their team.</p>
+                <p className="muted">Onboard customers and help them get measurable value fast: the trusted partner who makes the AI OS feel like part of their team.</p>
                 <div className="role-tags">
                   <span className="chip chip--brand">Onboarding</span>
                   <span className="chip chip--brand">CSM</span>
@@ -308,7 +308,7 @@ export default function Page() {
                   <span className="role-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 11l18-5v12L3 14v-3Z" /><path d="M11.6 16.8a3 3 0 0 1-5.8-1.6" /></svg></span>
                   <h3>Marketing &amp; Growth</h3>
                 </div>
-                <p className="muted">Tell the story of agentic commerce AI — content, demand, and brand that earn attention in a crowded category.</p>
+                <p className="muted">Tell the story of agentic commerce AI: content, demand, and brand that earn attention in a crowded category.</p>
                 <div className="role-tags">
                   <span className="chip chip--brand">Content</span>
                   <span className="chip chip--brand">Demand gen</span>
@@ -345,7 +345,7 @@ export default function Page() {
               <div className="step">
                 <div className="num"><i>2</i>Deep dive</div>
                 <h3>Talk craft</h3>
-                <p>A focused conversation with the team on the work itself — real problems, not trick questions.</p>
+                <p>A focused conversation with the team on the work itself: real problems, not trick questions.</p>
               </div>
               <div className="step">
                 <div className="num"><i>3</i>Practical</div>
@@ -355,7 +355,7 @@ export default function Page() {
               <div className="step">
                 <div className="num"><i>4</i>Offer</div>
                 <h3>Meet the team</h3>
-                <p>Meet a few more of us, get your questions answered, and — if it&apos;s a fit — an offer.</p>
+                <p>Meet a few more of us, get your questions answered, and, if it&apos;s a fit, an offer.</p>
               </div>
             </div>
           </div>
@@ -374,7 +374,7 @@ export default function Page() {
               <HubSpotForm portalId="24385350" formId="f419d113-fb6d-4841-9ca5-f3b4b7337ab2" region="na1" />
             </div>
             <p className="careers-form-note reveal">
-              Prefer email? Reach us at <a className="textlink" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Introducing%20myself">hey@vortexiq.ai</a> — we usually reply within one business day.
+              Prefer email? Reach us at <a className="textlink" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Introducing%20myself">hey@vortexiq.ai</a>. We usually reply within one business day.
             </p>
           </div>
         </section>

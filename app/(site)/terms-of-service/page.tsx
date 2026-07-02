@@ -159,10 +159,10 @@ export default function Page() {
                   <span className="legal-secnum">02</span>
                   <h2>Definitions</h2>
                   <ul>
-                    <li><b>Service</b> — the Vortex IQ AI Operating System and related apps, agents, and APIs.</li>
-                    <li><b>Customer Data</b> — the store, catalogue, and operational data you connect or upload.</li>
-                    <li><b>Account</b> — your registered access to the Service.</li>
-                    <li><b>Order</b> — the plan or subscription you sign up for.</li>
+                    <li><b>Service</b>: the Vortex IQ AI Operating System and related apps, agents, and APIs.</li>
+                    <li><b>Customer Data</b>: the store, catalogue, and operational data you connect or upload.</li>
+                    <li><b>Account</b>: your registered access to the Service.</li>
+                    <li><b>Order</b>: the plan or subscription you sign up for.</li>
                   </ul>
                 </div>
 
@@ -229,8 +229,8 @@ export default function Page() {
                   <h2>Vortex IQ intellectual property</h2>
                   <p>
                     The Service, including our software, models, designs, and brand, is owned by Vortex IQ and its
-                    licensors. These terms grant you a limited, non-exclusive, non-transferable right to use the Service —
-                    they do not transfer ownership of any Vortex IQ intellectual property to you.
+                    licensors. These terms grant you a limited, non-exclusive, non-transferable right to use the Service.
+                    They do not transfer ownership of any Vortex IQ intellectual property to you.
                   </p>
                 </div>
 
@@ -335,7 +335,7 @@ export default function Page() {
             <div className="eyebrow reveal" style={{ justifyContent: "center" }}>Ready when you are</div>
             <h2 className="reveal">Put the AI OS for commerce to work.</h2>
             <p className="lede reveal">
-              See how Vortex IQ detects, explains, and fixes issues on your store — and talk to the team about a plan that
+              See how Vortex IQ detects, explains, and fixes issues on your store, and talk to the team about a plan that
               fits how you operate.
             </p>
             <div className="cta-row reveal">

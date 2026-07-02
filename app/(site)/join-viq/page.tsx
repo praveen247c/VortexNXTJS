@@ -5,7 +5,7 @@ import BrochureForm from "./BrochureForm";
 export const metadata: Metadata = {
   title: "Vortex IQ Brochure | The AI OS for E-Commerce in One PDF",
   description:
-    "Get the Vortex IQ brochure — how the AI Operating System detects, explains, and fixes revenue leaks across your commerce stack, with security, pricing, and outcomes.",
+    "Get the Vortex IQ brochure, how the AI Operating System detects, explains, and fixes revenue leaks across your commerce stack, with security, pricing, and outcomes.",
 };
 
 const css = `
@@ -105,7 +105,7 @@ export default function Page() {
                   The AI OS for e-commerce, in <span className="grad">one PDF.</span>
                 </h1>
                 <p className="lede reveal in">
-                  See how Vortex IQ detects, explains, and fixes revenue leaks across your commerce stack —
+                  See how Vortex IQ detects, explains, and fixes revenue leaks across your commerce stack:
                   the platform, the pillars, security, integrations, pricing, and the outcomes teams see.
                   Drop your details and we&apos;ll send the brochure over.
                 </p>
@@ -161,7 +161,7 @@ export default function Page() {
             <div className="eyebrow reveal">What&apos;s inside</div>
             <h2 className="reveal" style={{ maxWidth: "20ch" }}>Six chapters that explain the whole platform.</h2>
             <p className="lede reveal" style={{ marginTop: "1.2rem" }}>
-              No fluff — just a clear walk through how the AI OS works, how it stays safe, what it connects to,
+              No fluff. Just a clear walk through how the AI OS works, how it stays safe, what it connects to,
               and what it costs.
             </p>
             <div className="grid grid-3" style={{ marginTop: "2.8rem" }}>
@@ -181,7 +181,7 @@ export default function Page() {
                   <span className="inside-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a3 3 0 0 0-3 3 3 3 0 0 0-3 3 3 3 0 0 0 0 6 3 3 0 0 0 3 5 3 3 0 0 0 6 0 3 3 0 0 0 3-5 3 3 0 0 0 0-6 3 3 0 0 0-3-3 3 3 0 0 0-3-3Z" /><path d="M12 8v8M9 12h6" /></svg></span>
                   <div>
                     <h3>The six AI pillars</h3>
-                    <p>Nerve Centre, Vortex Mind, Ask Viq, Vortex Apps, Actions, and Vortex Memory — what each one does and how they work together.</p>
+                    <p>Nerve Centre, Vortex Mind, Ask Viq, Vortex Apps, Actions, and Vortex Memory: what each one does and how they work together.</p>
                   </div>
                 </div>
               </div>
@@ -201,7 +201,7 @@ export default function Page() {
                   <span className="inside-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M14 7h3a4 4 0 0 1 0 8h-3M10 17H7a4 4 0 0 1 0-8h3" /><path d="M8 12h8" /></svg></span>
                   <div>
                     <h3>Integrations</h3>
-                    <p>Works with Shopify Plus, BigCommerce, and Adobe Commerce — plus how data flows in and actions flow back out to your stack.</p>
+                    <p>Works with Shopify Plus, BigCommerce, and Adobe Commerce, plus how data flows in and actions flow back out to your stack.</p>
                   </div>
                 </div>
               </div>
@@ -211,7 +211,7 @@ export default function Page() {
                   <span className="inside-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 1v22" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg></span>
                   <div>
                     <h3>Pricing overview</h3>
-                    <p>How packaging works and what to expect as you scale — so you can size Vortex IQ to your team before you talk to sales.</p>
+                    <p>How packaging works and what to expect as you scale, so you can size Vortex IQ to your team before you talk to sales.</p>
                   </div>
                 </div>
               </div>
@@ -253,12 +253,12 @@ export default function Page() {
               <div className="card reveal">
                 <div className="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="3.4" /><path d="m5.6 5.6 3 3M15.4 15.4l3 3M18.4 5.6l-3 3M8.6 15.4l-3 3" /></svg></div>
                 <h3>Always watching</h3>
-                <p className="muted" style={{ fontSize: ".97rem" }}>Agents monitor your store around the clock and flag revenue leaks the moment they appear — not at the next reporting cycle.</p>
+                <p className="muted" style={{ fontSize: ".97rem" }}>Agents monitor your store around the clock and flag revenue leaks the moment they appear, not at the next reporting cycle.</p>
               </div>
               <div className="card reveal">
                 <div className="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z" /><path d="M8 9h8M8 13h5" /></svg></div>
                 <h3>Plain-English answers</h3>
-                <p className="muted" style={{ fontSize: ".97rem" }}>Ask Viq explains what changed and why in language anyone on the team can act on — no dashboards to decode.</p>
+                <p className="muted" style={{ fontSize: ".97rem" }}>Ask Viq explains what changed and why in language anyone on the team can act on: no dashboards to decode.</p>
               </div>
               <div className="card reveal">
                 <div className="why-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13z" /></svg></div>

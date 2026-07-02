@@ -142,12 +142,12 @@ export default function Page() {
             <div className="roi-src reveal">
               <div className="roi-src-row">
                 <b>SEO/GEO content production</b>
-                <span className="v">~3&ndash;5 in-house hrs per optimised article x articles/month x 12 x loaded rate</span>
-                <span className="s">Orbit Media Studios annual blogging survey &mdash; an optimised article takes several hours to research, write and optimise in-house. Vortex IQ produces it; you approve the tone-of-voice and publish.</span>
+                <span className="v">~3 to 5 in-house hrs per optimised article x articles/month x 12 x loaded rate</span>
+                <span className="s">Orbit Media Studios annual blogging survey. An optimised article takes several hours to research, write and optimise in-house. Vortex IQ produces it; you approve the tone-of-voice and publish.</span>
               </div>
               <div className="roi-src-row">
                 <b>Reporting, briefings &amp; per-connector audits</b>
-                <span className="v">your weekly reporting hours (70&ndash;100%) + ~1&ndash;2 hrs/connector/month of audit &amp; QA, x loaded rate</span>
+                <span className="v">your weekly reporting hours (70 to 100%) + ~1 to 2 hrs/connector/month of audit &amp; QA, x loaded rate</span>
                 <span className="s">Conservative in-house effort for the work that Vortex Mind briefings, cohort/QBR reports and the 80+ check per-connector audits do for you, continuously.</span>
               </div>
               <div className="roi-src-row">
@@ -156,17 +156,17 @@ export default function Page() {
                 <span className="s">US Bureau of Labor Statistics (median $76,950) loaded via BLS ECEC (1.42x); UK ONS ASHE, GOV.UK employer NI + pension, and ITJobsWatch. Bases sit below the medians to stay conservative.</span>
               </div>
               <div className="roi-src-row">
-                <b>Revenue protected &mdash; change-failure rate</b>
-                <span className="v">5&ndash;15% of changes x your deploy frequency x cost of a failed deploy</span>
-                <span className="s">DORA <i>Accelerate State of DevOps 2024</i> &mdash; elite teams run a ~5% change-failure rate. Staging-first deploys and one-click rollback are built to catch these before they cost you.</span>
+                <b>Revenue protected: change-failure rate</b>
+                <span className="v">5 to 15% of changes x your deploy frequency x cost of a failed deploy</span>
+                <span className="s">DORA <i>Accelerate State of DevOps 2024</i>. Elite teams run a ~5% change-failure rate. Staging-first deploys and one-click rollback are built to catch these before they cost you.</span>
               </div>
               <div className="roi-src-row">
                 <b>Organic-influenced revenue</b>
-                <span className="v">30% (range 25&ndash;35%) of annual revenue</span>
-                <span className="s">Wolfgang Digital <i>E-Commerce KPI Report</i> &mdash; organic search drives ~30% of ecommerce revenue. This is the slice your open SEO issues sit on, not a promised uplift.</span>
+                <span className="v">30% (range 25 to 35%) of annual revenue</span>
+                <span className="s">Wolfgang Digital <i>E-Commerce KPI Report</i>. Organic search drives ~30% of ecommerce revenue. This is the slice your open SEO issues sit on, not a promised uplift.</span>
               </div>
               <div className="roi-src-row omit">
-                <b>SEO uplift from fixing issues &mdash; deliberately omitted</b>
+                <b>SEO uplift from fixing issues: deliberately omitted</b>
                 <span className="v">Not estimated</span>
                 <span className="s">No credible, independent, large-sample public figure exists for a generalisable SEO-fix uplift, so we do not put one in the maths. Your free audit sizes the recoverable opportunity against your real organic baseline.</span>
               </div>
@@ -178,7 +178,7 @@ export default function Page() {
                 <b>Illustrative estimate, not a guarantee.</b> Figures use conservative, publicly-sourced
                 multipliers and the numbers you enter. Actual results depend on your store, your market and your
                 competition. We verify the real numbers on your store with a free audit. We use the email you
-                provide only to send your range and follow up &mdash; we do not sell your data; email
+                provide only to send your range and follow up. We do not sell your data; email
                 privacy@vortexiq.ai to have it removed.
               </span>
             </div>

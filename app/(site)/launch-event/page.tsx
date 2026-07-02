@@ -99,12 +99,12 @@ export default function Page() {
             <div className="events-hero">
               <div className="eyebrow reveal in">Webinars &amp; Events</div>
               <h1 className="reveal in">
-                See the <span className="grad">AI OS for commerce</span> in action — live and on demand.
+                See the <span className="grad">AI OS for commerce</span> in action: live and on demand.
               </h1>
               <p className="lede reveal in">
                 Join the team behind Vortex IQ for live webinars, product launches, and hands-on sessions on
                 agentic AI for commerce. Watch agents detect issues, explain them in plain English, and fix
-                them safely on live revenue — then ask us anything.
+                them safely on live revenue. Then ask us anything.
               </p>
               <div className="cta-row reveal in">
                 <Link className="btn" href="/contact-us">Register your interest</Link>
@@ -149,7 +149,7 @@ export default function Page() {
                 <h2>The AI OS for Commerce: Live Demo &amp; Q&amp;A</h2>
                 <p className="lede">
                   A guided 45-minute walkthrough of the Vortex IQ AI Operating System, running on a real
-                  storefront — followed by an open Q&amp;A with the people who build it.
+                  storefront, followed by an open Q&amp;A with the people who build it.
                 </p>
                 <ul className="feature-agenda">
                   <li>
@@ -166,7 +166,7 @@ export default function Page() {
                   </li>
                   <li>
                     <span className="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
-                    Live Q&amp;A — bring a problem you can&apos;t get to the bottom of
+                    Live Q&amp;A: bring a problem you can&apos;t get to the bottom of
                   </li>
                 </ul>
                 <div className="cta-row">
@@ -184,7 +184,7 @@ export default function Page() {
                   <span className="feature-live">
                     <span className="dot" />New dates announced regularly
                   </span>
-                  <h3>Save your spot — pick the next date that works for you.</h3>
+                  <h3>Save your spot. Pick the next date that works for you.</h3>
                   <p>
                     We run this session on a rolling schedule for merchants, agencies and partners. Register
                     your interest and we&apos;ll send you the invite for the next available slot.
@@ -225,17 +225,17 @@ export default function Page() {
               <div className="card reveal">
                 <div className="take-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" /></svg></div>
                 <h3>Building your own agents</h3>
-                <p className="muted">Get a feel for designing and deploying custom workflows in Summit — and putting an army of agents to work for your team.</p>
+                <p className="muted">Get a feel for designing and deploying custom workflows in Summit, and putting an army of agents to work for your team.</p>
               </div>
               <div className="card reveal">
                 <div className="take-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a7 7 0 0 0-4 12.7V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.3A7 7 0 0 0 12 2Z" /><path d="M9 21h6" /></svg></div>
                 <h3>Where it fits your stack</h3>
-                <p className="muted">Learn how the AI OS works alongside Shopify Plus, BigCommerce and Adobe Commerce — and what onboarding looks like.</p>
+                <p className="muted">Learn how the AI OS works alongside Shopify Plus, BigCommerce and Adobe Commerce, and what onboarding looks like.</p>
               </div>
               <div className="card reveal">
                 <div className="take-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" /></svg></div>
                 <h3>Real questions, real answers</h3>
-                <p className="muted">Bring your own scenarios to the Q&amp;A. The people who build the platform answer them live — no scripted demos.</p>
+                <p className="muted">Bring your own scenarios to the Q&amp;A. The people who build the platform answer them live: no scripted demos.</p>
               </div>
             </div>
           </div>
@@ -249,7 +249,7 @@ export default function Page() {
               Catch up on past sessions whenever it suits you.
             </h2>
             <p className="lede reveal" style={{ marginTop: "1.2rem" }}>
-              Every session lives on our YouTube channel. Press play and watch the AI OS work — at your pace.
+              Every session lives on our YouTube channel. Press play and watch the AI OS work, at your pace.
             </p>
             <div className="grid grid-2" style={{ marginTop: "2.8rem" }}>
               <a className="card vod-card reveal" href="https://www.youtube.com/@VortexIQ-AI" target="_blank" rel="noopener noreferrer">
@@ -267,7 +267,7 @@ export default function Page() {
                   <span className="vod-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg></span>
                 </div>
                 <h3>Safe agentic actions: staging &amp; rollback</h3>
-                <p className="muted">How Vortex IQ lets agents change live stores without the risk — every action previewed, approved and reversible.</p>
+                <p className="muted">How Vortex IQ lets agents change live stores without the risk: every action previewed, approved and reversible.</p>
                 <span className="vod-link">Watch on YouTube →</span>
               </a>
               <a className="card vod-card reveal" href="https://www.youtube.com/@VortexIQ-AI" target="_blank" rel="noopener noreferrer">
@@ -308,7 +308,7 @@ export default function Page() {
                 </h2>
                 <p className="lede">
                   We announce new webinars, product launches and on-demand drops regularly. Follow along on
-                  LinkedIn, subscribe on YouTube, or tell us to add you to the invite list — your choice.
+                  LinkedIn, subscribe on YouTube, or tell us to add you to the invite list. Your choice.
                 </p>
                 <div className="cta-row" style={{ marginTop: "2rem" }}>
                   <a className="btn" href="https://www.linkedin.com/company/vortexiqai/" target="_blank" rel="noopener noreferrer">
@@ -332,7 +332,7 @@ export default function Page() {
                   </a>
                   <a className="loop-channel" href="mailto:hey@vortexiq.ai?subject=Add%20me%20to%20the%20Vortex%20IQ%20events%20list">
                     <span className="loop-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg></span>
-                    <span className="loop-tx"><b>Invite list</b><span>hey@vortexiq.ai — we&apos;ll email you the next date</span></span>
+                    <span className="loop-tx"><b>Invite list</b><span>hey@vortexiq.ai. We&apos;ll email you the next date</span></span>
                   </a>
                 </div>
               </aside>
@@ -348,7 +348,7 @@ export default function Page() {
             <p className="lede reveal">
               Beyond the public webinars, we&apos;ll run a private walkthrough on your catalogue and data.
               Bring a problem you can&apos;t crack, and we&apos;ll show you how the AI OS detects, explains
-              and fixes it — live.
+              and fixes it, live.
             </p>
             <div className="cta-row reveal">
               <Link className="btn" href="/contact-us" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>

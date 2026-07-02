@@ -106,14 +106,14 @@ export const caseStudies: CaseStudy[] = [
     metrics: [
       { value: "3 Months", label: "Launched dual-region stores within the project deadline" },
       { value: "90%", label: "Cut development efforts, saving time and cost" },
-      { value: "<1 Day", label: "To duplicate a full storefront, down from 7–10 days" },
+      { value: "<1 Day", label: "To duplicate a full storefront, down from 7 to 10 days" },
     ],
     blocks: [
       {
         type: "section",
         heading: "The problem: a broken development workflow",
         paras: [
-          "Radiant Health had no prior digital infrastructure — no e-commerce platform, CRM, or branded email — despite being an established wellness brand. The team needed to launch two region-specific stores (Canada and US) with slightly different content due to Canadian health compliance rules. With only a small team and a three-month deadline, manual duplication of the site was estimated to take 7–10 developer days — time they couldn't afford.",
+          "Radiant Health had no prior digital infrastructure, no e-commerce platform, CRM, or branded email, despite being an established wellness brand. The team needed to launch two region-specific stores (Canada and US) with slightly different content due to Canadian health compliance rules. With only a small team and a three-month deadline, manual duplication of the site was estimated to take 7 to 10 developer days, time they couldn't afford.",
         ],
         lead: "Key challenges:",
         bullets: [
@@ -128,16 +128,16 @@ export const caseStudies: CaseStudy[] = [
         type: "section",
         heading: "The solution: implementing StagingPro for speed and control",
         paras: [
-          "Apply Digital used StagingPro's Plus Plan to rapidly clone Radiant Health's Canadian storefront for the US market. With Bulk Content Migration, they copied products, content, themes, and settings in hours — saving over a week of manual effort.",
+          "Apply Digital used StagingPro's Plus Plan to rapidly clone Radiant Health's Canadian storefront for the US market. With Bulk Content Migration, they copied products, content, themes, and settings in hours, saving over a week of manual effort.",
           "Selective Content Migration then allowed them to update regional content such as regulatory messaging and shipping policies without touching the entire site. This approach was ideal for a small product catalogue and ensured both stores were compliant, consistent, and quick to launch.",
-          "To support code deployment, the team integrated GitHub for version-controlled theme changes and rollbacks, enabling safe, fast iterations. Instead of using a multi-storefront setup, the team opted for two separate sites — each tailored to its respective market — allowing clearer separation of codebases, easier region-specific updates, and more control during deployment.",
+          "To support code deployment, the team integrated GitHub for version-controlled theme changes and rollbacks, enabling safe, fast iterations. Instead of using a multi-storefront setup, the team opted for two separate sites, each tailored to its respective market, allowing clearer separation of codebases, easier region-specific updates, and more control during deployment.",
         ],
         lead: "Key capabilities used:",
         bullets: [
-          "Bulk Content Migration — duplicated entire storefronts in hours.",
-          "Selective Content Migration — enabled precise regional updates.",
-          "Multi-Storefront Dashboard — central control over all environments.",
-          "GitHub Integration — safe, trackable code deployment and rollback.",
+          "Bulk Content Migration: duplicated entire storefronts in hours.",
+          "Selective Content Migration: enabled precise regional updates.",
+          "Multi-Storefront Dashboard: central control over all environments.",
+          "GitHub Integration: safe, trackable code deployment and rollback.",
         ],
       },
       {
@@ -199,7 +199,7 @@ export const caseStudies: CaseStudy[] = [
         type: "section",
         heading: "From safe integrations to intelligent monitoring",
         paras: [
-          "The ability to safely test and deploy third-party integrations is fundamental to healthy e-commerce operations. Vortex IQ's Agent Hub extends this principle — AI agents facilitate safe testing while monitoring third-party tool performance 24/7, alerting to issues and optimization opportunities.",
+          "The ability to safely test and deploy third-party integrations is fundamental to healthy e-commerce operations. Vortex IQ's Agent Hub extends this principle: AI agents facilitate safe testing while monitoring third-party tool performance 24/7, alerting to issues and optimization opportunities.",
         ],
       },
     ],
@@ -213,9 +213,9 @@ export const caseStudies: CaseStudy[] = [
       "Crown Packaging, an $800M global packaging leader, embarked on a major digital initiative to launch its first fully transactional B2B ecommerce storefront. Their previous online store was purely informational: customers could browse but could not purchase.",
     logo: "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da28059b19ca42560e8874_image%2038.avif",
     metrics: [
-      { value: "30–40%", label: "Faster time to launch" },
+      { value: "30 to 40%", label: "Faster time to launch" },
       { value: "100%", label: "ERP integration tested with real data" },
-      { value: "50–60%", label: "Simplified and safer deployments" },
+      { value: "50 to 60%", label: "Simplified and safer deployments" },
     ],
     blocks: [
       {
@@ -261,7 +261,7 @@ export const caseStudies: CaseStudy[] = [
       {
         type: "quote",
         text:
-          "Building a modern B2B ecommerce site involves complex data, integrations, and stakeholder expectations. StagingPro allowed us to manage all of that seamlessly — replicating environments, testing ERP workflows, and deploying with confidence.",
+          "Building a modern B2B ecommerce site involves complex data, integrations, and stakeholder expectations. StagingPro allowed us to manage all of that seamlessly: replicating environments, testing ERP workflows, and deploying with confidence.",
         name: "David Black",
         role: "CEO, VIVID SITES",
       },
@@ -270,7 +270,7 @@ export const caseStudies: CaseStudy[] = [
         heading: "Conclusion: from catalogue to commerce, a confident transformation",
         paras: [
           "With VIVID SITES managing the implementation and Vortex IQ's StagingPro powering the deployment workflow, Crown Packaging has established a robust foundation for its digital evolution. The ability to replicate environments, test ERP integrations with real data, and deploy changes safely has transformed the way Crown builds and launches ecommerce functionality.",
-          "By choosing the Premium Plan, Crown now operates with greater confidence — able to iterate faster, reduce risk, and maintain consistency across environments. As the company continues its trajectory toward $1B in revenue, StagingPro ensures that its ecommerce infrastructure remains scalable, agile, and future-ready.",
+          "By choosing the Premium Plan, Crown now operates with greater confidence, able to iterate faster, reduce risk, and maintain consistency across environments. As the company continues its trajectory toward $1B in revenue, StagingPro ensures that its ecommerce infrastructure remains scalable, agile, and future-ready.",
         ],
       },
     ],
@@ -321,7 +321,7 @@ export const caseStudies: CaseStudy[] = [
         type: "section",
         heading: "The solution: implementing Vortex IQ StagingPro",
         paras: [
-          "Interlight adopted Vortex IQ's StagingPro platform to automate the replication of their BigCommerce production store into a staging environment. The platform's ability to move extensive data elements — including product catalogues, custom pages, store settings, and themes — meant Interlight's team could maintain a realistic test environment with minimal manual intervention.",
+          "Interlight adopted Vortex IQ's StagingPro platform to automate the replication of their BigCommerce production store into a staging environment. The platform's ability to move extensive data elements, including product catalogues, custom pages, store settings, and themes, meant Interlight's team could maintain a realistic test environment with minimal manual intervention.",
         ],
         lead: "Key benefits included:",
         bullets: [
@@ -334,7 +334,7 @@ export const caseStudies: CaseStudy[] = [
         type: "section",
         heading: "The outcome: an efficient, scalable testing environment",
         paras: [
-          "With StagingPro, Interlight now operates a scalable sandbox that mirrors their live BigCommerce store. Where their internal vendor previously spent 5–8 hours on manual replication, StagingPro offers a scalable and time-saving alternative.",
+          "With StagingPro, Interlight now operates a scalable sandbox that mirrors their live BigCommerce store. Where their internal vendor previously spent 5 to 8 hours on manual replication, StagingPro offers a scalable and time-saving alternative.",
         ],
         bullets: [
           "Test site changes and third-party tools safely before deploying to production.",
@@ -403,7 +403,7 @@ export const caseStudies: CaseStudy[] = [
         type: "section",
         heading: "From mobile testing to AI-powered monitoring",
         paras: [
-          "Ensuring a flawless mobile experience is non-negotiable in modern e-commerce. The Vortex IQ Agent Hub takes this a step further — our AI agents continuously monitor your site's Core Web Vitals and mobile performance 24/7, proactively alerting you to issues that could be affecting your mobile conversion rates.",
+          "Ensuring a flawless mobile experience is non-negotiable in modern e-commerce. The Vortex IQ Agent Hub takes this a step further: our AI agents continuously monitor your site's Core Web Vitals and mobile performance 24/7, proactively alerting you to issues that could be affecting your mobile conversion rates.",
         ],
       },
       {

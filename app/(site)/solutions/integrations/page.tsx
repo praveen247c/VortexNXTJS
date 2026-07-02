@@ -6,7 +6,7 @@ import { CONNECTOR_STATS } from "./connectors";
 export const metadata: Metadata = {
   title: "Integrations: Connect Your Entire Commerce Stack | Vortex IQ",
   description:
-    "Vortex IQ connects the commerce platforms, analytics, marketing, ads, and back-office tools you already run — turning every system into signal, and signal into safe action.",
+    "Vortex IQ connects the commerce platforms, analytics, marketing, ads, and back-office tools you already run, turning every system into signal, and signal into safe action.",
 };
 
 const css = `
@@ -112,7 +112,7 @@ export default function Page() {
               </h1>
               <p className="lede reveal in">
                 Vortex IQ plugs into the platforms, analytics, marketing, ads and back-office tools you already
-                run — turning every system into signal, and signal into safe, reversible action. No rip-and-replace,
+                run, turning every system into signal, and signal into safe, reversible action. No rip-and-replace,
                 no data warehouse project. Just your stack, finally working as one.
               </p>
               <div className="cta-row reveal in">
@@ -148,8 +148,8 @@ export default function Page() {
               <div className="eyebrow">Commerce platforms</div>
               <h2>Native depth on the platforms you sell on.</h2>
               <p className="muted" style={{ fontSize: "1.06rem" }}>
-                Vortex IQ connects directly to your store — reading orders, products, customers, pricing and
-                content — and can act back through the same connection, safely. Today we run natively on three
+                Vortex IQ connects directly to your store, reading orders, products, customers, pricing and
+                content, and can act back through the same connection, safely. Today we run natively on three
                 platforms.
               </p>
             </div>
@@ -165,7 +165,7 @@ export default function Page() {
                   Verified connector
                 </span>
                 <p className="muted">
-                  Read orders, products, customers, collections and discounts — and write back catalogue,
+                  Read orders, products, customers, collections and discounts, and write back catalogue,
                   pricing and content changes through approval-gated Actions.
                 </p>
                 <ul className="plat-list">
@@ -186,7 +186,7 @@ export default function Page() {
                 </span>
                 <p className="muted">
                   Manage products, orders and customers across your storefronts, with findings ranked by the
-                  revenue they put at stake — and fixes shipped through tracked work.
+                  revenue they put at stake, and fixes shipped through tracked work.
                 </p>
                 <ul className="plat-list">
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Products, variants &amp; categories</li>
@@ -206,7 +206,7 @@ export default function Page() {
                 </span>
                 <p className="muted">
                   Read across catalogue, orders, customers and payment gateways, and explain what changed in
-                  plain English — then act back safely with full audit trails.
+                  plain English, then act back safely with full audit trails.
                 </p>
                 <ul className="plat-list">
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Catalogue &amp; pricing rules</li>
@@ -225,7 +225,7 @@ export default function Page() {
               <div className="eyebrow">Integration categories</div>
               <h2>Bring the rest of your stack into one place.</h2>
               <p className="muted" style={{ fontSize: "1.06rem" }}>
-                Around your commerce platform sits everything else — analytics, email, ads, ERP, helpdesk,
+                Around your commerce platform sits everything else: analytics, email, ads, ERP, helpdesk,
                 your warehouse. Vortex IQ connects them so findings can be cross-referenced and a single fix
                 can ripple across systems. The names below are <em className="hl">examples</em> of the kinds of
                 tools each category covers.
@@ -236,7 +236,7 @@ export default function Page() {
               <div className="card cat-card reveal">
                 <div className="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2 3 6v14a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></svg></div>
                 <h3>Commerce platforms</h3>
-                <p className="muted">Your store of record — catalogue, orders, customers and content, read and written safely.</p>
+                <p className="muted">Your store of record: catalogue, orders, customers and content, read and written safely.</p>
                 <p className="cat-ex">Examples</p>
                 <div className="cat-tags">
                   <span className="tx">Shopify Plus</span>
@@ -331,7 +331,7 @@ export default function Page() {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 16v-4M12 8h.01" /></svg>
               <span>
                 Tool names shown above are illustrative examples of each category and are the trademarks of
-                their respective owners — they are not presented as official partnerships or endorsements.
+                their respective owners. They are not presented as official partnerships or endorsements.
                 Available connectors depend on your plan and stack; ask us about a specific tool.
               </span>
             </div>
@@ -361,7 +361,7 @@ export default function Page() {
               <h2>Read first. Act only when you say so.</h2>
               <p className="muted" style={{ fontSize: "1.06rem" }}>
                 Every connection starts read-only. Vortex IQ builds an honest picture of your store before it
-                ever touches a thing — and when it does act, it acts the way your team would: through review,
+                ever touches a thing, and when it does act, it acts the way your team would: through review,
                 approvals and a clean way back.
               </p>
             </div>
@@ -378,7 +378,7 @@ export default function Page() {
                   <h3>Connect, and the picture comes to you.</h3>
                   <p className="muted">
                     Authorise a connector and Vortex IQ reads across your systems to detect what&apos;s leaking
-                    revenue and explain why — in plain English, with the data behind it. Nothing is changed in
+                    revenue and explain why, in plain English, with the data behind it. Nothing is changed in
                     this phase; it&apos;s pure understanding.
                   </p>
                   <div className="flow-step" style={{ marginTop: "1.6rem" }}>
@@ -387,7 +387,7 @@ export default function Page() {
                   </div>
                   <div className="flow-step">
                     <span className="flow-num">2</span>
-                    <div><b>Explain</b><span>Every finding comes with the why, the evidence, and the revenue at stake — no black box.</span></div>
+                    <div><b>Explain</b><span>Every finding comes with the why, the evidence, and the revenue at stake: no black box.</span></div>
                   </div>
                 </div>
               </div>
@@ -400,16 +400,16 @@ export default function Page() {
                       Step 2 · Safe write-back
                     </span>
                   </div>
-                  <h3>Fix it — with guardrails, not guesswork.</h3>
+                  <h3>Fix it, with guardrails, not guesswork.</h3>
                   <p className="muted">
                     When you&apos;re ready to act, findings become tracked Actions that write back through the
                     same connector. Every write runs on staging first, waits for the right approval, and can be
                     undone in one click.
                   </p>
                   <ul className="safe-list">
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="11" width="16" height="10" rx="2" /><path d="M8 11V7a4 4 0 0 1 8 0v4" /></svg><span><b style={{ color: "var(--primary)" }}>Approval gates</b> — nothing ships to live without the right person signing off.</span></li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="m9 11 3 3L22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg><span><b style={{ color: "var(--primary)" }}>Staging-first</b> — changes are validated off-live before they ever reach customers.</span></li>
-                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8" /><path d="M3 3v5h5" /></svg><span><b style={{ color: "var(--primary)" }}>One-click rollback</b> — every write is reversible, with a full audit trail.</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="11" width="16" height="10" rx="2" /><path d="M8 11V7a4 4 0 0 1 8 0v4" /></svg><span><b style={{ color: "var(--primary)" }}>Approval gates</b>: nothing ships to live without the right person signing off.</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="m9 11 3 3L22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg><span><b style={{ color: "var(--primary)" }}>Staging-first</b>: changes are validated off-live before they ever reach customers.</span></li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8" /><path d="M3 3v5h5" /></svg><span><b style={{ color: "var(--primary)" }}>One-click rollback</b>: every write is reversible, with a full audit trail.</span></li>
                   </ul>
                   <Link className="flow-link" href="/ai-os-platform/vortex-agents">See how Vortex Agents ship work →</Link>
                 </div>
