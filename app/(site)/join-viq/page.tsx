@@ -133,7 +133,7 @@ export default function Page() {
                 <div className="bro-cover">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <div className="bro-cover-head">
-                    <img className="bro-cover-logo" src="https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c2a7984b7702411158df14_vlogo-white.svg" alt="Vortex IQ" />
+                    <img className="bro-cover-logo" src="/assets/webflow/vlogo-white.svg" alt="Vortex IQ" />
                     <span className="bro-cover-tag">Brochure 2026</span>
                   </div>
                   <div className="bro-cover-body">

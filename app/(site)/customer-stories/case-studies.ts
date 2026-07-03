@@ -33,7 +33,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Deploy or destroy? How The Revere Group eliminated the fear of BigCommerce updates",
     lede:
       "The Revere Group eliminated deployment fear with Vortex IQ StagingPro: 65% shorter development cycles and 100% incident-free deployments on BigCommerce.",
-    logo: "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da28056b56c687e9008e87_image%2036.avif",
+    logo: "/assets/webflow/image-36.avif",
     metrics: [
       { value: "65%", label: "Reduction in development cycle" },
       { value: "100%", label: "Incident-free deployments" },
@@ -102,7 +102,7 @@ export const caseStudies: CaseStudy[] = [
     title: "How Apply Digital enabled Radiant Health to launch dual-market e-commerce stores in record time",
     lede:
       "Apply Digital used StagingPro to help Radiant Health launch dual-region e-commerce stores in three months, cutting storefront duplication from 7-10 developer days to under one day.",
-    logo: "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da2805906c5fe5e3e7ba26_image%2035.avif",
+    logo: "/assets/webflow/image-35.avif",
     metrics: [
       { value: "3 Months", label: "Launched dual-region stores within the project deadline" },
       { value: "90%", label: "Cut development efforts, saving time and cost" },
@@ -164,7 +164,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Menkind safely implemented a new, business-critical search platform",
     lede:
       "Gift and gadget retailer Menkind used StagingPro to mirror their live store, giving Algolia a complete product catalogue and enabling safe, confident search testing before launch.",
-    logo: "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da280551fda1d89b0b73a1_image%2037.avif",
+    logo: "/assets/webflow/image-37.avif",
     metrics: [
       { value: "100%", label: "Production data available for testing" },
       { value: "Zero", label: "Risk to live operations" },
@@ -211,7 +211,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Crown Packaging builds a transactional B2B storefront with Vortex IQ StagingPro",
     lede:
       "Crown Packaging, an $800M global packaging leader, embarked on a major digital initiative to launch its first fully transactional B2B ecommerce storefront. Their previous online store was purely informational: customers could browse but could not purchase.",
-    logo: "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da28059b19ca42560e8874_image%2038.avif",
+    logo: "/assets/webflow/image-38.avif",
     metrics: [
       { value: "30 to 40%", label: "Faster time to launch" },
       { value: "100%", label: "ERP integration tested with real data" },
@@ -282,7 +282,7 @@ export const caseStudies: CaseStudy[] = [
     title: "How Interlight enabled safe A/B testing on a 2 million SKU catalogue",
     lede:
       "Interlight used Vortex IQ StagingPro to safely A/B test changes across a 2 million SKU BigCommerce catalogue, saving 8 hours of manual work per sync and cutting costs by 20%.",
-    logo: "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da2805bdf96f07e722e286_Clip%20path%20group.avif",
+    logo: "/assets/webflow/clip-path-group.avif",
     metrics: [
       { value: "2M", label: "SKUs in the product catalogue" },
       { value: "8 hrs", label: "Manual work saved per sync" },
@@ -359,7 +359,7 @@ export const caseStudies: CaseStudy[] = [
     title: "The Tire Man implements Vortex IQ StagingPro for safer BigCommerce development",
     lede:
       "The Tire Man used StagingPro to eliminate disconnected staging environments on BigCommerce, achieving 30% faster mobile optimisation and 100% error-free deployments across all devices.",
-    logo: "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68da2805a5e493b26156ecc7_image%2039.avif",
+    logo: "/assets/webflow/image-39.avif",
     metrics: [
       { value: "30%", label: "Faster mobile optimisation" },
       { value: "50%", label: "Increase in team productivity" },

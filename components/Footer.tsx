@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const CDN = "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a";
+const CDN = "/assets/webflow";
 
 const PLATFORMS = [
   { src: "/assets/icons/platform-adobe.svg", alt: "Adobe Commerce" },
@@ -33,7 +33,7 @@ export default function Footer() {
           <div>
             <a href="https://www.vortexiq.ai/">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="footer-logo" src={`${CDN}/68c2a7984b7702411158df14_vlogo-white.svg`} alt="Vortex IQ" />
+              <img className="footer-logo" src={`${CDN}/vlogo-white.svg`} alt="Vortex IQ" />
             </a>
             <p className="footer-tag">The World&apos;s First AI Operating System for E-Commerce. Detect. Explain. Fix. From one operating system.</p>
             <div className="footer-social">
@@ -81,12 +81,12 @@ export default function Footer() {
 
         <div className="footer-badges">
           {/* eslint-disable @next/next/no-img-element */}
-          <img src={`${CDN}/6953b913c52134a51a525a2d_techstars-logo.svg`} alt="Techstars" />
-          <img src={`${CDN}/6953cc5eb170ed50a2a47fe0_55dbc9f5cd0d006da67ae19f818551b1_googleForStartup.svg`} alt="Google for Startups" />
-          <img src={`${CDN}/6953cbf3940124a03970f2ba_a7b5714a9227630d62bfd99ff88a9eed_microsoftLogo-white.svg`} alt="Microsoft" />
-          <img src={`${CDN}/6953ca7c71cee230b8180a52_a0323fc3f60511610abc326e5341ba5e_invidiaInspection.svg`} alt="NVIDIA Inception" />
-          <img src={`${CDN}/6953cb4a2c90c528b0562ff1_8dc57718a83e4e5f9a0661ba76148fe7_aws-activate.svg`} alt="AWS Activate" />
-          <img src={`${CDN}/6953b9064f4f3cb2226c1fb0_iso-logo.svg`} alt="ISO 27001 Certified" />
+          <img src={`${CDN}/techstars-logo.svg`} alt="Techstars" />
+          <img src={`${CDN}/googleforstartup.svg`} alt="Google for Startups" />
+          <img src={`${CDN}/microsoftlogo-white.svg`} alt="Microsoft" />
+          <img src={`${CDN}/invidiainspection.svg`} alt="NVIDIA Inception" />
+          <img src={`${CDN}/aws-activate.svg`} alt="AWS Activate" />
+          <img src={`${CDN}/iso-logo.svg`} alt="ISO 27001 Certified" />
           {/* eslint-enable @next/next/no-img-element */}
         </div>
 

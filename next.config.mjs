@@ -2,10 +2,10 @@
 const nextConfig = {
   outputFileTracingRoot: import.meta.dirname,
   images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "cdn.prod.website-files.com" },
-      { protocol: "https", hostname: "cdn.sanity.io" },
-    ],
+    // Webflow CDN (cdn.prod.website-files.com) deliberately absent: all assets
+    // were localised to public/assets/webflow/ on 3 Jul 2026 so cancelling the
+    // Webflow subscription cannot break the site.
+    remotePatterns: [{ protocol: "https", hostname: "cdn.sanity.io" }],
   },
   async headers() {
     return [

@@ -8,9 +8,9 @@ export const metadata: Metadata = {
     "Logos, colours, and typography for partners, press, and event organisers. Everything you need to represent the Vortex IQ brand correctly.",
 };
 
-const CDN = "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a";
-const LOGO_COLOR = `${CDN}/68c29054c6d22238eac9bb4c_vlogo.svg`;
-const LOGO_WHITE = `${CDN}/68c2a7984b7702411158df14_vlogo-white.svg`;
+const CDN = "/assets/webflow";
+const LOGO_COLOR = `${CDN}/vlogo.svg`;
+const LOGO_WHITE = `${CDN}/vlogo-white.svg`;
 
 const css = `
 /* ============ Branding — page styles (built on the shared design system) ============ */

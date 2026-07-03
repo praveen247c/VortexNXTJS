@@ -108,4 +108,4 @@ export const DEMO_HREF = "/contact-us";
 export const GET_STARTED_HREF = "/get-started";
 export const FREE_AUDIT_HREF = "/free-audit";
 export const LOGO_SRC =
-  "https://cdn.prod.website-files.com/68bff49fa25caa581ab0524a/68c29054c6d22238eac9bb4c_vlogo.svg";
+  "/assets/webflow/vlogo.svg";
