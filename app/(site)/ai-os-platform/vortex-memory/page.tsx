@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { css, html } from "./content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ai-os-platform/vortex-memory" },
   title: "Vortex Memory: The Commerce Graph That Remembers Everything | Vortex IQ",
   description: "Vortex Memory is the live commerce graph underneath your AI OS. Every connector, finding, fix and decision becomes permanent, cited memory that compounds the longer you run it.",
 };

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/privacy-policy" },
   title: "Privacy Policy | Vortex IQ",
   description:
     "How Vortex IQ collects, uses, and protects your personal data. A plain-English summary of our privacy practices under UK GDPR and what choices you have.",

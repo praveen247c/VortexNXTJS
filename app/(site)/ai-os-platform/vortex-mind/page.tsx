@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { css, html } from "./content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ai-os-platform/vortex-mind" },
   title: "Vortex Mind: AI Ecommerce Analytics & Diagnostic Engine | Vortex IQ",
   description: "Vortex Mind turns messy signals into a clear action plan. It spots bottlenecks, benchmarks competitors, and produces recommendations your team can actually execute.",
 };

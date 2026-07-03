@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/cookie-policy" },
   title: "Cookie Policy | Vortex IQ",
   description:
     "How Vortex IQ uses cookies and similar technologies across our site, the categories we use, and how you can manage your preferences. A plain-English summary for review.",

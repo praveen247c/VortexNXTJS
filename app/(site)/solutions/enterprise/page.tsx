@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { css, html } from "./content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/solutions/enterprise" },
   title: "Enterprise AI Operations for Ecommerce | Vortex IQ",
   description:
     "The committee-ready hub for mid-market and enterprise merchants: multi-store governance, security and AI/LLM data controls, integration depth, and an honest build-vs-buy. Detect, explain and safely execute across your whole stack, approval-gated and reversible.",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/branding" },
   title: "Brand Assets, Logos & Colour Palette | Vortex IQ",
   description:
     "Logos, colours, and typography for partners, press, and event organisers. Everything you need to represent the Vortex IQ brand correctly.",

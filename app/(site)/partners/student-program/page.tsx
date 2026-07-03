@@ -3,6 +3,7 @@ import Link from "next/link";
 import HubSpotForm from "@/components/HubSpotForm";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/partners/student-program" },
   title: "Student Programme | AI Career Launchpad | Vortex IQ",
   description:
     "Launch your AI career with the Vortex IQ Student Programme: real projects inside a fast-moving commerce-AI team, 1:1 mentorship, and a path into the industry.",

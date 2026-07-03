@@ -3,6 +3,7 @@ import Link from "next/link";
 import HubSpotForm from "@/components/HubSpotForm";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/start-with-vortexiq" },
   title: "Start with Vortex IQ | Book a Demo or 14-Day Free Trial",
   description:
     "Get started with the AI Operating System for commerce. Start a 14-day free trial or book a live demo. Connect your store and put AI agents to work in minutes.",

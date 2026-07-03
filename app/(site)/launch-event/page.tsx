@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/launch-event" },
   title: "Live Webinars & Events: AI OS for Commerce in Action | Vortex IQ",
   description:
     "Live webinars, product launches, and on-demand sessions on agentic AI for commerce. See the AI Operating System in action and ask the team anything.",

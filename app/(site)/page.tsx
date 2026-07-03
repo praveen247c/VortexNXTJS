@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import HeroRotator from "@/components/home/HeroRotator";
 import ConnectorChips from "@/components/home/ConnectorChips";
 import PlatformTabs from "@/components/home/PlatformTabs";
@@ -10,6 +11,10 @@ import {
   type Faq,
 } from "@/lib/structured-data";
 
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
 // Single source of truth: the visible FAQ below AND the FAQPage JSON-LD are both
 // rendered from this array, so the schema always matches on-page content (Google
 // policy requires it). Edit copy here; both stay in sync.
@@ -21,7 +26,7 @@ const homeFaq: Faq[] = [
   { question: "Will the AI make changes to my live store?", answer: "Vortex IQ does the watching. Your team makes the calls. Every change runs through staging first, is approval-gated, and can be rolled back in one click, with a full audit trail. Nothing touches live revenue untested unless you choose to automate it." },
   { question: "What is Viq?", answer: "Viq is the AI agent you talk to inside Vortex IQ. Ask it plain questions like “Where am I losing revenue?” or “Summarise last week’s sales” and get an answer in seconds. Just ask Viq." },
   { question: "How does it keep my store safe?", answer: "Test every change on StagingPro before it goes live, and keep a full backup with one-click rollback through RollbackPro. You always have a recent restore point, and we never lose anything you delete." },
-  { question: "What does it cost?", answer: "Start with a 14-day free trial, then $499 a month. Higher plans add SEO and GEO, more connectors, deeper retention, and dedicated support. See full pricing for details." },
+  { question: "What does it cost?", answer: "Start with a 14-day free trial, then from $399 a month. Higher plans add SEO and GEO, more connectors, deeper retention, and dedicated support. See full pricing for details." },
   { question: "How is my data used and is it secure?", answer: "Your data powers your own insights and recommendations. It is not used to train shared AI models. We are ISO 27001 certified with SOC 2 in progress, and your data is processed in the United Kingdom under our Privacy Policy." },
   { question: "What results can I expect?", answer: "Across 60+ store audits we surfaced 749 issues and resolved 55% of them automatically, approval-gated and reversible. When the SEO and GEO engine runs, growth compounds; one recent deployment saw organic search rise 1,400%." },
 ];

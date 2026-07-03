@@ -13,11 +13,12 @@ export const metadata: Metadata = {
   // suffix, so a template would double it.
   title: DEFAULT_TITLE,
   description: DEFAULT_DESCRIPTION,
-  alternates: { canonical: "/" },
+  // No alternates.canonical here: a root default is inherited by every page that
+  // does not override it, which marked ~50 pages as duplicates of the homepage.
+  // Each page sets its own self-canonical (dynamic routes via generateMetadata).
   openGraph: {
     type: "website",
     siteName: "Vortex IQ",
-    url: SITE_URL,
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
     images: [{ url: "/og/default.png", width: 1200, height: 630, alt: "Vortex IQ" }],

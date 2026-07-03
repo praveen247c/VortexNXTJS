@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { css, html } from "./content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/customer-stories" },
   title: "Customer Stories & Case Studies | Vortex IQ",
   description: "See real results: how e-commerce merchants and agencies cut development time, reduce risk, and grow revenue with Vortex IQ. Case studies from brands around the world.",
 };

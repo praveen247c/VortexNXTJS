@@ -24,7 +24,7 @@ export const organizationLd: Record<string, unknown> = {
   description:
     "The AI Operating System for e-commerce. Vortex IQ detects what's broken across your stack, explains why in plain English, and helps you fix it safely, across Shopify, BigCommerce, Adobe Commerce and every platform you run.",
   foundingDate: "2023",
-  areaServed: "GB",
+  areaServed: ["GB", "US"],
   founder: {
     "@type": "Person",
     "@id": FOUNDER_ID,
@@ -49,9 +49,14 @@ export const organizationLd: Record<string, unknown> = {
     "Agentic AI for ecommerce",
     "Revenue leak detection",
   ],
-  // TODO: add verified third-party profile URLs (LinkedIn company, X, Crunchbase,
-  // G2, Capterra) to `sameAs` as they are claimed — see ticket off-site appendix.
-  sameAs: ["https://www.linkedin.com/in/susantpatro247/"],
+  // Company-entity profiles only (the founder's personal LinkedIn lives on the
+  // Person node above). TODO: append Crunchbase, G2 and Capterra profile URLs
+  // once those listings are claimed.
+  sameAs: [
+    "https://www.linkedin.com/company/vortexiqai",
+    "https://twitter.com/vortex_iq",
+    "https://www.youtube.com/@VortexIQ-AI",
+  ],
 };
 
 export const websiteLd: Record<string, unknown> = {

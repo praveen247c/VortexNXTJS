@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { css, html } from "./content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/developers" },
   title: "Developers: Docs, API & Sandbox | Vortex IQ",
   description:
     "Build on the AI Operating System for e-commerce. Full connector and API documentation is live at docs.vortexiq.ai. Request a sandbox, read the architecture and security model, and integrate with read-first, approval-gated connectors.",

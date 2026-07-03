@@ -3,6 +3,7 @@ import Link from "next/link";
 import BrochureForm from "./BrochureForm";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/join-viq" },
   title: "Vortex IQ Brochure | The AI OS for E-Commerce in One PDF",
   description:
     "Get the Vortex IQ brochure, how the AI Operating System detects, explains, and fixes revenue leaks across your commerce stack, with security, pricing, and outcomes.",

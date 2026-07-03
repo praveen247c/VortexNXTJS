@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/register" },
   title: "Vortex IQ Referral Programme | Earn for Every Introduction",
   description:
     "Refer merchants, agencies, and partners to Vortex IQ and earn rewards when they come on board. Simple sign-up, transparent tracking, real payouts.",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/product-tour" },
   title: "Product Tour: See the Loop Run | Vortex IQ",
   description:
     "Watch the detect, explain, fix, approve and rollback loop run on a real store, without a sales call. Everything shown is the real Vortex IQ interface with anonymised data.",

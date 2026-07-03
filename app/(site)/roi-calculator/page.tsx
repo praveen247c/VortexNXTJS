@@ -4,6 +4,7 @@ import Script from "next/script";
 import RoiCalculator from "./RoiCalculator";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/roi-calculator" },
   title: "Ecommerce Revenue-at-Risk & ROI Calculator | Vortex IQ",
   description:
     "Estimate the revenue at stake on your store: hours saved on manual reporting, revenue protected by staging-first deploys, and the organic revenue your SEO issues sit on. Conservative, publicly-sourced, verified on your store.",

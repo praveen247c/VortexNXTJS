@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/partners" },
   title: "Partner Programme | Build, Resell & Grow with Vortex IQ",
   description:
     "Join the Vortex IQ partner ecosystem. Whether you are an agency, technology platform, reseller, or student, there is a programme designed to help you grow.",

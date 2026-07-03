@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/free-audit/thank-you" },
   title: "Request received. Free Store Health Check | Vortex IQ",
   description: "Thanks. Your free Store Health Check request is in. We'll read your public pages, verify every finding, and email your revenue-ranked report.",
   robots: { index: false, follow: true },

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { policies } from "../policies";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/trust/trust-center" },
   title: "Security &amp; Trust Centre Centre | ISO 27001, Approvals & Rollback | Vortex IQ",
   description:
     "How Vortex IQ keeps your data and storefront safe: ISO 27001, least-privilege access, human approvals on every change, full audit trails, and one-click rollback.",

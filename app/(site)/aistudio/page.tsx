@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/aistudio" },
   title: "Summit by Vortex IQ | The AI Studio for Commerce Agents",
   description:
     "Summit is the AI Studio where teams design, test, and deploy their own commerce AI agents on the Vortex IQ operating system. No data-science team required.",

@@ -66,7 +66,7 @@ const STATIC_PATHS: { path: string; changeFrequency: MetadataRoute.Sitemap[numbe
   { path: "/trust/mobile-device-management-policy", changeFrequency: "yearly", priority: 0.3 },
   { path: "/trust/business-continuity-plan", changeFrequency: "yearly", priority: 0.3 },
   { path: "/trust/disaster-recovery-plan", changeFrequency: "yearly", priority: 0.3 },
-  { path: "/resources", changeFrequency: "weekly", priority: 0.6 },
+  // NOTE: /resources deliberately absent: no hub page exists; it 301s to /resources/blog.
   { path: "/resources/blog", changeFrequency: "daily", priority: 0.9 },
   { path: "/register", changeFrequency: "yearly", priority: 0.4 },
   { path: "/launch-event", changeFrequency: "monthly", priority: 0.4 },

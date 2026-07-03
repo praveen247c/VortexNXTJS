@@ -18,6 +18,7 @@ export async function generateMetadata({
   return {
     title: `${study.company}: ${study.title} | Vortex IQ`,
     description: study.lede,
+    alternates: { canonical: `/customer-stories/${study.slug}` },
   };
 }
 

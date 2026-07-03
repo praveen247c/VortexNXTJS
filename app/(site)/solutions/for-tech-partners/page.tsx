@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { css, html } from "./content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/solutions/for-tech-partners" },
   title: "AI Infrastructure for Technology Partners | Vortex IQ",
   description: "Make your platform agentic in weeks, not years. The complete Infrastructure-as-a-Service for building, deploying, and monetising bespoke AI agents for your customers.",
 };

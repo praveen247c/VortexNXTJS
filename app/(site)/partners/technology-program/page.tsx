@@ -3,6 +3,7 @@ import Link from "next/link";
 import HubSpotForm from "@/components/HubSpotForm";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/partners/technology-program" },
   title: "Technology Partner Programme | AI Integration | Vortex IQ",
   description:
     "Make your platform agentic. Connect your app to the Vortex IQ AI Operating System, give shared merchants AI digital workers, and ship AI features in weeks, not years.",

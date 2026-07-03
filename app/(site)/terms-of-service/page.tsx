@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/terms-of-service" },
   title: "Terms of Service | Vortex IQ",
   description:
     "The terms that govern your use of the Vortex IQ AI Operating System for e-commerce. A plain-English summary of the agreement between you and Vortex IQ Ltd.",

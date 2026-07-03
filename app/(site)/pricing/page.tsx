@@ -4,6 +4,7 @@ import { css, html } from "./content";
 import PricingToggle from "./PricingToggle";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/pricing" },
   title: "Pricing: From Audits to AI-Powered Execution | Vortex IQ",
   description: "Vortex IQ pricing: Foundation, Growth, Enterprise and OmniChannel plans for e-commerce, billed monthly or annually with a 20% annual saving. Choose your layer.",
 };
