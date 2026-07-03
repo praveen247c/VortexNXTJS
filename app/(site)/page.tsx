@@ -288,10 +288,20 @@ export default function Home() {
               <h4 style={{ fontFamily: "var(--font-mono)", fontSize: ".72rem", letterSpacing: ".12em", textTransform: "uppercase", color: "var(--text-faded)", marginBottom: "1.4rem" }}>Customers</h4>
               <div className="plogos plogos--clients">
                 {/* eslint-disable @next/next/no-img-element */}
-                <img src="/assets/logos/clients/coldwater-creek.svg" alt="Coldwater Creek" />
+                <img className="krispy" src="/assets/logos/clients/krispy-kreme.svg" alt="Krispy Kreme" />
+                <img src="/assets/logos/clients/nvidia.svg" alt="NVIDIA" />
+                <img src="/assets/logos/clients/white-stuff.svg" alt="White Stuff" />
                 <img src="/assets/logos/clients/richer-sounds.svg" alt="Richer Sounds" />
+                <img src="/assets/logos/clients/coldwater-creek.svg" alt="Coldwater Creek" />
+                <img src="/assets/logos/clients/zagg.svg" alt="ZAGG" />
+                <img src="/assets/logos/clients/bigcommerce.svg" alt="BigCommerce" />
+                <img src="/assets/logos/clients/iag.svg" alt="IAG" />
                 <img className="dhs" src="/assets/logos/clients/dhs-equipment.svg" alt="DHS Equipment" />
-                <img className="krispy" src="/assets/logos/clients/krispy-kreme.png" alt="Krispy Kreme" />
+                <img src="/assets/logos/clients/boutinot.svg" alt="Boutinot" />
+                <img src="/assets/logos/clients/organized-living.svg" alt="Organized Living" />
+                <img src="/assets/logos/clients/al-hussaini.svg" alt="Al-Hussaini" />
+                <img src="/assets/logos/clients/lok-grips.svg" alt="LOK Grips" />
+                <img src="/assets/logos/clients/fold.svg" alt="FOLD" />
               </div>
             </div>
             <div className="card">
