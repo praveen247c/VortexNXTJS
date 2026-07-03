@@ -1,678 +1,270 @@
-// Auto-generated from the AIOS connector registry (compiled_at 2026-06-25T04:21:01+00:00).
-// Source of truth: storage/app/vortex_mind/compiled/connector_registry.json
-// 93 live, 15 planned. Regenerate when the catalogue grows.
+// Auto-generated connector directory. Names, categories and descriptions from the
+// live app connector page; documentation URLs from the verified viq-docs link map
+// (Connector_Documentation_Map.json, all 200-status). 184 of 236 have a docUrl.
+// Connectors without a docUrl have no KPI-card page (databases, cloud/dev infra, VIQ apps).
 
-export type Connector = { name: string; category: string; status: "live" | "planned"; url: string };
+export type Connector = { name: string; category: string; desc: string; docUrl?: string };
 
-export const CONNECTOR_STATS = { live: 93, planned: 15, total: 108 };
+export const CONNECTOR_STATS = { total: 236, live: 236, documented: 184 };
 
-export const CONNECTOR_CATEGORIES: string[] = [
-  "Advertising",
-  "Analytics",
-  "CMS",
-  "Databases & warehouses",
-  "ERP",
-  "Ecommerce platforms",
-  "Email & marketing",
-  "Marketplaces",
-  "Monitoring",
-  "Notifications",
-  "Payments",
-  "Performance",
-  "Project management",
-  "Shipping & fulfilment",
-  "Social",
-  "Support & helpdesk",
-  "Wholesale & B2B"
+export const CONNECTOR_CATEGORIES: { key: string; label: string }[] = [
+
+  { key: "Ecommerce", label: "Ecommerce platforms" },
+  { key: "Marketplace", label: "Marketplace" },
+  { key: "Databases", label: "Databases" },
+  { key: "Analytics", label: "Analytics" },
+  { key: "Advertising", label: "Advertising" },
+  { key: "Payments", label: "Payments" },
+  { key: "Shipping & Delivery", label: "Shipping & delivery" },
+  { key: "Project Management", label: "Project Management" },
+  { key: "Cloud Platforms", label: "Cloud Platforms" },
+  { key: "CRM", label: "CRM" },
+  { key: "Email & Marketing", label: "Email & marketing" },
+  { key: "Notifications", label: "Notifications" },
+  { key: "Monitoring", label: "Monitoring" },
+  { key: "Version Control", label: "Version Control" },
+  { key: "Support", label: "Support" },
+  { key: "Content & Docs", label: "Content & docs" },
+  { key: "CMS", label: "CMS" },
+  { key: "Social Media", label: "Social Media" },
+  { key: "VortexIQ", label: "Vortex IQ apps" },
 ];
 
 export const CONNECTORS: Connector[] = [
-  {
-    "name": "AdRoll",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://www.adroll.com"
-  },
-  {
-    "name": "Amazon Ads",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://advertising.amazon.com"
-  },
-  {
-    "name": "Criteo",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://www.criteo.com"
-  },
-  {
-    "name": "Google Ads",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://ads.google.com"
-  },
-  {
-    "name": "LinkedIn Ads",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://www.linkedin.com/campaignmanager"
-  },
-  {
-    "name": "MediaMath (T1)",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://www.mediamath.com"
-  },
-  {
-    "name": "Meta Ads (Facebook)",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://business.facebook.com"
-  },
-  {
-    "name": "Microsoft Ads (Bing)",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://ads.microsoft.com"
-  },
-  {
-    "name": "Outbrain",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://www.outbrain.com"
-  },
-  {
-    "name": "Pinterest Ads",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://business.pinterest.com"
-  },
-  {
-    "name": "Quora Ads",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://www.quora.com/business"
-  },
-  {
-    "name": "Snapchat Ads",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://ads.snapchat.com"
-  },
-  {
-    "name": "StackAdapt",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://www.stackadapt.com"
-  },
-  {
-    "name": "Taboola",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://www.taboola.com"
-  },
-  {
-    "name": "The Trade Desk",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://www.thetradedesk.com"
-  },
-  {
-    "name": "TikTok Ads",
-    "category": "Advertising",
-    "status": "live",
-    "url": "https://ads.tiktok.com"
-  },
-  {
-    "name": "Amplitude",
-    "category": "Analytics",
-    "status": "live",
-    "url": "https://amplitude.com"
-  },
-  {
-    "name": "FullStory",
-    "category": "Analytics",
-    "status": "live",
-    "url": "https://www.fullstory.com"
-  },
-  {
-    "name": "Google Analytics 4",
-    "category": "Analytics",
-    "status": "live",
-    "url": "https://analytics.google.com"
-  },
-  {
-    "name": "Google Search Console",
-    "category": "Analytics",
-    "status": "live",
-    "url": "https://search.google.com/search-console"
-  },
-  {
-    "name": "Google Tag Manager",
-    "category": "Analytics",
-    "status": "live",
-    "url": "https://tagmanager.google.com"
-  },
-  {
-    "name": "Microsoft Clarity",
-    "category": "Analytics",
-    "status": "live",
-    "url": "https://clarity.microsoft.com"
-  },
-  {
-    "name": "Mixpanel",
-    "category": "Analytics",
-    "status": "live",
-    "url": "https://mixpanel.com"
-  },
-  {
-    "name": "PostHog",
-    "category": "Analytics",
-    "status": "live",
-    "url": "https://posthog.com"
-  },
-  {
-    "name": "WordPress",
-    "category": "CMS",
-    "status": "live",
-    "url": "https://wordpress.org"
-  },
-  {
-    "name": "ClickHouse",
-    "category": "Databases & warehouses",
-    "status": "live",
-    "url": "https://clickhouse.com"
-  },
-  {
-    "name": "CockroachDB",
-    "category": "Databases & warehouses",
-    "status": "live",
-    "url": "https://www.cockroachlabs.com"
-  },
-  {
-    "name": "Databricks",
-    "category": "Databases & warehouses",
-    "status": "live",
-    "url": "https://www.databricks.com"
-  },
-  {
-    "name": "Elasticsearch",
-    "category": "Databases & warehouses",
-    "status": "live",
-    "url": "https://www.elastic.co/elasticsearch"
-  },
-  {
-    "name": "MariaDB",
-    "category": "Databases & warehouses",
-    "status": "live",
-    "url": "https://mariadb.org"
-  },
-  {
-    "name": "MongoDB",
-    "category": "Databases & warehouses",
-    "status": "live",
-    "url": "https://www.mongodb.com"
-  },
-  {
-    "name": "MySQL",
-    "category": "Databases & warehouses",
-    "status": "live",
-    "url": "https://www.mysql.com"
-  },
-  {
-    "name": "PostgreSQL",
-    "category": "Databases & warehouses",
-    "status": "live",
-    "url": "https://www.postgresql.org"
-  },
-  {
-    "name": "Redis",
-    "category": "Databases & warehouses",
-    "status": "live",
-    "url": "https://redis.io"
-  },
-  {
-    "name": "Snowflake",
-    "category": "Databases & warehouses",
-    "status": "live",
-    "url": "https://www.snowflake.com"
-  },
-  {
-    "name": "Supabase",
-    "category": "Databases & warehouses",
-    "status": "live",
-    "url": "https://supabase.com"
-  },
-  {
-    "name": "Adobe Commerce",
-    "category": "Ecommerce platforms",
-    "status": "live",
-    "url": "https://business.adobe.com/products/magento/magento-commerce.html"
-  },
-  {
-    "name": "BigCommerce",
-    "category": "Ecommerce platforms",
-    "status": "live",
-    "url": "https://www.bigcommerce.com"
-  },
-  {
-    "name": "CloudHub Insights",
-    "category": "Ecommerce platforms",
-    "status": "live",
-    "url": "https://www.247commerce.co.uk"
-  },
-  {
-    "name": "Ecwid by Lightspeed",
-    "category": "Ecommerce platforms",
-    "status": "live",
-    "url": "https://www.ecwid.com"
-  },
-  {
-    "name": "OpenCart",
-    "category": "Ecommerce platforms",
-    "status": "live",
-    "url": "https://www.opencart.com"
-  },
-  {
-    "name": "Salesforce Commerce Cloud (B2C)",
-    "category": "Ecommerce platforms",
-    "status": "live",
-    "url": "https://www.salesforce.com/products/commerce/"
-  },
-  {
-    "name": "Shopify",
-    "category": "Ecommerce platforms",
-    "status": "live",
-    "url": "https://www.shopify.com"
-  },
-  {
-    "name": "Shopline",
-    "category": "Ecommerce platforms",
-    "status": "live",
-    "url": "https://www.shopline.com"
-  },
-  {
-    "name": "Square Online",
-    "category": "Ecommerce platforms",
-    "status": "live",
-    "url": "https://squareup.com/us/en/online-store"
-  },
-  {
-    "name": "WooCommerce",
-    "category": "Ecommerce platforms",
-    "status": "live",
-    "url": "https://woocommerce.com"
-  },
-  {
-    "name": "Dotdigital",
-    "category": "Email & marketing",
-    "status": "live",
-    "url": "https://dotdigital.com"
-  },
-  {
-    "name": "HubSpot",
-    "category": "Email & marketing",
-    "status": "live",
-    "url": "https://www.hubspot.com"
-  },
-  {
-    "name": "Klaviyo",
-    "category": "Email & marketing",
-    "status": "live",
-    "url": "https://klaviyo.com"
-  },
-  {
-    "name": "Mailchimp",
-    "category": "Email & marketing",
-    "status": "live",
-    "url": "https://mailchimp.com"
-  },
-  {
-    "name": "Microsoft Dynamics 365 Finance",
-    "category": "ERP",
-    "status": "live",
-    "url": "https://dynamics.microsoft.com/en-us/finance/"
-  },
-  {
-    "name": "NetSuite ERP",
-    "category": "ERP",
-    "status": "live",
-    "url": "https://www.netsuite.com"
-  },
-  {
-    "name": "Oracle ERP Cloud (Fusion)",
-    "category": "ERP",
-    "status": "live",
-    "url": "https://www.oracle.com/erp/"
-  },
-  {
-    "name": "Sage Intacct / Business Cloud",
-    "category": "ERP",
-    "status": "live",
-    "url": "https://www.sage.com"
-  },
-  {
-    "name": "SAP S/4HANA Cloud",
-    "category": "ERP",
-    "status": "live",
-    "url": "https://www.sap.com/products/erp.html"
-  },
-  {
-    "name": "AbeBooks",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://www.abebooks.com"
-  },
-  {
-    "name": "Alibaba.com (B2B)",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://www.alibaba.com"
-  },
-  {
-    "name": "Alibris",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://www.alibris.com"
-  },
-  {
-    "name": "AliExpress",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://sell.aliexpress.com"
-  },
-  {
-    "name": "Amazon (Selling Partner)",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://sellercentral.amazon.com"
-  },
-  {
-    "name": "Bonanza",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://www.bonanza.com"
-  },
-  {
-    "name": "Depop",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://www.depop.com"
-  },
-  {
-    "name": "eBay",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://www.ebay.com"
-  },
-  {
-    "name": "Etsy",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://www.etsy.com/sell"
-  },
-  {
-    "name": "Fruugo",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://merchants.fruugo.com"
-  },
-  {
-    "name": "JD.com",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://jos.jd.com"
-  },
-  {
-    "name": "Mercari",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://www.mercari.com"
-  },
-  {
-    "name": "Newegg",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://sellerportal.newegg.com"
-  },
-  {
-    "name": "OnBuy",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://www.onbuy.com"
-  },
-  {
-    "name": "Target Plus",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://plus.target.com"
-  },
-  {
-    "name": "Vinted",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://www.vinted.com"
-  },
-  {
-    "name": "Walmart Marketplace",
-    "category": "Marketplaces",
-    "status": "live",
-    "url": "https://marketplace.walmart.com"
-  },
-  {
-    "name": "Datadog",
-    "category": "Monitoring",
-    "status": "live",
-    "url": "https://www.datadoghq.com"
-  },
-  {
-    "name": "New Relic",
-    "category": "Monitoring",
-    "status": "live",
-    "url": "https://newrelic.com"
-  },
-  {
-    "name": "Email Notifications",
-    "category": "Notifications",
-    "status": "live",
-    "url": "https://www.vortexiq.ai"
-  },
-  {
-    "name": "Adyen",
-    "category": "Payments",
-    "status": "live",
-    "url": "https://www.adyen.com"
-  },
-  {
-    "name": "CyberSource",
-    "category": "Payments",
-    "status": "live",
-    "url": "https://www.cybersource.com"
-  },
-  {
-    "name": "PayPal",
-    "category": "Payments",
-    "status": "live",
-    "url": "https://www.paypal.com"
-  },
-  {
-    "name": "Stripe",
-    "category": "Payments",
-    "status": "live",
-    "url": "https://stripe.com"
-  },
-  {
-    "name": "Viva Payments",
-    "category": "Payments",
-    "status": "planned",
-    "url": "https://www.vivapayments.com"
-  },
-  {
-    "name": "Website Performance (PageSpeed + CrUX)",
-    "category": "Performance",
-    "status": "live",
-    "url": "https://pagespeed.web.dev"
-  },
-  {
-    "name": "Jira",
-    "category": "Project management",
-    "status": "live",
-    "url": "https://www.atlassian.com/software/jira"
-  },
-  {
-    "name": "Amazon Prime Shipping (SFP)",
-    "category": "Shipping & fulfilment",
-    "status": "planned",
-    "url": "https://sellercentral.amazon.com"
-  },
-  {
-    "name": "APC Overnight",
-    "category": "Shipping & fulfilment",
-    "status": "planned",
-    "url": "https://www.apc-overnight.com"
-  },
-  {
-    "name": "Australia Post",
-    "category": "Shipping & fulfilment",
-    "status": "live",
-    "url": "https://developers.auspost.com.au"
-  },
-  {
-    "name": "Bring (Posten Norge)",
-    "category": "Shipping & fulfilment",
-    "status": "live",
-    "url": "https://developer.bring.com"
-  },
-  {
-    "name": "Deutsche Post / DHL Parcel",
-    "category": "Shipping & fulfilment",
-    "status": "live",
-    "url": "https://developer.dhl.com"
-  },
-  {
-    "name": "DHL InExpress",
-    "category": "Shipping & fulfilment",
-    "status": "planned",
-    "url": "https://developer.dhl.com"
-  },
-  {
-    "name": "DPD",
-    "category": "Shipping & fulfilment",
-    "status": "planned",
-    "url": "https://www.dpd.co.uk"
-  },
-  {
-    "name": "DPDLocal",
-    "category": "Shipping & fulfilment",
-    "status": "live",
-    "url": "https://www.dpdlocal.co.uk"
-  },
-  {
-    "name": "EasyPost",
-    "category": "Shipping & fulfilment",
-    "status": "live",
-    "url": "https://www.easypost.com"
-  },
-  {
-    "name": "Evri (formerly Hermes UK)",
-    "category": "Shipping & fulfilment",
-    "status": "planned",
-    "url": "https://www.evri.com"
-  },
-  {
-    "name": "FedEx",
-    "category": "Shipping & fulfilment",
-    "status": "planned",
-    "url": "https://www.fedex.com/en-us/developer.html"
-  },
-  {
-    "name": "Interlink Express",
-    "category": "Shipping & fulfilment",
-    "status": "planned",
-    "url": "https://www.interlinkexpress.com"
-  },
-  {
-    "name": "Japan Post (EMS / Yu-Pack)",
-    "category": "Shipping & fulfilment",
-    "status": "live",
-    "url": "https://www.post.japanpost.jp"
-  },
-  {
-    "name": "NetDispatch",
-    "category": "Shipping & fulfilment",
-    "status": "planned",
-    "url": "https://www.netdespatch.com"
-  },
-  {
-    "name": "Parcelforce Worldwide",
-    "category": "Shipping & fulfilment",
-    "status": "planned",
-    "url": "https://www.parcelforce.com"
-  },
-  {
-    "name": "PostNord",
-    "category": "Shipping & fulfilment",
-    "status": "live",
-    "url": "https://developer.postnord.com"
-  },
-  {
-    "name": "Royal Mail",
-    "category": "Shipping & fulfilment",
-    "status": "planned",
-    "url": "https://developer.royalmail.net"
-  },
-  {
-    "name": "Sendle",
-    "category": "Shipping & fulfilment",
-    "status": "live",
-    "url": "https://developers.sendle.com"
-  },
-  {
-    "name": "ShipBob",
-    "category": "Shipping & fulfilment",
-    "status": "live",
-    "url": "https://www.shipbob.com"
-  },
-  {
-    "name": "Shippo",
-    "category": "Shipping & fulfilment",
-    "status": "live",
-    "url": "https://goshippo.com"
-  },
-  {
-    "name": "ShippyPro",
-    "category": "Shipping & fulfilment",
-    "status": "planned",
-    "url": "https://www.shippypro.com"
-  },
-  {
-    "name": "ShipTheory",
-    "category": "Shipping & fulfilment",
-    "status": "planned",
-    "url": "https://www.shiptheory.com"
-  },
-  {
-    "name": "USPS",
-    "category": "Shipping & fulfilment",
-    "status": "planned",
-    "url": "https://www.usps.com/business/web-tools-apis"
-  },
-  {
-    "name": "Instagram",
-    "category": "Social",
-    "status": "live",
-    "url": "https://www.instagram.com"
-  },
-  {
-    "name": "Intercom",
-    "category": "Support & helpdesk",
-    "status": "live",
-    "url": "https://www.intercom.com"
-  },
-  {
-    "name": "Costco SIP",
-    "category": "Wholesale & B2B",
-    "status": "planned",
-    "url": "https://www.costco.com/supplier"
-  }
+  { name: "SAP", category: "Ecommerce", desc: "Connect SAP ERP for enterprise resource planning data.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/sap" },
+  { name: "Shopify", category: "Ecommerce", desc: "Connect your Shopify store for full ecommerce analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/shopify" },
+  { name: "BigCommerce", category: "Ecommerce", desc: "Connect your BigCommerce store for full ecommerce analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/bigcommerce" },
+  { name: "Oracle ERP Cloud", category: "Ecommerce", desc: "Connect Oracle ERP Cloud for financial and supply chain data.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/oracle-erp" },
+  { name: "Adobe Commerce", category: "Ecommerce", desc: "Connect Adobe Commerce (Magento) for ecommerce analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/adobe-commerce" },
+  { name: "Sage", category: "Ecommerce", desc: "Connect Sage for accounting and ERP data.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/sage" },
+  { name: "Odoo", category: "Ecommerce", desc: "Connect Odoo open-source ERP.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/odoo" },
+  { name: "WooCommerce", category: "Ecommerce", desc: "Connect WooCommerce for WordPress ecommerce analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/woocommerce" },
+  { name: "Acumatica", category: "Ecommerce", desc: "Connect Acumatica cloud ERP.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/acumatica" },
+  { name: "NetSuite", category: "Ecommerce", desc: "Connect Oracle NetSuite ERP for ecommerce and financial data.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/netsuite" },
+  { name: "Microsoft Dynamics 365", category: "Ecommerce", desc: "Connect Microsoft Dynamics 365 for CRM and ERP data.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/microsoft-dynamics" },
+  { name: "PrestaShop", category: "Ecommerce", desc: "Connect PrestaShop for ecommerce analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/prestashop" },
+  { name: "OpenCart", category: "Ecommerce", desc: "Connect OpenCart for ecommerce analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/opencart" },
+  { name: "Big Cartel", category: "Ecommerce", desc: "Connect Big Cartel for indie ecommerce analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/bigcartel" },
+  { name: "Swell", category: "Ecommerce", desc: "Connect Swell headless ecommerce.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/swell" },
+  { name: "Medusa", category: "Ecommerce", desc: "Connect Medusa open-source ecommerce.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/medusa" },
+  { name: "Volusion", category: "Ecommerce", desc: "Connect Volusion for ecommerce data.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/volusion" },
+  { name: "Shopline", category: "Ecommerce", desc: "Connect Shopline for ecommerce analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/shopline" },
+  { name: "Amazon Seller Central", category: "Marketplace", desc: "Connect Amazon Seller Central for marketplace analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/amazon-seller" },
+  { name: "eBay", category: "Marketplace", desc: "Connect eBay for marketplace analytics and order management.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/ebay" },
+  { name: "AbeBooks", category: "Marketplace", desc: "Connect AbeBooks for used and rare book marketplace analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/abebooks" },
+  { name: "Alibaba.com (B2B)", category: "Marketplace", desc: "B2B wholesale supplier on Alibaba.com with MOQ tiers, RFQ inbox and Verified Supplier badge discipline.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/alibaba" },
+  { name: "Alibris", category: "Marketplace", desc: "Connect Alibris for books, music and movies marketplace analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/alibris" },
+  { name: "AliExpress", category: "Marketplace", desc: "Cross-border retail seller on AliExpress with price-sensitive global consumers and multi-region currency pricing.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/aliexpress" },
+  { name: "Bonanza", category: "Marketplace", desc: "Long-tail seller on Bonanza with cross-marketplace importer sync from eBay, Amazon, Etsy and Shopify.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/bonanza" },
+  { name: "Depop", category: "Marketplace", desc: "Gen Z fashion-focused resale seller on Depop with hashtag discovery and follower-base revenue mechanics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/depop" },
+  { name: "Etsy", category: "Marketplace", desc: "SMB and artisan seller on Etsy for creative goods, vintage and craft supplies with SEO and Star Seller discipline.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/etsy" },
+  { name: "Fruugo", category: "Marketplace", desc: "EU multi-market seller on Fruugo with a single-feed, multi-locale model across 46 countries.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/fruugo" },
+  { name: "JD.com", category: "Marketplace", desc: "Chinese-domestic marketplace seller on JD.com with Chinese-character SEO and brand-authorisation discipline.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/jd-com" },
+  { name: "Mercari", category: "Marketplace", desc: "Resale and pre-owned fashion seller on Mercari with listing freshness and Smart Pricing discipline.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/mercari" },
+  { name: "Newegg", category: "Marketplace", desc: "Tech and electronics-specialist seller on Newegg with MAP compliance and warranty handling.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/newegg" },
+  { name: "OnBuy", category: "Marketplace", desc: "Connect OnBuy for UK marketplace analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/onbuy" },
+  { name: "Target Plus", category: "Marketplace", desc: "Curated partner seller on Target Plus, invite-only via Mirakl, where brand fit and account health are key.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/target-plus" },
+  { name: "Vinted", category: "Marketplace", desc: "EU-focused resale fashion seller on Vinted with 0% listing fees and a buyer-paid protection model.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/vinted" },
+  { name: "Walmart Marketplace", category: "Marketplace", desc: "Enterprise multi-channel seller on Walmart Marketplace with strict Listing Quality Score and dispatch SLA.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/walmart-marketplace" },
+  { name: "MySQL", category: "Databases", desc: "Connect to MySQL or MariaDB databases.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/mysql" },
+  { name: "PostgreSQL", category: "Databases", desc: "Connect to PostgreSQL databases.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/postgresql" },
+  { name: "Microsoft SQL Server", category: "Databases", desc: "Connect to Microsoft SQL Server databases." },
+  { name: "MongoDB", category: "Databases", desc: "Connect to MongoDB databases.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/mongodb" },
+  { name: "Redis", category: "Databases", desc: "Connect to Redis for caching and data store access.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/redis" },
+  { name: "Elasticsearch", category: "Databases", desc: "Connect to Elasticsearch or OpenSearch clusters.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/elasticsearch" },
+  { name: "Snowflake", category: "Databases", desc: "Connect to Snowflake data warehouse.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/snowflake" },
+  { name: "MariaDB", category: "Databases", desc: "Connect to MariaDB databases.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/mariadb" },
+  { name: "CockroachDB", category: "Databases", desc: "Connect to CockroachDB distributed SQL.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/cockroachdb" },
+  { name: "Amazon DynamoDB", category: "Databases", desc: "Connect to DynamoDB NoSQL database." },
+  { name: "Supabase", category: "Databases", desc: "Connect to Supabase PostgreSQL.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/supabase" },
+  { name: "PlanetScale", category: "Databases", desc: "Connect to PlanetScale serverless MySQL." },
+  { name: "Google BigQuery", category: "Databases", desc: "Connect to BigQuery data warehouse." },
+  { name: "Amazon Redshift", category: "Databases", desc: "Connect to Redshift data warehouse." },
+  { name: "Databricks", category: "Databases", desc: "Connect to Databricks lakehouse.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/databricks" },
+  { name: "ClickHouse", category: "Databases", desc: "Connect to ClickHouse analytics database.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/clickhouse" },
+  { name: "Apache Cassandra", category: "Databases", desc: "Connect to Cassandra distributed database." },
+  { name: "Neo4j", category: "Databases", desc: "Connect to Neo4j graph database." },
+  { name: "Oracle Database", category: "Databases", desc: "Connect to Oracle databases." },
+  { name: "SQLite", category: "Databases", desc: "Connect to SQLite file database." },
+  { name: "Google Firestore", category: "Databases", desc: "Connect to Firestore document database." },
+  { name: "Custom Connector", category: "Databases", desc: "Custom read-only data proxy for Ask Viq, reports and audit." },
+  { name: "Google Analytics", category: "Analytics", desc: "Connect Google Analytics 4 for website analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/google-analytics" },
+  { name: "Google Search Console", category: "Analytics", desc: "Connect Google Search Console for SEO analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/google-search-console" },
+  { name: "Mixpanel", category: "Analytics", desc: "Connect Mixpanel for product analytics and user tracking.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/mixpanel" },
+  { name: "Amplitude", category: "Analytics", desc: "Connect Amplitude for product analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/amplitude" },
+  { name: "Segment", category: "Analytics", desc: "Connect Segment for customer data platform analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/segment" },
+  { name: "Hotjar", category: "Analytics", desc: "Connect Hotjar for heatmaps and session recording.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/hotjar" },
+  { name: "Plausible Analytics", category: "Analytics", desc: "Connect Plausible for privacy-friendly web analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/plausible" },
+  { name: "PostHog", category: "Analytics", desc: "Connect PostHog for product analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/posthog" },
+  { name: "FullStory", category: "Analytics", desc: "Connect FullStory for digital experience analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/fullstory" },
+  { name: "Matomo", category: "Analytics", desc: "Connect Matomo for privacy-focused web analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/matomo" },
+  { name: "Microsoft Clarity", category: "Analytics", desc: "Connect Clarity for free heatmaps and session recordings.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/clarity" },
+  { name: "Chartbeat", category: "Analytics", desc: "Connect Chartbeat for real-time content analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/chartbeat" },
+  { name: "Google Ads", category: "Advertising", desc: "Connect Google Ads for campaign analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/google-ads" },
+  { name: "Meta Ads (Facebook)", category: "Advertising", desc: "Connect Meta Ads to manage Facebook and Instagram ad campaigns across accounts.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/facebook-ads" },
+  { name: "Amazon Ads", category: "Advertising", desc: "Connect Amazon Advertising for sponsored product analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/amazon-ads" },
+  { name: "TikTok Ads", category: "Advertising", desc: "Connect TikTok for Business for ad campaign analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/tiktok-ads" },
+  { name: "LinkedIn Ads", category: "Advertising", desc: "Connect LinkedIn Campaign Manager for B2B ad analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/linkedin-ads" },
+  { name: "Pinterest Ads", category: "Advertising", desc: "Connect Pinterest Ads for visual marketing analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/pinterest-ads" },
+  { name: "Snapchat Ads", category: "Advertising", desc: "Connect Snapchat Ads for social ad analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/snapchat-ads" },
+  { name: "Microsoft Ads (Bing)", category: "Advertising", desc: "Connect Microsoft Advertising for Bing ad analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/microsoft-ads" },
+  { name: "Taboola", category: "Advertising", desc: "Connect Taboola for native ad analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/taboola" },
+  { name: "Outbrain", category: "Advertising", desc: "Connect Outbrain for content marketing analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/outbrain" },
+  { name: "AdRoll", category: "Advertising", desc: "Connect AdRoll for retargeting analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/adroll" },
+  { name: "Quora Ads", category: "Advertising", desc: "Connect Quora Ads for Q&A advertising analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/quora-ads" },
+  { name: "Criteo", category: "Advertising", desc: "Programmatic retargeting with Criteo product-feed-driven dynamic creative.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/criteo" },
+  { name: "MediaMath (T1)", category: "Advertising", desc: "Programmatic media trading for display and video on MediaMath TerminalOne.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/mediamath" },
+  { name: "StackAdapt", category: "Advertising", desc: "Mid-market programmatic native, display and CTV on StackAdapt.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/stackadapt" },
+  { name: "The Trade Desk", category: "Advertising", desc: "Enterprise programmatic media trading across display, video, CTV and audio on The Trade Desk.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/the-trade-desk" },
+  { name: "Viva Payments", category: "Payments", desc: "Connect Viva Payments for payment and order analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/viva-payments" },
+  { name: "QuickBooks (API)", category: "Payments", desc: "Connect QuickBooks for accounting analytics." },
+  { name: "Stripe", category: "Payments", desc: "Connect Stripe for payment analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/stripe" },
+  { name: "PayPal", category: "Payments", desc: "Connect PayPal for payment analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/paypal" },
+  { name: "Xero (API)", category: "Payments", desc: "Connect Xero for accounting analytics." },
+  { name: "CyberSource", category: "Payments", desc: "Connect CyberSource for payment processing analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/cybersource" },
+  { name: "FreshBooks", category: "Payments", desc: "Connect FreshBooks for invoicing analytics." },
+  { name: "Square", category: "Payments", desc: "Connect Square for POS and payment analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/square" },
+  { name: "Wave", category: "Payments", desc: "Connect Wave for free accounting analytics." },
+  { name: "Adyen", category: "Payments", desc: "Connect Adyen for payment processing analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/adyen" },
+  { name: "Zoho Books", category: "Payments", desc: "Connect Zoho Books for accounting data." },
+  { name: "Braintree", category: "Payments", desc: "Connect Braintree for payment analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/braintree" },
+  { name: "Razorpay", category: "Payments", desc: "Connect Razorpay for Indian payment analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/razorpay" },
+  { name: "Mollie", category: "Payments", desc: "Connect Mollie for European payment analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/mollie" },
+  { name: "Authorize.net", category: "Payments", desc: "Connect Authorize.net for payment processing.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/authorize-net" },
+  { name: "Worldpay", category: "Payments", desc: "Connect Worldpay for payment analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/worldpay" },
+  { name: "Klarna (API)", category: "Payments", desc: "Connect Klarna for BNPL payment data.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/klarna-api" },
+  { name: "Afterpay", category: "Payments", desc: "Connect Afterpay for BNPL analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/afterpay" },
+  { name: "Amazon Prime Shipping (SFP)", category: "Shipping & Delivery", desc: "Connect Amazon Seller Fulfilled Prime for shipping analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/amazon-prime-shipping" },
+  { name: "APC Overnight", category: "Shipping & Delivery", desc: "Connect APC Overnight for UK courier analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/apc" },
+  { name: "Australia Post", category: "Shipping & Delivery", desc: "Australian merchant shipping domestic and international with Express Post and customs-clearance visibility.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/australia-post" },
+  { name: "Bring (Posten Norge)", category: "Shipping & Delivery", desc: "Nordic merchant on Bring, Posten Norge's B2B brand, with carbon-neutral certification and non-EU export customs.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/bring" },
+  { name: "Deutsche Post / DHL Parcel", category: "Shipping & Delivery", desc: "DACH-region merchant using DHL Parcel Germany with pre-paid return labels for German compliance.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/deutsche-post" },
+  { name: "DHL InExpress", category: "Shipping & Delivery", desc: "Connect DHL InExpress for international shipping analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/dhl-inexpress" },
+  { name: "DPD", category: "Shipping & Delivery", desc: "Connect DPD for parcel delivery analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/dpd" },
+  { name: "EasyPost", category: "Shipping & Delivery", desc: "Multi-carrier shipping via EasyPost's unified API with rate shopping across 100+ carriers.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/easypost" },
+  { name: "FedEx", category: "Shipping & Delivery", desc: "Connect FedEx for shipping and tracking analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/fedex" },
+  { name: "Evri (formerly Hermes UK)", category: "Shipping & Delivery", desc: "Connect Evri for UK parcel delivery analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/hermes-evri" },
+  { name: "Interlink Express", category: "Shipping & Delivery", desc: "Connect Interlink Express for UK courier analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/interlink-express" },
+  { name: "Japan Post (EMS / Yu-Pack)", category: "Shipping & Delivery", desc: "Japanese merchant shipping domestic Yu-Pack and international EMS with chilled and frozen supply-chain support.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/japan-post" },
+  { name: "NetDispatch", category: "Shipping & Delivery", desc: "Connect NetDispatch for shipping management analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/net-dispatch" },
+  { name: "Parcelforce Worldwide", category: "Shipping & Delivery", desc: "Connect Parcelforce Worldwide for UK and international shipping.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/parcelforce" },
+  { name: "PostNord", category: "Shipping & Delivery", desc: "Nordic merchant shipping across SE, NO, DK and FI on a single PostNord pan-Nordic contract.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/postnord" },
+  { name: "Royal Mail", category: "Shipping & Delivery", desc: "Connect Royal Mail for UK postal and shipping analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/royal-mail" },
+  { name: "Sendle", category: "Shipping & Delivery", desc: "AU and US small-business merchant on Sendle with flat-rate-by-zone pricing and carbon-offset shipping.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/sendle" },
+  { name: "ShipTheory", category: "Shipping & Delivery", desc: "Connect ShipTheory for shipping automation analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/ship-theory" },
+  { name: "ShipBob", category: "Shipping & Delivery", desc: "Connect ShipBob for fulfilment and logistics analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/shipbob" },
+  { name: "Shippo", category: "Shipping & Delivery", desc: "Multi-carrier shipping on Shippo with predictive ETA and returns API for SMB and mid-market DTC.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/shippo" },
+  { name: "ShippyPro", category: "Shipping & Delivery", desc: "Connect ShippyPro for shipping and returns analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/shippy-pro" },
+  { name: "USPS", category: "Shipping & Delivery", desc: "Connect USPS for US postal and shipping analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/usps" },
+  { name: "BambooHR", category: "Project Management", desc: "Connect BambooHR for HR analytics." },
+  { name: "Jira", category: "Project Management", desc: "Connect Jira for project and issue tracking analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/jira" },
+  { name: "Asana", category: "Project Management", desc: "Connect Asana for project management analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/asana" },
+  { name: "Gusto", category: "Project Management", desc: "Connect Gusto for payroll and HR data." },
+  { name: "Monday.com", category: "Project Management", desc: "Connect Monday.com for work management analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/monday" },
+  { name: "Personio", category: "Project Management", desc: "Connect Personio for European HR analytics." },
+  { name: "ADP", category: "Project Management", desc: "Connect ADP for payroll and workforce data." },
+  { name: "Linear", category: "Project Management", desc: "Connect Linear for issue tracking analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/linear" },
+  { name: "ClickUp", category: "Project Management", desc: "Connect ClickUp for productivity analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/clickup" },
+  { name: "Trello (API)", category: "Project Management", desc: "Connect Trello for board and task analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/trello-api" },
+  { name: "Basecamp", category: "Project Management", desc: "Connect Basecamp for project management analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/basecamp" },
+  { name: "Wrike", category: "Project Management", desc: "Connect Wrike for work management analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/wrike-api" },
+  { name: "Smartsheet (API)", category: "Project Management", desc: "Connect Smartsheet for spreadsheet project analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/smartsheet-api" },
+  { name: "Teamwork", category: "Project Management", desc: "Connect Teamwork for project analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/teamwork" },
+  { name: "Height", category: "Project Management", desc: "Connect Height for task management analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/height" },
+  { name: "Google Cloud Platform", category: "Cloud Platforms", desc: "Connect GCP for cloud infrastructure monitoring." },
+  { name: "OpenAI", category: "Cloud Platforms", desc: "Connect OpenAI for AI model access and usage analytics." },
+  { name: "Amazon Web Services", category: "Cloud Platforms", desc: "Connect AWS for cloud resource monitoring." },
+  { name: "Anthropic (Claude)", category: "Cloud Platforms", desc: "Connect Anthropic for Claude API access." },
+  { name: "Cohere", category: "Cloud Platforms", desc: "Connect Cohere for NLP model access." },
+  { name: "Microsoft Azure", category: "Cloud Platforms", desc: "Connect Azure for cloud infrastructure analytics." },
+  { name: "DigitalOcean", category: "Cloud Platforms", desc: "Connect DigitalOcean for cloud infrastructure." },
+  { name: "Hugging Face", category: "Cloud Platforms", desc: "Connect Hugging Face for model hub access." },
+  { name: "Cloudflare", category: "Cloud Platforms", desc: "Connect Cloudflare for CDN and security analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/cloudflare" },
+  { name: "Replicate", category: "Cloud Platforms", desc: "Connect Replicate for AI model deployment." },
+  { name: "Linode (Akamai)", category: "Cloud Platforms", desc: "Connect Linode for cloud infrastructure." },
+  { name: "Vultr", category: "Cloud Platforms", desc: "Connect Vultr for cloud server monitoring." },
+  { name: "Hetzner", category: "Cloud Platforms", desc: "Connect Hetzner for cloud server monitoring." },
+  { name: "Fly.io", category: "Cloud Platforms", desc: "Connect Fly.io for edge compute monitoring." },
+  { name: "Salesforce", category: "CRM", desc: "Connect Salesforce CRM for sales and customer analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/salesforce" },
+  { name: "HubSpot", category: "CRM", desc: "Connect HubSpot for marketing and CRM analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/hubspot" },
+  { name: "Zoho CRM", category: "CRM", desc: "Connect Zoho CRM for sales analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/zoho-crm" },
+  { name: "Pipedrive", category: "CRM", desc: "Connect Pipedrive for sales pipeline analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/pipedrive" },
+  { name: "Freshsales", category: "CRM", desc: "Connect Freshsales for CRM analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/freshsales" },
+  { name: "Insightly", category: "CRM", desc: "Connect Insightly CRM for small business analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/insightly" },
+  { name: "SugarCRM", category: "CRM", desc: "Connect SugarCRM for sales analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/sugarcrm" },
+  { name: "Nimble", category: "CRM", desc: "Connect Nimble for social CRM analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/nimble" },
+  { name: "Keap (Infusionsoft)", category: "CRM", desc: "Connect Keap for CRM and marketing automation.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/keap" },
+  { name: "Agile CRM", category: "CRM", desc: "Connect Agile CRM for sales and marketing.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/agile-crm" },
+  { name: "Klaviyo", category: "Email & Marketing", desc: "Connect Klaviyo for email marketing analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/klaviyo" },
+  { name: "Dotdigital", category: "Email & Marketing", desc: "Connect Dotdigital for email marketing analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/dotdigital" },
+  { name: "Mailchimp", category: "Email & Marketing", desc: "Connect Mailchimp for email marketing analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/mailchimp" },
+  { name: "SendGrid", category: "Email & Marketing", desc: "Connect SendGrid for email delivery analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/sendgrid" },
+  { name: "Brevo (Sendinblue)", category: "Email & Marketing", desc: "Connect Brevo for email and SMS marketing analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/brevo-sendinblue" },
+  { name: "ActiveCampaign", category: "Email & Marketing", desc: "Connect ActiveCampaign for marketing automation analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/activecampaign" },
+  { name: "Constant Contact", category: "Email & Marketing", desc: "Connect Constant Contact for email marketing.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/constant-contact" },
+  { name: "ConvertKit (API)", category: "Email & Marketing", desc: "Connect ConvertKit for creator email analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/convertkit-api" },
+  { name: "Drip (API)", category: "Email & Marketing", desc: "Connect Drip for ecommerce email analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/drip-api" },
+  { name: "AWeber", category: "Email & Marketing", desc: "Connect AWeber for email marketing analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/aweber" },
+  { name: "Campaign Monitor", category: "Email & Marketing", desc: "Connect Campaign Monitor for email analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/campaign-monitor" },
+  { name: "Iterable", category: "Email & Marketing", desc: "Connect Iterable for cross-channel marketing.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/iterable" },
+  { name: "Customer.io (API)", category: "Email & Marketing", desc: "Connect Customer.io for messaging analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/customerio-api" },
+  { name: "Slack", category: "Notifications", desc: "Connect Slack for notifications and alerts.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/slack" },
+  { name: "Microsoft Teams", category: "Notifications", desc: "Connect Microsoft Teams for notifications and alerts.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/teams" },
+  { name: "Email", category: "Notifications", desc: "Add email addresses for alert notifications." },
+  { name: "PagerDuty", category: "Notifications", desc: "Connect PagerDuty for incident management alerts.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/pagerduty" },
+  { name: "Discord", category: "Notifications", desc: "Connect Discord for webhook notifications.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/discord" },
+  { name: "Twilio", category: "Notifications", desc: "Connect Twilio for SMS and voice notifications.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/twilio" },
+  { name: "Telegram", category: "Notifications", desc: "Connect Telegram for bot notifications.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/telegram" },
+  { name: "Pushover", category: "Notifications", desc: "Connect Pushover for push notifications.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/pushover" },
+  { name: "Atlassian Statuspage", category: "Notifications", desc: "Connect Statuspage for incident communication.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/statuspage" },
+  { name: "Opsgenie", category: "Notifications", desc: "Connect Opsgenie for alert management.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/opsgenie" },
+  { name: "CrowdStrike", category: "Monitoring", desc: "Connect CrowdStrike for endpoint security analytics." },
+  { name: "Datadog", category: "Monitoring", desc: "Connect Datadog for infrastructure and APM monitoring.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/datadog" },
+  { name: "Website", category: "Monitoring", desc: "Add a website URL for performance monitoring." },
+  { name: "Google Tag Manager", category: "Monitoring", desc: "Connect GTM for tag management analytics." },
+  { name: "New Relic", category: "Monitoring", desc: "Connect New Relic for APM and infrastructure monitoring.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/newrelic" },
+  { name: "SentinelOne", category: "Monitoring", desc: "Connect SentinelOne for endpoint protection data." },
+  { name: "Grafana", category: "Monitoring", desc: "Connect Grafana for dashboard and alerting data.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/grafana" },
+  { name: "OneLogin", category: "Monitoring", desc: "Connect OneLogin for identity analytics." },
+  { name: "Duo Security", category: "Monitoring", desc: "Connect Duo for MFA and access analytics." },
+  { name: "Sentry", category: "Monitoring", desc: "Connect Sentry for error tracking and performance monitoring.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/sentry" },
+  { name: "Splunk", category: "Monitoring", desc: "Connect Splunk for log analytics and SIEM.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/splunk" },
+  { name: "Prometheus", category: "Monitoring", desc: "Connect Prometheus for time-series metrics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/prometheus" },
+  { name: "Uptime Robot", category: "Monitoring", desc: "Connect Uptime Robot for website uptime monitoring.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/uptime-robot" },
+  { name: "Pingdom", category: "Monitoring", desc: "Connect Pingdom for website performance monitoring.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/pingdom" },
+  { name: "Better Uptime", category: "Monitoring", desc: "Connect Better Uptime for monitoring analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/better-uptime" },
+  { name: "GitHub", category: "Version Control", desc: "Connect GitHub for repository and CI/CD analytics." },
+  { name: "GitLab", category: "Version Control", desc: "Connect GitLab for repository analytics." },
+  { name: "Bitbucket", category: "Version Control", desc: "Connect Bitbucket for repository analytics." },
+  { name: "Azure DevOps", category: "Version Control", desc: "Connect Azure DevOps for repository and pipeline analytics." },
+  { name: "Zendesk", category: "Support", desc: "Connect Zendesk for support ticket analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/zendesk" },
+  { name: "Freshdesk", category: "Support", desc: "Connect Freshdesk for support analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/freshdesk" },
+  { name: "Intercom", category: "Support", desc: "Connect Intercom for customer messaging analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/intercom" },
+  { name: "Gorgias", category: "Support", desc: "Connect Gorgias for ecommerce support analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/gorgias" },
+  { name: "Help Scout", category: "Support", desc: "Connect Help Scout for support analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/helpscout" },
+  { name: "LiveAgent", category: "Support", desc: "Connect LiveAgent for helpdesk analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/liveagent" },
+  { name: "Crisp", category: "Support", desc: "Connect Crisp for live chat analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/crisp" },
+  { name: "Tidio", category: "Support", desc: "Connect Tidio for chatbot and live chat analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/tidio" },
+  { name: "LiveChat", category: "Support", desc: "Connect LiveChat for customer support analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/livechat" },
+  { name: "Notion", category: "Content & Docs", desc: "Connect Notion for workspace analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/notion" },
+  { name: "Confluence", category: "Content & Docs", desc: "Connect Confluence for documentation analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/confluence" },
+  { name: "Airtable", category: "Content & Docs", desc: "Connect Airtable for spreadsheet database analytics." },
+  { name: "Google Sheets", category: "Content & Docs", desc: "Connect Google Sheets for spreadsheet data access." },
+  { name: "Coda", category: "Content & Docs", desc: "Connect Coda for document analytics." },
+  { name: "Baserow", category: "Content & Docs", desc: "Connect Baserow for database analytics." },
+  { name: "WordPress", category: "CMS", desc: "Connect WordPress for content management analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/wordpress" },
+  { name: "Ghost", category: "CMS", desc: "Connect Ghost for publishing analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/ghost" },
+  { name: "Strapi", category: "CMS", desc: "Connect Strapi headless CMS.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/strapi" },
+  { name: "Sanity", category: "CMS", desc: "Connect Sanity structured content platform.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/sanity" },
+  { name: "Prismic", category: "CMS", desc: "Connect Prismic for headless CMS analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/prismic" },
+  { name: "Instagram", category: "Social Media", desc: "Connect Instagram for social media analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/instagram" },
+  { name: "X (Twitter)", category: "Social Media", desc: "Connect X or Twitter for social media analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/twitter" },
+  { name: "YouTube", category: "Social Media", desc: "Connect YouTube for video analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/youtube" },
+  { name: "TikTok", category: "Social Media", desc: "Connect TikTok for organic content analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/tiktok-organic" },
+  { name: "Reddit", category: "Social Media", desc: "Connect Reddit for community analytics.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/reddit" },
+  { name: "StagingPro", category: "VortexIQ", desc: "BigCommerce staging environment management." },
+  { name: "RollbackPro", category: "VortexIQ", desc: "BigCommerce backup and restore." },
+  { name: "VortexIQ Backup", category: "VortexIQ", desc: "Shopify store backup and restore." },
+  { name: "VortexIQ Staging", category: "VortexIQ", desc: "Shopify staging environment and migration." },
+  { name: "Viva Payments App", category: "VortexIQ", desc: "Viva Payments order and subscription management.", docUrl: "https://docs.vortexiq.ai/nerve-centre/kpi-cards/viva-payments" },
 ];

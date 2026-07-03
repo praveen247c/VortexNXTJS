@@ -88,11 +88,16 @@ const css = `
 .int-dir-cats button:hover{border-color:var(--border-brand);color:var(--primary)}
 .int-dir-cats button.on{background:var(--surface-tint);border-color:var(--border-brand);color:var(--brand-purple)}
 .int-dir-cats button span{opacity:.55;margin-left:.3rem}
-.int-dir-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:.7rem}
-.int-dir-tile{display:flex;align-items:center;gap:.7rem;padding:.7rem .85rem;border:1px solid var(--border-dark);border-radius:12px;background:var(--white);transition:border-color .2s,box-shadow .3s,transform .2s}
+.int-dir-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.7rem}
+.int-dir-tile{display:flex;align-items:flex-start;gap:.75rem;padding:.85rem 1rem;border:1px solid var(--border-dark);border-radius:12px;background:var(--white);transition:border-color .2s,box-shadow .3s,transform .2s;text-decoration:none;color:inherit}
 .int-dir-tile:hover{border-color:var(--border-brand);box-shadow:var(--shadow-md);transform:translateY(-1px)}
-.int-dir-mono{flex:none;width:34px;height:34px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;background:var(--surface-tint);border:1px solid var(--border-brand);font-family:var(--font-heading);font-weight:600;font-size:.8rem;color:var(--brand-purple)}
-.int-dir-name{font-size:.9rem;color:var(--primary);font-weight:500;line-height:1.2;flex:1;min-width:0}
+.int-dir-tile--link:hover .int-dir-arrow{color:var(--brand-purple);transform:translateX(2px)}
+.int-dir-mono{flex:none;width:34px;height:34px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;background:var(--surface-tint);border:1px solid var(--border-brand);font-family:var(--font-heading);font-weight:600;font-size:.8rem;color:var(--brand-purple);margin-top:1px}
+.int-dir-body{display:flex;flex-direction:column;gap:.15rem;flex:1;min-width:0}
+.int-dir-name{font-size:.92rem;color:var(--primary);font-weight:600;line-height:1.25}
+.int-dir-desc{font-size:.8rem;color:var(--text-body);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.int-dir-arrow{flex:none;color:var(--text-faded);font-size:.95rem;transition:color .2s,transform .2s;margin-top:1px}
+.int-dir-foot{margin-top:1.4rem;font-size:.86rem}
 .int-dir-soon{flex:none;font-family:var(--font-mono);font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-faded);background:var(--surface-soft);border:1px solid var(--border-dark);border-radius:999px;padding:.18rem .45rem}
 .int-dir-empty{margin-top:1.5rem}
 `;
@@ -345,8 +350,9 @@ export default function Page() {
               <div className="eyebrow">The directory</div>
               <h2>Browse every integration.</h2>
               <p className="muted" style={{ fontSize: "1.06rem" }}>
-                {CONNECTOR_STATS.live} integrations are live today, with {CONNECTOR_STATS.planned} more on the
-                roadmap. Search the list or filter by category. New connectors ship continuously.
+                {CONNECTOR_STATS.total} integrations across your commerce stack. Search the list or filter by
+                category, and open any documented connector to see exactly what it tracks. New connectors ship
+                continuously.
               </p>
             </div>
             <ConnectorDirectory />
