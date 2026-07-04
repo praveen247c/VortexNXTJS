@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HubSpotForm from "@/components/HubSpotForm";
+import { pageOpenGraph } from "@/lib/seo";
+
+const TITLE = "Agency Partner Programme | Grow with AI | Vortex IQ";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/partners/agency-program" },
-  title: "Agency Partner Programme | Grow with AI | Vortex IQ",
+  title: TITLE,
   description:
     "Turn your agency into a proactive AI operations partner. Monitor every client store, bill for outcomes, and earn recurring revenue with the Vortex IQ Agency Partner Programme.",
-  openGraph: { description: "Grow your client base without growing headcount. The Vortex IQ Agency Partner Programme: always-on monitoring, recurring revenue share, and co-sell." },
+  openGraph: pageOpenGraph({
+    title: TITLE,
+    description: "Grow your client base without growing headcount. The Vortex IQ Agency Partner Programme: always-on monitoring, recurring revenue share, and co-sell.",
+    path: "/partners/agency-program",
+  }),
 };
 
 const css = `

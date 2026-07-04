@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { pageOpenGraph } from "@/lib/seo";
+
+const TITLE = "Privacy Policy | Vortex IQ";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/privacy-policy" },
-  title: "Privacy Policy | Vortex IQ",
+  title: TITLE,
   description:
     "How Vortex IQ collects, uses, and protects your personal data. A plain-English summary of our privacy practices under UK GDPR and what choices you have.",
-  openGraph: { description: "How Vortex IQ collects, uses, and protects your personal data under UK GDPR. A plain-English summary of our privacy practices and your rights." },
+  openGraph: pageOpenGraph({
+    title: TITLE,
+    description: "How Vortex IQ collects, uses, and protects your personal data under UK GDPR. A plain-English summary of our privacy practices and your rights.",
+    path: "/privacy-policy",
+  }),
 };
 
 const css = `

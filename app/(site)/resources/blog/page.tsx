@@ -4,17 +4,16 @@ import Link from "next/link";
 import PostFeed, { formatDate, type PostCard } from "@/components/PostFeed";
 import { client } from "@/sanity/lib/client";
 import { categoriesQuery, postsQuery } from "@/sanity/lib/queries";
+import { pageOpenGraph } from "@/lib/seo";
+
+const TITLE = "Blog & News · Vortex IQ";
+const DESCRIPTION = "Product updates, insights and news from Vortex IQ.";
 
 export const metadata: Metadata = {
-  title: "Blog & News · Vortex IQ",
-  description: "Product updates, insights and news from Vortex IQ.",
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: "/resources/blog" },
-  openGraph: {
-    type: "website",
-    title: "Blog & News · Vortex IQ",
-    description: "Product updates, insights and news from Vortex IQ.",
-    url: "/resources/blog",
-  },
+  openGraph: pageOpenGraph({ title: TITLE, description: DESCRIPTION, path: "/resources/blog" }),
 };
 
 export const revalidate = 60;

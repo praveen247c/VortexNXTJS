@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import { faqPageLd, type Faq } from "@/lib/structured-data";
+import { pageOpenGraph } from "@/lib/seo";
 import { css, html } from "./content";
 
+const TITLE = "What is an AI Operating System for E-Commerce? | Vortex IQ";
+
 export const metadata: Metadata = {
-  title: "What is an AI Operating System for E-Commerce? | Vortex IQ",
+  title: TITLE,
   description:
     "A plain-English definition of the AI Operating System for e-commerce: one operating layer that detects what is wrong across your stack, explains why, and helps fix it safely, with a human approving every change.",
   alternates: { canonical: "/what-is-ai-os-for-ecommerce" },
-  openGraph: {
+  openGraph: pageOpenGraph({
+    title: TITLE,
     description:
       "A plain-English definition of the AI Operating System for e-commerce, why the category exists, and how the detect-diagnose-act-learn loop works.",
-  },
+    path: "/what-is-ai-os-for-ecommerce",
+  }),
 };
 
 // Single source of truth: the visible FAQ AND the FAQPage JSON-LD both render

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { policies, policyBySlug, policySlugs } from "../policies";
+import { pageOpenGraph, seoTitle } from "@/lib/seo";
 
 const css = `
 /* ============ Trust policy — page styles (built on the shared design system) ============ */
@@ -53,12 +54,13 @@ export async function generateMetadata({
   const { slug } = await params;
   const p = policyBySlug[slug];
   if (!p) return { title: "Trust Centre | Vortex IQ" };
-  const title = `${p.title} | Vortex IQ Trust Centre`;
+  const title = seoTitle(p.title, " | Vortex IQ Trust Centre");
+  const path = `/trust/${slug}`;
   return {
     title,
     description: p.blurb,
-    alternates: { canonical: `/trust/${slug}` },
-    openGraph: { title, description: p.blurb, url: `/trust/${slug}` },
+    alternates: { canonical: path },
+    openGraph: pageOpenGraph({ title, description: p.blurb, path }),
   };
 }
 

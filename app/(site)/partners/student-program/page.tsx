@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import HubSpotForm from "@/components/HubSpotForm";
+import { pageOpenGraph } from "@/lib/seo";
+
+const TITLE = "Student Programme | AI Career Launchpad | Vortex IQ";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/partners/student-program" },
-  title: "Student Programme | AI Career Launchpad | Vortex IQ",
+  title: TITLE,
   description:
     "Launch your AI career with the Vortex IQ Student Programme: real projects inside a fast-moving commerce-AI team, 1:1 mentorship, and a path into the industry.",
-  openGraph: { description: "Build real agents on a live AI platform. The Vortex IQ Student Programme: real projects, 1:1 mentorship, and a path into an AI commerce career." },
+  openGraph: pageOpenGraph({
+    title: TITLE,
+    description: "Build real agents on a live AI platform. The Vortex IQ Student Programme: real projects, 1:1 mentorship, and a path into an AI commerce career.",
+    path: "/partners/student-program",
+  }),
 };
 
 const css = `

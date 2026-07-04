@@ -11,6 +11,7 @@ import { urlForImage } from "@/sanity/lib/image";
 import { postBySlugQuery, postSlugsQuery } from "@/sanity/lib/queries";
 import { blogPostingLd, breadcrumbLd } from "@/lib/structured-data";
 import { absoluteUrl } from "@/lib/site";
+import { pageOpenGraph, seoTitle, truncateDescription } from "@/lib/seo";
 
 export const revalidate = 60;
 
@@ -69,8 +70,9 @@ export async function generateMetadata({
   const post = await getPost(slug);
   if (!post) return { title: "Blog · Vortex IQ" };
 
-  const title = `${post.seoTitle || post.title} · Vortex IQ`;
-  const description = post.seoDescription || post.excerpt;
+  const title = seoTitle(post.seoTitle || post.title);
+  const rawDescription = post.seoDescription || post.excerpt;
+  const description = rawDescription ? truncateDescription(rawDescription) : undefined;
   const path = `/resources/blog/${slug}`;
   const ogImage = post.seoOgImage?.asset
     ? urlForImage(post.seoOgImage).width(1200).height(630).fit("crop").url()
@@ -83,7 +85,7 @@ export async function generateMetadata({
     description,
     alternates: { canonical: post.seoCanonicalUrl || path },
     robots: post.seoNoIndex ? { index: false, follow: false } : undefined,
-    openGraph: { type: "article", title, description, url: path, images: [ogImage] },
+    openGraph: pageOpenGraph({ title, description: description ?? "", type: "article", path, image: { url: ogImage, width: 1200, height: 630 } }),
     twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
 }

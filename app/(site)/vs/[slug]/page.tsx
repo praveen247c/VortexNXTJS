@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { comparisons, comparisonBySlug, comparisonSlugs } from "../comparisons";
 import { css } from "../styles";
+import { pageOpenGraph } from "@/lib/seo";
 
 export function generateStaticParams() {
   return comparisonSlugs.map((slug) => ({ slug }));
@@ -16,13 +17,17 @@ export async function generateMetadata({
   const { slug } = await params;
   const c = comparisonBySlug(slug);
   if (!c) return {};
+  const title = `Vortex IQ vs ${c.name} | Vortex IQ`;
+  const path = `/vs/${c.slug}`;
   return {
-    title: `Vortex IQ vs ${c.name} | Vortex IQ`,
+    title,
     description: `A neutral, source-cited comparison of Vortex IQ and ${c.name}, side by side across platforms, scope, actions, approval and rollback. Facts only, then verify on your store.`,
-    alternates: { canonical: `/vs/${c.slug}` },
-    openGraph: {
+    alternates: { canonical: path },
+    openGraph: pageOpenGraph({
+      title,
       description: `How Vortex IQ, the AI Operating System for e-commerce, compares with ${c.name}: checkable facts from public sources.`,
-    },
+      path,
+    }),
   };
 }
 

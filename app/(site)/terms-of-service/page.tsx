@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { pageOpenGraph } from "@/lib/seo";
+
+const TITLE = "Terms of Service | Vortex IQ";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/terms-of-service" },
-  title: "Terms of Service | Vortex IQ",
+  title: TITLE,
   description:
     "The terms that govern your use of the Vortex IQ AI Operating System for e-commerce. A plain-English summary of the agreement between you and Vortex IQ Ltd.",
-  openGraph: { description: "The terms that govern your use of the Vortex IQ AI Operating System for e-commerce, in plain English. The agreement between you and Vortex IQ Ltd." },
+  openGraph: pageOpenGraph({
+    title: TITLE,
+    description: "The terms that govern your use of the Vortex IQ AI Operating System for e-commerce, in plain English. The agreement between you and Vortex IQ Ltd.",
+    path: "/terms-of-service",
+  }),
 };
 
 const css = `

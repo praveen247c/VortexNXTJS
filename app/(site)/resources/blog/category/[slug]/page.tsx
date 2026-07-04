@@ -9,6 +9,7 @@ import {
   categorySlugsQuery,
   postsByCategoryQuery,
 } from "@/sanity/lib/queries";
+import { pageOpenGraph } from "@/lib/seo";
 
 export const revalidate = 60;
 
@@ -49,16 +50,12 @@ export async function generateMetadata({
   if (!category) return { title: "Blog · Vortex IQ" };
   const description = category.description || `Articles in ${category.title}.`;
   const path = `/resources/blog/category/${slug}`;
+  const title = `${category.title} · Vortex IQ Blog`;
   return {
-    title: `${category.title} · Vortex IQ Blog`,
+    title,
     description,
     alternates: { canonical: path },
-    openGraph: {
-      type: "website",
-      title: `${category.title} · Vortex IQ Blog`,
-      description,
-      url: path,
-    },
+    openGraph: pageOpenGraph({ title, description, path }),
   };
 }
 
