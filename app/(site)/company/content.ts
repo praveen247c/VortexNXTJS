@@ -29,6 +29,7 @@ export const css = `/* scoped to .company-page so nothing leaks into the shared 
 .company-page .company-awards{margin-top:1.6rem}
 .company-page .company-team{margin-top:2.6rem}
 .company-page .company-role{font-family:var(--font-mono);font-size:.82rem;color:var(--text-body);letter-spacing:.01em}
+.company-page .company-photo{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border-dark);display:block;margin-bottom:1.2rem;background:var(--surface-soft)}
 .company-page .company-social{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;border:1px solid var(--border-dark);color:var(--text-body);margin-top:1rem;transition:background .2s,border-color .2s,color .2s}
 .company-page .company-social svg{width:15px;height:15px}
 .company-page .company-social:hover{background:var(--brand-purple);border-color:var(--brand-purple);color:#fff}
@@ -148,6 +149,7 @@ export const html = `<div class="company-page">
         <p class="company-clients-label">Merchants and teams that work with Vortex IQ</p>
         <div class="company-clients-row">
           <span>Krispy Kreme</span>
+          <span>Avios</span>
           <span>Supreme CBD</span>
           <span>Crown Packaging</span>
           <span>Glerup / The Revere Group</span>
@@ -170,15 +172,16 @@ export const html = `<div class="company-page">
       <h2>Investors who know the category.</h2>
       <p class="lede reveal">Vortex IQ is backed by Sure Valley Ventures and Techstars, and recognised across the AI and retail-tech ecosystem.</p>
       <div class="grid grid-2 company-backers reveal">
-        <div class="card card--tint"><h3>Sure Valley Ventures</h3><p class="muted">Investor.</p></div>
-        <div class="card card--tint"><h3>Techstars</h3><p class="muted">Investor and accelerator.</p></div>
+        <div class="card card--tint"><h3>Sure Valley Ventures</h3><p class="muted">Investor.</p><a class="textlink" style="display:block;margin-top:.7rem" href="https://www.svv.ai/" target="_blank" rel="noopener noreferrer">svv.ai &rarr;</a></div>
+        <div class="card card--tint"><h3>Techstars</h3><p class="muted">Investor and accelerator.</p><a class="textlink" style="display:block;margin-top:.7rem" href="https://www.techstars.com/" target="_blank" rel="noopener noreferrer">techstars.com &rarr;</a></div>
       </div>
       <div class="grid grid-3 company-awards">
-        <div class="card reveal"><h3>RAISE Your Hack 2025</h3><p class="muted">Winner, Vultr Track.</p></div>
-        <div class="card reveal"><h3>Microsoft GenAI Accelerator</h3><p class="muted">Elite Partner.</p></div>
+        <div class="card reveal"><h3>RAISE Your Hack 2025</h3><p class="muted">Winner, Vultr Track and the Fetch.ai &amp; Coral Protocol track, for Autonomous Agents from APIs, outperforming 922 teams among 6,000+ developers at the RAISE Summit, Carrousel du Louvre, Paris.</p><a class="textlink" style="display:block;margin-top:.7rem" href="https://www.youtube.com/watch?v=ciADZ-Q2XjM" target="_blank" rel="noopener noreferrer">Watch the win (31:53) &rarr;</a><a class="textlink" style="display:block;margin-top:.4rem" href="https://lablab.ai/ai-articles/lablab-hackathon-success-stories-part-1" target="_blank" rel="noopener noreferrer">Read: lablab.ai feature &rarr;</a></div>
+        <div class="card reveal"><h3>Microsoft GenAI Accelerator</h3><p class="muted">Elite Partner.</p><a class="textlink" style="display:block;margin-top:.7rem" href="https://www.microsoft.com/en-gb/microsoft-cloud/blog/cross-industry/2024/12/09/announcing-12-companies-selected-for-microsoft-uk-genai-accelerator/" target="_blank" rel="noopener noreferrer">View announcement &rarr;</a></div>
         <div class="card reveal"><h3>RetailTech 50 (2025)</h3><p class="muted">Business Cloud.</p></div>
-        <div class="card reveal"><h3>Startup Battlefield 2024</h3><p class="muted">TechCrunch.</p></div>
+        <div class="card reveal"><h3>Startup Battlefield 2024</h3><p class="muted">TechCrunch.</p><a class="textlink" style="display:block;margin-top:.7rem" href="https://techcrunch.com/startup-battlefield/company/vortex-iq/" target="_blank" rel="noopener noreferrer">View profile &rarr;</a></div>
         <div class="card reveal"><h3>Focal W24</h3><p class="muted">Demo Day.</p></div>
+        <div class="card reveal"><h3>BigCommerce Elite Partner</h3><p class="muted">AI-Pilots Elite tier.</p><a class="textlink" style="display:block;margin-top:.7rem" href="https://www.linkedin.com/posts/bigcommerce_bigcommerce-vortexiq-aiinecommerce-activity-7327814886913118208-ZMV6/" target="_blank" rel="noopener noreferrer">View announcement &rarr;</a></div>
       </div>
     </div>
   </section>
@@ -190,21 +193,25 @@ export const html = `<div class="company-page">
       <p class="lede reveal">Built by people who lived the problem.</p>
       <div class="grid grid-4 company-team">
         <div class="card reveal">
+          <img class="company-photo" src="/assets/webflow/susant.jpg" alt="Susant Patro" loading="lazy" />
           <h3>Susant Patro</h3>
           <p class="company-role">CEO</p>
           <a class="company-social" href="https://www.linkedin.com/in/susantpatro247/" target="_blank" rel="noopener noreferrer" aria-label="Susant Patro on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.51C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.74C24 .78 23.2 0 22.22 0z" /></svg></a>
         </div>
         <div class="card reveal">
+          <img class="company-photo" src="/assets/webflow/sambi.jpg" alt="Sambit Patra" loading="lazy" />
           <h3>Sambit Patra</h3>
           <p class="company-role">COO</p>
           <a class="company-social" href="https://www.linkedin.com/in/sambit-patra-4764a4184/" target="_blank" rel="noopener noreferrer" aria-label="Sambit Patra on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.51C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.74C24 .78 23.2 0 22.22 0z" /></svg></a>
         </div>
         <div class="card reveal">
+          <img class="company-photo" src="/assets/webflow/jaiganesh.jpg" alt="Jaiganesh V." loading="lazy" />
           <h3>Jaiganesh V.</h3>
           <p class="company-role">CTO</p>
           <a class="company-social" href="https://www.linkedin.com/in/jaiganesh-vanasubramanian/" target="_blank" rel="noopener noreferrer" aria-label="Jaiganesh V. on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.51C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.74C24 .78 23.2 0 22.22 0z" /></svg></a>
         </div>
         <div class="card reveal">
+          <img class="company-photo" src="/assets/webflow/benjamin.jpg" alt="Benjamin Gisvold" loading="lazy" />
           <h3>Benjamin Gisvold</h3>
           <p class="company-role">CRO</p>
           <a class="company-social" href="https://www.linkedin.com/in/bgisvold/" target="_blank" rel="noopener noreferrer" aria-label="Benjamin Gisvold on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.51C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.74C24 .78 23.2 0 22.22 0z" /></svg></a>
@@ -236,7 +243,7 @@ export const html = `<div class="company-page">
         </div>
         <div class="card">
           <h3>History</h3>
-          <p class="muted">Founded June 2023 by the team behind 247 Commerce, an agency running BigCommerce and Adobe Commerce stores since 2011 and winner of Adobe Commerce Rockstar 2023. 247 Commerce joined Vortex IQ as its managed-services arm in 2026. <a class="textlink" href="/about-us">Read the story &rarr;</a></p>
+          <p class="muted">Founded June 2023 by the team behind 247 Commerce, an agency running BigCommerce, Shopify and Adobe Commerce stores since 2011 and winner of Adobe Commerce Rockstar 2023. 247 Commerce joined Vortex IQ as its managed-services arm in 2026. <a class="textlink" href="/about-us">Read the story &rarr;</a></p>
         </div>
       </div>
     </div>
