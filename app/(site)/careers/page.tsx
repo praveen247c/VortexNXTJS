@@ -4,9 +4,9 @@ import HubSpotForm from "@/components/HubSpotForm";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/careers" },
-  title: "Careers at Vortex IQ | Build the AI OS for Commerce",
+  title: "Careers at Vortex IQ | Build the AI Operating System for Commerce",
   description:
-    "We are hiring across engineering, AI, product, and go-to-market. Help build the world's first AI Operating System for e-commerce: empowerment, not replacement.",
+    "We are hiring across engineering, AI, product, and go-to-market. Help build the AI Operating System for e-commerce: empowerment, not replacement.",
 };
 
 const css = `
