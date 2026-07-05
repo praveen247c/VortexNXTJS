@@ -318,6 +318,13 @@ export default function Page() {
                   </div>
                 </div>
                 <div className="comp-row">
+                  <span className="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12 11 14 15 10" /><path d="M21 12c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6l8-3 8 3Z" /></svg></span>
+                  <div className="comp-tx">
+                    <b>SOC 2</b>
+                    <span>SOC 2 Type II audit in progress. We will publish the completed report here rather than claim it early.</span>
+                  </div>
+                </div>
+                <div className="comp-row">
                   <span className="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z" /></svg></span>
                   <div className="comp-tx">
                     <b>UK GDPR & EU GDPR</b>
@@ -338,6 +345,13 @@ export default function Page() {
                     <span>We use a small set of vetted cloud and AI sub-processors to run the platform. A current list is available on request so you can complete your own due diligence.</span>
                   </div>
                 </div>
+                <div className="comp-row">
+                  <span className="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="m12 2 8 4v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6l8-4Z" /><path d="m8.5 12 2.5 2.5 5-5" /></svg></span>
+                  <div className="comp-tx">
+                    <b>BigCommerce Elite Partner</b>
+                    <span>Recognised in BigCommerce&apos;s AI-Pilots Elite tier, its highest technology-partner tier, following the Microsoft GenAI Accelerator.</span>
+                  </div>
+                </div>
               </div>
 
               <aside className="reveal">
@@ -356,8 +370,10 @@ export default function Page() {
               </aside>
             </div>
             <p className="muted reveal" style={{ fontSize: ".88rem", marginTop: "2rem", maxWidth: "70ch" }}>
-              We only claim what we hold today: ISO 27001 certification and GDPR alignment. We will not overstate
-              our posture. If a framework is on the roadmap rather than in place, we will say so.
+              We only claim what we hold today: ISO 27001 certification, GDPR alignment, and BigCommerce Elite
+              Partner status. SOC 2 is genuinely in progress, not yet complete, and we say so rather than
+              implying otherwise. We will not overstate our posture; if a framework is on the roadmap rather
+              than in place, we will say so.
             </p>
           </div>
         </section>
