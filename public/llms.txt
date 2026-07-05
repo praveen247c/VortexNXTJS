@@ -7,7 +7,7 @@
 - [Homepage](https://www.vortexiq.ai): one-page overview of the platform, value proposition, and proof.
 - [AI OS Platform Overview](https://www.vortexiq.ai/ai-os-platform): how the closed loop and the six pillars work together.
 - [Product Tour](https://www.vortexiq.ai/product-tour): guided walkthrough of the unified command centre.
-- [Pricing](https://www.vortexiq.ai/pricing): Foundation, Growth, Enterprise and OmniChannel plans, feature comparison and add-ons. Plans start from £399 per month (GBP) with a 14-day free trial.
+- [Pricing](https://www.vortexiq.ai/pricing): Foundation, Growth, Enterprise and OmniChannel plans, feature comparison and add-ons. Foundation starts from £399/$399 per month billed annually (20% off; £499/$499 billed monthly) with a 14-day free trial. Prices show in GBP for UK visitors and USD everywhere else, including the US; the figure itself is the same either way.
 - [Solutions by Role](https://www.vortexiq.ai/solutions): choose your path, merchants, agencies, or tech partners.
 - [Integrations](https://www.vortexiq.ai/solutions/integrations): 200+ connectors and 6,000+ KPIs across e-commerce, marketing, analytics, payments, support and operations.
 - [Customer Stories](https://www.vortexiq.ai/customer-stories): real merchant outcomes with verified numbers.
@@ -53,4 +53,4 @@ BigCommerce, Shopify, Adobe Commerce (Magento) and WooCommerce.
 - 1,400% organic traffic growth (Google Analytics) after the SEO and GEO rollout.
 - Across 60+ store audits: 749 issues surfaced, 55% resolved automatically, approval-gated and reversible.
 - BigCommerce AI-Pilots partner (Elite).
-- ISO 27001 certified. SOC 2 in progress. Data processed in the United Kingdom.
+- ISO 27001 certified. SOC 2 in progress. Data processing options for the United Kingdom and USA.
