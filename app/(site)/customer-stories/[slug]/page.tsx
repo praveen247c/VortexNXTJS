@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { caseStudies, caseStudyBySlug } from "../case-studies";
+import ShareLinkedIn from "@/components/ShareLinkedIn";
 
 export function generateStaticParams() {
   return caseStudies.map((c) => ({ slug: c.slug }));
@@ -111,6 +112,9 @@ export default async function Page({
                 <h1 className="reveal in">{study.title}</h1>
                 <p className="lede reveal in">{study.lede}</p>
                 <div className="eyebrow reveal in" style={{ marginTop: "1.6rem" }}>{study.eyebrow}</div>
+                <div className="reveal in" style={{ marginTop: "1.4rem" }}>
+                  <ShareLinkedIn path={`/customer-stories/${study.slug}`} />
+                </div>
               </div>
               <div className="cs-logo reveal in">
                 {/* eslint-disable-next-line @next/next/no-img-element */}

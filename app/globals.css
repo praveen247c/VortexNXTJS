@@ -560,6 +560,9 @@ main .section--hero{padding-top:10rem}
 .post-cover{margin-top:2.4rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-dark)}
 .post-cover img{width:100%;height:auto;display:block}
 
+.share-linkedin{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.78rem;color:var(--brand-purple);background:var(--surface-tint);border:1px solid var(--border-brand);border-radius:var(--radius-pill);padding:.5rem 1rem;text-decoration:none;transition:border-color .2s,box-shadow .2s}
+.share-linkedin:hover{border-color:var(--border-strong);box-shadow:var(--shadow-sm)}
+
 /* portable-text prose */
 .prose{margin-top:2.8rem;font-size:1.0625rem;line-height:1.7;color:var(--primary)}
 .prose .prose-p{margin:0 0 1.3rem;color:var(--text-body)}

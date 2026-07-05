@@ -6,6 +6,7 @@ import type { PortableTextBlock } from "sanity";
 
 import PortableText from "@/components/PortableText";
 import JsonLd from "@/components/JsonLd";
+import ShareLinkedIn from "@/components/ShareLinkedIn";
 import { client } from "@/sanity/lib/client";
 import { urlForImage } from "@/sanity/lib/image";
 import { postBySlugQuery, postSlugsQuery } from "@/sanity/lib/queries";
@@ -151,6 +152,10 @@ export default async function BlogPostPage({
             {post.publishedAt ? (
               <span>{formatDate(post.publishedAt)}</span>
             ) : null}
+          </div>
+
+          <div className="reveal in" style={{ marginTop: "1.2rem" }}>
+            <ShareLinkedIn path={`/resources/blog/${slug}`} />
           </div>
 
           {post.coverImage?.asset ? (
