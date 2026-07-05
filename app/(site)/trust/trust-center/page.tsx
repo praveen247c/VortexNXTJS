@@ -301,6 +301,66 @@ export default function Page() {
           </div>
         </section>
 
+        {/* PENETRATION TESTING & ACCESS CONTROL */}
+        <section className="section">
+          <div className="container">
+            <div className="eyebrow reveal">Independently tested</div>
+            <h2 className="reveal" style={{ maxWidth: "22ch" }}>
+              Tested by an independent security firm, not just our own team.
+            </h2>
+            <p className="lede reveal" style={{ marginTop: "1.2rem", maxWidth: "70ch" }}>
+              Vortex IQ undergoes independent penetration testing by SecureLayer7 Technologies, using a Grey
+              Box methodology aligned with OWASP Top 10, OWASP ASVS 4.0.2, NIST SP 800-115 and PTES. The most
+              recent assessment ran from 2 to 4 June 2025 and identified seven findings, one critical, one
+              high and five low. Every finding was remediated and confirmed closed during the retest.
+            </p>
+            <div className="comp-list reveal" style={{ marginTop: "2.4rem" }}>
+              <div className="comp-row">
+                <span className="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4" /><path d="M6 21v-1a4 4 0 0 1 4-4h1" /><path d="M16 19h6" /><path d="m19 16-3 3 3 3" /></svg></span>
+                <div className="comp-tx">
+                  <b>Role-Based Access Control (RBAC)</b>
+                  <span>Available. Access is scoped by role and revocable.</span>
+                </div>
+              </div>
+              <div className="comp-row">
+                <span className="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="10" width="16" height="10" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg></span>
+                <div className="comp-tx">
+                  <b>Multi-factor authentication (MFA)</b>
+                  <span>Available.</span>
+                </div>
+              </div>
+              <div className="comp-row">
+                <span className="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" /><path d="M10 17l5-5-5-5" /><path d="M15 12H3" /></svg></span>
+                <div className="comp-tx">
+                  <b>Single Sign-On (SAML / OIDC)</b>
+                  <span>In progress.</span>
+                </div>
+              </div>
+              <div className="comp-row">
+                <span className="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></span>
+                <div className="comp-tx">
+                  <b>SCIM user provisioning</b>
+                  <span>Planned.</span>
+                </div>
+              </div>
+              <div className="comp-row">
+                <span className="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" /><path d="M14 2v6h6M9 13h6M9 17h4" /></svg></span>
+                <div className="comp-tx">
+                  <b>Audit logs</b>
+                  <span>Available. Every Action is logged immutably: who proposed it, who approved it, and what changed.</span>
+                </div>
+              </div>
+              <div className="comp-row">
+                <span className="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg></span>
+                <div className="comp-tx">
+                  <b>Session management</b>
+                  <span>Available.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* COMPLIANCE & CERTIFICATIONS */}
         <section className="section section--soft">
           <div className="container">
@@ -413,8 +473,9 @@ export default function Page() {
               See how the platform is running, in real time.
             </h2>
             <p className="lede reveal" style={{ marginTop: "1.2rem", marginBottom: "2.6rem" }}>
-              Our public status page shows live uptime and any active incidents. We monitor the platform around
-              the clock so issues are caught and communicated quickly.
+              Production environments are backed by a 99.9% monthly uptime SLA, a maximum of about 43.8
+              minutes of downtime a month. Our public status page shows live uptime and any active incidents,
+              and we monitor the platform around the clock so issues are caught and communicated quickly.
             </p>
             <a className="status-card reveal" href="https://monitor.vortexiq.ai/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
               <div className="status-left">
