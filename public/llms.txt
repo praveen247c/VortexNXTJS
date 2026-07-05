@@ -7,7 +7,7 @@
 - [Homepage](https://www.vortexiq.ai): one-page overview of the platform, value proposition, and proof.
 - [AI OS Platform Overview](https://www.vortexiq.ai/ai-os-platform): how the closed loop and the six pillars work together.
 - [Product Tour](https://www.vortexiq.ai/product-tour): guided walkthrough of the unified command centre.
-- [Pricing](https://www.vortexiq.ai/pricing): Foundation, Growth, Enterprise and OmniChannel plans, feature comparison and add-ons. Plans start from $399 per month with a 14-day free trial.
+- [Pricing](https://www.vortexiq.ai/pricing): Foundation, Growth, Enterprise and OmniChannel plans, feature comparison and add-ons. Plans start from £399 per month (GBP) with a 14-day free trial.
 - [Solutions by Role](https://www.vortexiq.ai/solutions): choose your path, merchants, agencies, or tech partners.
 - [Integrations](https://www.vortexiq.ai/solutions/integrations): 200+ connectors and 6,000+ KPIs across e-commerce, marketing, analytics, payments, support and operations.
 - [Customer Stories](https://www.vortexiq.ai/customer-stories): real merchant outcomes with verified numbers.
