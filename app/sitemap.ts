@@ -41,6 +41,8 @@ const STATIC_PATHS: { path: string; changeFrequency: MetadataRoute.Sitemap[numbe
   { path: "/partners/agency-program", changeFrequency: "monthly", priority: 0.5 },
   { path: "/partners/technology-program", changeFrequency: "monthly", priority: 0.5 },
   { path: "/partners/student-program", changeFrequency: "monthly", priority: 0.5 },
+  { path: "/partners/deal-registration", changeFrequency: "monthly", priority: 0.4 },
+  { path: "/platforms/bigcommerce", changeFrequency: "monthly", priority: 0.7 },
   { path: "/start-with-vortexiq", changeFrequency: "monthly", priority: 0.6 },
   { path: "/get-started", changeFrequency: "monthly", priority: 0.6 },
   { path: "/free-audit", changeFrequency: "monthly", priority: 0.7 },

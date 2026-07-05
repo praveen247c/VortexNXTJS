@@ -235,6 +235,9 @@ export default function Page() {
               <a className="btn" href="#apply" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>Become a partner</a>
               <Link className="btn btn--ghost" href="/partners" style={{ height: 56, padding: "0 32px", fontSize: "1.1rem" }}>View all partner programmes →</Link>
             </div>
+            <p className="muted reveal" style={{ marginTop: "1.6rem" }}>
+              Already a partner? <Link href="/partners/deal-registration">Register a deal →</Link>
+            </p>
           </div>
         </section>
       </main>
