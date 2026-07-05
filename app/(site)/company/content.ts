@@ -29,6 +29,9 @@ export const css = `/* scoped to .company-page so nothing leaks into the shared 
 .company-page .company-awards{margin-top:1.6rem}
 .company-page .company-team{margin-top:2.6rem}
 .company-page .company-role{font-family:var(--font-mono);font-size:.82rem;color:var(--text-body);letter-spacing:.01em}
+.company-page .company-social{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;border:1px solid var(--border-dark);color:var(--text-body);margin-top:1rem;transition:background .2s,border-color .2s,color .2s}
+.company-page .company-social svg{width:15px;height:15px}
+.company-page .company-social:hover{background:var(--brand-purple);border-color:var(--brand-purple);color:#fff}
 .company-page .company-facts{margin-top:2.6rem}
 .company-page .company-facts .card h3{color:var(--brand-purple)}
 @media(max-width:1024px){
@@ -189,18 +192,22 @@ export const html = `<div class="company-page">
         <div class="card reveal">
           <h3>Susant Patro</h3>
           <p class="company-role">CEO</p>
+          <a class="company-social" href="https://www.linkedin.com/in/susantpatro247/" target="_blank" rel="noopener noreferrer" aria-label="Susant Patro on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.51C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.74C24 .78 23.2 0 22.22 0z" /></svg></a>
         </div>
         <div class="card reveal">
           <h3>Sambit Patra</h3>
           <p class="company-role">COO</p>
+          <a class="company-social" href="https://www.linkedin.com/in/sambit-patra-4764a4184/" target="_blank" rel="noopener noreferrer" aria-label="Sambit Patra on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.51C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.74C24 .78 23.2 0 22.22 0z" /></svg></a>
         </div>
         <div class="card reveal">
           <h3>Jaiganesh V.</h3>
           <p class="company-role">CTO</p>
+          <a class="company-social" href="https://www.linkedin.com/in/jaiganesh-vanasubramanian/" target="_blank" rel="noopener noreferrer" aria-label="Jaiganesh V. on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.51C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.74C24 .78 23.2 0 22.22 0z" /></svg></a>
         </div>
         <div class="card reveal">
           <h3>Benjamin Gisvold</h3>
           <p class="company-role">CRO</p>
+          <a class="company-social" href="https://www.linkedin.com/in/bgisvold/" target="_blank" rel="noopener noreferrer" aria-label="Benjamin Gisvold on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.51C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.74C24 .78 23.2 0 22.22 0z" /></svg></a>
         </div>
       </div>
     </div>
