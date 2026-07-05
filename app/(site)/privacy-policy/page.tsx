@@ -26,11 +26,6 @@ const css = `
 .legal-hero h1{font-size:clamp(2.4rem,5vw,3.8rem);margin:0 0 1rem}
 .legal-updated{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--font-mono);font-size:.78rem;letter-spacing:.04em;color:var(--text-body)}
 .legal-updated svg{width:15px;height:15px;color:var(--brand-purple)}
-.legal-banner{display:flex;align-items:flex-start;gap:.85rem;margin-top:2rem;max-width:680px;background:var(--surface-tint);border:1px solid var(--border-brand);border-radius:var(--radius);padding:1rem 1.15rem}
-.legal-banner .bi{width:34px;height:34px;flex:none;border-radius:9px;background:var(--white);border:1px solid var(--border-brand);color:var(--brand-purple);display:flex;align-items:center;justify-content:center}
-.legal-banner .bi svg{width:17px;height:17px}
-.legal-banner p{font-family:var(--font-mono);font-size:.8rem;line-height:1.55;color:var(--text-body);margin:0}
-.legal-banner b{color:var(--brand-purple);font-weight:500}
 
 /* two-column layout */
 .legal-layout{display:grid;grid-template-columns:248px 1fr;gap:3.4rem;align-items:start}
@@ -112,13 +107,6 @@ export default function Page() {
               <div className="legal-updated reveal in">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
                 Last updated: June 2026
-              </div>
-              <div className="legal-banner reveal in">
-                <span className="bi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 8h.01M11 12h1v4h1" /></svg></span>
-                <p>
-                  <b>This is a plain-English summary provided for review.</b> The final, legally binding text is
-                  being finalised.
-                </p>
               </div>
             </div>
           </div>
