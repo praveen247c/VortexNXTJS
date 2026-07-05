@@ -185,18 +185,22 @@ export const html = `<div class="company-page">
       <div class="eyebrow">Team</div>
       <h2>The people behind the AI OS.</h2>
       <p class="lede reveal">Built by people who lived the problem.</p>
-      <div class="grid grid-3 company-team">
+      <div class="grid grid-4 company-team">
         <div class="card reveal">
           <h3>Susant Patro</h3>
-          <p class="company-role">Co-founder and CEO</p>
+          <p class="company-role">CEO</p>
         </div>
         <div class="card reveal">
           <h3>Sambit Patra</h3>
-          <p class="company-role">Co-founder</p>
+          <p class="company-role">COO</p>
         </div>
         <div class="card reveal">
           <h3>Jaiganesh V.</h3>
-          <p class="company-role">Co-founder</p>
+          <p class="company-role">CTO</p>
+        </div>
+        <div class="card reveal">
+          <h3>Benjamin Gisvold</h3>
+          <p class="company-role">CRO</p>
         </div>
       </div>
     </div>
@@ -223,6 +227,10 @@ export const html = `<div class="company-page">
           <h3>Security</h3>
           <p class="muted">ISO 27001 certified. SOC 2 in progress. Approval-gated AI, staging-first, one-click rollback, full audit trail.</p>
         </div>
+        <div class="card">
+          <h3>History</h3>
+          <p class="muted">Founded June 2023 by the team behind 247 Commerce, an agency running BigCommerce and Adobe Commerce stores since 2011 and winner of Adobe Commerce Rockstar 2023. 247 Commerce joined Vortex IQ as its managed-services arm in 2026. <a class="textlink" href="/about-us">Read the story &rarr;</a></p>
+        </div>
       </div>
     </div>
   </section>
@@ -230,10 +238,10 @@ export const html = `<div class="company-page">
   <section class="section final">
     <div class="container">
       <h2>Want the longer version?</h2>
-      <p class="lede reveal" style="margin:0 auto 2rem">Talk to the founding team, or see the AI OS run on a live store.</p>
+      <p class="lede reveal" style="margin:0 auto 2rem">Read the full story, from 247 Commerce to the AI Operating System, or talk to the founding team.</p>
       <div class="cta-row reveal" style="justify-content:center">
-        <a class="btn" href="/contact-us">Talk to the team</a>
-        <a class="btn btn--ghost" href="/ai-os-platform">See the platform</a>
+        <a class="btn" href="/about-us">Read our story</a>
+        <a class="btn btn--ghost" href="/contact-us">Talk to the team</a>
       </div>
     </div>
   </section>

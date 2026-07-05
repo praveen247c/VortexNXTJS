@@ -412,6 +412,13 @@ export default function Page() {
                     <span>Recognised in BigCommerce&apos;s AI-Pilots Elite tier, its highest technology-partner tier, following the Microsoft GenAI Accelerator.</span>
                   </div>
                 </div>
+                <div className="comp-row">
+                  <span className="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M8 21h8" /><path d="M12 17v4" /><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z" /><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3" /></svg></span>
+                  <div className="comp-tx">
+                    <b>Adobe Commerce Rockstar, Winner (2023)</b>
+                    <span>DryRun Pro, built by 247 Commerce (now a Vortex IQ company), won the Developer Tooling category at Adobe Commerce Rockstar, chosen from over 65 submissions and showcased on stage at Adobe Summit. Independently judged by Adobe&apos;s own engineering and product leadership.</span>
+                  </div>
+                </div>
               </div>
 
               <aside className="reveal">
