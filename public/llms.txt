@@ -48,9 +48,17 @@
 
 BigCommerce, Shopify, Adobe Commerce (Magento) and WooCommerce.
 
+## Company
+
+Vortex IQ Ltd, founded June 2023, headquartered in Brentford, London, England. Registered in England and Wales, No. 14925424. Built by the team behind 247 Commerce, a BigCommerce, Shopify and Adobe Commerce agency founded in 2011, which became a Vortex IQ company in 2026 and remains a distinct legal entity as its managed-services and delivery arm. Backed by Sure Valley Ventures and Techstars. See [Company](https://www.vortexiq.ai/company) and [About Us](https://www.vortexiq.ai/about-us) for the full story and team.
+
 ## Proof and trust
 
 - 1,400% organic traffic growth (Google Analytics) after the SEO and GEO rollout.
 - Across 60+ store audits: 749 issues surfaced, 55% resolved automatically, approval-gated and reversible.
 - BigCommerce AI-Pilots partner (Elite).
 - ISO 27001 certified. SOC 2 in progress. Data processing options for the United Kingdom and USA.
+- Winner, Adobe Commerce Rockstar 2023 (Developer Tooling category, chosen from over 65 submissions).
+- Winner, RAISE Your Hack 2025 (Vultr Track and the Fetch.ai & Coral Protocol track), outperforming 922 teams among 6,000+ developers.
+- Ranked 16th, Business Cloud RetailTech 50 (2026), up from 20th in 2025.
+- Selected for the Microsoft UK GenAI Accelerator (2024) and TechCrunch Startup Battlefield (2024).

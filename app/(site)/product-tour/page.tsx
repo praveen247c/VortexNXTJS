@@ -116,12 +116,8 @@ function Media({ image, alt, shot, file }: { image: string; alt: string; shot: s
   return (
     <div className="pt-media">
       <div className="pt-ph">
-        <span className="pt-ph-badge">Screenshot needed</span>
+        <span className="pt-ph-badge">Coming soon</span>
         <p className="pt-ph-what">{shot}</p>
-        <p className="pt-ph-file">
-          Drop at <code>/assets/product-tour/{file}</code>
-          <br />Real UI, anonymised data &middot; light mode &middot; &ge;1600px wide
-        </p>
       </div>
     </div>
   );

@@ -124,6 +124,10 @@ export const html = `<div class="limits-page">
           <summary>We do not overstate certifications.</summary>
           <p>We are ISO 27001 certified. SOC 2 is in progress, and we say &ldquo;in progress&rdquo; rather than implying a completion date we cannot yet commit to. See the Trust Centre for current status.</p>
         </details>
+        <details>
+          <summary>We have not yet completed an independent WCAG audit.</summary>
+          <p>The site is built with semantic HTML, keyboard-navigable controls and visible focus states, and we test with screen readers as we build. We have not commissioned an independent WCAG 2.1 conformance audit, so we do not claim a conformance level we have not verified. If you hit an accessibility barrier, tell us and we will fix it.</p>
+        </details>
       </div>
       <div class="cta-row reveal" style="margin-top:2.4rem">
         <a class="btn" href="/trust/trust-center">Visit the Trust Centre &rarr;</a>

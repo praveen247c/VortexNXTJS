@@ -78,7 +78,7 @@ export default function Page() {
               </span>
               <div className="eyebrow reveal in">Vortex IQ for BigCommerce</div>
               <h1 className="reveal in">
-                Built for BigCommerce merchants from <span className="grad">$5M to $100M GMV.</span>
+                Built for BigCommerce merchants from <span className="grad">$1M to $100M GMV.</span>
               </h1>
               <p className="lede reveal in">
                 Real staging and one-click rollback where BigCommerce&apos;s own sandbox stops, safe testing for
