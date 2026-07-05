@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ConnectorDirectory from "./ConnectorDirectory";
-import { CONNECTOR_STATS } from "./connectors";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/solutions/integrations" },
@@ -351,7 +350,7 @@ export default function Page() {
               <div className="eyebrow">The directory</div>
               <h2>Browse every integration.</h2>
               <p className="muted" style={{ fontSize: "1.06rem" }}>
-                {CONNECTOR_STATS.total} integrations across your commerce stack. Search the list or filter by
+                200+ integrations across your commerce stack. Search the list or filter by
                 category, and open any documented connector to see exactly what it tracks. New connectors ship
                 continuously.
               </p>
