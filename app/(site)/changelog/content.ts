@@ -29,7 +29,7 @@ export const html = `<div class="changelog-page">
     <div class="container">
       <div class="cl-hero">
         <div class="eyebrow reveal">Changelog</div>
-        <h1 class="reveal">What&rsquo;s <em class="hl">shipping</em> in the AI OS.</h1>
+        <h1 class="reveal">What&rsquo;s <em class="hl">shipping</em> in the AI OS this year.</h1>
         <p class="lede reveal">New connectors, capabilities and fixes, dated as they ship. Breaking changes are announced with notice. For the API deprecation policy and technical detail, see the developer docs.</p>
       </div>
     </div>
