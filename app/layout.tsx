@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import SiteAnalytics from "@/components/SiteAnalytics";
 import { SITE_URL } from "@/lib/site";
+import WebMcpProvider from "@/components/webmcp/WebMcpProvider";
+// import WebMcpConsole from "@/components/webmcp/WebMcpConsole"; // disabled for now
 
 const DEFAULT_TITLE = "The AI Operating System for E-Commerce · Vortex IQ";
 const DEFAULT_DESCRIPTION =
@@ -43,7 +45,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        {children}
+        {/* WebMCP: registers document.modelContext tools + mcp-b bridge.
+            See lib/webmcp/. Test console disabled for now. */}
+        <WebMcpProvider />
+        {/* <WebMcpConsole /> */}
+      </body>
       {/* Site-wide analytics & tracking (GA4, HubSpot, Leadfeeder, Vercel).
           Managed in components/SiteAnalytics.tsx — do not remove. */}
       <SiteAnalytics />
