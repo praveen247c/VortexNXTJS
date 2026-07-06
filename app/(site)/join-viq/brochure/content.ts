@@ -50,7 +50,7 @@ export const html = `<div class="brochure-read">
       <div class="br-hero">
         <div class="eyebrow reveal">Brochure</div>
         <h1 class="reveal">Vortex IQ, the <em class="hl">AI Operating System</em> for e-commerce.</h1>
-        <p class="lede reveal">Detect what is wrong. Understand why. Fix it safely. Across every platform you run. Here is the whole platform in one read. The PDF is on its way to your inbox too.</p>
+        <p class="lede reveal">Detect what is wrong. Understand why. Fix it safely. Across every platform you run. Here is the whole platform in one read. Prefer the PDF? <a class="textlink" href="/downloads/VortexIQ-Brochure.pdf">Download it here</a>.</p>
         <div class="br-toc reveal">
           <a href="#what">What it is</a>
           <a href="#pillars">The six pillars</a>

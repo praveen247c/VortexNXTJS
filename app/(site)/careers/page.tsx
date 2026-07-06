@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import HubSpotForm from "@/components/HubSpotForm";
 
 export const metadata: Metadata = {
@@ -245,7 +244,7 @@ export default function Page() {
                   <span className="chip chip--brand">Platform</span>
                   <span className="chip chip--brand">TypeScript</span>
                 </div>
-                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Engineering">Apply for Engineering →</a>
+                <a className="role-link" href="#apply">Apply for Engineering →</a>
               </div>
 
               <div className="card role-card reveal">
@@ -259,7 +258,7 @@ export default function Page() {
                   <span className="chip chip--brand">LLMs</span>
                   <span className="chip chip--brand">Evals</span>
                 </div>
-                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20AI%2FML">Apply for AI/ML →</a>
+                <a className="role-link" href="#apply">Apply for AI/ML →</a>
               </div>
 
               <div className="card role-card reveal">
@@ -273,7 +272,7 @@ export default function Page() {
                   <span className="chip chip--brand">UX</span>
                   <span className="chip chip--brand">Research</span>
                 </div>
-                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Product%20%26%20Design">Apply for Product & Design →</a>
+                <a className="role-link" href="#apply">Apply for Product & Design →</a>
               </div>
 
               <div className="card role-card reveal">
@@ -287,7 +286,7 @@ export default function Page() {
                   <span className="chip chip--brand">SDR</span>
                   <span className="chip chip--brand">Solutions</span>
                 </div>
-                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Sales">Apply for Sales →</a>
+                <a className="role-link" href="#apply">Apply for Sales →</a>
               </div>
 
               <div className="card role-card reveal">
@@ -301,7 +300,7 @@ export default function Page() {
                   <span className="chip chip--brand">CSM</span>
                   <span className="chip chip--brand">Support</span>
                 </div>
-                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Customer%20Success">Apply for Customer Success →</a>
+                <a className="role-link" href="#apply">Apply for Customer Success →</a>
               </div>
 
               <div className="card role-card reveal">
@@ -315,16 +314,10 @@ export default function Page() {
                   <span className="chip chip--brand">Demand gen</span>
                   <span className="chip chip--brand">Brand</span>
                 </div>
-                <a className="role-link" href="mailto:hey@vortexiq.ai?subject=Careers%20%E2%80%94%20Marketing%20%26%20Growth">Apply for Marketing & Growth →</a>
+                <a className="role-link" href="#apply">Apply for Marketing & Growth →</a>
               </div>
             </div>
 
-            <div className="cta-row reveal" style={{ marginTop: "2.8rem" }}>
-              <a className="btn btn--ghost btn--sm" href="https://www.vortexiq.ai/careers" target="_blank" rel="noopener noreferrer">See all open roles at Vortex IQ →</a>
-              <span className="muted" style={{ fontSize: ".94rem" }}>
-                Vortex IQ is an equal opportunity employer. We build a diverse team and an inclusive place to do great work.
-              </span>
-            </div>
           </div>
         </section>
 
@@ -365,11 +358,12 @@ export default function Page() {
         {/* FINAL CTA / APPLY */}
         <section className="section careers-final" id="apply">
           <div className="container">
-            <div className="eyebrow reveal" style={{ justifyContent: "center" }}>Don&apos;t see your role?</div>
-            <h2 className="reveal">Introduce yourself anyway.</h2>
+            <div className="eyebrow reveal" style={{ justifyContent: "center" }}>Apply</div>
+            <h2 className="reveal">Introduce yourself.</h2>
             <p className="lede reveal">
-              If you&apos;re excited about building the AI Operating System for commerce, we want to hear from you.
-              Tell us what you&apos;d love to work on and where you can have the biggest impact.
+              Whether it&apos;s one of the teams above or a role we haven&apos;t thought of yet, if you&apos;re excited
+              about building the AI Operating System for commerce, we want to hear from you. Tell us what
+              you&apos;d love to work on and where you can have the biggest impact.
             </p>
             <div className="careers-form-card reveal">
               <HubSpotForm portalId="24385350" formId="f419d113-fb6d-4841-9ca5-f3b4b7337ab2" region="na1" />

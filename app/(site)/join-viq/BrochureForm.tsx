@@ -86,13 +86,20 @@ export default function BrochureForm() {
           </div>
           <h3>Thanks{name ? `, ${name.split(" ")[0]}` : ""}: the brochure is on its way.</h3>
           <p className="muted" style={{ marginTop: ".7rem", maxWidth: "46ch", marginInline: "auto" }}>
-            We&apos;ll email the PDF to you shortly. No need to wait, though: read the whole brochure
-            online right now. Any questions, we&apos;re at{" "}
+            We&apos;ll email the PDF to you shortly. No need to wait, though: download it now or read
+            it online. Any questions, we&apos;re at{" "}
             <a href="mailto:hey@vortexiq.ai" style={{ color: "var(--brand-purple)" }}>hey@vortexiq.ai</a>.
           </p>
           <div className="bf-success-actions">
-            <a className="btn btn--sm" href="/join-viq/brochure">
-              Read the brochure now
+            <a className="btn btn--sm" href="/downloads/VortexIQ-Brochure.pdf" download>
+              Download the PDF
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ width: 15, height: 15 }}>
+                <path d="M12 3v12M7 11l5 5 5-5" />
+                <path d="M5 21h14" />
+              </svg>
+            </a>
+            <a className="btn btn--ghost btn--sm" href="/join-viq/brochure">
+              Read it online
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ width: 15, height: 15 }}>
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>

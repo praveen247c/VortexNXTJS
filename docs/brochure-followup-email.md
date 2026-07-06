@@ -4,10 +4,13 @@ The email HubSpot sends to a person who submits the brochure request form on
 `/join-viq`. Set it up as a form follow-up email, or a workflow triggered by a
 submission of the brochure form (see docs/README.md).
 
-Attach the brochure PDF, or link it (a hosted file or the on-site page
-`https://www.vortexiq.ai/join-viq/brochure`). Tone matches the brand: warm,
-concrete, no em dashes, no banned phrases. Personalisation tokens use HubSpot's
-`{{ contact.firstname }}` syntax; adjust to your portal's token names.
+The brochure PDF is hosted on the site:
+`https://www.vortexiq.ai/downloads/VortexIQ-Brochure.pdf` (source file in the
+repo at `public/downloads/VortexIQ-Brochure.pdf`). Attach it or link that URL,
+plus the on-site page `https://www.vortexiq.ai/join-viq/brochure`. Tone matches
+the brand: warm, concrete, no em dashes, no banned phrases. Personalisation
+tokens use HubSpot's `{{ contact.firstname }}` syntax; adjust to your portal's
+token names.
 
 ---
 
@@ -21,7 +24,9 @@ concrete, no em dashes, no banned phrases. Personalisation tokens use HubSpot's
 
 Hi {{ contact.firstname }},
 
-Thanks for requesting the Vortex IQ brochure. It is attached, and you can read it online any time here:
+Thanks for requesting the Vortex IQ brochure. It is attached, and you can also download it or read it online any time:
+
+**Download the PDF:** https://www.vortexiq.ai/downloads/VortexIQ-Brochure.pdf
 
 **Read the brochure:** https://www.vortexiq.ai/join-viq/brochure
 
@@ -55,7 +60,9 @@ The Vortex IQ team
 
 Hi {{ contact.firstname }},
 
-Here is the Vortex IQ brochure you asked for. Read the whole thing online in a couple of minutes:
+Here is the Vortex IQ brochure you asked for. Download the PDF, or read the whole thing online in a couple of minutes:
+
+**Download the PDF:** https://www.vortexiq.ai/downloads/VortexIQ-Brochure.pdf
 
 **Read the brochure:** https://www.vortexiq.ai/join-viq/brochure
 
