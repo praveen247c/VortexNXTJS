@@ -13,3 +13,7 @@ next-env.d.ts
 
 # local archives
 *.zip
+
+# MCP registry auth — private signing key must never be committed
+key.pem
+*.pem
