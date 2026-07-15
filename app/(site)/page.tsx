@@ -121,6 +121,90 @@ export default function Home() {
         </div>
       </section>
 
+      {/* infra: AI as infrastructure vs. chatbot */}
+      <section className="section" id="infra">
+        <div className="container">
+          <div className="infra-open reveal">
+            <div className="eyebrow" style={{ justifyContent: "center" }}>A different kind of AI</div>
+            <div className="infra-quote">
+              Most brands added a chatbot.<br />
+              We built an <em className="hl">AI operating system.</em>
+            </div>
+            <p className="infra-sub">Most eCommerce teams use AI to answer questions. Vortex IQ runs underneath your entire operation — watching, diagnosing, acting, deploying, and learning. Continuously. Across every app you use.</p>
+          </div>
+
+          <div className="compare reveal">
+            <div className="col-left">
+              <div className="col-head">✕ AI as a chatbot</div>
+              <div className="col-rows">
+                <div className="row"><span className="row-icon">○</span> You ask it a question</div>
+                <div className="row"><span className="row-icon">○</span> One answer at a time</div>
+                <div className="row"><span className="row-icon">○</span> Reactive — you have to prompt it</div>
+                <div className="row"><span className="row-icon">○</span> Isolated from your tech stack</div>
+                <div className="row"><span className="row-icon">○</span> Generates text</div>
+                <div className="row"><span className="row-icon">○</span> Forgets after each session</div>
+              </div>
+            </div>
+            <div className="col-right">
+              <div className="col-head">✓ AI as infrastructure (Vortex IQ)</div>
+              <div className="col-rows">
+                <div className="row"><span className="row-icon">●</span> Watches everything, always on</div>
+                <div className="row"><span className="row-icon">●</span> Connected to 200+ data sources simultaneously</div>
+                <div className="row"><span className="row-icon">●</span> Proactive — it alerts you before you ask</div>
+                <div className="row"><span className="row-icon">●</span> Embedded across your entire operation</div>
+                <div className="row"><span className="row-icon">●</span> Generates diagnosis, actions, deployments</div>
+                <div className="row"><span className="row-icon">●</span> Learns from every fix — Vortex Memory</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="infra-bottom reveal">
+            <div className="ib-left">
+              <div className="ib-title">AI that doesn&apos;t wait for you to ask.</div>
+              <p className="ib-desc">A chatbot sits idle until you type. Vortex IQ runs a continuous loop: detecting anomalies across 200+ connectors, diagnosing root cause with AI, proposing fixes you approve in seconds, deploying safely, and remembering every resolution so the next one is faster.</p>
+              <p className="ib-desc">This isn&apos;t a feature you bolt on. It&apos;s the foundation your entire commerce operation runs on.</p>
+            </div>
+            <div>
+              <div className="loop-mini">
+                <div className="loop-step">
+                  <div className="loop-num">1</div>
+                  <div className="loop-text">Detect<span>— Nerve Centre</span></div>
+                  <div className="loop-tag">Always on</div>
+                </div>
+                <div className="loop-step">
+                  <div className="loop-num">2</div>
+                  <div className="loop-text">Diagnose<span>— Vortex Mind</span></div>
+                  <div className="loop-tag">AI</div>
+                </div>
+                <div className="loop-step">
+                  <div className="loop-num">3</div>
+                  <div className="loop-text">Act<span>— Vortex Agents</span></div>
+                  <div className="loop-tag">You approve</div>
+                </div>
+                <div className="loop-step">
+                  <div className="loop-num">4</div>
+                  <div className="loop-text">Deploy<span>— Vortex Apps</span></div>
+                  <div className="loop-tag">Safe</div>
+                </div>
+                <div className="loop-step">
+                  <div className="loop-num">5</div>
+                  <div className="loop-text">Learn<span>— Vortex Memory</span></div>
+                  <div className="loop-tag">Gets smarter</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="infra-cta reveal">
+            <p>Stop using AI like a chatbot. Start running your operation on it.</p>
+            <div className="cta-row" style={{ justifyContent: "center" }}>
+              <a href="https://www.vortexiq.ai/contact-us" className="btn">See the AI OS in Action →</a>
+              <a href="https://www.vortexiq.ai/ai-os-platform" className="btn btn--ghost">Explore the Platform</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* WHAT: the six pillars (mechanism + outcome) */}
       <section className="section" id="pillars">
         <div className="container">

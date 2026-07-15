@@ -229,6 +229,41 @@ em.hl{font-style:normal;color:var(--brand-purple);font-weight:500}
 .manifesto p{font-family:var(--font-heading);font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.32;color:var(--primary);font-weight:600;letter-spacing:-.015em}
 .manifesto .why{color:var(--brand-purple)}
 
+/* ---- infra: AI as infrastructure vs. chatbot ---- */
+.infra-open{max-width:820px;margin:0 auto 3.5rem;text-align:center}
+.infra-quote{font-family:var(--font-heading);font-weight:600;font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.25;letter-spacing:-.02em;color:var(--primary);margin-bottom:1.4rem}
+.infra-sub{font-size:1.05rem;color:var(--text-body);line-height:1.6;max-width:640px;margin:0 auto}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:0 0 3.5rem;border:1px solid var(--border-dark);border-radius:var(--radius);overflow:hidden}
+.col-left,.col-right{background:var(--white)}
+.col-head{display:flex;align-items:center;gap:.55rem;font-family:var(--font-heading);font-weight:700;font-size:.86rem;letter-spacing:.04em;text-transform:uppercase;padding:1.15rem 1.6rem}
+.col-left .col-head{background:var(--danger-soft);color:var(--danger)}
+.col-right .col-head{background:var(--success-soft);color:var(--success)}
+.col-rows{display:flex;flex-direction:column}
+.row{display:flex;align-items:center;gap:.8rem;font-size:.95rem;padding:1.05rem 1.6rem;border-top:1px solid var(--border-dark)}
+.col-left .row{color:var(--text-faded)}
+.col-right .row{color:var(--primary);font-weight:500}
+.col-rows .row:nth-child(even){background:var(--surface-soft)}
+.row-icon{flex:none;font-size:.65rem;line-height:1}
+.col-left .row-icon{color:var(--text-faded)}
+.col-right .row-icon{color:var(--primary)}
+.infra-bottom{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;margin-bottom:3.5rem}
+.ib-title{font-family:var(--font-heading);font-weight:600;font-size:1.5rem;letter-spacing:-.015em;margin-bottom:1rem;color:var(--primary)}
+.ib-desc{color:var(--text-body);font-size:1rem;line-height:1.6;margin-bottom:1rem}
+.ib-desc:last-child{margin-bottom:0}
+.loop-mini{display:flex;flex-direction:column;gap:.8rem}
+.loop-step{display:flex;align-items:center;gap:1rem;background:var(--white);border:1px solid var(--border-dark);border-radius:var(--radius);padding:1rem 1.2rem;transition:border-color .2s,transform .2s var(--ease)}
+.loop-step:hover{border-color:var(--border-strong);transform:translateX(3px)}
+.loop-num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--brand-gradient);color:#fff;font-family:var(--font-heading);font-weight:700;font-size:.9rem;display:flex;align-items:center;justify-content:center}
+.loop-text{flex:1;font-family:var(--font-heading);font-weight:600;font-size:.96rem;color:var(--primary)}
+.loop-text span{display:block;font-family:var(--font-mono);font-weight:400;font-size:.74rem;color:var(--text-faded);margin-top:.15rem}
+.loop-tag{flex:none;font-family:var(--font-mono);font-size:.66rem;color:var(--brand-purple);background:var(--surface-tint);border:1px solid var(--border-brand);padding:.25rem .6rem;border-radius:999px}
+.infra-cta{text-align:center;padding-top:2.5rem;border-top:1px solid var(--border-dark)}
+.infra-cta p{font-family:var(--font-heading);font-weight:600;font-size:1.2rem;color:var(--primary);margin-bottom:1.4rem}
+@media(max-width:1024px){
+  .compare{grid-template-columns:1fr}
+  .infra-bottom{grid-template-columns:1fr;gap:2.5rem}
+}
+
 /* ---- loop diagram ---- */
 .loop{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--border-dark);border-radius:var(--radius);overflow:hidden;background:var(--white)}
 .lnode{padding:1.8rem 1.2rem;text-align:center;border-right:1px solid var(--border-dark);position:relative;transition:background .2s}
