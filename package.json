@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "build:brand": "node scripts/build-brand-html.mjs",
     "migrate:webflow": "tsx scripts/migrate-webflow.ts"
   },
   "dependencies": {
