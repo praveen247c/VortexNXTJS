@@ -40,7 +40,8 @@ const CSS = `
 .vrt .eyebrow::before{content:"";width:1.5rem;height:2px;background:var(--brand);border-radius:2px}
 .vrt h2{font-size:clamp(1.7rem,3.4vw,2.35rem);line-height:1.08;font-weight:800;text-wrap:balance}
 .vrt .sub{font-size:1.08rem;color:var(--body);max-width:60ch;margin-top:14px}
-.vrt .hero{padding:52px 0 40px;position:relative;overflow:hidden}
+.vrt .hero{padding:9.5rem 0 40px;position:relative;overflow:hidden}
+@media(max-width:640px){.vrt .hero{padding-top:7rem}}
 .vrt .hero .grid{display:grid;gap:40px;align-items:center}
 @media(min-width:900px){.vrt .hero .grid{grid-template-columns:1.05fr .95fr}}
 .vrt .h-eyebrow{display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;font-family:var(--vmono);font-size:.74rem;letter-spacing:.04em;color:var(--faded);margin-bottom:18px}
