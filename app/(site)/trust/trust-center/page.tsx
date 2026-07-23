@@ -252,13 +252,12 @@ export default function Page() {
                     <span className="safe-num">4</span>
                     <div>
                       <b>Staging & backups</b>
-                      <p>Test changes against a safe environment and keep restore points of your storefront with Vortex Apps, so risky work never starts on production.</p>
+                      <p>Test changes against a safe environment and keep restore points of your storefront with Vortex Agents, so risky work never starts on production.</p>
                     </div>
                   </div>
                 </div>
                 <div>
                   <Link className="safe-link" href="/ai-os-platform/vortex-agents">Explore Vortex Agents →</Link>
-                  <Link className="safe-link" href="/ai-os-platform/vortex-apps">Staging & backups →</Link>
                 </div>
               </div>
 
@@ -282,7 +281,7 @@ export default function Page() {
                     </div>
                     <div className="ap-line">
                       <span className="ic ic--ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
-                      <span className="tx"><b>Restore point saved</b><span>rollback ready · Vortex Apps</span></span>
+                      <span className="tx"><b>Restore point saved</b><span>rollback ready · Vortex Agents</span></span>
                     </div>
                     <div className="ap-foot">
                       <span className="ap-approve">

@@ -53,7 +53,7 @@ export const html = `<div class="brochure-read">
         <p class="lede reveal">Detect what is wrong. Understand why. Fix it safely. Across every platform you run. Here is the whole platform in one read. The PDF is on its way to your inbox too.</p>
         <div class="br-toc reveal">
           <a href="#what">What it is</a>
-          <a href="#pillars">The six pillars</a>
+          <a href="#pillars">The four pillars</a>
           <a href="#seo">SEO &amp; GEO</a>
           <a href="#safe">Safety</a>
           <a href="#proof">Proof</a>
@@ -74,18 +74,16 @@ export const html = `<div class="brochure-read">
     </div>
   </section>
 
-  <!-- SIX PILLARS -->
+  <!-- FOUR PILLARS -->
   <section class="section section--soft" id="pillars">
     <div class="container br-block">
-      <div class="eyebrow reveal">The six pillars</div>
-      <h2 class="reveal" style="max-width:24ch">Six pillars. One platform. What each does for you.</h2>
+      <div class="eyebrow reveal">The four pillars</div>
+      <h2 class="reveal" style="max-width:24ch">Four pillars. One platform. What each does for you.</h2>
       <div class="br-pillars reveal">
         <div class="br-pillar"><span class="step">Detect</span><div><h3>Nerve Centre</h3><p class="mech">Real-time detection across 200+ connectors.</p><p class="get"><b>You get:</b> revenue leaks caught before your customers do, ranked by the money at stake.</p></div></div>
-        <div class="br-pillar"><span class="step">Diagnose</span><div><h3>Vortex Mind</h3><p class="mech">Diagnostics and strategy across every channel.</p><p class="get"><b>You get:</b> the root cause in plain English, not another chart to interpret yourself.</p></div></div>
+        <div class="br-pillar"><span class="step">Diagnose</span><div><h3>Vortex Mind</h3><p class="mech">Diagnostics, strategy and a memory graph across every channel.</p><p class="get"><b>You get:</b> the root cause in plain English, and a system that starts from everything you have already fixed, so the second fix is faster than the first.</p></div></div>
         <div class="br-pillar"><span class="step">Converse</span><div><h3>Ask Viq&trade;</h3><p class="mech">Conversational AI over your whole stack.</p><p class="get"><b>You get:</b> answers to plain questions like &ldquo;where am I losing revenue?&rdquo;, cited to your data.</p></div></div>
-        <div class="br-pillar"><span class="step">Act</span><div><h3>Vortex Agents</h3><p class="mech">Execute changes safely, on your approval.</p><p class="get"><b>You get:</b> agents that do the work across SEO and GEO, merchandising, paid media, inventory and retention. Staging-first and reversible.</p></div></div>
-        <div class="br-pillar"><span class="step">Deploy</span><div><h3>Vortex Apps</h3><p class="mech">Staging, backup and governance.</p><p class="get"><b>You get:</b> every change previewed on a copy of your store first, with one-click rollback and a full audit trail.</p></div></div>
-        <div class="br-pillar"><span class="step">Learn</span><div><h3>Vortex Memory</h3><p class="mech">Learns from every signal, fix and decision.</p><p class="get"><b>You get:</b> a system that starts from everything you have already fixed, so the second fix is faster than the first.</p></div></div>
+        <div class="br-pillar"><span class="step">Act</span><div><h3>Vortex Agents</h3><p class="mech">Execute changes safely, on your approval, with staging, backup and governance.</p><p class="get"><b>You get:</b> agents that do the work across SEO and GEO, merchandising, paid media, inventory and retention. Every change is previewed on a copy of your store first, staging-first and reversible, with one-click rollback and a full audit trail.</p></div></div>
       </div>
     </div>
   </section>

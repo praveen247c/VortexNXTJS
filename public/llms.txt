@@ -5,7 +5,7 @@
 ## Start here
 
 - [Homepage](https://www.vortexiq.ai): one-page overview of the platform, value proposition, and proof.
-- [AI OS Platform Overview](https://www.vortexiq.ai/ai-os-platform): how the closed loop and the six pillars work together.
+- [AI OS Platform Overview](https://www.vortexiq.ai/ai-os-platform): how the closed loop and the four pillars work together.
 - [Product Tour](https://www.vortexiq.ai/product-tour): guided walkthrough of the unified command centre.
 - [Pricing](https://www.vortexiq.ai/pricing): Foundation, Growth, Enterprise and OmniChannel plans, feature comparison and add-ons. Foundation starts from £399/$399 per month billed annually (20% off; £499/$499 billed monthly) with a 14-day free trial. Prices show in GBP for UK visitors and USD everywhere else, including the US; the figure itself is the same either way.
 - [Solutions by Role](https://www.vortexiq.ai/solutions): choose your path, merchants, agencies, or tech partners.
@@ -21,21 +21,19 @@
 
 1. Real-time monitoring and alerting: the Nerve Centre tracks KPIs across the store, payments, ads and infrastructure, surfacing anomalies with their revenue impact before revenue is lost.
 2. AI diagnostics and recommendations: Vortex Mind analyses commerce signals, benchmarks competitors and generates ranked, actionable fix plans.
-3. Conversational AI: Ask Viq lets you query your entire stack in plain English and apply safe fixes, with every answer cited to the data and stored in Vortex Memory.
+3. Conversational AI: Ask Viq lets you query your entire stack in plain English and apply safe fixes, with every answer cited to the data and stored in Vortex Mind's memory graph.
 4. Agentic actions and workflows: AI-generated, AI-ranked findings flow onto a Kanban board with assignees, due dates and automation rules, syncing to Jira, Asana and Linear. The platform defines the work and tracks it to done.
 5. Agents that act inside the store: Vortex Agents create products and landing pages, issue discount codes, run campaigns and execute operational actions through platform APIs, every change approval-gated.
 6. Safe staging, backup and rollback: StagingPro provides production-parity staging and RollbackPro gives one-click rollback for BigCommerce, Shopify and Adobe Commerce, so autonomy is safe to run on live revenue.
-7. The unified commerce graph and Vortex Memory: every connector, fix, deploy and decision is written into one live graph across 200+ integrations and 6,000+ KPIs, compounding with every store, report and question.
+7. The unified commerce graph and Vortex Mind's memory: every connector, fix, deploy and decision is written into one live graph across 200+ integrations and 6,000+ KPIs, compounding with every store, report and question.
 8. AI Enablement for enterprises and platforms: grey-label infrastructure so platforms can build and scale their own agent ecosystems, including custom MCPs.
 
-## The six pillars (the closed loop)
+## The four pillars (the closed loop)
 
 - [Nerve Centre](https://www.vortexiq.ai/ai-os-platform/nerve-centre): real-time detection, KPI tracking and automated alerts. Detect.
-- [Vortex Mind](https://www.vortexiq.ai/ai-os-platform/vortex-mind): diagnostic and strategy engine that analyses signals, spots bottlenecks and benchmarks competitors. Diagnose.
+- [Vortex Mind](https://www.vortexiq.ai/ai-os-platform/vortex-mind): diagnostic and strategy engine that analyses signals, spots bottlenecks and benchmarks competitors, and the compounding memory graph that every pillar reads from and writes to. Diagnose and learn.
 - [Ask Viq](https://www.vortexiq.ai/ai-os-platform/ask-viq): conversational agent spanning all connected systems, cited to the graph. Converse.
-- [Vortex Agents](https://www.vortexiq.ai/ai-os-platform/vortex-agents): agents that execute changes safely inside the store, approval-gated, with AI-ranked findings tracked as work to done. Act.
-- [Vortex Apps](https://www.vortexiq.ai/ai-os-platform/vortex-apps): safe deployment infrastructure, StagingPro and RollbackPro, for Shopify, BigCommerce and Adobe Commerce. Safe-deploy.
-- [Vortex Memory](https://www.vortexiq.ai/ai-os-platform/vortex-memory): the compounding data layer and unified commerce graph that every pillar reads from and writes to. Learn.
+- [Vortex Agents](https://www.vortexiq.ai/ai-os-platform/vortex-agents): agents that execute changes safely inside the store, approval-gated, with AI-ranked findings tracked as work to done, plus production-parity staging, backup and one-click rollback (StagingPro and RollbackPro) for Shopify, BigCommerce and Adobe Commerce. Act and safe-deploy.
 
 ## Solutions by audience
 

@@ -82,7 +82,7 @@ export const html = `<div class="company-page">
       <div class="eyebrow">How it works</div>
       <h2>Detect. Explain. Fix. The loop is the product.</h2>
       <p class="lede reveal">One operating layer watches every signal, explains the root cause in plain English, acts safely on your approval, and remembers every decision so it gets sharper each run.</p>
-      <div class="grid grid-3 company-pillars">
+      <div class="grid grid-2 company-pillars">
         <div class="card reveal">
           <span class="company-ic"><img src="/assets/icons/nerve.svg" alt="" /></span>
           <h3>Nerve Centre</h3>
@@ -91,7 +91,7 @@ export const html = `<div class="company-page">
         <div class="card reveal">
           <span class="company-ic"><img src="/assets/icons/mind.svg" alt="" /></span>
           <h3>Vortex Mind</h3>
-          <p class="muted">The diagnostic layer. It investigates a moving number and explains the root cause.</p>
+          <p class="muted">The diagnostic layer. It investigates a moving number, explains the root cause, and remembers every fix so the AI OS gets sharper over time.</p>
         </div>
         <div class="card reveal">
           <span class="company-ic"><img src="/assets/icons/ask.svg" alt="" /></span>
@@ -101,17 +101,7 @@ export const html = `<div class="company-page">
         <div class="card reveal">
           <span class="company-ic"><img src="/assets/icons/actions.svg" alt="" /></span>
           <h3>Vortex Agents</h3>
-          <p class="muted">AI agents that monitor, analyse and act across the stack, safely and on approval.</p>
-        </div>
-        <div class="card reveal">
-          <span class="company-ic"><img src="/assets/icons/apps.svg" alt="" /></span>
-          <h3>Vortex Apps</h3>
-          <p class="muted">Staging, backup and rollback: StagingPro and RollbackPro keep every change predictable.</p>
-        </div>
-        <div class="card reveal">
-          <span class="company-ic"><img src="/assets/icons/memory.svg" alt="" /></span>
-          <h3>Vortex Memory</h3>
-          <p class="muted">The graph that records each fix and decision, so the AI OS gets sharper over time.</p>
+          <p class="muted">AI agents that monitor, analyse and act across the stack, safely and on approval, with staging, backup and one-click rollback (StagingPro and RollbackPro) keeping every change predictable.</p>
         </div>
       </div>
       <p class="muted company-body reveal">Runs on BigCommerce, Shopify, Adobe Commerce and WooCommerce.</p>

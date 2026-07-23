@@ -6,8 +6,8 @@ const TABS = [
   { id: "detect", step: "01 · Detect", label: "Nerve Centre" },
   { id: "diagnose", step: "02 · Diagnose", label: "Vortex Mind + Ask Viq" },
   { id: "cross", step: "Cross-channel", label: "Cross-Channel Insights" },
-  { id: "act", step: "03-04 · Act + Deploy", label: "Actions + Vortex Apps" },
-  { id: "learn", step: "05 · Learn", label: "Vortex Memory" },
+  { id: "act", step: "03 · Act", label: "Vortex Agents" },
+  { id: "learn", step: "05 · Learn", label: "Vortex Mind" },
 ];
 
 export default function PlatformTabs() {
@@ -109,10 +109,10 @@ export default function PlatformTabs() {
         <div className={`tabpanel${active === "act" ? " active" : ""}`} id="panel-act" role="tabpanel" aria-labelledby="tab-act">
           <div className="split">
             <div>
-              <span className="tag">03-04 / Act + Deploy · Actions + Vortex Apps</span>
+              <span className="tag">03 / Act · Vortex Agents</span>
               <h2>Act on findings. Ship safely. Undo in one click.</h2>
-              <p className="lede" style={{ marginTop: "1.2rem" }}>Knowing is not fixing. Actions turns every finding into real work on a Kanban board with owners and due dates, runs the SEO &amp; GEO engine on a schedule, and edits thousands of products in a single pass. It syncs both ways with the tools your team already lives in.</p>
-              <p className="muted" style={{ marginTop: "1rem" }}>Then Vortex Apps makes that autonomy safe: preview on StagingPro, approve, ship, and roll back in one click with RollbackPro.</p>
+              <p className="lede" style={{ marginTop: "1.2rem" }}>Knowing is not fixing. Vortex Agents turn every finding into real work on a Kanban board with owners and due dates, run the SEO &amp; GEO engine on a schedule, and edit thousands of products in a single pass. They sync both ways with the tools your team already lives in.</p>
+              <p className="muted" style={{ marginTop: "1rem" }}>Every agent runs inside a safe harness: preview on StagingPro, approve, ship, and roll back in one click with RollbackPro.</p>
             </div>
             <div className="grid" style={{ gap: ".9rem" }}>
               <div className="card card--soft" style={{ padding: "1.4rem" }}><h3 style={{ fontSize: "1rem" }}>StagingPro</h3><p className="muted" style={{ fontSize: ".9rem" }}>Production-parity staging to preview every change before it goes live.</p></div>
@@ -128,15 +128,15 @@ export default function PlatformTabs() {
           <div className="split">
             <div className="grid" style={{ order: 2 }}>
               <div className="card card--brand" style={{ padding: "2.4rem" }}>
-                <h3 style={{ fontSize: "1rem", color: "#fff" }}>Vortex Memory</h3>
-                <p style={{ marginTop: ".6rem", color: "rgba(255,255,255,.8)" }}>The one place every connector, finding, fix and decision is remembered over time, so Vortex Mind diagnoses faster on every store, every report and every day.</p>
-                <p className="stat-label" style={{ marginTop: "1.4rem" }}>Mind reasons. Memory remembers. Together they compound.</p>
+                <h3 style={{ fontSize: "1rem", color: "#fff" }}>Vortex Mind</h3>
+                <p style={{ marginTop: ".6rem", color: "rgba(255,255,255,.8)" }}>Vortex Mind remembers every connector, finding, fix and decision over time, so it diagnoses faster on every store, every report and every day.</p>
+                <p className="stat-label" style={{ marginTop: "1.4rem" }}>It reasons and remembers, so every diagnosis compounds.</p>
               </div>
             </div>
             <div>
-              <span className="tag">05 / Learn · Vortex Memory</span>
+              <span className="tag">05 / Learn · Vortex Mind</span>
               <h2>The longer you run it, the sharper it gets.</h2>
-              <p className="lede" style={{ marginTop: "1.2rem" }}>The loop closes here and feeds straight back into detection. Vortex Memory is the moat underneath everything: it&apos;s why the answer gets better every time you ask, and why the second fix is always faster than the first.</p>
+              <p className="lede" style={{ marginTop: "1.2rem" }}>The loop closes here and feeds straight back into detection. Vortex Mind&apos;s memory graph is the moat underneath everything: it&apos;s why the answer gets better every time you ask, and why the second fix is always faster than the first.</p>
             </div>
           </div>
         </div>

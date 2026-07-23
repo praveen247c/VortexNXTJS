@@ -153,7 +153,7 @@ export default function Home() {
                 <div className="row"><span className="row-icon">●</span> Proactive — it alerts you before you ask</div>
                 <div className="row"><span className="row-icon">●</span> Embedded across your entire operation</div>
                 <div className="row"><span className="row-icon">●</span> Generates diagnosis, actions, deployments</div>
-                <div className="row"><span className="row-icon">●</span> Learns from every fix — Vortex Memory</div>
+                <div className="row"><span className="row-icon">●</span> Learns from every fix, remembered in Vortex Mind</div>
               </div>
             </div>
           </div>
@@ -183,12 +183,7 @@ export default function Home() {
                 </div>
                 <div className="loop-step">
                   <div className="loop-num">4</div>
-                  <div className="loop-text">Deploy<span>— Vortex Apps</span></div>
-                  <div className="loop-tag">Safe</div>
-                </div>
-                <div className="loop-step">
-                  <div className="loop-num">5</div>
-                  <div className="loop-text">Learn<span>— Vortex Memory</span></div>
+                  <div className="loop-text">Learn<span>— Vortex Mind</span></div>
                   <div className="loop-tag">Gets smarter</div>
                 </div>
               </div>
@@ -205,13 +200,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHAT: the six pillars (mechanism + outcome) */}
+      {/* WHAT: the four pillars (mechanism + outcome) */}
       <section className="section" id="pillars">
         <div className="container">
-          <div className="eyebrow reveal">The six pillars</div>
-          <h2 className="reveal" style={{ maxWidth: "20ch" }}>Six pillars. One platform. What each one does for you.</h2>
-          <p className="lede reveal" style={{ margin: "1.4rem 0 2.8rem" }}>The loop runs on six pillars. Here is what each one is, and what you actually get from it.</p>
-          <div className="grid grid-3">
+          <div className="eyebrow reveal">The four pillars</div>
+          <h2 className="reveal" style={{ maxWidth: "20ch" }}>Four pillars. One platform. What each one does for you.</h2>
+          <p className="lede reveal" style={{ margin: "1.4rem 0 2.8rem" }}>The loop runs on four pillars. Here is what each one is, and what you actually get from it.</p>
+          <div className="grid grid-4">
             <a className="card reveal" href="/ai-os-platform/nerve-centre" style={{ textDecoration: "none", color: "inherit" }}>
               <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Detect</span>
               <h3>Nerve Centre</h3>
@@ -221,8 +216,8 @@ export default function Home() {
             <a className="card reveal" href="/ai-os-platform/vortex-mind" style={{ textDecoration: "none", color: "inherit" }}>
               <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Diagnose</span>
               <h3>Vortex Mind</h3>
-              <p className="muted" style={{ margin: ".5rem 0 .9rem" }}>Diagnostics and strategy across every channel.</p>
-              <p style={{ fontWeight: 500 }}>You get: the root cause in plain English, not another chart to interpret yourself.</p>
+              <p className="muted" style={{ margin: ".5rem 0 .9rem" }}>Diagnostics, strategy and memory across every channel.</p>
+              <p style={{ fontWeight: 500 }}>You get: the root cause in plain English, and a system that remembers every fix so the next one is faster.</p>
             </a>
             <a className="card reveal" href="/ai-os-platform/ask-viq" style={{ textDecoration: "none", color: "inherit" }}>
               <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Converse</span>
@@ -235,18 +230,6 @@ export default function Home() {
               <h3 style={{ color: "#fff" }}>Vortex Agents</h3>
               <p className="muted" style={{ margin: ".5rem 0 .9rem", color: "rgba(255,255,255,.75)" }}>Execute changes safely, on your approval.</p>
               <p style={{ fontWeight: 500, color: "#fff" }}>You get: agents that do the work, SEO &amp; GEO, merchandising, paid media, inventory and retention, staging-first and reversible.</p>
-            </a>
-            <a className="card reveal" href="/ai-os-platform/vortex-apps" style={{ textDecoration: "none", color: "inherit" }}>
-              <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Deploy</span>
-              <h3>Vortex Apps</h3>
-              <p className="muted" style={{ margin: ".5rem 0 .9rem" }}>Staging, backup and governance.</p>
-              <p style={{ fontWeight: 500 }}>You get: every change previewed on a copy of your store first, with one-click rollback and a full audit trail.</p>
-            </a>
-            <a className="card reveal" href="/ai-os-platform/vortex-memory" style={{ textDecoration: "none", color: "inherit" }}>
-              <span className="chip chip--brand" style={{ marginBottom: "1rem" }}>Learn</span>
-              <h3>Vortex Memory</h3>
-              <p className="muted" style={{ margin: ".5rem 0 .9rem" }}>Learns from every signal, fix and decision.</p>
-              <p style={{ fontWeight: 500 }}>You get: a system that starts from everything you have already fixed, so the second fix is faster than the first.</p>
             </a>
           </div>
         </div>
@@ -348,7 +331,7 @@ export default function Home() {
         <div className="container">
           <div className="eyebrow reveal">What you actually get</div>
           <h2 className="reveal" style={{ maxWidth: "18ch" }}>One loop. Five steps. Every store you run.</h2>
-          <p className="lede reveal" style={{ margin: "1.4rem 0" }}>Six pillars run one continuous loop, from detect to learn. Each step does one job and hands off cleanly to the next.</p>
+          <p className="lede reveal" style={{ margin: "1.4rem 0" }}>Four pillars run one continuous loop, from detect to learn. Each step does one job and hands off cleanly to the next.</p>
         </div>
 
         <PlatformTabs />

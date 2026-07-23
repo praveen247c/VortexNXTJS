@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/branding" },
   title: "Brand Guidelines: Logos, Colour, Type & Tone of Voice | Vortex IQ",
   description:
-    "The complete Vortex IQ brand book. Logo rules, colour tokens, typography, UI components, the six pillars, and the full tone-of-voice guide. Download it as Markdown or HTML.",
+    "The complete Vortex IQ brand book. Logo rules, colour tokens, typography, UI components, the four pillars, and the full tone-of-voice guide. Download it as Markdown or HTML.",
   openGraph: {
     title: "Vortex IQ Brand Guidelines",
     description:
@@ -361,7 +361,7 @@ const css = `
 .lp-tx span{font-family:var(--font-mono);font-size:.62rem;color:var(--text-faded)}
 .lp-state{margin-left:auto;font-family:var(--font-mono);font-size:.6rem;color:var(--brand-purple);text-align:right}
 
-/* ---- six pillars ---- */
+/* ---- four pillars ---- */
 .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--bento-gap)}
 .pillar-card{display:flex;flex-direction:column;text-decoration:none;color:inherit}
 .pillar-card .p-top{display:flex;align-items:center;gap:.9rem;margin-bottom:1.2rem}
@@ -525,7 +525,7 @@ export default function Page() {
                 The <span className="grad">Vortex IQ</span> brand, in one place.
               </h1>
               <p className="lede reveal in">
-                Logo rules, colour tokens, typography, UI components, the six pillars, and the full
+                Logo rules, colour tokens, typography, UI components, the four pillars, and the full
                 tone-of-voice guide. Everything a partner, a designer, or a writer needs to put the AI
                 Operating System for e-commerce in front of an audience. On brand, every time.
               </p>
@@ -594,7 +594,7 @@ export default function Page() {
               ))}
             </div>
             <div className="loop-meta reveal">
-              <span>Six pillars run the loop. Five steps, continuously.</span>
+              <span>Four pillars run the loop. Five steps, continuously.</span>
               <span>Detect. Explain. Fix.</span>
             </div>
           </div>
@@ -1040,9 +1040,9 @@ export default function Page() {
               </div>
               <div className="card card--tint reveal">
                 <div className="det-cat" style={{ marginBottom: "0.9rem" }}>Tint</div>
-                <h3>Vortex Memory</h3>
+                <h3>Vortex Mind</h3>
                 <p className="muted" style={{ fontSize: "0.95rem" }}>
-                  The graph that compounds, per store.
+                  The memory graph that compounds, per store.
                 </p>
               </div>
               <div className="card card--brand reveal">
@@ -1257,7 +1257,7 @@ export default function Page() {
                       </span>
                       <span className="lp-tx">
                         <b>Fix</b>
-                        <span>Vortex Apps</span>
+                        <span>Vortex Agents</span>
                       </span>
                       <span className="lp-state">Rollback staged</span>
                     </div>
@@ -1351,7 +1351,7 @@ export default function Page() {
           </div>
         </section>
 
-        {/* =========================== SIX PILLARS =========================== */}
+        {/* =========================== FOUR PILLARS =========================== */}
         <section className="section section--soft" id="pillars">
           <div className="container">
             <div className="chap reveal">
@@ -1360,7 +1360,7 @@ export default function Page() {
                 <h2>Name the mechanism, every time.</h2>
                 <p>
                   Do not just say what we do, name how. A sceptic who can file the how away stops asking. These
-                  six nouns are the how, and they are always title-case and never paraphrased.
+                  four nouns are the how, and they are always title-case and never paraphrased.
                 </p>
               </div>
             </div>

@@ -72,7 +72,7 @@ const TOUR: Step[] = [
     title: "Nothing ships without you.",
     caption:
       "Every change is staged first and waits for your approval. You review the exact change, then approve or reject. Vortex Agents do the work; you keep control.",
-    surface: "Vortex Agents / Vortex Apps",
+    surface: "Vortex Agents",
     shot: "The approval screen for a staged change (approve / reject)",
     file: "4-approve.png",
     image: "/assets/product-tour/4-approve.png",
@@ -84,7 +84,7 @@ const TOUR: Step[] = [
     title: "Reversible by design.",
     caption:
       "Want a change back? One click rolls it back, with a full audit trail of who changed what and when. Safe to act, because nothing is permanent without your say-so.",
-    surface: "Vortex Apps",
+    surface: "Vortex Agents",
     shot: "The one-click rollback control and/or the audit trail/history",
     file: "5-rollback.png",
     image: "/assets/product-tour/5-rollback.png",
@@ -95,12 +95,12 @@ const TOUR: Step[] = [
     phase: "Learn",
     title: "It gets sharper over time.",
     caption:
-      "Vortex Memory remembers every signal, fix and decision, so the next finding starts from what already worked on your store instead of from scratch.",
-    surface: "Vortex Memory",
+      "Vortex Mind remembers every signal, fix and decision, so the next finding starts from what already worked on your store instead of from scratch.",
+    surface: "Vortex Mind",
     shot: "A view showing past fixes / what the system has learned",
     file: "6-learn.png",
     image: "/assets/product-tour/6-learn.png",
-    alt: "Vortex Memory recording fixes and decisions",
+    alt: "Vortex Mind recording fixes and decisions",
   },
 ];
 

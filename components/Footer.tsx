@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <h4>Product</h4>
-            <Link href="/aistudio">Summit</Link>
+            <Link href="/vortex-runtime">Vortex Runtime</Link>
             <Link href="/ai-os-platform">Capabilities</Link>
             <Link href="/free-audit">Free Store Audit</Link>
             <Link href="/get-started">Get Started</Link>

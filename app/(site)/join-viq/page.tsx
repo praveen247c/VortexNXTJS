@@ -143,7 +143,7 @@ export default function Page() {
                   </div>
                   <div className="bro-cover-foot">
                     <span>Platform overview</span>
-                    <span>The six AI pillars</span>
+                    <span>The four AI pillars</span>
                     <span>Security &amp; trust</span>
                     <span>Integrations</span>
                     <span>Pricing</span>
@@ -181,8 +181,8 @@ export default function Page() {
                 <div className="inside-item">
                   <span className="inside-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a3 3 0 0 0-3 3 3 3 0 0 0-3 3 3 3 0 0 0 0 6 3 3 0 0 0 3 5 3 3 0 0 0 6 0 3 3 0 0 0 3-5 3 3 0 0 0 0-6 3 3 0 0 0-3-3 3 3 0 0 0-3-3Z" /><path d="M12 8v8M9 12h6" /></svg></span>
                   <div>
-                    <h3>The six AI pillars</h3>
-                    <p>Nerve Centre, Vortex Mind, Ask Viq, Vortex Apps, Vortex Agents, and Vortex Memory: what each one does and how they work together.</p>
+                    <h3>The four AI pillars</h3>
+                    <p>Nerve Centre, Vortex Mind, Ask Viq and Vortex Agents: what each one does and how they work together.</p>
                   </div>
                 </div>
               </div>

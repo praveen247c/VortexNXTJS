@@ -50,7 +50,7 @@ const faq: Faq[] = [
   {
     question: "Is Vortex IQ an AI Operating System for e-commerce?",
     answer:
-      "Yes. Vortex IQ is an AI Operating System for e-commerce, built around the detect-diagnose-act-learn loop across six pillars: Nerve Centre, Vortex Mind, Ask Viq, Vortex Agents, Vortex Apps and Vortex Memory.",
+      "Yes. Vortex IQ is an AI Operating System for e-commerce, built around the detect-diagnose-act-learn loop across four pillars: Nerve Centre, Vortex Mind, Ask Viq and Vortex Agents.",
   },
 ];
 

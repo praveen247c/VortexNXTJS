@@ -2,9 +2,9 @@ import { SITE_URL, absoluteUrl } from "./site";
 
 // ---------------------------------------------------------------------------
 // Brand-locked copy. Do NOT paraphrase the customer-facing strings below
-// (description, featureList, FAQ answers). Rules: no em dashes; the six module
-// names exactly as cased (Nerve Centre, Vortex Mind, Ask Viq™, Vortex Apps,
-// Vortex Agents, Vortex Memory); the Detect. Explain. Fix. loop; the umbrella
+// (description, featureList, FAQ answers). Rules: no em dashes; the four pillar
+// names exactly as cased (Nerve Centre, Vortex Mind, Ask Viq™, Vortex Agents);
+// the Detect. Explain. Fix. loop; the umbrella
 // "the AI Operating System for e-commerce". Banned: leverage, powered by AI,
 // seamless, robust, world-class, unlock.
 // ---------------------------------------------------------------------------
@@ -84,9 +84,7 @@ export const softwareApplicationLd: Record<string, unknown> = {
     "Nerve Centre: real-time detection across every critical KPI, before revenue is lost",
     "Vortex Mind: diagnoses what's happening and returns clear, prioritised recommendations",
     "Ask Viq™: ask in plain English, get answers, context and safe actions across your stack",
-    "Vortex Apps: apply fixes safely with staging, backup and rollback, never risking your live store",
-    "Vortex Agents: build and manage the AI agents that monitor, analyse and act across your stack",
-    "Vortex Memory: the graph that remembers every signal, fix and decision, so the AI OS gets sharper over time",
+    "Vortex Agents: build and manage the AI agents that monitor, analyse and act across your stack, applying fixes safely with staging, backup and rollback so your live store is never at risk",
   ],
   offers: { "@type": "Offer", category: "SaaS", url: absoluteUrl("/pricing") },
   // Intentionally no aggregateRating until genuine review volume exists.

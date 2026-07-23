@@ -25,7 +25,7 @@ export const css = `
 @media(max-width:820px){.whatis-page .proof-grid{grid-template-columns:1fr}}
 
 /* pillars index */
-.whatis-page .mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.6rem}
+.whatis-page .mod-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.6rem}
 .whatis-page .mod-card{display:flex;flex-direction:column;gap:.35rem;background:var(--white);border:1px solid var(--border-dark);border-radius:12px;padding:1.1rem 1.2rem;text-decoration:none;transition:border-color .2s,transform .2s}
 .whatis-page .mod-card:hover{border-color:var(--border-brand);transform:translateY(-2px)}
 .whatis-page .mod-card b{font-family:var(--font-heading);font-size:1rem;color:var(--primary)}
@@ -119,14 +119,12 @@ export const html = `<div class="whatis-page">
   <section class="section">
     <div class="container">
       <div class="eyebrow reveal">The pillars</div>
-      <h2 class="reveal" style="max-width:24ch">Six pillars, one loop.</h2>
+      <h2 class="reveal" style="max-width:24ch">Four pillars, one loop.</h2>
       <div class="mod-grid reveal">
         <a class="mod-card" href="/ai-os-platform/nerve-centre"><b>Nerve Centre</b><span>Continuous detection across your connectors.</span></a>
-        <a class="mod-card" href="/ai-os-platform/vortex-mind"><b>Vortex Mind</b><span>Diagnoses a moving number and explains why.</span></a>
+        <a class="mod-card" href="/ai-os-platform/vortex-mind"><b>Vortex Mind</b><span>Diagnoses a moving number, explains why, and remembers every fix so it compounds.</span></a>
         <a class="mod-card" href="/ai-os-platform/ask-viq"><b>Ask Viq&trade;</b><span>Ask in plain English, get an answer you can act on.</span></a>
-        <a class="mod-card" href="/ai-os-platform/vortex-agents"><b>Vortex Agents</b><span>Agents that act across the stack, safely and on approval.</span></a>
-        <a class="mod-card" href="/ai-os-platform/vortex-apps"><b>Vortex Apps</b><span>Staging, backup and one-click rollback.</span></a>
-        <a class="mod-card" href="/ai-os-platform/vortex-memory"><b>Vortex Memory</b><span>Remembers every fix and decision, so it compounds.</span></a>
+        <a class="mod-card" href="/ai-os-platform/vortex-agents"><b>Vortex Agents</b><span>Agents that act across the stack, safely and on approval, with staging, backup and one-click rollback.</span></a>
       </div>
     </div>
   </section>

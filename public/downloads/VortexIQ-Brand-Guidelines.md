@@ -19,7 +19,7 @@ If another document contradicts this one, this one wins. Update this document; d
 4. [Typography](#4-typography)
 5. [Design tokens](#5-design-tokens)
 6. [Components](#6-components)
-7. [The six pillars](#7-the-six-pillars)
+7. [The four pillars](#7-the-four-pillars)
 8. [Voice pillars](#8-voice-pillars)
 9. [Tone by surface](#9-tone-by-surface)
 10. [The nine triggers](#10-the-nine-triggers)
@@ -56,7 +56,7 @@ The promise has three load-bearing words:
 | 04 | Deploy | approval-gated, reversible |
 | 05 | Learn | remember and compound |
 
-Six pillars run this loop. When both numbers appear together, keep them reconciled: six pillars, five steps.
+Four pillars run this loop. When both numbers appear together, keep them reconciled: four pillars, five steps.
 
 ---
 
@@ -269,22 +269,20 @@ Two visuals carry the product story and should appear on any surface that needs 
 
 ---
 
-## 7. The six pillars
+## 7. The four pillars
 
-Do not just say what we do, name how. A sceptic who can file the how away stops asking. These six nouns are the how, and they are always title-case and never paraphrased.
+Do not just say what we do, name how. A sceptic who can file the how away stops asking. These four nouns are the how, and they are always title-case and never paraphrased.
 
 | Pillar | Metaphor | What it is | How to write it |
 |---|---|---|---|
 | **Nerve Centre** | Eyes | The detection layer. Every KPI, live, across 200+ connectors. | Always title-case. Always paired with real-time or continuous. |
-| **Vortex Mind** | Judgement | The diagnostic layer. It investigates the finding and returns the root cause. | Always paired with explains why or root cause. |
+| **Vortex Mind** | Judgement | The diagnostic and memory layer. It investigates the finding, returns the root cause, and remembers every signal, fix, and decision, per store. | Always paired with explains why or root cause. Its memory graph learns and gets sharper over time. |
 | **Ask Viq** | Voice | The conversational interface, cited back to the graph it answered from. | Ask Viq™ on the first prominent mention of a page. Bare Ask Viq after that. |
-| **Vortex Apps** | Guardrails | Staging, backup, and one-click rollback around every change. | Always paired with safe or predictable. |
-| **Vortex Agents** | Hands | Build and manage the AI agents that monitor, analyse, and act across the stack. | Always paired with AI agents or act safely. Agent Hub is retired. |
-| **Vortex Memory** | Recall | The graph that remembers every signal, fix, and decision, per store. | Always paired with learns or gets sharper over time. |
+| **Vortex Agents** | Hands | Build and manage the AI agents that monitor, analyse, and act across the stack, with staging, backup, and one-click rollback around every change. | Always paired with AI agents or act safely. Staging, backup, and rollback are the harness they run inside. Agent Hub is retired. |
 
-Say **six pillars**, not six modules. The six run one continuous five-step loop, so when both numbers appear together, keep them reconciled: six pillars, five steps.
+Say **four pillars**, not four modules. The four run one continuous five-step loop, so when both numbers appear together, keep them reconciled: four pillars, five steps.
 
-**AI OS** is the umbrella over all six, and it always takes a noun: *the AI OS for commerce*, not a bare *AI OS*.
+**AI OS** is the umbrella over all four, and it always takes a noun: *the AI OS for commerce*, not a bare *AI OS*.
 
 The **Eyes, Voice, Hands** metaphor is approved shorthand for a marketing surface. Use it sparingly, and not in docs.
 
@@ -331,7 +329,7 @@ Voice stays constant. Tone shifts.
 | Surface | Dial up | Dial down | Anchor |
 |---|---|---|---|
 | Marketing hero | Anti-chaos | Concrete, concision beats numbers here | *Stop fighting fires. Protect revenue and automate ops.* |
-| Product pages | Concrete, name mechanisms and proof | Nothing, all four run high | *Six pillars, one platform. Eyes, Voice, Hands.* |
+| Product pages | Concrete, name mechanisms and proof | Nothing, all four run high | *Four pillars, one platform. Eyes, Voice, Hands.* |
 | Help docs | Concrete plus Confident | Anti-chaos, less rallying and more explaining | *The Shopify connector is one of 200+ feeding the Nerve Centre.* |
 | In-app labels | Concrete, short and specific | Warm, no chatter inside buttons | *Run Audit, not Get started with your audit journey.* |
 | Empty states and errors | Warm | Confident, apologise softly when something is wrong | *We couldn't reach Shopify just now. Reconnecting in 30s.* |
@@ -374,9 +372,9 @@ The reader is interested and is now testing plausibility. We are not asking for 
 
 #### Trigger 04: Name the unique mechanism
 
-Don't just say what we do, name how. Give it a noun so a sceptic can file the how away and stop asking. Our nouns are the six pillars.
+Don't just say what we do, name how. Give it a noun so a sceptic can file the how away and stop asking. Our nouns are the four pillars.
 
-- Yes: "The Nerve Centre watches it. Vortex Mind explains it. Vortex Apps ships the fix behind staging."
+- Yes: "The Nerve Centre watches it. Vortex Mind explains it. Vortex Agents ship the fix behind staging."
 - No: "Our platform monitors your data and provides recommendations."
 
 #### Trigger 05: Typically atypical
@@ -412,7 +410,7 @@ Three options, ours in the middle. The brain pattern-matches on three. Make the 
 
 Name what is not included. Result, but limitation. Stating the limit builds trust faster than any feature list.
 
-- Yes: "Vortex Apps catches most regressions before they hit production, but it can't catch what your theme partner pushes outside our staging."
+- Yes: "Vortex Agents catch most regressions before they hit production, but they can't catch what your theme partner pushes outside our staging."
 - No: "Total protection across every change."
 
 #### Trigger 09: Big proof, small bite
@@ -439,14 +437,14 @@ Approved proof points. Pick the one that fits the audience, and show one, never 
 | merchant | client, customer, user, end-user |
 | ops lead, growth lead, founder | stakeholder, decision-maker, executive |
 | connector | integration, plugin, app |
-| Nerve Centre, Vortex Mind, Ask Viq, Vortex Apps, Vortex Agents, Vortex Memory | any paraphrase, any lower-case version |
+| Nerve Centre, Vortex Mind, Ask Viq, Vortex Agents | any paraphrase, any lower-case version |
 | Ask Viq™ on first prominent mention | AskViq, Ask VIQ, ask viq |
 | detect, explain, fix | monitor, analyse, recommend |
 | safe, predictable, controlled | bulletproof, guaranteed, foolproof |
 | over 200 connectors, in the AI OS catalogue | many, all the major, 215+, 70+ |
 | catalogue, mapped | supported, integrated |
 | 14-day free trial, free for 14 days | free forever, freemium |
-| six pillars | six modules, six products |
+| four pillars | four modules, four products |
 
 On "catalogue" versus "supported": the catalogue has manifests, cards, and audits ready to light up. Production coverage is broadest where merchants connect first. "Supported" implies production-tested for all, which is not the claim we are making.
 

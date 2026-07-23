@@ -34,7 +34,7 @@ export const NAV: NavEntry[] = [
       layout: "split",
       overview: {
         title: "AI Operating System Overview",
-        text: "The 6 pillars of the AI Operating System.",
+        text: "The four pillars of the AI Operating System.",
         moreLabel: "Explore the Platform →",
         moreHref: "/ai-os-platform",
         works: {
@@ -50,9 +50,8 @@ export const NAV: NavEntry[] = [
         { label: "Nerve Centre", href: "/ai-os-platform/nerve-centre", desc: "Real-time detection", icon: "nerve" },
         { label: "Vortex Mind", href: "/ai-os-platform/vortex-mind", desc: "Diagnostics & strategy", icon: "mind" },
         { label: "Ask Viq™", href: "/ai-os-platform/ask-viq", desc: "Conversational AI", icon: "ask" },
-        { label: "Vortex Apps", href: "/ai-os-platform/vortex-apps", desc: "Staging, backup & governance", icon: "apps" },
         { label: "Vortex Agents", href: "/ai-os-platform/vortex-agents", desc: "Execute changes safely", icon: "actions" },
-        { label: "Vortex Memory", href: "/ai-os-platform/vortex-memory", desc: "Learns from every interaction", icon: "memory" },
+        { label: "Vortex Runtime", href: "/vortex-runtime", desc: "Build & run your own agents", icon: "apps" },
       ],
     },
   },

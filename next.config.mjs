@@ -53,11 +53,15 @@ const nextConfig = {
       // --- A. Flat module/pillar slugs -> /ai-os-platform/* ---
       { source: "/nerve-centre", destination: "/ai-os-platform/nerve-centre", permanent: true },
       { source: "/vortex-mind", destination: "/ai-os-platform/vortex-mind", permanent: true },
-      { source: "/vortex-apps", destination: "/ai-os-platform/vortex-apps", permanent: true },
-      { source: "/vortex-memory", destination: "/ai-os-platform/vortex-memory", permanent: true },
+      { source: "/vortex-apps", destination: "/ai-os-platform/vortex-agents", permanent: true },
+      { source: "/vortex-memory", destination: "/ai-os-platform/vortex-mind", permanent: true },
       { source: "/ask-viq", destination: "/ai-os-platform/ask-viq", permanent: true },
       { source: "/vortex-agents", destination: "/ai-os-platform/vortex-agents", permanent: true },
       { source: "/ai-os-platform/actions", destination: "/ai-os-platform/vortex-agents", permanent: true },
+      // Retired pillars fold into their successors: Apps -> Agents, Memory -> Mind.
+      // These catch every inbound redirect that still lands on the old pillar URL.
+      { source: "/ai-os-platform/vortex-apps", destination: "/ai-os-platform/vortex-agents", permanent: true },
+      { source: "/ai-os-platform/vortex-memory", destination: "/ai-os-platform/vortex-mind", permanent: true },
       { source: "/modules", destination: "/ai-os-platform", permanent: true },
       { source: "/platform", destination: "/ai-os-platform", permanent: true },
       { source: "/vortex-iq-ai-os", destination: "/ai-os-platform", permanent: true },
@@ -74,8 +78,8 @@ const nextConfig = {
       { source: "/agents/site-management/staging-shopify", destination: "/stagingpro-to-ai-os", permanent: true },
       { source: "/agents/site-management/staging-magento", destination: "/stagingpro-to-ai-os", permanent: true },
       { source: "/agents/site-management/stagingpro-bigcommerce", destination: "/stagingpro-to-ai-os", permanent: true },
-      { source: "/agents/site-management/backup-shopify", destination: "/ai-os-platform/vortex-apps", permanent: true },
-      { source: "/agents/site-management/backup-bigcommerce", destination: "/ai-os-platform/vortex-apps", permanent: true },
+      { source: "/agents/site-management/backup-shopify", destination: "/ai-os-platform/vortex-agents", permanent: true },
+      { source: "/agents/site-management/backup-bigcommerce", destination: "/ai-os-platform/vortex-agents", permanent: true },
       { source: "/agents/insights-monitoring/:path*", destination: "/ai-os-platform/nerve-centre", permanent: true },
       { source: "/agents/seo-optimization/:path*", destination: "/solutions/seo-geo", permanent: true },
       { source: "/agents/:path*", destination: "/ai-os-platform/vortex-agents", permanent: true },
@@ -84,7 +88,7 @@ const nextConfig = {
       // --- Old /integrations/* and /solution/* -> topical equivalents ---
       { source: "/integrations/:path*", destination: "/solutions/integrations", permanent: true },
       { source: "/solution/insights-monitoring", destination: "/ai-os-platform/nerve-centre", permanent: true },
-      { source: "/solution/site-management-reliability", destination: "/ai-os-platform/vortex-apps", permanent: true },
+      { source: "/solution/site-management-reliability", destination: "/ai-os-platform/vortex-agents", permanent: true },
       { source: "/solution/seo-performance-optimisation", destination: "/solutions/seo-geo", permanent: true },
 
       // --- C. Solutions / audience flat slugs ---
@@ -220,9 +224,13 @@ const nextConfig = {
 
       // --- Retired standalone pages -> nearest live equivalent (were dumping to /) ---
       { source: "/ai-os-platform/video-demo-gallery", destination: "/product-tour", permanent: true },
-      { source: "/ai-product-photography-for-ecommerce", destination: "/aistudio", permanent: true },
-      { source: "/image-ai-agent-cpg", destination: "/aistudio", permanent: true },
-      { source: "/image-ai-agent-fashion", destination: "/aistudio", permanent: true },
+      // /aistudio (Summit) is retired and replaced by /vortex-runtime. Inbound
+      // redirects point straight at /vortex-runtime so they don't chain through
+      // the now-deleted /aistudio page.
+      { source: "/aistudio", destination: "/vortex-runtime", permanent: true },
+      { source: "/ai-product-photography-for-ecommerce", destination: "/vortex-runtime", permanent: true },
+      { source: "/image-ai-agent-cpg", destination: "/vortex-runtime", permanent: true },
+      { source: "/image-ai-agent-fashion", destination: "/vortex-runtime", permanent: true },
       { source: "/page-speed-web-vitals", destination: "/ai-os-platform/nerve-centre", permanent: true },
       { source: "/vortex-mind-sample-report-contoso-fashion", destination: "/ai-os-platform/vortex-mind", permanent: true },
     ];

@@ -223,7 +223,7 @@ export const TOKEN_GROUPS = [
 ];
 
 /* ------------------------------------------------------------------ *
- * 06. The six pillars
+ * 06. The four pillars
  * ------------------------------------------------------------------ */
 
 export const PILLARS = [
@@ -326,7 +326,7 @@ export const TONE_ROWS = [
     context: "Product pages",
     up: "Concrete, name mechanisms and proof",
     down: "Nothing, all four run high",
-    anchor: "Six pillars, one platform. Eyes, Voice, Hands.",
+    anchor: "Four pillars, one platform. Eyes, Voice, Hands.",
   },
   {
     context: "Help docs",
@@ -397,8 +397,8 @@ export const TRIGGERS = [
       {
         n: "04",
         title: "Name the unique mechanism",
-        body: "Don't just say what we do, name how. Give it a noun so a sceptic can file the how away and stop asking. Our nouns are the six pillars.",
-        yes: "The Nerve Centre watches it. Vortex Mind explains it. Vortex Apps ships the fix behind staging.",
+        body: "Don't just say what we do, name how. Give it a noun so a sceptic can file the how away and stop asking. Our nouns are the four pillars.",
+        yes: "The Nerve Centre watches it. Vortex Mind explains it. Vortex Agents ships the fix behind staging.",
         no: "Our platform monitors your data and provides recommendations.",
       },
       {
@@ -433,7 +433,7 @@ export const TRIGGERS = [
         n: "08",
         title: "Transparent trade-offs",
         body: "Name what is not included. Result, but limitation. Stating the limit builds trust faster than any feature list.",
-        yes: "Vortex Apps catches most regressions before they hit production, but it can't catch what your theme partner pushes outside our staging.",
+        yes: "Vortex Agents catches most regressions before they hit production, but it can't catch what your theme partner pushes outside our staging.",
         no: "Total protection across every change.",
       },
       {
@@ -484,7 +484,7 @@ export const VOCAB = [
   { use: "ops lead, growth lead, founder", not: "stakeholder, decision-maker, executive" },
   { use: "connector", not: "integration, plugin, app" },
   {
-    use: "Nerve Centre, Vortex Mind, Ask Viq, Vortex Apps, Vortex Agents, Vortex Memory",
+    use: "Nerve Centre, Vortex Mind, Ask Viq, Vortex Agents",
     not: "any paraphrase, any lower-case version",
   },
   { use: "Ask Viq™ on first prominent mention", not: "AskViq, Ask VIQ, ask viq" },
@@ -493,7 +493,7 @@ export const VOCAB = [
   { use: "over 200 connectors, in the AI OS catalogue", not: "many, all the major, 215+, 70+" },
   { use: "catalogue, mapped", not: "supported, integrated" },
   { use: "14-day free trial, free for 14 days", not: "free forever, freemium" },
-  { use: "six pillars", not: "six modules, six products" },
+  { use: "four pillars", not: "four modules, four products" },
 ];
 
 export const BANNED_PHRASES = [
