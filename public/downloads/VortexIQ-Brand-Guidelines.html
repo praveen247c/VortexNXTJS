@@ -1,0 +1,1434 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vortex IQ Brand Guidelines v2.1</title>
+<meta name="description" content="The complete Vortex IQ brand book: logo, colour, typography, components, the six pillars, and the full tone-of-voice guide.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   VORTEX IQ BRAND GUIDELINES v2.1
+   Self-contained. Tokens verbatim from the live stylesheet.
+   Print to PDF straight from the browser (A4 or Letter, background graphics on).
+   ========================================================================== */
+:root{
+  --brand-purple:#5529d6;
+  --brand-purple-mid:#392bd5;
+  --brand-purple-light:#a58af3;
+  --brand-purple-deep:#0c061f;
+  --brand-blue:#004794;
+  --brand-gradient:linear-gradient(135deg,#5529d6,#0c061f 50%,#5529d6 75%);
+  --brand-gradient-soft:linear-gradient(135deg,#a58af3,#5529d6);
+  --white:#fff;
+  --neutral-2:#e8e6e3;
+  --surface-soft:#f6f5f3;
+  --surface-tint:#f3f0fc;
+  --primary:#222325;
+  --text-body:rgba(0,0,0,.60);
+  --text-faded:rgba(0,0,0,.40);
+  --border-dark:rgba(0,0,0,.10);
+  --border-strong:rgba(0,0,0,.16);
+  --border-brand:rgba(85,41,214,.30);
+  --success:#1f9e54;--success-soft:rgba(31,158,84,.10);
+  --danger:#d23f31;--danger-soft:rgba(210,63,49,.09);
+  --warning:#c47d12;--warning-soft:rgba(196,125,18,.10);
+  --font-heading:'Geist',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+  --font-body:'Geist',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+  --font-mono:'Geist Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --radius:10px;--radius-pill:200px;--gap:30px;
+  --shadow-sm:0 1px 2px rgba(20,12,40,.06),0 1px 3px rgba(20,12,40,.05);
+  --shadow-md:0 6px 20px rgba(20,12,40,.07),0 2px 6px rgba(20,12,40,.05);
+  --ease:cubic-bezier(.16,1,.3,1);
+  --max:960px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--primary);font-family:var(--font-body);font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;font-feature-settings:"ss01" 1,"ss03" 1,"ss04" 1}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 2rem}
+
+/* ---------- cover ---------- */
+.cover{background:var(--brand-gradient);color:#fff;padding:5.5rem 0 4.5rem;position:relative;overflow:hidden}
+.cover::after{content:"";position:absolute;top:-40%;right:-8%;width:52%;height:190%;
+  background:radial-gradient(circle,rgba(165,138,243,.5),transparent 62%);pointer-events:none}
+.cover .wrap{position:relative;z-index:1}
+.cover .mark{height:44px;width:auto;display:block;margin-bottom:2.6rem}
+.cover .mark svg{height:44px;width:auto;display:block}
+.cover .kicker{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--brand-purple-light);margin-bottom:1.1rem}
+.cover h1{font-family:var(--font-heading);font-weight:600;font-size:clamp(2.4rem,6vw,3.9rem);line-height:1.05;
+  letter-spacing:-.03em;margin-bottom:1.2rem;max-width:15ch}
+.cover .sub{font-size:1.14rem;line-height:1.55;color:rgba(255,255,255,.72);max-width:56ch}
+.cover .meta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2.6rem}
+.cover .meta span{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.03em;color:#fff;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius-pill);padding:.36rem .85rem}
+
+/* ---------- table of contents ---------- */
+.toc{background:var(--surface-soft);border-bottom:1px solid var(--border-dark);padding:3.4rem 0}
+.toc ol{list-style:none;counter-reset:t;columns:2;column-gap:3rem}
+.toc li{counter-increment:t;break-inside:avoid;padding:.5rem 0;border-bottom:1px solid var(--border-dark)}
+.toc a{text-decoration:none;color:var(--primary);font-size:.98rem;display:flex;gap:.9rem;align-items:baseline}
+.toc a::before{content:counter(t,decimal-leading-zero);font-family:var(--font-mono);font-size:.72rem;color:var(--brand-purple);flex:none}
+.toc a:hover{color:var(--brand-purple)}
+
+/* ---------- sections ---------- */
+section{padding:4.4rem 0;border-bottom:1px solid var(--border-dark)}
+section:nth-of-type(even){background:var(--surface-soft)}
+.chap{display:flex;gap:1.4rem;align-items:flex-start;margin-bottom:2.4rem}
+.chap-n{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.14em;color:var(--brand-purple);padding-top:.5rem;flex:none}
+h2{font-family:var(--font-heading);font-weight:600;font-size:clamp(1.7rem,3.4vw,2.4rem);line-height:1.12;
+  letter-spacing:-.025em;margin-bottom:.7rem;max-width:20ch}
+.chap p{color:var(--text-body);font-size:1.04rem;max-width:64ch}
+h3{font-family:var(--font-heading);font-weight:600;font-size:1.18rem;letter-spacing:-.01em;margin:2.4rem 0 .9rem}
+h4{font-family:var(--font-heading);font-weight:600;font-size:1.02rem;margin:1.8rem 0 .6rem}
+.lab{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faded);
+  margin:2.6rem 0 1.1rem;padding-bottom:.65rem;border-bottom:1px solid var(--border-dark)}
+p{margin-bottom:1rem;color:var(--text-body)}
+p.tight{margin-bottom:.4rem}
+strong{color:var(--primary);font-weight:600}
+code{font-family:var(--font-mono);font-size:.86em;background:var(--surface-tint);border:1px solid var(--border-brand);
+  border-radius:5px;padding:.1em .38em;color:var(--brand-purple)}
+a{color:var(--brand-purple)}
+
+/* ---------- quote ---------- */
+.ns{background:var(--surface-tint);border:1px solid var(--border-brand);border-radius:var(--radius);padding:2.4rem;margin-bottom:var(--gap)}
+.ns .p1{font-family:var(--font-heading);font-weight:600;font-size:clamp(1.3rem,2.8vw,1.9rem);line-height:1.22;
+  letter-spacing:-.02em;color:var(--primary);margin-bottom:.9rem;max-width:24ch}
+.ns .p2{font-size:1.05rem;color:var(--text-body);max-width:56ch;margin:0}
+
+/* ---------- grids ---------- */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.card{background:var(--white);border:1px solid var(--border-dark);border-radius:var(--radius);padding:1.7rem}
+.card h4{margin-top:0}
+.card p:last-child{margin-bottom:0}
+.card--tint{background:var(--surface-tint);border-color:var(--border-brand)}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto;border:1px solid var(--border-dark);border-radius:var(--radius);background:var(--white);margin-bottom:1.4rem}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faded);
+  text-align:left;padding:.85rem 1.1rem;border-bottom:1px solid var(--border-dark);font-weight:500;white-space:nowrap}
+td{padding:.85rem 1.1rem;border-bottom:1px solid var(--border-dark);color:var(--text-body);vertical-align:top;line-height:1.5}
+tr:last-child td{border-bottom:none}
+td.k{color:var(--primary);font-weight:500}
+td.mono,th.mono{font-family:var(--font-mono);font-size:.8rem;color:var(--brand-purple);white-space:nowrap}
+td.no{color:var(--text-faded);text-decoration:line-through;text-decoration-color:rgba(210,63,49,.5)}
+td em,td i{font-style:italic}
+
+/* ---------- logo blocks ---------- */
+.logos{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin-bottom:var(--gap)}
+.logobox{border:1px solid var(--border-dark);border-radius:var(--radius);overflow:hidden}
+.logostage{height:180px;display:flex;align-items:center;justify-content:center}
+.logostage svg{height:40px;width:auto;display:block}
+.logostage.light{background:var(--white)}
+.logostage.deep{background:var(--brand-purple-deep)}
+.logofoot{background:var(--white);border-top:1px solid var(--border-dark);padding:.9rem 1.2rem;
+  font-family:var(--font-mono);font-size:.72rem;color:var(--text-faded)}
+.logofoot b{display:block;font-family:var(--font-heading);font-size:.95rem;color:var(--primary);font-weight:600;margin-bottom:.15rem}
+.clearframe{display:inline-block;position:relative;padding:38px;border:1px dashed var(--border-brand);border-radius:6px;
+  background:var(--surface-tint)}
+.clearframe svg{height:36px;width:auto;display:block}
+.clearframe span{position:absolute;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:.6rem;color:var(--brand-purple)}
+.clearframe .t{top:12px}
+.clearframe .b{bottom:12px}
+
+/* ---------- swatches ---------- */
+.sw{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-bottom:1.6rem}
+.swatch{border:1px solid var(--border-dark);border-radius:8px;overflow:hidden;background:var(--white)}
+.swatch .fill{height:74px;display:block}
+.swatch .meta{padding:.7rem .8rem}
+.swatch .tok{font-family:var(--font-mono);font-size:.65rem;color:var(--primary);display:block;word-break:break-all;line-height:1.4}
+.swatch .val{font-family:var(--font-mono);font-size:.63rem;color:var(--brand-purple);display:block;margin-top:.2rem}
+.swatch .role{font-size:.74rem;color:var(--text-faded);display:block;margin-top:.35rem;line-height:1.35}
+.grads{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.4rem}
+.grad{border:1px solid var(--border-dark);border-radius:8px;overflow:hidden;background:var(--white)}
+.grad .fill{height:80px}
+.grad .meta{padding:.85rem 1rem}
+.grad .tok{font-family:var(--font-mono);font-size:.74rem;color:var(--primary)}
+.grad .val{font-family:var(--font-mono);font-size:.63rem;color:var(--brand-purple);display:block;margin-top:.3rem;word-break:break-all}
+
+/* ---------- type ---------- */
+.spec{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin-bottom:1.6rem}
+.specbox{border:1px solid var(--border-dark);border-radius:var(--radius);background:var(--white);padding:1.8rem}
+.specbox .aa{font-family:var(--font-heading);font-weight:500;font-size:4rem;line-height:1;letter-spacing:-.03em;
+  color:var(--primary);margin-bottom:.7rem}
+.specbox.mono .aa{font-family:var(--font-mono)}
+.specbox .nm{font-family:var(--font-heading);font-weight:600;font-size:1.06rem}
+.specbox.mono .nm{font-family:var(--font-mono)}
+.specbox .rl{font-size:.9rem;color:var(--text-body);margin:.25rem 0 1rem}
+.specbox .gl{border-top:1px solid var(--border-dark);padding-top:1rem;font-size:1.05rem;letter-spacing:.04em;color:var(--text-body);line-height:1.6}
+.specbox.mono .gl{font-family:var(--font-mono);font-size:.92rem}
+
+/* ---------- examples ---------- */
+.ex{display:flex;gap:.65rem;align-items:flex-start;font-size:.94rem;line-height:1.5;padding:.75rem .95rem;border-radius:7px;margin-top:.55rem}
+.ex .m{font-family:var(--font-mono);font-size:.72rem;font-weight:500;flex:none;padding-top:.12rem}
+.ex.yes{background:var(--success-soft);border:1px solid rgba(31,158,84,.22);color:var(--primary)}
+.ex.yes .m{color:var(--success)}
+.ex.no{background:var(--danger-soft);border:1px solid rgba(210,63,49,.2);color:var(--text-body)}
+.ex.no .m{color:var(--danger)}
+
+/* ---------- callout ---------- */
+.callout{background:var(--brand-purple-deep);border-radius:var(--radius);padding:2.2rem;color:#fff;position:relative;
+  overflow:hidden;margin:1.6rem 0}
+.callout::after{content:"";position:absolute;top:-40%;right:-6%;width:46%;height:180%;
+  background:radial-gradient(circle,rgba(85,41,214,.6),transparent 64%);pointer-events:none}
+.callout > *{position:relative;z-index:1}
+.callout .k{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--brand-purple-light);margin-bottom:.85rem}
+.callout h3{color:#fff;margin:0 0 .7rem;font-size:1.35rem;max-width:22ch}
+.callout p{color:rgba(255,255,255,.68);margin:0;max-width:60ch}
+.note{display:flex;gap:.75rem;align-items:flex-start;background:var(--surface-tint);border:1px solid var(--border-brand);
+  border-radius:var(--radius);padding:1rem 1.2rem;font-size:.94rem;color:var(--text-body);line-height:1.55;margin:1.4rem 0}
+.note b{color:var(--brand-purple)}
+
+/* ---------- component previews ---------- */
+.demo{background:var(--white);border:1px solid var(--border-dark);border-radius:var(--radius);padding:1.6rem;margin-bottom:1.4rem}
+.row{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:.5rem;height:46px;padding:0 22px;border-radius:var(--radius-pill);
+  font-family:var(--font-body);font-weight:500;font-size:.98rem;background:var(--brand-purple);color:#fff;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--primary);border:1px solid var(--border-strong)}
+.btn.sm{height:38px;padding:0 17px;font-size:.9rem}
+.chip{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-mono);font-size:.7rem;padding:.3rem .68rem;
+  border-radius:var(--radius-pill);border:1px solid var(--border-dark);background:var(--white);color:var(--text-body)}
+.chip.brand{background:var(--surface-tint);border-color:var(--border-brand);color:var(--brand-purple)}
+.chip.ok{background:var(--success-soft);border-color:rgba(31,158,84,.3);color:var(--success)}
+.chip.bad{background:var(--danger-soft);border-color:rgba(210,63,49,.3);color:var(--danger)}
+.chip.warn{background:var(--warning-soft);border-color:rgba(196,125,18,.3);color:var(--warning)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--success);flex:none}
+.modicon{width:48px;height:48px;border-radius:12px;background:var(--brand-gradient);display:flex;align-items:center;
+  justify-content:center;color:#fff;font-family:var(--font-mono);font-size:.68rem}
+.stepnum{width:38px;height:38px;border-radius:10px;background:var(--brand-gradient);color:#fff;font-family:var(--font-heading);
+  font-weight:700;font-size:1rem;display:flex;align-items:center;justify-content:center}
+.loop{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--border-dark);border-radius:var(--radius);
+  overflow:hidden;background:var(--white);margin-bottom:1.4rem}
+.loop div{padding:1.3rem .9rem;text-align:center;border-right:1px solid var(--border-dark)}
+.loop div:last-child{border-right:none}
+.loop .s{font-family:var(--font-mono);font-size:.65rem;letter-spacing:.14em;color:var(--brand-purple);display:block;margin-bottom:.5rem}
+.loop b{font-family:var(--font-heading);font-weight:600;font-size:.98rem;display:block;color:var(--primary)}
+.loop .d{font-family:var(--font-mono);font-size:.64rem;color:var(--text-faded);display:block;margin-top:.35rem;line-height:1.35}
+
+/* ---------- rewrite ---------- */
+.rw{border:1px solid var(--border-dark);border-radius:var(--radius);background:var(--white);overflow:hidden;margin-bottom:1.4rem}
+.rw .h{padding:.85rem 1.3rem;border-bottom:1px solid var(--border-dark);background:var(--surface-tint);
+  font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-purple)}
+.rw .b{display:grid;grid-template-columns:1fr 1fr}
+.rw .c{padding:1.3rem}
+.rw .c:first-child{border-right:1px solid var(--border-dark);background:var(--surface-soft)}
+.rw .c .m{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:.7rem}
+.rw .c:first-child .m{color:var(--danger)}
+.rw .c:last-child .m{color:var(--success)}
+.rw .c p{margin:0;font-size:.95rem}
+.rw .c:last-child p{color:var(--primary)}
+.rw .n{padding:.9rem 1.3rem;border-top:1px solid var(--border-dark);background:var(--surface-soft);font-size:.88rem;
+  color:var(--text-body);line-height:1.5}
+
+/* ---------- lists ---------- */
+ul.plain,ol.plain{list-style:none;display:grid;gap:.6rem;margin-bottom:1.2rem}
+ul.plain li{display:flex;gap:.65rem;align-items:flex-start;font-size:.96rem;color:var(--text-body);line-height:1.5}
+ul.plain li::before{content:"";width:5px;height:5px;flex:none;border-radius:50%;background:var(--brand-purple);margin-top:.58rem}
+ol.plain{counter-reset:o}
+ol.plain li{counter-increment:o;position:relative;padding-left:2rem;font-size:.96rem;color:var(--text-body);line-height:1.5}
+ol.plain li::before{content:counter(o,decimal-leading-zero);position:absolute;left:0;top:.06rem;font-family:var(--font-mono);
+  font-size:.68rem;color:var(--brand-purple)}
+
+/* ---------- footer ---------- */
+footer{background:var(--brand-purple-deep);color:rgba(255,255,255,.6);padding:3rem 0;font-family:var(--font-mono);font-size:.76rem;line-height:1.9}
+footer a{color:var(--brand-purple-light);text-decoration:none}
+footer b{color:#fff;font-weight:500}
+
+/* ---------- responsive ---------- */
+@media(max-width:820px){
+  .g2,.g3,.logos,.spec,.grads,.rw .b{grid-template-columns:1fr}
+  .sw{grid-template-columns:repeat(2,1fr)}
+  .toc ol{columns:1}
+  .loop{grid-template-columns:1fr}
+  .loop div{border-right:none;border-bottom:1px solid var(--border-dark)}
+  .rw .c:first-child{border-right:none;border-bottom:1px solid var(--border-dark)}
+}
+
+/* ---------- print ---------- */
+@media print{
+  @page{margin:14mm}
+  body{font-size:10.5pt}
+  .wrap{max-width:none;padding:0}
+  .cover{padding:2.4rem 0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  section{padding:1.6rem 0;break-inside:auto;page-break-inside:auto}
+  section:nth-of-type(even){background:none}
+  h2,h3,h4{break-after:avoid;page-break-after:avoid}
+  .card,.swatch,.rw,.callout,.note,.ns,.demo,.tw,.logobox{break-inside:avoid;page-break-inside:avoid}
+  tr{break-inside:avoid;page-break-inside:avoid}
+  .toc{page-break-after:always}
+  a{text-decoration:none}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================ COVER ============================ -->
+<div class="cover">
+  <div class="wrap">
+    <div class="mark"><svg width="186" height="48" viewBox="0 0 186 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mask id="mask0_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="5" y="9" width="27" height="20">
+<path d="M5.11035 24.4869V28.7315C5.11035 23.1384 31.1987 19.377 31.1987 13.999V9.75439C31.1987 15.1324 5.11035 18.893 5.11035 24.4869Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_11293_819)">
+<path d="M31.1987 28.7317L5.11035 37.7514V9.7546L31.1987 0.734863V28.7317Z" fill="white"/>
+</g>
+<mask id="mask1_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="27" height="19">
+<path d="M0.278809 14.7325V18.974C0.278809 13.3808 26.3672 9.61945 26.3672 4.24148V0C26.3672 5.37797 0.278809 9.13782 0.278809 14.7325Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_11293_819)">
+<path d="M26.3672 18.9739L0.278809 27.9968V-7.92071e-05L26.3672 -9.01904V18.9739Z" fill="white"/>
+</g>
+<mask id="mask2_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="8" width="32" height="13">
+<path d="M15.6212 12.2024C7.93037 14.8056 0.278809 17.4072 0.278809 14.7325V18.9771C0.278809 21.6525 7.93037 19.0494 15.6212 16.4462C23.39 13.8167 31.198 11.1871 31.198 13.9984V9.75386C31.198 8.89935 30.4727 8.5459 29.2435 8.5459C26.4412 8.5459 21.0216 10.3738 15.6205 12.2016" fill="white"/>
+</mask>
+<g mask="url(#mask2_11293_819)">
+<rect x="0.132324" y="-2.2085" width="31.172" height="34.6146" fill="url(#pattern0_11293_819)"/>
+</g>
+<mask id="mask3_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="22" width="17" height="17">
+<path d="M10.9077 33.9083V38.1521C10.9077 32.559 26.3673 32.4728 26.3673 27.094V22.8486C26.3673 28.2266 10.9077 28.3121 10.9077 33.9068" fill="white"/>
+</mask>
+<g mask="url(#mask3_11293_819)">
+<path d="M26.3673 38.1531L10.9077 43.4977V22.8504L26.3673 17.5059V38.1531Z" fill="white"/>
+</g>
+<mask id="mask4_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="5" y="21" width="22" height="10">
+<path d="M15.6436 23.6194C10.3612 25.3898 5.11035 27.1602 5.11035 24.4871V28.7294C5.11035 31.4024 10.3612 29.632 15.6436 27.8616C20.9892 26.0703 26.368 24.2781 26.368 27.0918V22.8472C26.368 21.7884 25.6065 21.3813 24.3718 21.3813C22.3256 21.3813 18.9769 22.4992 15.6444 23.6163" fill="white"/>
+</mask>
+<g mask="url(#mask4_11293_819)">
+<rect x="5.06348" y="13.9448" width="21.3092" height="24.8515" fill="url(#pattern1_11293_819)"/>
+</g>
+<mask id="mask5_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="15" y="36" width="6" height="12">
+<path d="M15.7383 43.6631V47.9076C15.7383 42.3145 20.5698 45.9027 20.5698 40.5278V36.2832C20.5698 41.6612 15.7383 38.0699 15.7383 43.6631Z" fill="white"/>
+</mask>
+<g mask="url(#mask5_11293_819)">
+<path d="M20.5698 47.907L15.7383 49.5772V36.281L20.5698 34.6108V47.907Z" fill="white"/>
+</g>
+<mask id="mask6_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="15" y="36" width="6" height="11">
+<path d="M15.7383 43.6628V46.2014C15.7383 40.6083 20.5698 44.1964 20.5698 38.8216V36.2837C20.5698 41.6617 15.7383 38.0696 15.7383 43.6628Z" fill="white"/>
+</mask>
+<g mask="url(#mask6_11293_819)">
+<path d="M15.7383 36.281L20.5698 34.6108V46.2011L15.7383 47.8713V36.281Z" fill="white"/>
+</g>
+<mask id="mask7_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="33" width="11" height="8">
+<path d="M10.9077 38.153C10.9077 40.8214 13.2861 40.0492 15.6861 39.2763C18.12 38.4909 20.5731 37.7063 20.5731 40.5254V36.2808C20.5731 33.4617 18.12 34.2471 15.6861 35.0317C13.2892 35.8046 10.9077 36.5776 10.9077 33.9092V38.153Z" fill="white"/>
+</mask>
+<g mask="url(#mask7_11293_819)">
+<path d="M10.9077 33.461L20.57 30.1206V40.8214L10.9077 44.1618V33.461Z" fill="white"/>
+</g>
+<mask id="mask8_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="8" width="32" height="13">
+<path d="M15.6212 12.2024C7.93037 14.8056 0.278809 17.4072 0.278809 14.7325V18.9771C0.278809 21.6525 7.93037 19.0494 15.6212 16.4462C23.39 13.8167 31.198 11.1871 31.198 13.9984V9.75386C31.198 8.89935 30.4727 8.5459 29.2435 8.5459C26.4412 8.5459 21.0216 10.3738 15.6205 12.2016" fill="white"/>
+</mask>
+<g mask="url(#mask8_11293_819)">
+<path d="M0.278809 8.54685L31.1988 -2.14307V21.6535L0.278809 32.3426V8.54685Z" fill="white"/>
+</g>
+<mask id="mask9_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="5" y="21" width="22" height="10">
+<path d="M15.6436 23.6194C10.3612 25.3898 5.11035 27.1602 5.11035 24.4871V28.7294C5.11035 31.4024 10.3612 29.632 15.6436 27.8616C20.9892 26.0703 26.368 24.2781 26.368 27.0918V22.8472C26.368 21.7884 25.6065 21.3813 24.3718 21.3813C22.3256 21.3813 18.9769 22.4992 15.6444 23.6163" fill="white"/>
+</mask>
+<g mask="url(#mask9_11293_819)">
+<path d="M5.11035 21.3805L26.3672 14.0317V31.4016L5.11035 38.7504V21.3805Z" fill="white"/>
+</g>
+<mask id="mask10_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="33" width="11" height="8">
+<path d="M10.9077 38.153C10.9077 40.8214 13.2861 40.0492 15.6861 39.2763C18.12 38.4909 20.5731 37.7063 20.5731 40.5254V36.2808C20.5731 33.4617 18.12 34.2471 15.6861 35.0317C13.2892 35.8046 10.9077 36.5776 10.9077 33.9092V38.153Z" fill="white"/>
+</mask>
+<g mask="url(#mask10_11293_819)">
+<path d="M10.9077 33.461L20.57 30.1206V40.8214L10.9077 44.1618V33.461Z" fill="white"/>
+</g>
+<mask id="mask11_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="8" width="32" height="13">
+<path d="M15.6212 12.2024C7.93037 14.8056 0.278809 17.4072 0.278809 14.7325V18.9771C0.278809 21.6525 7.93037 19.0494 15.6212 16.4462C23.39 13.8167 31.198 11.1871 31.198 13.9984V9.75386C31.198 8.89935 30.4727 8.5459 29.2435 8.5459C26.4412 8.5459 21.0216 10.3738 15.6205 12.2016" fill="white"/>
+</mask>
+<g mask="url(#mask11_11293_819)">
+<path d="M0.278809 8.54685L31.1988 -2.14307V21.6535L0.278809 32.3426V8.54685Z" fill="white"/>
+</g>
+<path d="M58.1201 10.1613L49.7025 29.3683L41.3504 10.1613H37.772L47.9784 33.5438H51.2593L61.4326 10.1613H58.1201ZM69.189 33.7442C74.4583 33.7442 78.3026 29.9696 78.3026 24.6918C78.3026 19.4141 74.4583 15.6729 69.189 15.6729C63.9197 15.6729 60.0423 19.4141 60.0423 24.6918C60.0423 29.9696 63.9197 33.7442 69.189 33.7442ZM69.189 30.9383C65.8087 30.9383 63.2546 28.4664 63.2546 24.6918C63.2546 20.9172 65.8064 18.4772 69.189 18.4772C72.5717 18.4772 75.088 20.9157 75.088 24.6918C75.088 28.468 72.5693 30.9383 69.189 30.9383ZM84.8344 18.8128V15.8399H81.7824V33.5438H84.9638V24.7252C84.9638 20.8504 87.0848 18.7437 90.4983 18.7437C90.7418 18.7388 90.9853 18.75 91.2274 18.7771V15.6698C88.1453 15.6729 85.958 16.7418 84.8313 18.8128H84.8344ZM103.821 30.2034C103.108 30.7546 102.233 31.0487 101.335 31.0385C99.5787 31.0385 98.5845 29.9696 98.5845 28.0656V18.4788H103.623V15.8375H98.5845V11.9627H95.403V15.8375H92.4204V18.4788H95.403V28.1992C95.403 31.7726 97.4246 33.7442 100.971 33.7442C102.355 33.7918 103.713 33.3551 104.815 32.5083L103.821 30.2034ZM123.011 24.792C123.011 19.3473 119.399 15.6729 114.328 15.6729C109.258 15.6729 105.513 19.4475 105.513 24.6918C105.511 29.9704 109.289 33.7442 114.953 33.7442C116.246 33.8071 117.537 33.5821 118.734 33.0854C119.931 32.5886 121.005 31.8322 121.879 30.8699L120.123 28.7989C119.481 29.5038 118.696 30.06 117.82 30.4291C116.945 30.7982 116 30.9714 115.052 30.9367C111.572 30.9367 109.087 28.8657 108.689 25.7592H122.94C122.976 25.4601 123.009 25.0593 123.009 24.792H123.011ZM114.326 18.3785C115.733 18.3335 117.102 18.8357 118.151 19.781C119.2 20.7263 119.848 22.0422 119.96 23.4559H108.692C108.803 22.0417 109.451 20.725 110.5 19.7794C111.549 18.8339 112.919 18.3322 114.326 18.3785ZM140.805 33.5438L133.813 24.4914L140.441 15.8399H136.961L132.156 22.22L127.317 15.8399H123.772L130.367 24.4914L123.44 33.5438H126.985L132.122 26.7628L137.193 33.5438H140.805ZM151.808 33.5438H155.122V10.1613H151.808V33.5438ZM183.49 33.7768C182.974 34.4049 182.326 34.9102 181.593 35.2567C180.86 35.6031 180.061 35.7822 179.251 35.781C177.76 35.781 176.368 35.113 174.81 33.4428C177.428 32.8785 179.77 31.413 181.432 29.298C183.095 27.183 183.975 24.5504 183.921 21.8525C183.921 14.9714 178.685 9.89404 171.626 9.89404C164.501 9.89404 159.264 15.0048 159.264 21.8525C159.268 28.433 164.103 33.4101 170.764 33.7768C174.012 37.1506 176.299 38.4199 179.215 38.4199C180.328 38.4302 181.43 38.1896 182.439 37.7157C183.448 37.2418 184.339 36.5466 185.048 35.6808L183.49 33.7768ZM162.582 21.8525C162.559 20.6546 162.777 19.4643 163.225 18.3545C163.673 17.2447 164.341 16.2385 165.188 15.3976C166.035 14.5566 167.043 13.8985 168.15 13.4634C169.258 13.0283 170.442 12.8253 171.63 12.867C172.813 12.8328 173.99 13.0413 175.09 13.48C176.191 13.9186 177.191 14.5782 178.031 15.4187C178.87 16.2591 179.532 17.2628 179.975 18.3688C180.417 19.4749 180.633 20.6601 180.607 21.8525C180.633 23.0453 180.417 24.2309 179.974 25.3371C179.531 26.4434 178.869 27.4473 178.029 28.2878C177.189 29.1283 176.188 29.7878 175.088 30.2262C173.987 30.6646 172.809 30.8728 171.626 30.8381C170.438 30.8792 169.255 30.6758 168.147 30.2405C167.04 29.8051 166.033 29.1469 165.187 28.306C164.34 27.4651 163.673 26.4592 163.225 25.3496C162.777 24.24 162.559 23.0501 162.582 21.8525Z" fill="white"/>
+<defs>
+<pattern id="pattern0_11293_819" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_11293_819" transform="scale(0.00564972 0.00512821)"/>
+</pattern>
+<pattern id="pattern1_11293_819" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_11293_819" transform="scale(0.00826446 0.00714286)"/>
+</pattern>
+<image id="image0_11293_819" width="177" height="195" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+<image id="image1_11293_819" width="121" height="140" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+</defs>
+</svg></div>
+    <div class="kicker">Brand book v2.1</div>
+    <h1>Vortex IQ Brand Guidelines</h1>
+    <p class="sub">The single source of truth for how Vortex IQ looks and sounds, across the marketing site, the help docs, and the in-app product surfaces. Anyone producing customer-facing work reads this first.</p>
+    <div class="meta">
+      <span>Updated July 2026</span>
+      <span>Owned by marketing and product</span>
+      <span>vortexiq.ai/branding</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ CONTENTS ============================ -->
+<div class="toc">
+  <div class="wrap">
+    <div class="lab" style="margin-top:0">Contents</div>
+    <ol>
+      <li><a href="#north-star">The North Star</a></li>
+      <li><a href="#logo">Logo</a></li>
+      <li><a href="#colour">Colour</a></li>
+      <li><a href="#type">Typography</a></li>
+      <li><a href="#tokens">Design tokens</a></li>
+      <li><a href="#components">Components</a></li>
+      <li><a href="#pillars">The six pillars</a></li>
+      <li><a href="#voice">Voice pillars</a></li>
+      <li><a href="#tone">Tone by surface</a></li>
+      <li><a href="#triggers">The nine triggers</a></li>
+      <li><a href="#vocabulary">Vocabulary</a></li>
+      <li><a href="#patterns">Structural patterns</a></li>
+      <li><a href="#channels">Channel playbook</a></li>
+      <li><a href="#rewrites">Worked rewrites</a></li>
+      <li><a href="#how-to-use">How to use this document</a></li>
+    </ol>
+    <p style="margin-top:1.6rem;font-size:.92rem">If another document contradicts this one, this one wins. Update this document; do not fork the brand in your channel. Questions, corrections, and asset requests: <a href="mailto:hey@vortexiq.ai">hey@vortexiq.ai</a>.</p>
+  </div>
+</div>
+
+<!-- ============================ 01 NORTH STAR ============================ -->
+<section id="north-star">
+  <div class="wrap">
+    <div class="chap"><span class="chap-n">01</span><div>
+      <h2>Start with the promise.</h2>
+      <p>Every design and every sentence exists to make one claim believable. If a decision does not serve this line, it is the wrong decision.</p>
+    </div></div>
+
+    <div class="ns">
+      <p class="p1">Vortex IQ is the world's first AI Operating System for e-commerce.</p>
+      <p class="p2">One command centre that detects what's wrong, explains why, and helps you fix it safely, across every platform you run.</p>
+    </div>
+
+    <p>AI OS and AI Operating System are the public umbrella. Use them. This is the brand promise, not internal lingo.</p>
+
+    <div class="g3">
+      <div class="card"><h4 style="color:var(--brand-purple)">AI</h4><p>Not analytics, not dashboards. Active, not passive. The system does the watching so your team does the deciding.</p></div>
+      <div class="card"><h4 style="color:var(--brand-purple)">Operating System</h4><p>The thing your stack runs on, not another tool you bolt on beside it. That distinction carries the whole positioning.</p></div>
+      <div class="card"><h4 style="color:var(--brand-purple)">For e-commerce</h4><p>A narrow category, named in the first line. Not for businesses. Not for retailers. Specifically e-commerce.</p></div>
+    </div>
+
+    <div class="lab">One loop, five steps</div>
+    <div class="loop">
+      <div><span class="s">01</span><b>Detect</b><span class="d">watch every KPI live</span></div>
+      <div><span class="s">02</span><b>Diagnose</b><span class="d">find the root cause</span></div>
+      <div><span class="s">03</span><b>Act</b><span class="d">turn findings into work</span></div>
+      <div><span class="s">04</span><b>Deploy</b><span class="d">approval-gated, reversible</span></div>
+      <div><span class="s">05</span><b>Learn</b><span class="d">remember and compound</span></div>
+    </div>
+    <p>Six pillars run this loop. When both numbers appear together, keep them reconciled: six pillars, five steps.</p>
+  </div>
+</section>
+
+<!-- ============================ 02 LOGO ============================ -->
+<section id="logo">
+  <div class="wrap">
+    <div class="chap"><span class="chap-n">02</span><div>
+      <h2>One mark, two finishes.</h2>
+      <p>Use the full-colour mark on light surfaces and the white mark on dark or brand-deep backgrounds. Keep clear space around it, and never recolour or distort it.</p>
+    </div></div>
+
+    <div class="logos">
+      <div class="logobox">
+        <div class="logostage light"><svg width="186" height="48" viewBox="0 0 186 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mask id="mask0_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="5" y="9" width="27" height="20">
+<path d="M5.11035 24.5792V28.8238C5.11035 23.2306 31.1987 19.4692 31.1987 14.0913V9.84668C31.1987 15.2247 5.11035 18.9853 5.11035 24.5792Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_11290_753)">
+<path d="M31.1987 28.824L5.11035 37.8437V9.84689L31.1987 0.827148V28.824Z" fill="#4B24BE"/>
+</g>
+<mask id="mask1_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="27" height="20">
+<path d="M0.278809 14.8248V19.0663C0.278809 13.4731 26.3672 9.71174 26.3672 4.33376V0.0922852C26.3672 5.47026 0.278809 9.2301 0.278809 14.8248Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_11290_753)">
+<path d="M26.3672 19.0662L0.278809 28.0891V0.0922059L26.3672 -8.92676V19.0662Z" fill="#4B24BE"/>
+</g>
+<mask id="mask2_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="8" width="32" height="13">
+<path d="M15.6212 12.2947C7.93037 14.8979 0.278809 17.4994 0.278809 14.8248V19.0694C0.278809 21.7448 7.93037 19.1417 15.6212 16.5385C23.39 13.909 31.198 11.2794 31.198 14.0907V9.84615C31.198 8.99164 30.4727 8.63818 29.2435 8.63818C26.4412 8.63818 21.0216 10.4661 15.6205 12.2939" fill="white"/>
+</mask>
+<g mask="url(#mask2_11290_753)">
+<rect x="0.132324" y="-2.11621" width="31.172" height="34.6146" fill="url(#pattern0_11290_753)"/>
+</g>
+<mask id="mask3_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="22" width="17" height="17">
+<path d="M10.9077 34.0006V38.2444C10.9077 32.6513 26.3673 32.565 26.3673 27.1863V22.9409C26.3673 28.3189 10.9077 28.4043 10.9077 33.9991" fill="white"/>
+</mask>
+<g mask="url(#mask3_11290_753)">
+<path d="M26.3673 38.2454L10.9077 43.59V22.9427L26.3673 17.5981V38.2454Z" fill="#4B24BE"/>
+</g>
+<mask id="mask4_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="5" y="21" width="22" height="10">
+<path d="M15.6436 23.7117C10.3612 25.4821 5.11035 27.2525 5.11035 24.5794V28.8216C5.11035 31.4947 10.3612 29.7243 15.6436 27.9539C20.9892 26.1626 26.368 24.3704 26.368 27.1841V22.9395C26.368 21.8807 25.6065 21.4736 24.3718 21.4736C22.3256 21.4736 18.9769 22.5915 15.6444 23.7086" fill="white"/>
+</mask>
+<g mask="url(#mask4_11290_753)">
+<rect x="5.06348" y="14.0371" width="21.3092" height="24.8515" fill="url(#pattern1_11290_753)"/>
+</g>
+<mask id="mask5_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="15" y="36" width="6" height="12">
+<path d="M15.7383 43.7554V47.9999C15.7383 42.4068 20.5698 45.9949 20.5698 40.6201V36.3755C20.5698 41.7535 15.7383 38.1622 15.7383 43.7554Z" fill="white"/>
+</mask>
+<g mask="url(#mask5_11290_753)">
+<path d="M20.5698 47.9993L15.7383 49.6695V36.3733L20.5698 34.7031V47.9993Z" fill="#4B24BE"/>
+</g>
+<mask id="mask6_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="15" y="36" width="6" height="11">
+<path d="M15.7383 43.7551V46.2937C15.7383 40.7006 20.5698 44.2887 20.5698 38.9139V36.376C20.5698 41.754 15.7383 38.1619 15.7383 43.7551Z" fill="white"/>
+</mask>
+<g mask="url(#mask6_11290_753)">
+<path d="M15.7383 36.3733L20.5698 34.7031V46.2934L15.7383 47.9636V36.3733Z" fill="#4B24BE"/>
+</g>
+<mask id="mask7_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="34" width="11" height="7">
+<path d="M10.9077 38.2453C10.9077 40.9137 13.2861 40.1415 15.6861 39.3686C18.12 38.5832 20.5731 37.7986 20.5731 40.6177V36.3731C20.5731 33.554 18.12 34.3394 15.6861 35.124C13.2892 35.8969 10.9077 36.6699 10.9077 34.0015V38.2453Z" fill="white"/>
+</mask>
+<g mask="url(#mask7_11290_753)">
+<path d="M10.9077 33.5532L20.57 30.2129V40.9137L10.9077 44.254V33.5532Z" fill="#4B24BE"/>
+</g>
+<mask id="mask8_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="8" width="32" height="13">
+<path d="M15.6212 12.2947C7.93037 14.8979 0.278809 17.4994 0.278809 14.8248V19.0694C0.278809 21.7448 7.93037 19.1417 15.6212 16.5385C23.39 13.909 31.198 11.2794 31.198 14.0907V9.84615C31.198 8.99164 30.4727 8.63818 29.2435 8.63818C26.4412 8.63818 21.0216 10.4661 15.6205 12.2939" fill="white"/>
+</mask>
+<g mask="url(#mask8_11290_753)">
+<path d="M0.278809 8.63914L31.1988 -2.05078V21.7458L0.278809 32.4349V8.63914Z" fill="#4B24BE"/>
+</g>
+<mask id="mask9_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="5" y="21" width="22" height="10">
+<path d="M15.6436 23.7117C10.3612 25.4821 5.11035 27.2525 5.11035 24.5794V28.8216C5.11035 31.4947 10.3612 29.7243 15.6436 27.9539C20.9892 26.1626 26.368 24.3704 26.368 27.1841V22.9395C26.368 21.8807 25.6065 21.4736 24.3718 21.4736C22.3256 21.4736 18.9769 22.5915 15.6444 23.7086" fill="white"/>
+</mask>
+<g mask="url(#mask9_11290_753)">
+<path d="M5.11035 21.4728L26.3672 14.124V31.4939L5.11035 38.8427V21.4728Z" fill="#4B24BE"/>
+</g>
+<mask id="mask10_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="34" width="11" height="7">
+<path d="M10.9077 38.2453C10.9077 40.9137 13.2861 40.1415 15.6861 39.3686C18.12 38.5832 20.5731 37.7986 20.5731 40.6177V36.3731C20.5731 33.554 18.12 34.3394 15.6861 35.124C13.2892 35.8969 10.9077 36.6699 10.9077 34.0015V38.2453Z" fill="white"/>
+</mask>
+<g mask="url(#mask10_11290_753)">
+<path d="M10.9077 33.5532L20.57 30.2129V40.9137L10.9077 44.254V33.5532Z" fill="#4B24BE"/>
+</g>
+<mask id="mask11_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="8" width="32" height="13">
+<path d="M15.6212 12.2947C7.93037 14.8979 0.278809 17.4994 0.278809 14.8248V19.0694C0.278809 21.7448 7.93037 19.1417 15.6212 16.5385C23.39 13.909 31.198 11.2794 31.198 14.0907V9.84615C31.198 8.99164 30.4727 8.63818 29.2435 8.63818C26.4412 8.63818 21.0216 10.4661 15.6205 12.2939" fill="white"/>
+</mask>
+<g mask="url(#mask11_11290_753)">
+<path d="M0.278809 8.63914L31.1988 -2.05078V21.7458L0.278809 32.4349V8.63914Z" fill="#4B24BE"/>
+</g>
+<path d="M58.1201 10.2536L49.7025 29.4606L41.3504 10.2536H37.772L47.9784 33.636H51.2593L61.4326 10.2536H58.1201ZM69.189 33.8365C74.4583 33.8365 78.3026 30.0619 78.3026 24.7841C78.3026 19.5063 74.4583 15.7651 69.189 15.7651C63.9197 15.7651 60.0423 19.5063 60.0423 24.7841C60.0423 30.0619 63.9197 33.8365 69.189 33.8365ZM69.189 31.0306C65.8087 31.0306 63.2546 28.5587 63.2546 24.7841C63.2546 21.0095 65.8064 18.5695 69.189 18.5695C72.5717 18.5695 75.088 21.0079 75.088 24.7841C75.088 28.5603 72.5693 31.0306 69.189 31.0306ZM84.8344 18.9051V15.9322H81.7824V33.636H84.9638V24.8175C84.9638 20.9427 87.0848 18.8359 90.4983 18.8359C90.7418 18.8311 90.9853 18.8423 91.2274 18.8693V15.762C88.1453 15.7651 85.958 16.8341 84.8313 18.9051H84.8344ZM103.821 30.2957C103.108 30.8469 102.233 31.141 101.335 31.1308C99.5787 31.1308 98.5845 30.0619 98.5845 28.1579V18.571H103.623V15.9298H98.5845V12.055H95.403V15.9298H92.4204V18.571H95.403V28.2915C95.403 31.8649 97.4246 33.8365 100.971 33.8365C102.355 33.8841 103.713 33.4474 104.815 32.6005L103.821 30.2957ZM123.011 24.8843C123.011 19.4395 119.399 15.7651 114.328 15.7651C109.258 15.7651 105.513 19.5397 105.513 24.7841C105.511 30.0626 109.289 33.8365 114.953 33.8365C116.246 33.8993 117.537 33.6744 118.734 33.1776C119.931 32.6809 121.005 31.9245 121.879 30.9622L120.123 28.8912C119.481 29.5961 118.696 30.1523 117.82 30.5213C116.945 30.8904 116 31.0636 115.052 31.029C111.572 31.029 109.087 28.958 108.689 25.8515H122.94C122.976 25.5524 123.009 25.1515 123.009 24.8843H123.011ZM114.326 18.4708C115.733 18.4258 117.102 18.928 118.151 19.8733C119.2 20.8186 119.848 22.1345 119.96 23.5482H108.692C108.803 22.134 109.451 20.8173 110.5 19.8717C111.549 18.9262 112.919 18.4245 114.326 18.4708ZM140.805 33.636L133.813 24.5837L140.441 15.9322H136.961L132.156 22.3122L127.317 15.9322H123.772L130.367 24.5837L123.44 33.636H126.985L132.122 26.8551L137.193 33.636H140.805ZM151.808 33.636H155.122V10.2536H151.808V33.636ZM183.49 33.8691C182.974 34.4972 182.326 35.0025 181.593 35.3489C180.86 35.6954 180.061 35.8745 179.251 35.8733C177.76 35.8733 176.368 35.2052 174.81 33.5351C177.428 32.9708 179.77 31.5053 181.432 29.3903C183.095 27.2752 183.975 24.6427 183.921 21.9448C183.921 15.0637 178.685 9.98633 171.626 9.98633C164.501 9.98633 159.264 15.0971 159.264 21.9448C159.268 28.5253 164.103 33.5024 170.764 33.8691C174.012 37.2429 176.299 38.5122 179.215 38.5122C180.328 38.5225 181.43 38.2819 182.439 37.808C183.448 37.3341 184.339 36.6388 185.048 35.7731L183.49 33.8691ZM162.582 21.9448C162.559 20.7469 162.777 19.5566 163.225 18.4468C163.673 17.3369 164.341 16.3308 165.188 15.4898C166.035 14.6489 167.043 13.9907 168.15 13.5556C169.258 13.1205 170.442 12.9176 171.63 12.9592C172.813 12.9251 173.99 13.1336 175.09 13.5723C176.191 14.0109 177.191 14.6705 178.031 15.5109C178.87 16.3514 179.532 17.3551 179.975 18.4611C180.417 19.5671 180.633 20.7524 180.607 21.9448C180.633 23.1376 180.417 24.3231 179.974 25.4294C179.531 26.5357 178.869 27.5396 178.029 28.3801C177.189 29.2206 176.188 29.8801 175.088 30.3185C173.987 30.7569 172.809 30.9651 171.626 30.9304C170.438 30.9715 169.255 30.7681 168.147 30.3328C167.04 29.8974 166.033 29.2392 165.187 28.3983C164.34 27.5574 163.673 26.5515 163.225 25.4419C162.777 24.3323 162.559 23.1424 162.582 21.9448Z" fill="#4B24BE"/>
+<defs>
+<pattern id="pattern0_11290_753" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_11290_753" transform="scale(0.00564972 0.00512821)"/>
+</pattern>
+<pattern id="pattern1_11290_753" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_11290_753" transform="scale(0.00826446 0.00714286)"/>
+</pattern>
+<image id="image0_11290_753" width="177" height="195" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+<image id="image1_11290_753" width="121" height="140" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+</defs>
+</svg></div>
+        <div class="logofoot"><b>Full-colour logo</b>vlogo.svg · for light and white backgrounds</div>
+      </div>
+      <div class="logobox">
+        <div class="logostage deep"><svg width="186" height="48" viewBox="0 0 186 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mask id="mask0_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="5" y="9" width="27" height="20">
+<path d="M5.11035 24.4869V28.7315C5.11035 23.1384 31.1987 19.377 31.1987 13.999V9.75439C31.1987 15.1324 5.11035 18.893 5.11035 24.4869Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_11293_819)">
+<path d="M31.1987 28.7317L5.11035 37.7514V9.7546L31.1987 0.734863V28.7317Z" fill="white"/>
+</g>
+<mask id="mask1_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="27" height="19">
+<path d="M0.278809 14.7325V18.974C0.278809 13.3808 26.3672 9.61945 26.3672 4.24148V0C26.3672 5.37797 0.278809 9.13782 0.278809 14.7325Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_11293_819)">
+<path d="M26.3672 18.9739L0.278809 27.9968V-7.92071e-05L26.3672 -9.01904V18.9739Z" fill="white"/>
+</g>
+<mask id="mask2_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="8" width="32" height="13">
+<path d="M15.6212 12.2024C7.93037 14.8056 0.278809 17.4072 0.278809 14.7325V18.9771C0.278809 21.6525 7.93037 19.0494 15.6212 16.4462C23.39 13.8167 31.198 11.1871 31.198 13.9984V9.75386C31.198 8.89935 30.4727 8.5459 29.2435 8.5459C26.4412 8.5459 21.0216 10.3738 15.6205 12.2016" fill="white"/>
+</mask>
+<g mask="url(#mask2_11293_819)">
+<rect x="0.132324" y="-2.2085" width="31.172" height="34.6146" fill="url(#pattern0_11293_819)"/>
+</g>
+<mask id="mask3_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="22" width="17" height="17">
+<path d="M10.9077 33.9083V38.1521C10.9077 32.559 26.3673 32.4728 26.3673 27.094V22.8486C26.3673 28.2266 10.9077 28.3121 10.9077 33.9068" fill="white"/>
+</mask>
+<g mask="url(#mask3_11293_819)">
+<path d="M26.3673 38.1531L10.9077 43.4977V22.8504L26.3673 17.5059V38.1531Z" fill="white"/>
+</g>
+<mask id="mask4_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="5" y="21" width="22" height="10">
+<path d="M15.6436 23.6194C10.3612 25.3898 5.11035 27.1602 5.11035 24.4871V28.7294C5.11035 31.4024 10.3612 29.632 15.6436 27.8616C20.9892 26.0703 26.368 24.2781 26.368 27.0918V22.8472C26.368 21.7884 25.6065 21.3813 24.3718 21.3813C22.3256 21.3813 18.9769 22.4992 15.6444 23.6163" fill="white"/>
+</mask>
+<g mask="url(#mask4_11293_819)">
+<rect x="5.06348" y="13.9448" width="21.3092" height="24.8515" fill="url(#pattern1_11293_819)"/>
+</g>
+<mask id="mask5_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="15" y="36" width="6" height="12">
+<path d="M15.7383 43.6631V47.9076C15.7383 42.3145 20.5698 45.9027 20.5698 40.5278V36.2832C20.5698 41.6612 15.7383 38.0699 15.7383 43.6631Z" fill="white"/>
+</mask>
+<g mask="url(#mask5_11293_819)">
+<path d="M20.5698 47.907L15.7383 49.5772V36.281L20.5698 34.6108V47.907Z" fill="white"/>
+</g>
+<mask id="mask6_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="15" y="36" width="6" height="11">
+<path d="M15.7383 43.6628V46.2014C15.7383 40.6083 20.5698 44.1964 20.5698 38.8216V36.2837C20.5698 41.6617 15.7383 38.0696 15.7383 43.6628Z" fill="white"/>
+</mask>
+<g mask="url(#mask6_11293_819)">
+<path d="M15.7383 36.281L20.5698 34.6108V46.2011L15.7383 47.8713V36.281Z" fill="white"/>
+</g>
+<mask id="mask7_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="33" width="11" height="8">
+<path d="M10.9077 38.153C10.9077 40.8214 13.2861 40.0492 15.6861 39.2763C18.12 38.4909 20.5731 37.7063 20.5731 40.5254V36.2808C20.5731 33.4617 18.12 34.2471 15.6861 35.0317C13.2892 35.8046 10.9077 36.5776 10.9077 33.9092V38.153Z" fill="white"/>
+</mask>
+<g mask="url(#mask7_11293_819)">
+<path d="M10.9077 33.461L20.57 30.1206V40.8214L10.9077 44.1618V33.461Z" fill="white"/>
+</g>
+<mask id="mask8_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="8" width="32" height="13">
+<path d="M15.6212 12.2024C7.93037 14.8056 0.278809 17.4072 0.278809 14.7325V18.9771C0.278809 21.6525 7.93037 19.0494 15.6212 16.4462C23.39 13.8167 31.198 11.1871 31.198 13.9984V9.75386C31.198 8.89935 30.4727 8.5459 29.2435 8.5459C26.4412 8.5459 21.0216 10.3738 15.6205 12.2016" fill="white"/>
+</mask>
+<g mask="url(#mask8_11293_819)">
+<path d="M0.278809 8.54685L31.1988 -2.14307V21.6535L0.278809 32.3426V8.54685Z" fill="white"/>
+</g>
+<mask id="mask9_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="5" y="21" width="22" height="10">
+<path d="M15.6436 23.6194C10.3612 25.3898 5.11035 27.1602 5.11035 24.4871V28.7294C5.11035 31.4024 10.3612 29.632 15.6436 27.8616C20.9892 26.0703 26.368 24.2781 26.368 27.0918V22.8472C26.368 21.7884 25.6065 21.3813 24.3718 21.3813C22.3256 21.3813 18.9769 22.4992 15.6444 23.6163" fill="white"/>
+</mask>
+<g mask="url(#mask9_11293_819)">
+<path d="M5.11035 21.3805L26.3672 14.0317V31.4016L5.11035 38.7504V21.3805Z" fill="white"/>
+</g>
+<mask id="mask10_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="33" width="11" height="8">
+<path d="M10.9077 38.153C10.9077 40.8214 13.2861 40.0492 15.6861 39.2763C18.12 38.4909 20.5731 37.7063 20.5731 40.5254V36.2808C20.5731 33.4617 18.12 34.2471 15.6861 35.0317C13.2892 35.8046 10.9077 36.5776 10.9077 33.9092V38.153Z" fill="white"/>
+</mask>
+<g mask="url(#mask10_11293_819)">
+<path d="M10.9077 33.461L20.57 30.1206V40.8214L10.9077 44.1618V33.461Z" fill="white"/>
+</g>
+<mask id="mask11_11293_819" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="8" width="32" height="13">
+<path d="M15.6212 12.2024C7.93037 14.8056 0.278809 17.4072 0.278809 14.7325V18.9771C0.278809 21.6525 7.93037 19.0494 15.6212 16.4462C23.39 13.8167 31.198 11.1871 31.198 13.9984V9.75386C31.198 8.89935 30.4727 8.5459 29.2435 8.5459C26.4412 8.5459 21.0216 10.3738 15.6205 12.2016" fill="white"/>
+</mask>
+<g mask="url(#mask11_11293_819)">
+<path d="M0.278809 8.54685L31.1988 -2.14307V21.6535L0.278809 32.3426V8.54685Z" fill="white"/>
+</g>
+<path d="M58.1201 10.1613L49.7025 29.3683L41.3504 10.1613H37.772L47.9784 33.5438H51.2593L61.4326 10.1613H58.1201ZM69.189 33.7442C74.4583 33.7442 78.3026 29.9696 78.3026 24.6918C78.3026 19.4141 74.4583 15.6729 69.189 15.6729C63.9197 15.6729 60.0423 19.4141 60.0423 24.6918C60.0423 29.9696 63.9197 33.7442 69.189 33.7442ZM69.189 30.9383C65.8087 30.9383 63.2546 28.4664 63.2546 24.6918C63.2546 20.9172 65.8064 18.4772 69.189 18.4772C72.5717 18.4772 75.088 20.9157 75.088 24.6918C75.088 28.468 72.5693 30.9383 69.189 30.9383ZM84.8344 18.8128V15.8399H81.7824V33.5438H84.9638V24.7252C84.9638 20.8504 87.0848 18.7437 90.4983 18.7437C90.7418 18.7388 90.9853 18.75 91.2274 18.7771V15.6698C88.1453 15.6729 85.958 16.7418 84.8313 18.8128H84.8344ZM103.821 30.2034C103.108 30.7546 102.233 31.0487 101.335 31.0385C99.5787 31.0385 98.5845 29.9696 98.5845 28.0656V18.4788H103.623V15.8375H98.5845V11.9627H95.403V15.8375H92.4204V18.4788H95.403V28.1992C95.403 31.7726 97.4246 33.7442 100.971 33.7442C102.355 33.7918 103.713 33.3551 104.815 32.5083L103.821 30.2034ZM123.011 24.792C123.011 19.3473 119.399 15.6729 114.328 15.6729C109.258 15.6729 105.513 19.4475 105.513 24.6918C105.511 29.9704 109.289 33.7442 114.953 33.7442C116.246 33.8071 117.537 33.5821 118.734 33.0854C119.931 32.5886 121.005 31.8322 121.879 30.8699L120.123 28.7989C119.481 29.5038 118.696 30.06 117.82 30.4291C116.945 30.7982 116 30.9714 115.052 30.9367C111.572 30.9367 109.087 28.8657 108.689 25.7592H122.94C122.976 25.4601 123.009 25.0593 123.009 24.792H123.011ZM114.326 18.3785C115.733 18.3335 117.102 18.8357 118.151 19.781C119.2 20.7263 119.848 22.0422 119.96 23.4559H108.692C108.803 22.0417 109.451 20.725 110.5 19.7794C111.549 18.8339 112.919 18.3322 114.326 18.3785ZM140.805 33.5438L133.813 24.4914L140.441 15.8399H136.961L132.156 22.22L127.317 15.8399H123.772L130.367 24.4914L123.44 33.5438H126.985L132.122 26.7628L137.193 33.5438H140.805ZM151.808 33.5438H155.122V10.1613H151.808V33.5438ZM183.49 33.7768C182.974 34.4049 182.326 34.9102 181.593 35.2567C180.86 35.6031 180.061 35.7822 179.251 35.781C177.76 35.781 176.368 35.113 174.81 33.4428C177.428 32.8785 179.77 31.413 181.432 29.298C183.095 27.183 183.975 24.5504 183.921 21.8525C183.921 14.9714 178.685 9.89404 171.626 9.89404C164.501 9.89404 159.264 15.0048 159.264 21.8525C159.268 28.433 164.103 33.4101 170.764 33.7768C174.012 37.1506 176.299 38.4199 179.215 38.4199C180.328 38.4302 181.43 38.1896 182.439 37.7157C183.448 37.2418 184.339 36.5466 185.048 35.6808L183.49 33.7768ZM162.582 21.8525C162.559 20.6546 162.777 19.4643 163.225 18.3545C163.673 17.2447 164.341 16.2385 165.188 15.3976C166.035 14.5566 167.043 13.8985 168.15 13.4634C169.258 13.0283 170.442 12.8253 171.63 12.867C172.813 12.8328 173.99 13.0413 175.09 13.48C176.191 13.9186 177.191 14.5782 178.031 15.4187C178.87 16.2591 179.532 17.2628 179.975 18.3688C180.417 19.4749 180.633 20.6601 180.607 21.8525C180.633 23.0453 180.417 24.2309 179.974 25.3371C179.531 26.4434 178.869 27.4473 178.029 28.2878C177.189 29.1283 176.188 29.7878 175.088 30.2262C173.987 30.6646 172.809 30.8728 171.626 30.8381C170.438 30.8792 169.255 30.6758 168.147 30.2405C167.04 29.8051 166.033 29.1469 165.187 28.306C164.34 27.4651 163.673 26.4592 163.225 25.3496C162.777 24.24 162.559 23.0501 162.582 21.8525Z" fill="white"/>
+<defs>
+<pattern id="pattern0_11293_819" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_11293_819" transform="scale(0.00564972 0.00512821)"/>
+</pattern>
+<pattern id="pattern1_11293_819" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_11293_819" transform="scale(0.00826446 0.00714286)"/>
+</pattern>
+<image id="image0_11293_819" width="177" height="195" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+<image id="image1_11293_819" width="121" height="140" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+</defs>
+</svg></div>
+        <div class="logofoot"><b>White logo</b>vlogo-white.svg · for dark and brand-deep backgrounds</div>
+      </div>
+    </div>
+
+    <div class="g2">
+      <div class="card" style="text-align:center">
+        <div class="clearframe">
+          <span class="t">clear space = height of the V</span>
+          <svg width="186" height="48" viewBox="0 0 186 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mask id="mask0_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="5" y="9" width="27" height="20">
+<path d="M5.11035 24.5792V28.8238C5.11035 23.2306 31.1987 19.4692 31.1987 14.0913V9.84668C31.1987 15.2247 5.11035 18.9853 5.11035 24.5792Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_11290_753)">
+<path d="M31.1987 28.824L5.11035 37.8437V9.84689L31.1987 0.827148V28.824Z" fill="#4B24BE"/>
+</g>
+<mask id="mask1_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="27" height="20">
+<path d="M0.278809 14.8248V19.0663C0.278809 13.4731 26.3672 9.71174 26.3672 4.33376V0.0922852C26.3672 5.47026 0.278809 9.2301 0.278809 14.8248Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_11290_753)">
+<path d="M26.3672 19.0662L0.278809 28.0891V0.0922059L26.3672 -8.92676V19.0662Z" fill="#4B24BE"/>
+</g>
+<mask id="mask2_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="8" width="32" height="13">
+<path d="M15.6212 12.2947C7.93037 14.8979 0.278809 17.4994 0.278809 14.8248V19.0694C0.278809 21.7448 7.93037 19.1417 15.6212 16.5385C23.39 13.909 31.198 11.2794 31.198 14.0907V9.84615C31.198 8.99164 30.4727 8.63818 29.2435 8.63818C26.4412 8.63818 21.0216 10.4661 15.6205 12.2939" fill="white"/>
+</mask>
+<g mask="url(#mask2_11290_753)">
+<rect x="0.132324" y="-2.11621" width="31.172" height="34.6146" fill="url(#pattern0_11290_753)"/>
+</g>
+<mask id="mask3_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="22" width="17" height="17">
+<path d="M10.9077 34.0006V38.2444C10.9077 32.6513 26.3673 32.565 26.3673 27.1863V22.9409C26.3673 28.3189 10.9077 28.4043 10.9077 33.9991" fill="white"/>
+</mask>
+<g mask="url(#mask3_11290_753)">
+<path d="M26.3673 38.2454L10.9077 43.59V22.9427L26.3673 17.5981V38.2454Z" fill="#4B24BE"/>
+</g>
+<mask id="mask4_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="5" y="21" width="22" height="10">
+<path d="M15.6436 23.7117C10.3612 25.4821 5.11035 27.2525 5.11035 24.5794V28.8216C5.11035 31.4947 10.3612 29.7243 15.6436 27.9539C20.9892 26.1626 26.368 24.3704 26.368 27.1841V22.9395C26.368 21.8807 25.6065 21.4736 24.3718 21.4736C22.3256 21.4736 18.9769 22.5915 15.6444 23.7086" fill="white"/>
+</mask>
+<g mask="url(#mask4_11290_753)">
+<rect x="5.06348" y="14.0371" width="21.3092" height="24.8515" fill="url(#pattern1_11290_753)"/>
+</g>
+<mask id="mask5_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="15" y="36" width="6" height="12">
+<path d="M15.7383 43.7554V47.9999C15.7383 42.4068 20.5698 45.9949 20.5698 40.6201V36.3755C20.5698 41.7535 15.7383 38.1622 15.7383 43.7554Z" fill="white"/>
+</mask>
+<g mask="url(#mask5_11290_753)">
+<path d="M20.5698 47.9993L15.7383 49.6695V36.3733L20.5698 34.7031V47.9993Z" fill="#4B24BE"/>
+</g>
+<mask id="mask6_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="15" y="36" width="6" height="11">
+<path d="M15.7383 43.7551V46.2937C15.7383 40.7006 20.5698 44.2887 20.5698 38.9139V36.376C20.5698 41.754 15.7383 38.1619 15.7383 43.7551Z" fill="white"/>
+</mask>
+<g mask="url(#mask6_11290_753)">
+<path d="M15.7383 36.3733L20.5698 34.7031V46.2934L15.7383 47.9636V36.3733Z" fill="#4B24BE"/>
+</g>
+<mask id="mask7_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="34" width="11" height="7">
+<path d="M10.9077 38.2453C10.9077 40.9137 13.2861 40.1415 15.6861 39.3686C18.12 38.5832 20.5731 37.7986 20.5731 40.6177V36.3731C20.5731 33.554 18.12 34.3394 15.6861 35.124C13.2892 35.8969 10.9077 36.6699 10.9077 34.0015V38.2453Z" fill="white"/>
+</mask>
+<g mask="url(#mask7_11290_753)">
+<path d="M10.9077 33.5532L20.57 30.2129V40.9137L10.9077 44.254V33.5532Z" fill="#4B24BE"/>
+</g>
+<mask id="mask8_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="8" width="32" height="13">
+<path d="M15.6212 12.2947C7.93037 14.8979 0.278809 17.4994 0.278809 14.8248V19.0694C0.278809 21.7448 7.93037 19.1417 15.6212 16.5385C23.39 13.909 31.198 11.2794 31.198 14.0907V9.84615C31.198 8.99164 30.4727 8.63818 29.2435 8.63818C26.4412 8.63818 21.0216 10.4661 15.6205 12.2939" fill="white"/>
+</mask>
+<g mask="url(#mask8_11290_753)">
+<path d="M0.278809 8.63914L31.1988 -2.05078V21.7458L0.278809 32.4349V8.63914Z" fill="#4B24BE"/>
+</g>
+<mask id="mask9_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="5" y="21" width="22" height="10">
+<path d="M15.6436 23.7117C10.3612 25.4821 5.11035 27.2525 5.11035 24.5794V28.8216C5.11035 31.4947 10.3612 29.7243 15.6436 27.9539C20.9892 26.1626 26.368 24.3704 26.368 27.1841V22.9395C26.368 21.8807 25.6065 21.4736 24.3718 21.4736C22.3256 21.4736 18.9769 22.5915 15.6444 23.7086" fill="white"/>
+</mask>
+<g mask="url(#mask9_11290_753)">
+<path d="M5.11035 21.4728L26.3672 14.124V31.4939L5.11035 38.8427V21.4728Z" fill="#4B24BE"/>
+</g>
+<mask id="mask10_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="10" y="34" width="11" height="7">
+<path d="M10.9077 38.2453C10.9077 40.9137 13.2861 40.1415 15.6861 39.3686C18.12 38.5832 20.5731 37.7986 20.5731 40.6177V36.3731C20.5731 33.554 18.12 34.3394 15.6861 35.124C13.2892 35.8969 10.9077 36.6699 10.9077 34.0015V38.2453Z" fill="white"/>
+</mask>
+<g mask="url(#mask10_11290_753)">
+<path d="M10.9077 33.5532L20.57 30.2129V40.9137L10.9077 44.254V33.5532Z" fill="#4B24BE"/>
+</g>
+<mask id="mask11_11290_753" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="8" width="32" height="13">
+<path d="M15.6212 12.2947C7.93037 14.8979 0.278809 17.4994 0.278809 14.8248V19.0694C0.278809 21.7448 7.93037 19.1417 15.6212 16.5385C23.39 13.909 31.198 11.2794 31.198 14.0907V9.84615C31.198 8.99164 30.4727 8.63818 29.2435 8.63818C26.4412 8.63818 21.0216 10.4661 15.6205 12.2939" fill="white"/>
+</mask>
+<g mask="url(#mask11_11290_753)">
+<path d="M0.278809 8.63914L31.1988 -2.05078V21.7458L0.278809 32.4349V8.63914Z" fill="#4B24BE"/>
+</g>
+<path d="M58.1201 10.2536L49.7025 29.4606L41.3504 10.2536H37.772L47.9784 33.636H51.2593L61.4326 10.2536H58.1201ZM69.189 33.8365C74.4583 33.8365 78.3026 30.0619 78.3026 24.7841C78.3026 19.5063 74.4583 15.7651 69.189 15.7651C63.9197 15.7651 60.0423 19.5063 60.0423 24.7841C60.0423 30.0619 63.9197 33.8365 69.189 33.8365ZM69.189 31.0306C65.8087 31.0306 63.2546 28.5587 63.2546 24.7841C63.2546 21.0095 65.8064 18.5695 69.189 18.5695C72.5717 18.5695 75.088 21.0079 75.088 24.7841C75.088 28.5603 72.5693 31.0306 69.189 31.0306ZM84.8344 18.9051V15.9322H81.7824V33.636H84.9638V24.8175C84.9638 20.9427 87.0848 18.8359 90.4983 18.8359C90.7418 18.8311 90.9853 18.8423 91.2274 18.8693V15.762C88.1453 15.7651 85.958 16.8341 84.8313 18.9051H84.8344ZM103.821 30.2957C103.108 30.8469 102.233 31.141 101.335 31.1308C99.5787 31.1308 98.5845 30.0619 98.5845 28.1579V18.571H103.623V15.9298H98.5845V12.055H95.403V15.9298H92.4204V18.571H95.403V28.2915C95.403 31.8649 97.4246 33.8365 100.971 33.8365C102.355 33.8841 103.713 33.4474 104.815 32.6005L103.821 30.2957ZM123.011 24.8843C123.011 19.4395 119.399 15.7651 114.328 15.7651C109.258 15.7651 105.513 19.5397 105.513 24.7841C105.511 30.0626 109.289 33.8365 114.953 33.8365C116.246 33.8993 117.537 33.6744 118.734 33.1776C119.931 32.6809 121.005 31.9245 121.879 30.9622L120.123 28.8912C119.481 29.5961 118.696 30.1523 117.82 30.5213C116.945 30.8904 116 31.0636 115.052 31.029C111.572 31.029 109.087 28.958 108.689 25.8515H122.94C122.976 25.5524 123.009 25.1515 123.009 24.8843H123.011ZM114.326 18.4708C115.733 18.4258 117.102 18.928 118.151 19.8733C119.2 20.8186 119.848 22.1345 119.96 23.5482H108.692C108.803 22.134 109.451 20.8173 110.5 19.8717C111.549 18.9262 112.919 18.4245 114.326 18.4708ZM140.805 33.636L133.813 24.5837L140.441 15.9322H136.961L132.156 22.3122L127.317 15.9322H123.772L130.367 24.5837L123.44 33.636H126.985L132.122 26.8551L137.193 33.636H140.805ZM151.808 33.636H155.122V10.2536H151.808V33.636ZM183.49 33.8691C182.974 34.4972 182.326 35.0025 181.593 35.3489C180.86 35.6954 180.061 35.8745 179.251 35.8733C177.76 35.8733 176.368 35.2052 174.81 33.5351C177.428 32.9708 179.77 31.5053 181.432 29.3903C183.095 27.2752 183.975 24.6427 183.921 21.9448C183.921 15.0637 178.685 9.98633 171.626 9.98633C164.501 9.98633 159.264 15.0971 159.264 21.9448C159.268 28.5253 164.103 33.5024 170.764 33.8691C174.012 37.2429 176.299 38.5122 179.215 38.5122C180.328 38.5225 181.43 38.2819 182.439 37.808C183.448 37.3341 184.339 36.6388 185.048 35.7731L183.49 33.8691ZM162.582 21.9448C162.559 20.7469 162.777 19.5566 163.225 18.4468C163.673 17.3369 164.341 16.3308 165.188 15.4898C166.035 14.6489 167.043 13.9907 168.15 13.5556C169.258 13.1205 170.442 12.9176 171.63 12.9592C172.813 12.9251 173.99 13.1336 175.09 13.5723C176.191 14.0109 177.191 14.6705 178.031 15.5109C178.87 16.3514 179.532 17.3551 179.975 18.4611C180.417 19.5671 180.633 20.7524 180.607 21.9448C180.633 23.1376 180.417 24.3231 179.974 25.4294C179.531 26.5357 178.869 27.5396 178.029 28.3801C177.189 29.2206 176.188 29.8801 175.088 30.3185C173.987 30.7569 172.809 30.9651 171.626 30.9304C170.438 30.9715 169.255 30.7681 168.147 30.3328C167.04 29.8974 166.033 29.2392 165.187 28.3983C164.34 27.5574 163.673 26.5515 163.225 25.4419C162.777 24.3323 162.559 23.1424 162.582 21.9448Z" fill="#4B24BE"/>
+<defs>
+<pattern id="pattern0_11290_753" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_11290_753" transform="scale(0.00564972 0.00512821)"/>
+</pattern>
+<pattern id="pattern1_11290_753" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_11290_753" transform="scale(0.00826446 0.00714286)"/>
+</pattern>
+<image id="image0_11290_753" width="177" height="195" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+<image id="image1_11290_753" width="121" height="140" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHkAAACMCAYAAABYpQbjAAAAAXNSR0IArs4c6QAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAeaADAAQAAAABAAAAjAAAAAAROEoKAAAGjUlEQVR4Ae2dfWhVZRzHd67L1WjYbLHU1GXLl1bLF5bKYCQZycBKrOzFkCiKCqSiMOqPiBAEQSiEoqgYZa+i2BtDjJGkTJc5JlPTJms1c7i0Vcvl3F333t1z77mec7bz3N/znPP8zvnun3vvs+f3PN/n87nPueecO9EYHh4uwE84CcQXxwsNw4gXhnN50V3VhUWDxUaBEU/KLUg8JklAcgjeD+dvGSgtSEhNyx26eEmQfDERJq/P1fSXmzs2+ThabEgejY5mv+tf0DfNMGKJnWoejr0FhGRvnALr9df8M5Ved6xbSEh2IxNwe9+83tmpw3DqBIoWBpJp/KRWn5nbU03dtU6BINmJio9tvdUna8zLncSj7cxYRhRIlkFRcIyem36tVbFj3WJAshsZye2/V3UuSe5YWZ+zIvEgWYSWYN/uGzqWmZc7CblKDsVeIkGyF0oCfbrmHLszdSgWvJYVmEK4KyQLI7MXdM46co/l5GnUu0/2avUtkJwn446Zhx7Knjwl70Lp+wPJAm6OV7Y+EtTJk0BMW1dItiHJbfjpugNPWE6etDsU56Z1fgXJDlwOX7t/rbljE49aH4od4tuaINmCpL2i+Tnze1lLM/unkZfcNn3Pi5ldO8b3slxtR1Jy67Tdr6Q/Z4dSd6C42vOYOzKSD1zTtD6zYyV8feeRrxbdQi25Zcqujea1bHLnakE8gBChk9w8qfGNkR0bG0o+BsBUuylDIXnv1V+/hR3r/t5iK/n78i/eS500mV/fua8x8r9hJfm7q7ZvSe9YHIoF3rraS24q2/o5dqyAUYeuWkr+duKnO8w7Tzh5crAm2KSN5J2lHzWaOzYW4F9RCPJj0T1wyY1XfLgr/TmLyx1Fb5lAJH8zoWF3SmzyBgWuZRWpzQ7rm+QvS97dN7JjcZMii9+fZ0ol77j87YPZQzHuPvmj1D6LdMnbi99sHzkjFvuXd/ZoaJFFQIrkrZdt/jm9YyPx1Z0s+H6Nk7fkz4pe78KO9UsTbR4hyZ+M33Qqc5Miwl/d0ZD7Xz2m5C2XbDyLQ7H/YmTO6Cj5g3Eb+nEolok52LEykhti6we5/31xsCj1nb3wfeO14ey1rL5BkSx/ArH8S1HJhQAkczFFyAnJBHhcSiGZiylCTkgmwONSCslcTBFyQjIBHpdSSOZiipATkgnwuJRCMhdThJyQTIDHpRSSuZgi5IRkAjwupZDMxRQhJyQT4HEphWQupgg5IZkAj0spJHMxRcgJyQR4XEohmYspQk5IJsDjUgrJXEwRckIyAR6XUkjmYoqQE5IJ8LiUQjIXU4SckEyAx6UUkrmYIuSEZAI8LqWQzMUUISckE+BxKYVkLqYIOSGZAI9LKSRzMUXICckEeFxKIZmLKUJOSCbA41IKyVxMEXJCMgEel1JI5mKKkBOSCfC4lEIyF1OEnJBMgMelFJK5mCLkhGQCPC6lkMzFFCEnJBPgcSmFZC6mCDkhmQCPSykkczFFyAnJBHhcSiGZiylCTkgmwONSCslcTBFyQjIBHpdSSOZiipATkgnwuJRCMhdTeeY09hrxzP/VmOcYKNOQwLjmwgFrLEi20mD8fPy+oj63+JDsRoZB+6Utxae9xIRkL5Q06lP8Q0m3aBxIFiUWQP+SH0tPUKaFZAo9hbUTDpYdlTU8JMsiKWGcia3lbRKGsQ0ByTYk/jaUtU1uUT0jJKsm7DB++aGpexyalTVBsjK0uQNPaq9oym3x7xUkK2Y95fCMnYqnGHN4SB4TkXiHqUeu/0q8Sl0FJEtiO/3o7G2ShpI+DCQTkM44duPHhHLfSiFZEHXl8ZsbBEsC7w7JHhTM6pj/jodu2naBZBc1c07UbHb5FbtmSLYoq+pctMnyMjRPIy+5+pfaDaGx6bKQSEqe21X3qguPUDZHRvKC35a8HEqDHhYVask13Utf8MAg9F1CKXnhyTueCb05gQWGRvLiU/VPCaw7Ul1ZS67tWf5YpGzluVh2kutO3/1wnmuNbBkLybf2rlwVWUMSFq6t5Nv+uG+FhPVhiAQBrSTffvaBeliRTyBwycv+XL1U/rIwopVAIJLr+9bUWUPguVoCvkle/vejC9UuBaO7EVAq+a5/Hp/nNjHa/SMgXfKKf5+s8i8+ZvJCQJrkleeenullQvTxnwBJ8r0Dayv8j4wZRQkIS77/v2cni06C/sES8CT5wcHnrww2JmanEHCVvPrCuhLKwKjVh0CO5DXxl4r0iYYksgj8D0CsIvubusaSAAAAAElFTkSuQmCC"/>
+</defs>
+</svg>
+          <span class="b">on all four sides</span>
+        </div>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">Minimum size</h4>
+        <p>Below these sizes the IQ stops resolving. If the space is tighter, use the icon on its own rather than shrinking the full mark.</p>
+        <div class="tw" style="margin-bottom:0">
+          <table>
+            <tr><td class="k">Digital</td><td class="mono">110px wide minimum</td></tr>
+            <tr><td class="k">Print</td><td class="mono">25mm wide minimum</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="lab">Usage rules</div>
+    <div class="g2">
+      <div class="card card--tint">
+        <h4 style="margin-top:0;color:var(--success)">Do</h4>
+        <ul class="plain">
+          <li>Use the full-colour logo on white and light surfaces.</li>
+          <li>Switch to the white logo on dark or brand-deep backgrounds.</li>
+          <li>Keep clear space around the mark equal to the height of the V.</li>
+          <li>Scale proportionally and use the provided SVG wherever possible.</li>
+          <li>Hold a minimum width of 110px on screen and 25mm in print.</li>
+          <li>Place it on enough contrast that it stays clearly legible.</li>
+        </ul>
+      </div>
+      <div class="card card--tint">
+        <h4 style="margin-top:0;color:var(--danger)">Don't</h4>
+        <ul class="plain">
+          <li>Recolour, add gradients, or apply effects to the mark.</li>
+          <li>Stretch, squash, rotate, or distort the proportions.</li>
+          <li>Place the logo on a busy image or a low-contrast background.</li>
+          <li>Add a drop shadow, outline, or box around the mark.</li>
+          <li>Recreate, re-typeset, or alter the wordmark in any way.</li>
+          <li>Write VortexIQ, Vortex-IQ, or VORTEX IQ. It is Vortex IQ, two words.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note"><span>Need a transparent PNG, an EPS, the icon on its own, or a co-branded lock-up? Email <b>hey@vortexiq.ai</b> and we will send the full asset pack the same day.</span></div>
+  </div>
+</section>
+
+<!-- ============================ 03 COLOUR ============================ -->
+<section id="colour">
+  <div class="wrap">
+    <div class="chap"><span class="chap-n">03</span><div>
+      <h2>Purple leads. Everything else supports.</h2>
+      <p>These are the exact tokens the product and the website run on. Status colours carry meaning, so they never appear as decoration.</p>
+    </div></div>
+
+    <div class="lab" style="margin-top:0">Brand</div>
+    <div class="sw">
+      <div class="swatch"><span class="fill" style="background:#5529d6"></span><span class="meta"><span class="tok">--brand-purple</span><span class="val">#5529d6</span><span class="role">Primary, buttons, links</span></span></div>
+      <div class="swatch"><span class="fill" style="background:#392bd5"></span><span class="meta"><span class="tok">--brand-purple-mid</span><span class="val">#392bd5</span><span class="role">Hover, secondary</span></span></div>
+      <div class="swatch"><span class="fill" style="background:#a58af3"></span><span class="meta"><span class="tok">--brand-purple-light</span><span class="val">#a58af3</span><span class="role">Soft accent, gradient stop</span></span></div>
+      <div class="swatch"><span class="fill" style="background:#0c061f"></span><span class="meta"><span class="tok">--brand-purple-deep</span><span class="val">#0c061f</span><span class="role">Dark backgrounds, footer</span></span></div>
+      <div class="swatch"><span class="fill" style="background:#004794"></span><span class="meta"><span class="tok">--brand-blue</span><span class="val">#004794</span><span class="role">Secondary accent, sparing</span></span></div>
+    </div>
+
+    <div class="lab">Surfaces</div>
+    <div class="sw">
+      <div class="swatch"><span class="fill" style="background:#ffffff;border-bottom:1px solid var(--border-dark)"></span><span class="meta"><span class="tok">--white</span><span class="val">#ffffff</span><span class="role">Base canvas</span></span></div>
+      <div class="swatch"><span class="fill" style="background:#f6f5f3;border-bottom:1px solid var(--border-dark)"></span><span class="meta"><span class="tok">--surface-soft</span><span class="val">#f6f5f3</span><span class="role">Alternating sections</span></span></div>
+      <div class="swatch"><span class="fill" style="background:#f3f0fc;border-bottom:1px solid var(--border-dark)"></span><span class="meta"><span class="tok">--surface-tint</span><span class="val">#f3f0fc</span><span class="role">Brand wash, callouts</span></span></div>
+      <div class="swatch"><span class="fill" style="background:#e8e6e3;border-bottom:1px solid var(--border-dark)"></span><span class="meta"><span class="tok">--neutral-2</span><span class="val">#e8e6e3</span><span class="role">Warm panel</span></span></div>
+    </div>
+
+    <div class="lab">Text</div>
+    <div class="sw">
+      <div class="swatch"><span class="fill" style="background:#222325"></span><span class="meta"><span class="tok">--primary</span><span class="val">#222325</span><span class="role">Headings and ink</span></span></div>
+      <div class="swatch"><span class="fill" style="background:rgba(0,0,0,.6)"></span><span class="meta"><span class="tok">--text-body</span><span class="val">rgba(0,0,0,.60)</span><span class="role">Body copy</span></span></div>
+      <div class="swatch"><span class="fill" style="background:rgba(0,0,0,.4)"></span><span class="meta"><span class="tok">--text-faded</span><span class="val">rgba(0,0,0,.40)</span><span class="role">Labels and metadata</span></span></div>
+      <div class="swatch"><span class="fill" style="background:rgba(0,0,0,.1)"></span><span class="meta"><span class="tok">--border-dark</span><span class="val">rgba(0,0,0,.10)</span><span class="role">Hairline borders</span></span></div>
+    </div>
+    <p>Pure black is never used.</p>
+
+    <div class="lab">Status</div>
+    <div class="sw">
+      <div class="swatch"><span class="fill" style="background:#1f9e54"></span><span class="meta"><span class="tok">--success</span><span class="val">#1f9e54</span><span class="role">Healthy, fixed, live</span></span></div>
+      <div class="swatch"><span class="fill" style="background:#d23f31"></span><span class="meta"><span class="tok">--danger</span><span class="val">#d23f31</span><span class="role">Incident, revenue at risk</span></span></div>
+      <div class="swatch"><span class="fill" style="background:#c47d12"></span><span class="meta"><span class="tok">--warning</span><span class="val">#c47d12</span><span class="role">Watching, anomaly</span></span></div>
+    </div>
+
+    <div class="lab">Gradients</div>
+    <div class="grads">
+      <div class="grad"><div class="fill" style="background:linear-gradient(135deg,#5529d6,#0c061f 50%,#5529d6 75%)"></div><div class="meta"><span class="tok">--brand-gradient</span><span class="val">linear-gradient(135deg,#5529d6,#0c061f 50%,#5529d6 75%)</span><span class="role" style="font-size:.8rem;color:var(--text-body);display:block;margin-top:.4rem">Brand cards, icon tiles, the banner above the footer</span></div></div>
+      <div class="grad"><div class="fill" style="background:linear-gradient(135deg,#a58af3,#5529d6)"></div><div class="meta"><span class="tok">--brand-gradient-soft</span><span class="val">linear-gradient(135deg,#a58af3,#5529d6)</span><span class="role" style="font-size:.8rem;color:var(--text-body);display:block;margin-top:.4rem">Gradient text, underline sweeps, progress states</span></div></div>
+    </div>
+
+    <div class="note"><span><b>Contrast rule.</b> Purple text sits on white or the purple tint, never on the mid purple. White text sits on purple or purple-deep. Every text and background pair we ship clears WCAG AA at body size.</span></div>
+  </div>
+</section>
+
+<!-- ============================ 04 TYPE ============================ -->
+<section id="type">
+  <div class="wrap">
+    <div class="chap"><span class="chap-n">04</span><div>
+      <h2>Geist, end to end.</h2>
+      <p>Geist sets every headline and paragraph. Geist Mono handles eyebrows, labels, metadata, and code: the small, precise type that gives the brand its technical edge.</p>
+    </div></div>
+
+    <div class="spec">
+      <div class="specbox">
+        <div class="aa">Aa</div>
+        <div class="nm">Geist</div>
+        <div class="rl">Display, headings, and running text. Weights 400, 500, 600, 700.</div>
+        <div class="gl">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz 0123456789</div>
+      </div>
+      <div class="specbox mono">
+        <div class="aa">Aa</div>
+        <div class="nm">Geist Mono</div>
+        <div class="rl">Eyebrows, labels, metadata, and code. Weights 400, 500.</div>
+        <div class="gl">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz 0123456789</div>
+      </div>
+    </div>
+
+    <p>Stylistic sets <code>ss01</code>, <code>ss03</code> and <code>ss04</code> are enabled site-wide via <code>font-feature-settings</code>.</p>
+
+    <div class="lab">The scale</div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Token</th><th>Size</th><th>Weight</th><th>Use</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">display / h1</td><td class="mono">clamp(2.6rem, 6vw, 4.6rem)</td><td class="k">500</td><td>Page hero, one per page</td></tr>
+          <tr><td class="mono">h2</td><td class="mono">clamp(2rem, 3.8vw, 3.1rem)</td><td class="k">500</td><td>Section headings</td></tr>
+          <tr><td class="mono">h3</td><td class="mono">1.18rem</td><td class="k">600</td><td>Card titles, sub-headings</td></tr>
+          <tr><td class="mono">lede</td><td class="mono">1.22rem</td><td class="k">400</td><td>The paragraph under a heading</td></tr>
+          <tr><td class="mono">body</td><td class="mono">1.0625rem</td><td class="k">400</td><td>Running text</td></tr>
+          <tr><td class="mono">eyebrow</td><td class="mono">0.72rem mono</td><td class="k">500</td><td>Section label above a heading</td></tr>
+          <tr><td class="mono">label</td><td class="mono">0.72rem mono</td><td class="k">500</td><td>Chips, metadata, step numbers</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ul class="plain">
+      <li>One h1 per page. Headings never skip a level.</li>
+      <li>Headline tracking is negative (-0.02em to -0.025em).</li>
+      <li>Mono labels run positive (0.14em to 0.16em), uppercase.</li>
+      <li>That tracking contrast is a brand signal. Keep it.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ 05 TOKENS ============================ -->
+<section id="tokens">
+  <div class="wrap">
+    <div class="chap"><span class="chap-n">05</span><div>
+      <h2>The rest of the system.</h2>
+      <p>Radius, layout rhythm, elevation, and motion. Four small sets that do most of the work of making a new page look like it belongs.</p>
+    </div></div>
+
+    <div class="g2">
+      <div>
+        <div class="lab" style="margin-top:0">Radius</div>
+        <div class="tw"><table>
+          <tr><td class="mono">--radius</td><td class="k">10px</td><td>Cards, panels, inputs</td></tr>
+          <tr><td class="mono">--radius-pill</td><td class="k">200px</td><td>Every button and chip</td></tr>
+          <tr><td class="mono">product visuals</td><td class="k">14px to 18px</td><td>Floating console cards</td></tr>
+        </table></div>
+
+        <div class="lab">Elevation</div>
+        <div class="tw"><table>
+          <tr><td class="mono">--shadow-sm</td><td>Chips, small tiles</td></tr>
+          <tr><td class="mono">--shadow-md</td><td>Raised cards</td></tr>
+          <tr><td class="mono">--shadow-lg</td><td>Hover state, floating visuals</td></tr>
+          <tr><td class="mono">--shadow-brand</td><td>Primary button hover</td></tr>
+        </table></div>
+      </div>
+      <div>
+        <div class="lab" style="margin-top:0">Layout</div>
+        <div class="tw"><table>
+          <tr><td class="mono">--max</td><td class="k">1180px</td><td>Container width</td></tr>
+          <tr><td class="mono">--bento-gap</td><td class="k">30px</td><td>Grid gap, every bento</td></tr>
+          <tr><td class="mono">.section</td><td class="k">7.5rem 0</td><td>Vertical section rhythm</td></tr>
+          <tr><td class="mono">nav height</td><td class="k">4.5rem</td><td>Fixed header</td></tr>
+        </table></div>
+
+        <div class="lab">Motion</div>
+        <div class="tw"><table>
+          <tr><td class="mono">--ease</td><td class="k">cubic-bezier(.16,1,.3,1)</td><td>Every transition</td></tr>
+          <tr><td class="mono">hover lift</td><td class="k">-1px to -3px</td><td>Buttons and cards</td></tr>
+          <tr><td class="mono">reveal</td><td class="k">600ms, 22px</td><td>Scroll-in sections</td></tr>
+          <tr><td class="mono">reduced motion</td><td class="k">off</td><td>Always honoured</td></tr>
+        </table></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 06 COMPONENTS ============================ -->
+<section id="components">
+  <div class="wrap">
+    <div class="chap"><span class="chap-n">06</span><div>
+      <h2>The parts we build pages from.</h2>
+      <p>Buttons are always pills. Cards are always 10px. Nothing here needs inventing twice. Everything below is built from the tokens in sections 03 to 05.</p>
+    </div></div>
+
+    <div class="lab" style="margin-top:0">Buttons</div>
+    <div class="demo">
+      <div class="row">
+        <a class="btn" style="height:54px;padding:0 28px;font-size:1.1rem">Book a demo</a>
+        <a class="btn">Run a free audit</a>
+        <a class="btn sm">Get started</a>
+        <a class="btn ghost">See how it works &rarr;</a>
+      </div>
+      <p style="margin:1.1rem 0 0;font-size:.9rem">Verb-led labels, one to three words. One primary CTA per section. The ghost variant is always the secondary of a pair, never on its own.</p>
+    </div>
+
+    <div class="lab">Chips, badges, and status</div>
+    <div class="demo">
+      <div class="row">
+        <span class="chip">Default</span>
+        <span class="chip brand">AI OS</span>
+        <span class="chip ok"><span class="dot"></span>Live, 200+ connectors</span>
+        <span class="chip bad">Revenue at risk</span>
+        <span class="chip warn">Anomaly</span>
+      </div>
+      <p style="margin:1.1rem 0 0;font-size:.9rem">Status colour always maps to state, never to decoration. Green is healthy or recovered, red is revenue at risk, amber is watching.</p>
+    </div>
+
+    <div class="lab">Cards and building blocks</div>
+    <div class="g3">
+      <div class="card"><span class="chip brand" style="margin-bottom:.8rem">Feature</span><h4 style="margin-top:.6rem">Nerve Centre</h4><p style="margin:0;font-size:.94rem">Watches every KPI live across 200+ connectors.</p></div>
+      <div class="card card--tint"><span class="chip brand" style="margin-bottom:.8rem">Tint</span><h4 style="margin-top:.6rem">Vortex Memory</h4><p style="margin:0;font-size:.94rem">The graph that compounds, per store.</p></div>
+      <div class="card" style="background:linear-gradient(135deg,#5529d6,#0c061f 50%,#5529d6 75%);border-color:transparent">
+        <span class="chip" style="background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.25);color:#fff;margin-bottom:.8rem">Brand gradient</span>
+        <h4 style="margin-top:.6rem;color:#fff">Ask Viq&trade;</h4><p style="margin:0;font-size:.94rem;color:rgba(255,255,255,.72)">Conversational agent, cited back to the graph.</p></div>
+    </div>
+
+    <div class="demo" style="margin-top:1.4rem">
+      <div class="row" style="gap:2rem">
+        <div style="text-align:center"><span class="modicon">icon</span><span style="display:block;font-family:var(--font-mono);font-size:.62rem;color:var(--text-faded);margin-top:.5rem">gradient tile</span></div>
+        <div style="text-align:center"><span class="stepnum">3</span><span style="display:block;font-family:var(--font-mono);font-size:.62rem;color:var(--text-faded);margin-top:.5rem">step number</span></div>
+        <div style="flex:1;min-width:220px;display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:var(--surface-tint);border:1px solid var(--border-brand);border-radius:var(--radius)">
+          <span style="font-family:var(--font-heading);font-weight:700;font-size:1.8rem;letter-spacing:-.03em;color:var(--brand-purple);line-height:1">65%</span>
+          <span style="font-size:.88rem;color:var(--text-body);line-height:1.4">increase in operational efficiency, reported by merchants on the platform for 12 months or more.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lab">Signature product visuals</div>
+    <p>Two visuals carry the product story and should appear on any surface that needs to show the loop.</p>
+    <ul class="plain">
+      <li><strong>Detect, explain, fix loop card.</strong> Three rows, each naming the pillar that owns the step. Rows highlight in sequence.</li>
+      <li><strong>Ask Viq diagnosis console.</strong> Question, typing state, cited answer, three confirmed steps, recovered value, apply-fix CTA.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ 07 SIX PILLARS ============================ -->
+<section id="pillars">
+  <div class="wrap">
+    <div class="chap"><span class="chap-n">07</span><div>
+      <h2>Name the mechanism, every time.</h2>
+      <p>Do not just say what we do, name how. A sceptic who can file the how away stops asking. These six nouns are the how, and they are always title-case and never paraphrased.</p>
+    </div></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Pillar</th><th>Metaphor</th><th>What it is</th><th>How to write it</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Nerve Centre</td><td class="mono">Eyes</td><td>The detection layer. Every KPI, live, across 200+ connectors.</td><td>Always title-case. Always paired with real-time or continuous.</td></tr>
+          <tr><td class="k">Vortex Mind</td><td class="mono">Judgement</td><td>The diagnostic layer. It investigates the finding and returns the root cause.</td><td>Always paired with explains why or root cause.</td></tr>
+          <tr><td class="k">Ask Viq</td><td class="mono">Voice</td><td>The conversational interface, cited back to the graph it answered from.</td><td>Ask Viq&trade; on the first prominent mention of a page. Bare Ask Viq after that.</td></tr>
+          <tr><td class="k">Vortex Apps</td><td class="mono">Guardrails</td><td>Staging, backup, and one-click rollback around every change.</td><td>Always paired with safe or predictable.</td></tr>
+          <tr><td class="k">Vortex Agents</td><td class="mono">Hands</td><td>Build and manage the AI agents that monitor, analyse, and act across the stack.</td><td>Always paired with AI agents or act safely. Agent Hub is retired.</td></tr>
+          <tr><td class="k">Vortex Memory</td><td class="mono">Recall</td><td>The graph that remembers every signal, fix, and decision, per store.</td><td>Always paired with learns or gets sharper over time.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note"><span>Say <b>six pillars</b>, not six modules. The six run one continuous five-step loop, so when both numbers appear together, keep them reconciled: six pillars, five steps. <b>AI OS</b> is the umbrella over all six, and it always takes a noun: the AI OS for commerce, not a bare AI OS. The <b>Eyes, Voice, Hands</b> metaphor is approved shorthand for a marketing surface. Use it sparingly, and not in docs.</span></div>
+  </div>
+</section>
+
+<!-- ============================ 08 VOICE ============================ -->
+<section id="voice">
+  <div class="wrap">
+    <div class="chap"><span class="chap-n">08</span><div>
+      <h2>Four qualities, testable line by line.</h2>
+      <p>Voice is what stays constant everywhere we write. Run any sentence against these four. If it fails one, it is not finished.</p>
+    </div></div>
+
+    <div class="g2">
+      <div class="card">
+        <div style="font-family:var(--font-mono);font-size:.7rem;letter-spacing:.14em;color:var(--brand-purple);margin-bottom:.7rem">PILLAR 01</div>
+        <h4 style="margin-top:0">Confident, not arrogant</h4>
+        <p>We have built this for global brands. We know the chaos because we have fixed it. Write from that authority, but never lecture, never condescend, never imply the reader is failing.</p>
+        <div class="ex yes"><span class="m">YES</span><span>We've lived the chaos, fixed the chaos, and built the AI system that stops the chaos.</span></div>
+        <div class="ex no"><span class="m">NO</span><span>Most e-commerce teams get this completely wrong.</span></div>
+      </div>
+      <div class="card">
+        <div style="font-family:var(--font-mono);font-size:.7rem;letter-spacing:.14em;color:var(--brand-purple);margin-bottom:.7rem">PILLAR 02</div>
+        <h4 style="margin-top:0">Anti-chaos, action-led</h4>
+        <p>The brand exists because running e-commerce should not feel like fighting fires. Every line should imply less work, less anxiety, more control. Lead with verbs. Stop X, start Y is on-brand and repeatable.</p>
+        <div class="ex yes"><span class="m">YES</span><span>Stop fighting fires. Protect revenue and automate ops.</span></div>
+        <div class="ex no"><span class="m">NO</span><span>Our advanced platform uses cutting-edge AI to deliver insights.</span></div>
+      </div>
+      <div class="card">
+        <div style="font-family:var(--font-mono);font-size:.7rem;letter-spacing:.14em;color:var(--brand-purple);margin-bottom:.7rem">PILLAR 03</div>
+        <h4 style="margin-top:0">Concrete over abstract</h4>
+        <p>Numbers, names, mechanisms. If a sentence could appear on any SaaS landing page, rewrite it until it could only appear on ours.</p>
+        <div class="ex yes"><span class="m">YES</span><span>Reduced quote turnaround by 96% for an Adobe Commerce B2B merchant.</span></div>
+        <div class="ex no"><span class="m">NO</span><span>Powerful AI-driven insights for the modern merchant.</span></div>
+      </div>
+      <div class="card">
+        <div style="font-family:var(--font-mono);font-size:.7rem;letter-spacing:.14em;color:var(--brand-purple);margin-bottom:.7rem">PILLAR 04</div>
+        <h4 style="margin-top:0">Warm, not corporate</h4>
+        <p>Vortex IQ is built by people who lived the problem. The voice should feel like a senior peer pulling up a chair, not a vendor pitching from a stage. Contractions, second person, plain words.</p>
+        <div class="ex yes"><span class="m">YES</span><span>Your store is already generating signals every second. It's time those signals worked for you, not against you.</span></div>
+        <div class="ex no"><span class="m">NO</span><span>Vortex IQ enables organisations to optimise their digital commerce operations.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 09 TONE ============================ -->
+<section id="tone">
+  <div class="wrap">
+    <div class="chap"><span class="chap-n">09</span><div>
+      <h2>Voice stays. Tone shifts.</h2>
+      <p>Same brand, dialled differently for the surface. A hero rallies. A docs page explains. An error message apologises softly and names the next step.</p>
+    </div></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Surface</th><th>Dial up</th><th>Dial down</th><th>Anchor</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Marketing hero</td><td>Anti-chaos</td><td>Concrete, concision beats numbers here</td><td><em>Stop fighting fires. Protect revenue and automate ops.</em></td></tr>
+          <tr><td class="k">Product pages</td><td>Concrete, name mechanisms and proof</td><td>Nothing, all four run high</td><td><em>Six pillars, one platform. Eyes, Voice, Hands.</em></td></tr>
+          <tr><td class="k">Help docs</td><td>Concrete plus Confident</td><td>Anti-chaos, less rallying and more explaining</td><td><em>The Shopify connector is one of 200+ feeding the Nerve Centre.</em></td></tr>
+          <tr><td class="k">In-app labels</td><td>Concrete, short and specific</td><td>Warm, no chatter inside buttons</td><td><em>Run Audit, not Get started with your audit journey.</em></td></tr>
+          <tr><td class="k">Empty states and errors</td><td>Warm</td><td>Confident, apologise softly when something is wrong</td><td><em>We couldn't reach Shopify just now. Reconnecting in 30s.</em></td></tr>
+          <tr><td class="k">Social</td><td>All four, the format demands voice density</td><td>Nothing, but keep it short</td><td><em>One mechanism named per post. One proof point per post.</em></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 10 TRIGGERS ============================ -->
+<section id="triggers">
+  <div class="wrap">
+    <div class="chap"><span class="chap-n">10</span><div>
+      <h2>Nine triggers, mapped to the funnel.</h2>
+      <p>Where the reader stands changes what they need to hear. Use this as a checklist before anything ships.</p>
+    </div></div>
+
+    <h3 style="margin-top:0">TOFU: "Am I in the right place?"</h3>
+    <p>The reader has never heard of us. They scan in half a second. One job: make them feel named, seen, and at ease.</p>
+
+    <h4>Trigger 01: Frame the specific category</h4>
+    <p class="tight">Name the exact bucket the reader sits in. A specific role plus a specific pain, never a general audience.</p>
+    <div class="ex yes"><span class="m">YES</span><span>For e-commerce ops leads who can't see across their stack.</span></div>
+    <div class="ex no"><span class="m">NO</span><span>Business intelligence for everyone.</span></div>
+
+    <h4>Trigger 02: Identity matching, not identity attacking</h4>
+    <p class="tight">Mirror who they already think they are. Never open with "you're doing it wrong". That wakes the defensive brain and they are gone.</p>
+    <div class="ex yes"><span class="m">YES</span><span>You've already built a smart stack. Vortex IQ makes it work as one.</span></div>
+    <div class="ex no"><span class="m">NO</span><span>Most teams have set up their stack completely wrong.</span></div>
+
+    <h4>Trigger 03: Fluency</h4>
+    <p class="tight">Short sentences. Familiar words. Predictable rhythm. Read every top-of-funnel paragraph out loud, and wherever you stumble, rewrite. Non-negotiable on the homepage hero.</p>
+    <div class="ex yes"><span class="m">YES</span><span>Your store is talking. Until now, no one's been listening.</span></div>
+    <div class="ex no"><span class="m">NO</span><span>Vortex IQ uses multi-modal anomaly detection across heterogeneous commerce platforms to surface latent operational signals.</span></div>
+
+    <h3>MOFU: "Will it actually work for me?"</h3>
+    <p>The reader is interested and is now testing plausibility. We are not asking for the sale, we are earning the right to.</p>
+
+    <h4>Trigger 04: Name the unique mechanism</h4>
+    <p class="tight">Don't just say what we do, name how. Give it a noun so a sceptic can file the how away and stop asking. Our nouns are the six pillars.</p>
+    <div class="ex yes"><span class="m">YES</span><span>The Nerve Centre watches it. Vortex Mind explains it. Vortex Apps ships the fix behind staging.</span></div>
+    <div class="ex no"><span class="m">NO</span><span>Our platform monitors your data and provides recommendations.</span></div>
+
+    <h4>Trigger 05: Typically atypical</h4>
+    <p class="tight">Strong claims need calibrating language so the brain does not reject them. Add time frames. Add ratios. Prefer "more than half" to an exact multiple that sounds invented.</p>
+    <div class="ex yes"><span class="m">YES</span><span>In one Adobe Commerce B2B engagement, quote turnaround dropped 96% over the first quarter.</span></div>
+    <div class="ex no"><span class="m">NO</span><span>100x faster quotes.</span></div>
+
+    <h4>Trigger 06: Boring by design</h4>
+    <p>Kill objections in monotone. Flat, factual prose signals this is not a big deal. Drama signals the opposite. Two or three lines per objection, no exclamation marks.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Objection</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Will AI replace my team?</td><td>Vortex IQ does the watching. Your team makes the calls. Every action ships through human approval unless you say otherwise.</td></tr>
+          <tr><td class="k">Will I lose control of my store?</td><td>Every change runs through staging first. Backup runs continuously. Rollback is one click.</td></tr>
+          <tr><td class="k">How is this different from analytics tools?</td><td>Analytics tells you what happened. The AI OS tells you what's wrong, why, and helps you fix it.</td></tr>
+          <tr><td class="k">Do I need a developer?</td><td>No. Connect your stack from the UI. The AI OS handles the rest.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>BOFU: "Should I buy?"</h3>
+    <p>The reader believes. Now they need to feel safe saying yes.</p>
+
+    <h4>Trigger 07: Choice framing</h4>
+    <p class="tight">Three options, ours in the middle. The brain pattern-matches on three. Make the other two real, not strawmen, so the choice reads as honest.</p>
+    <div class="ex yes"><span class="m">YES</span><span>Three ways to start: keep firefighting in your current stack, hire a contractor at &pound;4k a month to watch it, or start your free 14-day Vortex IQ trial in 10 minutes.</span></div>
+    <div class="ex no"><span class="m">NO</span><span>Vortex IQ has many ways to start.</span></div>
+
+    <h4>Trigger 08: Transparent trade-offs</h4>
+    <p class="tight">Name what is not included. Result, but limitation. Stating the limit builds trust faster than any feature list.</p>
+    <div class="ex yes"><span class="m">YES</span><span>Vortex Apps catches most regressions before they hit production, but it can't catch what your theme partner pushes outside our staging.</span></div>
+    <div class="ex no"><span class="m">NO</span><span>Total protection across every change.</span></div>
+
+    <h4>Trigger 09: Big proof, small bite</h4>
+    <p>One boulder, not a wall. A grid of twelve logos triggers suspicion. One specific, credible, named proof point lets both the fast and the slow brain sign off. Pick the one that fits the audience, and show one, never all four.</p>
+    <ul class="plain">
+      <li>Krispy Kreme's e-commerce ops team uses Vortex IQ to monitor across BigCommerce, Stripe and GA4 from a single Nerve Centre.</li>
+      <li>Wells Stringham, Head of Experience at Apply Digital: "Saved us at least a week of dev time."</li>
+      <li>Olaf Akkerman, GM Retail UK at Microsoft: "Vortex IQ stands out by showing merchants what's broken, why it happened, and how to fix it automatically."</li>
+      <li>Reduced quote turnaround by 96% on a single Adobe Commerce B2B engagement.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ 11 VOCABULARY ============================ -->
+<section id="vocabulary">
+  <div class="wrap">
+    <div class="chap"><span class="chap-n">11</span><div>
+      <h2>The words we use, and the ones we never do.</h2>
+      <p>Half of brand consistency is vocabulary discipline. Run any draft through this table before it ships.</p>
+    </div></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th style="width:50%">Use</th><th style="width:50%">Not</th></tr></thead>
+        <tbody>
+          <tr><td class="k">AI OS, AI Operating System</td><td class="no">platform, tool, app, software</td></tr>
+          <tr><td class="k">commerce, e-commerce</td><td class="no">online retail, e-tail, digital commerce</td></tr>
+          <tr><td class="k">merchant</td><td class="no">client, customer, user, end-user</td></tr>
+          <tr><td class="k">ops lead, growth lead, founder</td><td class="no">stakeholder, decision-maker, executive</td></tr>
+          <tr><td class="k">connector</td><td class="no">integration, plugin, app</td></tr>
+          <tr><td class="k">Nerve Centre, Vortex Mind, Ask Viq, Vortex Apps, Vortex Agents, Vortex Memory</td><td class="no">any paraphrase, any lower-case version</td></tr>
+          <tr><td class="k">Ask Viq&trade; on first prominent mention</td><td class="no">AskViq, Ask VIQ, ask viq</td></tr>
+          <tr><td class="k">detect, explain, fix</td><td class="no">monitor, analyse, recommend</td></tr>
+          <tr><td class="k">safe, predictable, controlled</td><td class="no">bulletproof, guaranteed, foolproof</td></tr>
+          <tr><td class="k">over 200 connectors, in the AI OS catalogue</td><td class="no">many, all the major, 215+, 70+</td></tr>
+          <tr><td class="k">catalogue, mapped</td><td class="no">supported, integrated</td></tr>
+          <tr><td class="k">14-day free trial, free for 14 days</td><td class="no">free forever, freemium</td></tr>
+          <tr><td class="k">six pillars</td><td class="no">six modules, six products</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>On "catalogue" versus "supported": the catalogue has manifests, cards, and audits ready to light up. Production coverage is broadest where merchants connect first. "Supported" implies production-tested for all, which is not the claim we are making.</p>
+
+    <div class="lab">Banned phrases</div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Phrase</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td class="k">powered by AI</td><td>We are AI. This is filler.</td></tr>
+          <tr><td class="k">leverage, leveraging</td><td>Say use.</td></tr>
+          <tr><td class="k">best-in-class, world-class, industry-leading</td><td>Unfalsifiable, so it reads as noise.</td></tr>
+          <tr><td class="k">seamless, frictionless, effortless</td><td>Every vendor says it, so it says nothing.</td></tr>
+          <tr><td class="k">transform your business overnight</td><td>Fails the calibration test in Trigger 05.</td></tr>
+          <tr><td class="k">unlock insights</td><td>Overworked past the point of meaning.</td></tr>
+          <tr><td class="k">robust, powerful, scalable</td><td>Empty without a specific number beside them.</td></tr>
+          <tr><td class="k">synergy, ecosystem play, holistic</td><td>Consultant language, not merchant language.</td></tr>
+          <tr><td class="k">most teams get this wrong</td><td>Breaks Voice Pillar 01 and Trigger 02.</td></tr>
+          <tr><td class="k">free forever</td><td>Retired June 2026. The offer is a 14-day free trial.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>"Start free" stays valid as a CTA, because the trial does start free.</p>
+
+    <div class="lab">Punctuation</div>
+    <div class="callout">
+      <div class="k">House rule</div>
+      <h3>Never use an em dash. Never use an en dash either.</h3>
+      <p>Not in marketing copy, not in docs, not in CMS content, not in a social post. The em dash is overused, it reads as machine-written to a lot of readers, and the voice prefers shorter, more declarative sentences anyway. A hyphen covers every legitimate compound case.</p>
+    </div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Where you would reach for one</th><th>Use instead</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Parenthetical aside</td><td class="mono">comma, comma</td><td><em>Vortex IQ, the AI OS for commerce, runs on every connector you have.</em></td></tr>
+          <tr><td class="k">Emphasis or summary clause</td><td class="mono">colon or full stop</td><td><em>One operating system. Detect, explain, fix.</em></td></tr>
+          <tr><td class="k">Strong aside or clarification</td><td class="mono">parentheses</td><td><em>Connect your stack (10 minutes max). The Nerve Centre does the rest.</em></td></tr>
+          <tr><td class="k">Range or span</td><td class="mono">"to", or a hyphen</td><td><em>5 to 15 minutes. Q2-Q3.</em></td></tr>
+          <tr><td class="k">Compound modifier</td><td class="mono">hyphen</td><td><em>AI-driven, 24-7, top-quartile.</em></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="lab">Owned hooks</div>
+    <p>House style. Repeat them, they build recall.</p>
+    <div class="tw">
+      <table>
+        <tbody>
+          <tr><td class="k">Stop fighting fires.</td><td>The anti-chaos opener. Also: stop flying blind, stop chasing problems.</td></tr>
+          <tr><td class="k">Connect. Activate. Optimise.</td><td>The three-step process.</td></tr>
+          <tr><td class="k">Detect. Explain. Fix.</td><td>The product loop.</td></tr>
+          <tr><td class="k">Eyes, Voice, Hands.</td><td>The pillar metaphor. Marketing surfaces only, not docs.</td></tr>
+          <tr><td class="k">The AI OS for commerce.</td><td>The elevator line.</td></tr>
+          <tr><td class="k">Built for merchants, agencies, and tech partners.</td><td>The audience triad.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 12 PATTERNS ============================ -->
+<section id="patterns">
+  <div class="wrap">
+    <div class="chap"><span class="chap-n">12</span><div>
+      <h2>Four structures that carry most of our writing.</h2>
+      <p>When you are staring at a blank page, pick the pattern that matches the format and fill it in. The structure is already approved, so you only have to be good at the sentences.</p>
+    </div></div>
+
+    <div class="g2">
+      <div class="card">
+        <div style="font-family:var(--font-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-purple);margin-bottom:.6rem">Pattern A</div>
+        <h4 style="margin-top:0">StoryBrand</h4>
+        <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-faded);margin-bottom:1.1rem">Long-form: landing pages, sales decks, video scripts</p>
+        <ol class="plain">
+          <li>Character: name the merchant and what they want</li>
+          <li>Problem: external (fragmented tools), internal (overwhelmed team), philosophical (this shouldn't feel like firefighting)</li>
+          <li>Guide: empathy (we've lived it) plus authority (the logos, the case studies)</li>
+          <li>Plan: Connect, Activate, Optimise</li>
+          <li>Call to action: direct (start free) plus transitional (see a sample report)</li>
+          <li>Success: what life looks like running Vortex IQ</li>
+          <li>Failure: what it costs to keep doing it the old way</li>
+        </ol>
+      </div>
+      <div class="card">
+        <div style="font-family:var(--font-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-purple);margin-bottom:.6rem">Pattern B</div>
+        <h4 style="margin-top:0">PEACE soundbite</h4>
+        <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-faded);margin-bottom:1.1rem">Short-form: social, ads, opening paragraphs</p>
+        <ol class="plain">
+          <li>Problem: the one most readers nod at</li>
+          <li>Empathy: we know how this feels</li>
+          <li>Authority: one credible proof point</li>
+          <li>CTA: one clear next step</li>
+          <li>Evidence: one quantified outcome</li>
+        </ol>
+      </div>
+      <div class="card">
+        <div style="font-family:var(--font-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-purple);margin-bottom:.6rem">Pattern C</div>
+        <h4 style="margin-top:0">Three-option close</h4>
+        <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-faded);margin-bottom:1.1rem">Bottom-of-funnel CTAs and pricing</p>
+        <ol class="plain">
+          <li>Always offer exactly three</li>
+          <li>Position ours as the middle</li>
+          <li>Make the other two real options, not strawmen</li>
+          <li>Mark the middle one, the way pricing marks Growth as most popular</li>
+        </ol>
+      </div>
+      <div class="card">
+        <div style="font-family:var(--font-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-purple);margin-bottom:.6rem">Pattern D</div>
+        <h4 style="margin-top:0">Card body</h4>
+        <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--text-faded);margin-bottom:1.1rem">KPI and connector cards in the docs</p>
+        <ol class="plain">
+          <li>Card class line, category, tier</li>
+          <li>At a glance</li>
+          <li>Calculation</li>
+          <li>Worked example</li>
+          <li>Sibling cards</li>
+          <li>Reconciling against the vendor's own dashboard</li>
+          <li>Known limitations and merchant FAQs</li>
+          <li>Tracked live in Nerve Centre, the closing CTA</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 13 CHANNELS ============================ -->
+<section id="channels">
+  <div class="wrap">
+    <div class="chap"><span class="chap-n">13</span><div>
+      <h2>What changes, surface by surface.</h2>
+      <p>The rules below sit on top of everything above. Where a channel carries extra legal or trust risk, the voice gets tighter, not louder.</p>
+    </div></div>
+
+    <div class="g2">
+      <div class="card">
+        <h4 style="margin-top:0">Marketing site</h4>
+        <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--brand-purple);margin-bottom:1rem">vortexiq.ai</p>
+        <ul class="plain">
+          <li>Lead every page with the AI OS framing.</li>
+          <li>The hero must pass the half-second scan test.</li>
+          <li>One big proof point per page, never a wall of logos.</li>
+          <li>One headline price per pricing tier, with the annual maths in small print.</li>
+          <li>Keep Growth as the marked middle of the self-serve path.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">Comparison hub</h4>
+        <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--brand-purple);margin-bottom:1rem">/vs and /vs/{competitor}</p>
+        <ul class="plain">
+          <li>Facts only. Every competitor claim sourced to their own public pages and cited on the page.</li>
+          <li>No disparagement. Describe accurately what they do well.</li>
+          <li>Complementary, not superior. They own one slice, we are the cross-stack operating layer.</li>
+          <li>One clear CTA at the end, the free audit.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">Limits and guardrails</h4>
+        <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--brand-purple);margin-bottom:1rem">/trust/limits</p>
+        <ul class="plain">
+          <li>Boring by design. State the hard rules in flat prose. The calm tone is the message.</li>
+          <li>Transparent trade-offs. Ranges not guarantees, live connector counts not roadmap totals.</li>
+          <li>Keep safety mechanics scoped. Staging and one-click rollback are BigCommerce, Shopify, and Adobe Commerce. Approval-gating is universal.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">Help docs</h4>
+        <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--brand-purple);margin-bottom:1rem">docs.vortexiq.ai</p>
+        <ul class="plain">
+          <li>Open each connector landing with the AI OS connection: this connector is one of 200+ feeding the Nerve Centre.</li>
+          <li>Merchant-friendly does not mean stripping the brand frame. Keep the pillar names.</li>
+          <li>Avoid jargon the merchant will not recognise. Never avoid our own product names.</li>
+          <li>Worked examples stay concrete and merchant-readable.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">In-app</h4>
+        <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--brand-purple);margin-bottom:1rem">app.vortexiq.ai</p>
+        <ul class="plain">
+          <li>Buttons: one to three words, verb-led. Run Audit, Connect, View finding.</li>
+          <li>Empty states: warm and specific. "No findings yet. Connect your first source to put the Nerve Centre to work."</li>
+          <li>Errors: monotone and factual, and always name the next step.</li>
+          <li>Alerts: lead with impact in plain English. "Catalogue drift on 14 SKUs. &pound;8,400 at risk."</li>
+          <li>Onboarding: name the AI OS on the first screen and set the frame.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0">Social</h4>
+        <p style="font-family:var(--font-mono);font-size:.72rem;color:var(--brand-purple);margin-bottom:1rem">LinkedIn and X</p>
+        <ul class="plain">
+          <li>All four voice pillars run high. The format rewards voice density.</li>
+          <li>One mechanism named per post.</li>
+          <li>One proof point per post.</li>
+          <li>Short. If it needs a scroll, it needs a cut.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 14 REWRITES ============================ -->
+<section id="rewrites">
+  <div class="wrap">
+    <div class="chap"><span class="chap-n">14</span><div>
+      <h2>The rules, applied.</h2>
+      <p>Five real edits from our own surfaces. Use them as anchors when you are unsure whether a draft is on brand.</p>
+    </div></div>
+
+    <div class="rw">
+      <div class="h">Homepage hero</div>
+      <div class="b">
+        <div class="c"><span class="m">Before</span><p>The AI Operating System That Runs Your Entire eCommerce Operation. Deploy a 24/7 Digital Workforce that connects every app in your stack. We give your business the Eyes to monitor every KPI, the Voice to strategize, and the Hands to execute tasks automatically.</p></div>
+        <div class="c"><span class="m">After</span><p>The AI Operating System for E-Commerce. Detect what's broken. Understand why. Fix it safely. Across every platform you run.</p></div>
+      </div>
+      <div class="n">The original is strong on authority and specifics, but the subhead is one long sentence that fails the fluency test. Eyes, Voice, Hands belongs in the next section, not the hero.</div>
+    </div>
+
+    <div class="rw">
+      <div class="h">KPI card opener</div>
+      <div class="b">
+        <div class="c"><span class="m">Before</span><p>Active Subscribers (Est.) is a customer lifecycle metric tracked from ActiveCampaign data.</p></div>
+        <div class="c"><span class="m">After</span><p>The Nerve Centre tracks Active Subscribers (Est.) from your ActiveCampaign account in real time. When the number moves, Vortex Mind investigates why, and Ask Viq acts on the finding.</p></div>
+      </div>
+      <div class="n">Same merchant-readable explanation, but it now ships the brand frame and chains three pillars. Costs nothing in clarity.</div>
+    </div>
+
+    <div class="rw">
+      <div class="h">In-app empty state</div>
+      <div class="b">
+        <div class="c"><span class="m">Before</span><p>You don't have any findings yet. To get started, please connect your first data source by going to the Connectors page in your Settings.</p></div>
+        <div class="c"><span class="m">After</span><p>No findings yet. Connect your first source to put the Nerve Centre to work.</p></div>
+      </div>
+      <div class="n">Shorter, names the mechanism, one CTA.</div>
+    </div>
+
+    <div class="rw">
+      <div class="h">Email subject line</div>
+      <div class="b">
+        <div class="c"><span class="m">Before</span><p>Vortex IQ: your weekly performance report is ready</p></div>
+        <div class="c"><span class="m">After</span><p>What the Nerve Centre found in your store this week</p></div>
+      </div>
+      <div class="n">Names the mechanism, leads with the value, no brand-stuffing.</div>
+    </div>
+
+    <div class="rw">
+      <div class="h">Pricing display</div>
+      <div class="b">
+        <div class="c"><span class="m">Before</span><p>Starter &pound;39/month. Save 20%. &pound;199/month.</p></div>
+        <div class="c"><span class="m">After</span><p>Growth $1,199/mo, most popular. Billed annually at $14,388. Save 20% a year.</p></div>
+      </div>
+      <div class="n">One headline figure carries the card. The toggle switches monthly and annual, and the total lives in small print. Never two prices competing for the eye.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 15 HOW TO USE ============================ -->
+<section id="how-to-use">
+  <div class="wrap">
+    <div class="chap"><span class="chap-n">15</span><div>
+      <h2>How to use this document.</h2>
+      <p>Five ways in, depending on what you are about to make.</p>
+    </div></div>
+
+    <div class="g2">
+      <div class="card"><h4 style="margin-top:0">Writing for any surface</h4><p>Read section 08 (voice pillars), section 09 (the tone modifier for your channel), section 11 (vocabulary), and the relevant example in section 14.</p></div>
+      <div class="card"><h4 style="margin-top:0">Designing a page or screen</h4><p>Read sections 03 to 06. If a component already exists, use it. If it does not, build it from the tokens rather than inventing new ones.</p></div>
+      <div class="card"><h4 style="margin-top:0">Editing existing copy</h4><p>Run it through the vocabulary table in section 11, then check the trigger relevant to its funnel position in section 10.</p></div>
+      <div class="card"><h4 style="margin-top:0">Using an AI writing assistant</h4><p>Give it the Markdown version of this file as the house style. The em dash rule and the banned phrase list are the two it most often needs told twice.</p></div>
+    </div>
+
+    <div class="note" style="margin-top:1.6rem"><span><b>Disagree with something here?</b> Update this document. Do not fork the brand in your channel. <b>Spotted drift on the live product?</b> Flag it at hey@vortexiq.ai. The cost of an inconsistent voice is trust. The cost of one fix is ten minutes.</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>Vortex IQ</b> · The AI OS for commerce<br>
+    Brand guidelines v2.1, July 2026. Owned jointly by marketing and product.<br>
+    <a href="https://www.vortexiq.ai/branding">vortexiq.ai/branding</a> · <a href="mailto:hey@vortexiq.ai">hey@vortexiq.ai</a>
+  </div>
+</footer>
+
+</body>
+</html>
