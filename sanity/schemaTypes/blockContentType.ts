@@ -1,5 +1,5 @@
 import { defineArrayMember, defineType } from "sanity";
-import { ImageIcon } from "@sanity/icons";
+import { ImageIcon, ThLargeIcon } from "@sanity/icons";
 
 /**
  * Portable Text content for the blog body — headings, lists, links,
@@ -63,6 +63,62 @@ export const blockContentType = defineType({
           title: "Caption",
         },
       ],
+    }),
+    defineArrayMember({
+      type: "object",
+      name: "table",
+      title: "Table",
+      icon: ThLargeIcon,
+      fields: [
+        {
+          name: "hasHeaderRow",
+          title: "First row is a header",
+          type: "boolean",
+          initialValue: true,
+        },
+        {
+          name: "caption",
+          title: "Caption",
+          type: "string",
+        },
+        {
+          name: "rows",
+          title: "Rows",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              name: "row",
+              fields: [
+                {
+                  name: "cells",
+                  title: "Cells",
+                  type: "array",
+                  of: [{ type: "string" }],
+                },
+              ],
+              preview: {
+                select: { cells: "cells" },
+                prepare({ cells }) {
+                  return {
+                    title: Array.isArray(cells) ? cells.join(" · ") : "Row",
+                  };
+                },
+              },
+            },
+          ],
+        },
+      ],
+      preview: {
+        select: { rows: "rows", caption: "caption" },
+        prepare({ rows, caption }) {
+          const count = Array.isArray(rows) ? rows.length : 0;
+          return {
+            title: caption || "Table",
+            subtitle: `${count} row${count === 1 ? "" : "s"}`,
+          };
+        },
+      },
     }),
   ],
 });

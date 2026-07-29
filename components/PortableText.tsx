@@ -61,6 +61,42 @@ const components: PortableTextComponents = {
         </figure>
       );
     },
+    table: ({ value }) => {
+      const rows: { cells?: string[] }[] = value?.rows ?? [];
+      if (!rows.length) return null;
+      const hasHeader = value?.hasHeaderRow !== false;
+      const [head, ...rest] = rows;
+      const bodyRows = hasHeader ? rest : rows;
+      return (
+        <figure className="prose-figure">
+          <div className="prose-table-wrap" style={{ overflowX: "auto" }}>
+            <table className="prose-table">
+              {hasHeader ? (
+                <thead>
+                  <tr>
+                    {(head?.cells ?? []).map((c, i) => (
+                      <th key={i}>{c}</th>
+                    ))}
+                  </tr>
+                </thead>
+              ) : null}
+              <tbody>
+                {bodyRows.map((row, r) => (
+                  <tr key={r}>
+                    {(row.cells ?? []).map((c, i) => (
+                      <td key={i}>{c}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {value?.caption ? (
+            <figcaption className="prose-caption">{value.caption}</figcaption>
+          ) : null}
+        </figure>
+      );
+    },
   },
 };
 

@@ -612,4 +612,10 @@ main .section--hero{padding-top:10rem}
 .prose .prose-code{font-family:var(--font-mono);font-size:.88em;background:var(--surface-tint);border:1px solid var(--border-brand);border-radius:5px;padding:.1rem .35rem}
 .prose .prose-figure{margin:2rem 0}
 .prose .prose-img{width:100%;height:auto;display:block;border-radius:var(--radius);border:1px solid var(--border-dark)}
+.prose .prose-table-wrap{overflow-x:auto;border:1px solid var(--border-brand);border-radius:var(--radius)}
+.prose .prose-table{border-collapse:collapse;width:100%;font-size:.95rem;min-width:34rem}
+.prose .prose-table th,.prose .prose-table td{text-align:left;padding:.7rem 1rem;border-bottom:1px solid var(--border-brand);vertical-align:top;color:var(--text-body)}
+.prose .prose-table thead th{font-family:var(--font-heading);font-weight:600;color:var(--primary);background:var(--surface-tint);white-space:nowrap}
+.prose .prose-table tbody tr:last-child td{border-bottom:none}
+.prose .prose-table tbody td:first-child{font-weight:600;color:var(--primary);white-space:nowrap}
 .prose .prose-caption{margin-top:.6rem;font-family:var(--font-mono);font-size:.76rem;color:var(--text-faded);text-align:center}
