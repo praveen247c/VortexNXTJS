@@ -75,15 +75,28 @@ const nextConfig = {
       { source: "/role-specific-agents/:path*", destination: "/solutions", permanent: true },
 
       // --- Old /agents/* keyword pages -> topical equivalents (were dumping to /) ---
-      { source: "/agents/site-management/staging-shopify", destination: "/stagingpro-to-ai-os", permanent: true },
+      // Staging and backup URLs now land on the pages that match the query intent.
+      // They previously landed on /stagingpro-to-ai-os, which is a customer-transition
+      // page ("you already trust us for staging"), so staging searches had nowhere
+      // relevant to go: "does shopify have a staging environment" fell from position
+      // 2.0 to 14.0 in GSC after the original redirect change.
+      { source: "/agents/site-management/staging-shopify", destination: "/shopify-staging", permanent: true },
       { source: "/agents/site-management/staging-magento", destination: "/stagingpro-to-ai-os", permanent: true },
-      { source: "/agents/site-management/stagingpro-bigcommerce", destination: "/stagingpro-to-ai-os", permanent: true },
-      { source: "/agents/site-management/backup-shopify", destination: "/ai-os-platform/vortex-agents", permanent: true },
-      { source: "/agents/site-management/backup-bigcommerce", destination: "/ai-os-platform/vortex-agents", permanent: true },
+      { source: "/agents/site-management/stagingpro-bigcommerce", destination: "/platforms/bigcommerce", permanent: true },
+      { source: "/agents/site-management/backup-shopify", destination: "/platforms/shopify", permanent: true },
+      { source: "/agents/site-management/backup-bigcommerce", destination: "/platforms/bigcommerce", permanent: true },
       { source: "/agents/insights-monitoring/:path*", destination: "/ai-os-platform/nerve-centre", permanent: true },
       { source: "/agents/seo-optimization/:path*", destination: "/solutions/seo-geo", permanent: true },
       { source: "/agents/:path*", destination: "/ai-os-platform/vortex-agents", permanent: true },
-      { source: "/vortex-apps/staging-shopify", destination: "/stagingpro-to-ai-os", permanent: true },
+      { source: "/vortex-apps/staging-shopify", destination: "/shopify-staging", permanent: true },
+
+      // --- Indexed URLs found serving 404s on 30 Jul 2026 ---
+      // /resources/one-pagers/stagingpro was still ranking (position 6.8, 8.0% CTR in
+      // the 13 May GSC pull) while returning a 404.
+      { source: "/resources/one-pagers/stagingpro", destination: "/platforms/bigcommerce", permanent: true },
+      { source: "/agents-by-platform/shopify", destination: "/platforms/shopify", permanent: true },
+      { source: "/agents-by-platform/bigcommerce", destination: "/platforms/bigcommerce", permanent: true },
+      { source: "/agents-by-platform/:path*", destination: "/ai-os-platform/vortex-agents", permanent: true },
 
       // --- Old /integrations/* and /solution/* -> topical equivalents ---
       { source: "/integrations/:path*", destination: "/solutions/integrations", permanent: true },

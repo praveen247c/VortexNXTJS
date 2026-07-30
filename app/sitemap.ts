@@ -41,6 +41,11 @@ const STATIC_PATHS: { path: string; changeFrequency: MetadataRoute.Sitemap[numbe
   { path: "/partners/student-program", changeFrequency: "monthly", priority: 0.5 },
   { path: "/partners/deal-registration", changeFrequency: "monthly", priority: 0.4 },
   { path: "/platforms/bigcommerce", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/platforms/shopify", changeFrequency: "monthly", priority: 0.7 },
+  // Owns the Shopify staging query cluster; /platforms/shopify links here rather than
+  // competing for the same terms. Highest priority of the platform set: it is the
+  // destination for the paid staging campaign.
+  { path: "/shopify-staging", changeFrequency: "monthly", priority: 0.8 },
   { path: "/start-with-vortexiq", changeFrequency: "monthly", priority: 0.6 },
   { path: "/get-started", changeFrequency: "monthly", priority: 0.6 },
   { path: "/free-audit", changeFrequency: "monthly", priority: 0.7 },
