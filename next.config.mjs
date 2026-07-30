@@ -81,7 +81,7 @@ const nextConfig = {
       // relevant to go: "does shopify have a staging environment" fell from position
       // 2.0 to 14.0 in GSC after the original redirect change.
       { source: "/agents/site-management/staging-shopify", destination: "/shopify-staging", permanent: true },
-      { source: "/agents/site-management/staging-magento", destination: "/stagingpro-to-ai-os", permanent: true },
+      { source: "/agents/site-management/staging-magento", destination: "/magento-adobe-commerce-staging", permanent: true },
       { source: "/agents/site-management/stagingpro-bigcommerce", destination: "/platforms/bigcommerce", permanent: true },
       { source: "/agents/site-management/backup-shopify", destination: "/platforms/shopify", permanent: true },
       { source: "/agents/site-management/backup-bigcommerce", destination: "/platforms/bigcommerce", permanent: true },
@@ -96,6 +96,10 @@ const nextConfig = {
       { source: "/resources/one-pagers/stagingpro", destination: "/platforms/bigcommerce", permanent: true },
       { source: "/agents-by-platform/shopify", destination: "/platforms/shopify", permanent: true },
       { source: "/agents-by-platform/bigcommerce", destination: "/platforms/bigcommerce", permanent: true },
+      { source: "/agents-by-platform/adobe-commerce", destination: "/platforms/magento-adobe-commerce", permanent: true },
+      { source: "/agents-by-platform/magento", destination: "/platforms/magento-adobe-commerce", permanent: true },
+      // Susant's preferred short URL for the hub, kept working alongside the /platforms/* convention.
+      { source: "/magento-adobe-commerce", destination: "/platforms/magento-adobe-commerce", permanent: true },
       { source: "/agents-by-platform/:path*", destination: "/ai-os-platform/vortex-agents", permanent: true },
 
       // --- Old /integrations/* and /solution/* -> topical equivalents ---
