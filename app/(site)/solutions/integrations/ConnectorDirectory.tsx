@@ -58,7 +58,7 @@ export default function ConnectorDirectory() {
   );
 
   return (
-    <div className="int-dir reveal">
+    <div className="int-dir reveal in">
       <div className="int-dir-controls">
         <input
           className="int-dir-search"
